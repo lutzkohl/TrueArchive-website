@@ -3,110 +3,112 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="description" content="TrueArchive für Mac: Bilder aus Apple Fotos, von SD-Karten und lokalen Ordnern in einem eigenen Archiv bewahren. Originale, fertige Fassungen und verfügbare Metadaten zusammenhalten.">
+  <meta name="description" content="TrueArchive für Mac bringt Bilder aus Apple Fotos, von SD-Karten und lokalen Ordnern in dein eigenes Archiv. Für die Beta anmelden und beim Testen mitmachen.">
   <meta name="robots" content="noindex, nofollow">
   <meta name="theme-color" content="#1E3C93">
   <title>TrueArchive – Deine Bilder. Dein Archiv.</title>
   <link rel="icon" href="assets/app-icon.png" type="image/png">
   <link rel="stylesheet" href="styles.css">
-  <script src="archive-demo.js" defer></script>
 </head>
 <body>
   <a class="skip-link" href="#inhalt">Zum Inhalt</a>
   <header class="site-header wrap">
-    <a class="brand" href="index.html" aria-label="TrueArchive Startseite"><img src="assets/app-icon.png" width="42" height="42" alt=""><span>TrueArchive</span></a>
+    <a class="brand" href="index.html" aria-label="TrueArchive Startseite"><img src="assets/app-icon.png" width="40" height="40" alt=""><span>TrueArchive</span></a>
     <nav aria-label="Hauptnavigation">
-      <a href="#archiv">Das Archiv</a>
-      <a href="anleitung.html">Anleitung</a>
-      <a class="nav-download" href="#download">Download</a>
+      <a class="secondary-nav" href="anleitung.html">Anleitung</a>
+      <a class="button small primary" href="#beta">Zur Beta anmelden</a>
     </nav>
   </header>
+
   <main id="inhalt">
     <section class="hero wrap" aria-labelledby="hero-title">
       <div class="hero-copy">
         <h1 id="hero-title">Deine Bilder.<br>Dein Archiv.</h1>
-        <p class="lead">Bilder aus Apple Fotos, von SD-Karten und deinen Ordnern. Zusammen auf deiner Archivplatte – mit Originalen, fertigen Fassungen und verfügbaren Metadaten.</p>
-        <div class="hero-actions"><a class="button primary" href="#archiv">Archiv entdecken</a><a class="text-link" href="anleitung.html">Erste Schritte</a></div>
-        <p class="pilot-note"><span class="status-dot" aria-hidden="true"></span>Für Mac. Jetzt als Pilot ausprobieren.</p>
+        <p class="lead">Aus Apple Fotos, von SD-Karten und deinen Ordnern. Gemeinsam auf deiner Archivplatte.</p>
+        <p class="hero-detail">Originale, fertige Fassungen und verfügbare Metadaten bleiben beieinander. In normalen Ordnern, die dir gehören.</p>
+        <a class="button primary beta-button" href="#beta">Zur Beta anmelden</a>
+        <p class="beta-meta">Für Mac · macOS 15+ · Intel und Apple Silicon</p>
+        <p class="beta-invitation">Trag dich ein. Wir melden uns per E-Mail, wenn du TrueArchive testen kannst.</p>
       </div>
 
-      <figure class="archive-figure" aria-label="Interaktives Beispiel der Archivdateien">
-        <div class="archive-window">
-          <div class="window-top"><span class="window-controls" aria-hidden="true"><i></i><i></i><i></i></span><span>Dein Archiv</span><svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M5 5h14l2 12H3L5 5Z"/><path d="M3 17v3h18v-3M16 18.5h2"/></svg></div>
-          <div class="archive-path"><svg viewBox="0 0 24 24" width="22" height="22" aria-hidden="true"><path fill="currentColor" d="M2 5a2 2 0 0 1 2-2h6l3 3h7a2 2 0 0 1 2 2v11a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2Z"/></svg><span>Medien</span><span aria-hidden="true">/</span><span>2026</span><span aria-hidden="true">/</span><strong>2026-06-14</strong></div>
-          <div class="archive-body">
-            <div class="file-list" role="tablist" aria-label="Beispieldatei ansehen" aria-orientation="vertical">
-              <button class="file-tab" id="file-original" role="tab" aria-selected="true" aria-controls="preview-original" tabindex="0"><span class="file-symbol photo-symbol" aria-hidden="true"></span><span><strong>IMG_0428.heic</strong><small>Original</small></span></button>
-              <button class="file-tab" id="file-edited" role="tab" aria-selected="false" aria-controls="preview-edited" tabindex="-1"><span class="file-symbol photo-symbol edited-symbol" aria-hidden="true"></span><span><strong>IMG_0428-bearbeitet.jpg</strong><small>Fertige Fassung</small></span></button>
-              <button class="file-tab" id="file-metadata" role="tab" aria-selected="false" aria-controls="preview-metadata" tabindex="-1"><span class="file-symbol metadata-symbol" aria-hidden="true">≡</span><span><strong>IMG_0428.heic.xmp</strong><small>Metadaten</small></span></button>
-            </div>
-            <div class="preview-area">
-              <div class="file-preview" id="preview-original" role="tabpanel" aria-labelledby="file-original" tabindex="0">
-                <img class="landscape original" src="assets/landscape.svg" width="420" height="350" alt="Illustration eines Bergsees mit orangefarbener Sonne">
-                <div class="preview-caption"><strong>Der Moment bleibt.</strong><span>Das Original bleibt unverändert.</span></div>
+      <figure class="app-figure" aria-labelledby="app-caption">
+        <div class="app-example" role="img" aria-label="Schematisches Beispiel: Quellen links, darunter das Archivziel. Rechts eine Vorschau mit drei ausgewählten Dateien und der Aktion zum Archivieren.">
+          <div class="app-titlebar"><span class="window-dots" aria-hidden="true"><i></i><i></i><i></i></span><span>TrueArchive</span></div>
+          <div class="app-layout" aria-hidden="true">
+            <aside class="app-sidebar">
+              <span class="app-brand"><img src="assets/app-icon.png" width="22" height="22" alt="">TrueArchive</span>
+              <span class="app-section-label">Quellen</span>
+              <span class="app-source is-selected"><svg viewBox="0 0 20 20"><path d="M7 2h9v16H4V6Z"/><path d="M8 3v4m3-4v4m3-4v4"/></svg>Reisekarte</span>
+              <span class="app-source"><svg viewBox="0 0 20 20"><rect x="3" y="3" width="14" height="14" rx="2"/><path d="m4 14 4-5 5 5 2-2 2 2"/></svg>Meine Fotos</span>
+              <span class="app-source"><svg viewBox="0 0 20 20"><path d="M2 5h6l2 2h8v10H2Z"/></svg>Bildordner</span>
+              <span class="app-source app-add"><span>+</span>Quelle hinzufügen</span>
+              <span class="app-flow"><span class="flow-arrow">↓</span><span>Ins Archiv übernehmen</span></span>
+              <span class="app-section-label">Ziel</span>
+              <span class="app-source"><svg viewBox="0 0 20 20"><path d="M4 3h12l2 11H2Zm-2 11v3h16v-3m-5 1.5h2"/></svg>Bildarchiv</span>
+            </aside>
+            <div class="app-content">
+              <div class="app-page-heading"><strong>Reisekarte</strong><span>✓ Verbunden</span></div>
+              <div class="app-content-body">
+                <p class="app-settings">› &nbsp; Einstellungen</p>
+                <div class="app-target"><span>↓</span><div><strong>Ziel: Bildarchiv</strong><small>Verbunden · keine offenen Übernahmen</small></div></div>
+                <div class="app-preview-heading"><strong>Vorschau</strong><span>3 Dateien geprüft</span></div>
+                <div class="app-filters"><span class="is-selected">Alle</span><span>Neu</span><span>Geändert</span><span>Probleme</span></div>
+                <table class="app-files"><thead><tr><th></th><th>Dateiname</th><th>Status</th></tr></thead><tbody>
+                  <tr><td>✓</td><td>IMG_0042.ARW</td><td>Neu</td></tr>
+                  <tr><td>✓</td><td>IMG_0043.ARW</td><td>Neu</td></tr>
+                  <tr><td>✓</td><td>IMG_0044.ARW</td><td>Unverändert</td></tr>
+                </tbody></table>
+                <p class="app-file-count">1–3 von 3 Dateien</p>
               </div>
-              <div class="file-preview" id="preview-edited" role="tabpanel" aria-labelledby="file-edited" tabindex="0" hidden>
-                <img class="landscape edited" src="assets/landscape.svg" width="420" height="350" alt="Illustration desselben Bergsees mit kräftigeren Farben als Beispiel einer Bearbeitung">
-                <div class="preview-caption"><strong>Dein Blick darauf auch.</strong><span>Die fertige Fassung liegt daneben.</span></div>
-              </div>
-              <div class="file-preview metadata-preview" id="preview-metadata" role="tabpanel" aria-labelledby="file-metadata" tabindex="0" hidden>
-                <span class="metadata-mark" aria-hidden="true">XMP</span>
-                <h2>Das Wissen zum Bild.</h2>
-                <dl><div><dt>Aufgenommen</dt><dd>14. Juni 2026</dd></div><div><dt>Album</dt><dd>Bergtage</dd></div><div><dt>GPS</dt><dd>Wenn verfügbar</dd></div><div><dt>Original</dt><dd>Unverändert</dd></div></dl>
-                <p>Eine gemeinsame Begleitdatei. Direkt beim Bild.</p>
-              </div>
+              <div class="app-actionbar"><span>3 ausgewählt</span><span class="app-main-action">3 ausgewählte archivieren</span></div>
             </div>
           </div>
-          <div class="archive-bottom"><span class="small-check" aria-hidden="true">✓</span>Normale Dateien. Jederzeit zugänglich.</div>
         </div>
-        <figcaption>Beispielausschnitt: Jede Mediendatei hat ihr eigenes XMP.<br>Wähle eine Datei, um mehr zu sehen.</figcaption>
-        <noscript><p class="no-script-note">Die Dateiauswahl benötigt JavaScript. Originale, fertige Fassungen und gemeinsame XMP-Dateien liegen im selben Datumsordner.</p></noscript>
+        <figcaption id="app-caption">Schematische App-Ansicht mit Beispieldaten.</figcaption>
       </figure>
     </section>
 
-    <section class="archive-principle" id="archiv" aria-labelledby="archive-title">
-      <div class="wrap principle-grid">
-        <div><h2 id="archive-title">Ein Zuhause für<br>deine Bilder.</h2><p class="section-intro">Das Archiv gehört dir. Es besteht aus lesbaren Ordnern, deinen Bildern und ihren Metadaten.</p></div>
-        <div class="principles">
-          <article><svg viewBox="0 0 32 32" aria-hidden="true"><path d="M4 9h9l3 3h12v14H4Z"/><path d="M4 9V6h9l3 3h10"/></svg><div><h3>Nach Tagen geordnet.</h3><p>Neue Aufnahmen liegen in Jahres- und Datumsordnern. Original und fertige Fassung bleiben zusammen.</p></div></article>
-          <article><svg viewBox="0 0 32 32" aria-hidden="true"><path d="M9 4h10l5 5v19H9Z"/><path d="M19 4v6h5M13 15h7M13 19h7M13 23h4"/></svg><div><h3>Metadaten direkt am Bild.</h3><p>Zu jeder Mediendatei gehört eine gemeinsame XMP-Begleitdatei. Sie hält verfügbare Angaben wie Alben und GPS sowie Archivzuordnungen fest.</p></div></article>
-          <article><svg viewBox="0 0 32 32" aria-hidden="true"><path d="M6 6h20v20H6ZM6 12h20M12 12v14"/></svg><div><h3>Auch außerhalb der App nutzbar.</h3><p>Du kannst deine Ordner im Finder öffnen und das Archiv mit digiKam durchsuchen. Die Dateien bleiben unabhängig von TrueArchive lesbar.</p></div></article>
-        </div>
+    <section class="workflow" id="archiv" aria-labelledby="workflow-title">
+      <div class="wrap">
+        <div class="section-heading"><h2 id="workflow-title">In drei Schritten ins Archiv.</h2><p>Du entscheidest, was übernommen wird.<br>Deine Quellen bleiben unverändert.</p></div>
+        <ol class="steps">
+          <li><span class="step-number" aria-hidden="true">1</span><h3>Verbinden</h3><p>Quellen hinzufügen und dein Archiv wählen. Der Assistent hilft beim ersten Start.</p></li>
+          <li><span class="step-number" aria-hidden="true">2</span><h3>Vorschau prüfen</h3><p>Neue Bilder und Änderungen ansehen. Zum Einstieg genügen bis zu zehn Bilder.</p></li>
+          <li><span class="step-number" aria-hidden="true">3</span><h3>Archivieren</h3><p>Deine Auswahl übernehmen. Bilder und XMP-Dateien liegen nach Datum geordnet im Archiv.</p></li>
+        </ol>
+        <p class="workflow-note">Jeden Abgleich startest du selbst. Automatische Zeitpläne folgen später. <a href="anleitung.html#einrichtung">Zur Anleitung</a></p>
       </div>
     </section>
 
-    <section class="sources-section wrap" aria-labelledby="sources-title">
-      <div class="section-heading"><h2 id="sources-title">Viele Quellen. Ein Archiv.</h2><p>Erst aufnehmen und bearbeiten.<br>Dann in Ruhe archivieren.</p></div>
-      <div class="sources-grid">
-        <article class="source-block"><div class="source-heading"><svg viewBox="0 0 40 40" aria-hidden="true"><rect x="6" y="6" width="28" height="28" rx="7"/><circle cx="26" cy="15" r="3"/><path d="m7 29 10-11 9 10 4-5 4 5"/></svg><h3>Aus Apple Fotos</h3></div><p>Wähle Aufnahmen und exportiere Originale, aktuelle Bearbeitungen und angebotene Zusatzressourcen. Zugängliche Alben, Datum, GPS und Favorit kommen mit.</p><p class="source-detail">Zum Einstieg bis zu zehn Bilder, danach manuell aus den neuesten 1–100 Aufnahmen wählen. Der regelmäßige Abgleich folgt später.</p><a class="text-link" href="anleitung.html#apple-fotos">Fotos-Export kennenlernen</a></article>
-        <article class="source-block"><div class="source-heading"><svg viewBox="0 0 40 40" aria-hidden="true"><path d="M13 5h18v30H9V12Z"/><path d="M16 6v8M22 6v8M28 6v8M14 25h12"/></svg><h3>Von Karten &amp; Ordnern</h3></div><p>Verbinde SD-Karten, Festplatten und weitere lokale Bildordner über +. Übernimm RAWs und vorhandene XMPs, auch nach der Bearbeitung mit Nitro auf dem iPad.</p><p class="source-detail">Mehrere Quellen speichern und einzeln manuell abgleichen. Unterordner je Quelle einbeziehen. Mit Fortschritt, Pause und Fortsetzen.</p><a class="text-link" href="anleitung.html#sd-karte">Karten und Ordner verbinden</a></article>
+    <section class="beta-section wrap" id="mitmachen" aria-labelledby="beta-title">
+      <div class="beta-copy">
+        <span class="eyebrow">Gemeinsam weiterentwickeln</span>
+        <h2 id="beta-title">Teste TrueArchive<br> mit uns.</h2>
+        <p>Hilf uns, TrueArchive im Alltag zu testen. Lass uns deine E-Mail-Adresse da, damit wir dich zur Beta einladen können.</p>
       </div>
-      <div class="source-promise"><span class="small-check" aria-hidden="true">✓</span><p><strong>Deine Quellen bleiben erhalten.</strong> Der Abgleich geht immer ins Archiv. Quellen bleiben unverändert; dort gelöschte Dateien bleiben im Archiv erhalten.</p></div>
-    </section>
-
-    <section class="start-section wrap" aria-labelledby="start-title">
-      <div><h2 id="start-title">Einrichten.<br>Mit Bildern starten.</h2><p>Der neue Assistent begleitet dich zu deinem echten Archiv. Eine kleine erste Übernahme ist optional und landet direkt dort.</p><a class="button primary" href="anleitung.html#einrichtung">Zum Einrichtungsassistenten</a></div>
-      <ol class="start-steps"><li><span>1</span><div><h3>Quellen und Archiv verbinden</h3><p>Apple Fotos, SD-Karten und lokale Ordner auswählen. Ein neues Archiv anlegen oder ein vorhandenes TrueArchive-Archiv weiterverwenden.</p></div></li><li><span>2</span><div><h3>Mit bis zu zehn Bildern beginnen</h3><p>Vorschau laden, Hinweise lesen und Bilder bei Bedarf abwählen. Eigenständige Videos bleiben bei diesem Einstieg außen vor.</p></div></li><li><span>3</span><div><h3>Einrichtung behalten</h3><p>Ergebnis ansehen und Einrichtung abschließen. Beim nächsten Start sind deine Quellen und dein Archiv wieder eingerichtet.</p></div></li></ol>
-    </section>
-
-    <section class="download-section" id="download" aria-labelledby="download-title">
-      <div class="wrap download-grid">
-        <div class="download-copy"><span class="release-status"><span class="status-dot" aria-hidden="true"></span>Pilot zum Ausprobieren</span><h2 id="download-title">TrueArchive<br>für deinen Mac.</h2><p>Version 0.4.0 bringt den Einrichtungsassistenten und mehrere gespeicherte Ordnerquellen. Das App-Paket kannst du hier für deinen Mac herunterladen.</p><p class="download-unavailable">Öffentlicher Download · macOS 15 oder neuer</p><a class="button light" href="https://github.com/lutzkohl/TrueArchive-website/releases/download/v0.4.0-pilot/TrueArchive-0.4.0-pilot-macos-universal.zip">TrueArchive 0.4.0 herunterladen</a><p><a href="https://github.com/lutzkohl/TrueArchive-website/releases/download/v0.4.0-pilot/TrueArchive-0.4.0-pilot-macos-universal.zip.sha256">SHA-256-Prüfsumme</a> · <a href="https://github.com/lutzkohl/TrueArchive-website/releases/tag/v0.4.0-pilot">Versionshinweise und Prüfstand</a></p><p><a href="anleitung.html#installation">Hinweise zur Installation</a></p></div>
-        <div class="release-details"><h3>Der aktuelle Stand</h3><dl><div><dt>Version</dt><dd>0.4.0 <span>Pilot</span></dd></div><div><dt>System</dt><dd>macOS 15 oder neuer</dd></div><div><dt>Paket</dt><dd>Intel &amp; Apple Silicon</dd></div><div><dt>Abgleich</dt><dd>Manuell, von der Quelle ins Archiv</dd></div></dl><p>Der Laufzeittest dieser Ausgabe auf Intel steht aus. Das Paket ist lokal signiert und noch nicht notarisiert. Bitte beachte vor dem ersten Start die Installationshinweise.</p><a href="https://github.com/lutzkohl/TrueArchive">Projekt auf GitHub <span>(derzeit privat)</span></a></div>
+      <div class="beta-signup" id="beta" tabindex="-1">
+        <h3 id="beta-form-title">Für die Beta anmelden</h3>
+        <form id="beta-form" action="https://formspree.io/f/xeaqrbwz" method="post" aria-labelledby="beta-form-title" aria-describedby="beta-purpose beta-hint">
+          <input type="hidden" name="subject" value="TrueArchive – Beta-Anmeldung">
+          <input type="hidden" name="_language" value="de">
+          <fieldset>
+            <legend class="visually-hidden">E-Mail-Adresse für die Beta-Einladung</legend>
+            <label for="beta-email">Deine E-Mail-Adresse</label>
+            <input id="beta-email" name="email" type="email" autocomplete="email" inputmode="email" autocapitalize="none" spellcheck="false" maxlength="254" placeholder="du@beispiel.de" required>
+            <button class="button primary" type="submit">Zur Beta anmelden</button>
+          </fieldset>
+          <p class="beta-purpose" id="beta-purpose">Mit deiner Anmeldung möchtest du per E-Mail zur TrueArchive-Beta eingeladen werden.</p>
+          <p class="beta-hint" id="beta-hint">Nach dem Absenden führt dich Formspree durch die Bestätigung.</p>
+        </form>
+        <details class="beta-privacy" id="datenschutz">
+          <summary>Was passiert mit meiner E-Mail?</summary>
+          <p>Lutz Kohl verwendet deine E-Mail-Adresse für die Einladung zur TrueArchive-Beta. Die Anmeldung wird über Formspree übertragen und dort gespeichert. Formspree verarbeitet auch technische Daten wie IP-Adresse und Browserangaben; eine Verarbeitung in den USA ist möglich. <a href="https://formspree.io/legal/privacy-policy/">Datenschutz bei Formspree</a>.</p>
+          <p>Für Fragen, Widerruf deiner Anmeldung oder Löschung deiner Adresse schreib an <a href="mailto:lutz.kohl@gmail.com">lutz.kohl@gmail.com</a>.</p>
+        </details>
       </div>
     </section>
-
-    <section class="future-section wrap" aria-labelledby="future-title"><div><h2 id="future-title">Gemeinsam weiterbauen.</h2><p>TrueArchive entsteht als persönliches Community-Projekt. Das Ziel ist eine offene App für ein dauerhaft nutzbares Bildarchiv. Die Öffnung des Quellcodes und die Lizenz sind in Vorbereitung.</p></div><div class="future-list"><h3>Auf dem Weg zu 1.0</h3><ul><li>Apple Fotos regelmäßig abgleichen</li><li>Metadaten im Alltag mit Nitro und digiKam prüfen</li><li>Fremde Jahresarchive und einen Macwechsel begleiten</li><li>Installation und Updates vereinfachen</li></ul><p>Lightroom Cloud, eine geführte Bestandssichtung und weitere Module sind für später vorgesehen.</p></div></section>
-
-    <section class="faq-section wrap" aria-labelledby="faq-title"><h2 id="faq-title">Gut zu wissen.</h2><div class="faq-list">
-      <details><summary>Brauche ich TrueArchive, um mein Archiv zu öffnen?</summary><p>Nein. Die Bilder liegen als normale Mediendateien in Jahres- und Datumsordnern. Metadaten stehen in gemeinsamen XMP-Begleitdateien. Du kannst die Dateien unabhängig von TrueArchive lesen und mit geeigneten Programmen öffnen.</p></details>
-      <details><summary>Kommen wirklich alle Metadaten und Bearbeitungen mit?</summary><p>TrueArchive erhält die Daten, die die jeweilige Quelle bereitstellt. Bei Apple Fotos gehören dazu Originale, fertige Fassungen und angebotene Bearbeitungsressourcen. Nicht alle Angaben sind zugänglich; beispielsweise liefert der aktuelle Adapter keine Personen oder Apple-Fotos-Schlagwörter. Die <a href="anleitung.html#metadaten">Anleitung erklärt den Umfang</a>.</p></details>
-      <details><summary>Was passiert, wenn eine Übernahme unterbrochen wird?</summary><p>Ab Version 0.3.0 prüft TrueArchive das ausgewählte Archiv auf offene Vorgänge. Eindeutig belegte Übernahmen lassen sich kontrolliert wiederherstellen. Unklare oder unabhängig veränderte Dateien bleiben zur Prüfung erhalten. <a href="anleitung.html#wiederherstellung">Zur Wiederherstellung</a>.</p></details>
-      <details><summary>Kann ich mein vorhandenes Jahresarchiv schon anschließen?</summary><p>Ein vorhandenes TrueArchive-Archiv kannst du direkt weiterverwenden. Ein neuer leerer Ordner wird zu deinem neuen Archiv. Die Übernahme eines fremden Jahresarchivs als Archivbestand ist noch nicht eingebaut; dafür reicht die Auswahl als Zielordner nicht aus.</p></details>
-      <details><summary>Kann ich später weitere Ordner hinzufügen?</summary><p>Ja. Über + „Quelle hinzufügen“ verbindest du weitere lokale Ordner, auch mehrere auf einmal. Jede Quelle behält ihre Einstellung für Unterordner. Du startest den Abgleich für die gewünschte Quelle selbst; ein automatischer Zeitplan folgt später.</p></details>
-      <details><summary>Gibt TrueArchive Speicher in iCloud frei?</summary><p>Die Standard-App löscht keine Quellen. Ein getrenntes Modul zum gezielten Entfernen großer Videos ist später denkbar. Es gehört nicht zum jetzigen Pilot.</p></details>
-    </div></section>
   </main>
-  <footer class="site-footer wrap"><a class="brand" href="index.html"><img src="assets/app-icon.png" width="34" height="34" alt=""><span>TrueArchive</span></a><p>Deine Bilder. Dein Archiv.<br><span>Persönliches Community-Projekt in Entwicklung.</span></p><nav aria-label="Weitere Informationen"><a href="anleitung.html">Anleitung</a><a href="#download">Download</a><a href="https://github.com/lutzkohl/TrueArchive">GitHub (privat)</a></nav></footer>
+
+  <footer class="site-footer wrap"><p><strong>TrueArchive</strong><br>Ein persönliches Community-Projekt.</p><nav aria-label="Weitere Informationen"><a href="anleitung.html">Anleitung</a><a href="mailto:lutz.kohl@gmail.com">Kontakt</a><a href="https://github.com/lutzkohl/TrueArchive-website">Website auf GitHub</a></nav></footer>
 </body>
 </html>

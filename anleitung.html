@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="description" content="TrueArchive 0.4.0 einrichten: Apple Fotos, SD-Karten und lokale Ordner verbinden, ein eigenes Archiv anlegen und mit bis zu zehn Bildern starten.">
+  <meta name="description" content="TrueArchive für Mac installieren, Quellen verbinden und die ersten Bilder archivieren. Kurze Anleitung und Antworten zum Pilot 0.4.2.">
   <meta name="robots" content="noindex, nofollow">
   <meta name="theme-color" content="#1E3C93">
   <title>Anleitung – TrueArchive</title>
@@ -12,70 +12,106 @@
 </head>
 <body>
   <a class="skip-link" href="#inhalt">Zum Inhalt</a>
-  <header class="site-header wrap"><a class="brand" href="index.html" aria-label="TrueArchive Startseite"><img src="assets/app-icon.png" width="42" height="42" alt=""><span>TrueArchive</span></a><nav aria-label="Hauptnavigation"><a href="index.html#archiv">Das Archiv</a><a href="anleitung.html" aria-current="page">Anleitung</a><a class="nav-download" href="index.html#download">Download</a></nav></header>
+  <header class="site-header wrap">
+    <a class="brand" href="index.html" aria-label="TrueArchive Startseite"><img src="assets/app-icon.png" width="40" height="40" alt=""><span>TrueArchive</span></a>
+    <nav aria-label="Hauptnavigation"><a class="secondary-nav" href="anleitung.html" aria-current="page">Anleitung</a><a class="button small primary" href="index.html#beta">Zur Beta anmelden</a></nav>
+  </header>
+
   <main id="inhalt" class="wrap">
-    <div class="guide-heading"><h1>Dein erstes Archiv.</h1><p>Der Assistent verbindet deine Quellen mit deinem Archiv. Eine kleine erste Übernahme hilft dir, Dateien und Metadaten in Ruhe kennenzulernen.</p><p class="guide-version">Anleitung für Pilot 0.4.0, Stand 8. September 2026.</p></div>
+    <div class="guide-heading"><h1>Loslegen mit TrueArchive.</h1><p>Quellen verbinden, Vorschau prüfen, Bilder archivieren.</p><p class="guide-version">Anleitung für den kostenlosen Pilot 0.4.2</p></div>
     <div class="guide-layout">
-      <nav class="guide-nav" aria-label="In dieser Anleitung"><a href="#installation">Installation</a><a href="#einrichtung">Einrichtung in fünf Schritten</a><a href="#archiv-einrichten">Archiv und Verbindungen</a><a href="#apple-fotos">Apple Fotos exportieren</a><a href="#sd-karte">Karten und Ordner übernehmen</a><a href="#metadaten">Metadaten verstehen</a><a href="#wiederherstellung">Unterbrechung klären</a><a href="#digikam">Mit digiKam ansehen</a><a href="#hilfe">Wenn etwas offen bleibt</a></nav>
+      <nav class="guide-nav" aria-label="In dieser Anleitung"><a href="#installation">Installieren</a><a href="#einrichtung">Das erste Archiv</a><a href="#details">Fragen und Details</a><a href="#hilfe">Bei Problemen</a></nav>
       <div class="guide-content">
         <section id="installation" aria-labelledby="installation-title">
-          <h2 id="installation-title">Installation im Pilot</h2>
-          <p>TrueArchive 0.4.0 benötigt macOS 15 oder neuer. Das Paket enthält Intel- und Apple-Silicon-Versionen. Der Laufzeittest dieser Ausgabe auf Intel steht aus.</p>
-          <div class="guide-note"><p><strong>TrueArchive 0.4.0 ist als Pilot verfügbar.</strong> <a href="https://github.com/lutzkohl/TrueArchive-website/releases/download/v0.4.0-pilot/TrueArchive-0.4.0-pilot-macos-universal.zip">Lade das App-Paket für Intel und Apple Silicon herunter</a>. Für diesen öffentlichen Download brauchst du keinen Zugang zum privaten Quellcode-Projekt. Dazu gehören die <a href="https://github.com/lutzkohl/TrueArchive-website/releases/download/v0.4.0-pilot/TrueArchive-0.4.0-pilot-macos-universal.zip.sha256">SHA-256-Prüfsumme</a> und die <a href="https://github.com/lutzkohl/TrueArchive-website/releases/tag/v0.4.0-pilot">Versionshinweise mit dem Prüfstand</a>.</p></div>
-          <ol><li><strong>Vorhandene Übernahmen beenden.</strong> Schließe eine ältere TrueArchive- beziehungsweise Bildarchiv-App, bevor du die neue Ausgabe öffnest.</li><li><strong>Das bereitgestellte ZIP entpacken.</strong> Lege <code>TrueArchive.app</code> in deinen Programme-Ordner und öffne sie. Version, Paketdetails und Prüfsumme stehen beim jeweiligen Release.</li><li><strong>macOS-Hinweise prüfen.</strong> Der Pilot ist lokal signiert und noch nicht notarisiert. Wenn macOS ihn blockiert, prüfe zuerst Herkunft und Version des Pakets. Deaktiviere keine Sicherheitseinstellungen pauschal.</li></ol>
-          <p>Zum Verwenden des fertigen Pakets ist Xcode nicht nötig. Wer selbst bauen möchte, findet die Bauanleitung im <a href="https://github.com/lutzkohl/TrueArchive">privaten GitHub-Projekt</a>.</p>
+          <h2 id="installation-title">Installieren</h2>
+          <p>Du brauchst einen Mac mit <strong>macOS 15 oder neuer</strong>. Dasselbe Paket läuft auf Intel und Apple Silicon.</p>
+          <p>Wenn du deine Beta-Einladung erhalten hast, kannst du das darin verlinkte App-Paket so installieren:</p>
+          <ol>
+            <li><strong>Laufende Übernahmen beenden.</strong> Schließe die ältere TrueArchive-App vor einem Update.</li>
+            <li><strong>Das App-Paket aus deiner Beta-Einladung entpacken.</strong> Lege <code>TrueArchive.app</code> in den Ordner „Programme“.</li>
+            <li><strong>App öffnen.</strong> Beim ersten Start beginnt der Einrichtungsassistent.</li>
+          </ol>
+          <p>Noch keine Einladung erhalten? <a href="index.html#beta">Melde dich für die Beta an.</a></p>
+          <div class="guide-note"><p>Der Pilot ist noch nicht notarisiert. Falls macOS den Start blockiert, prüfe Herkunft und Version des Pakets. Schalte die Sicherheitseinstellungen nicht pauschal ab.</p></div>
+          <p>Nutze die Versionshinweise und die Prüfsumme, die zu deinem eingeladenen App-Paket gehören.</p>
         </section>
 
         <section id="einrichtung" aria-labelledby="setup-title">
-          <h2 id="setup-title">Einrichtung in fünf Schritten</h2>
-          <p>Beim ersten Start führt dich TrueArchive durch die Einrichtung. Ein zusätzlicher Testordner ist nicht erforderlich: Deine erste Übernahme landet im gewählten Archiv.</p>
-          <ol><li><strong>Deine Quellen.</strong> Wähle Apple Fotos, SD-Karten und/oder „Festplatten &amp; lokale Ordner“. Mehrere Arten lassen sich kombinieren.</li><li><strong>Dein Archiv.</strong> Wähle „Neues Archiv anlegen“ oder verbinde über „Archiv wählen …“ ein vorhandenes TrueArchive-Archiv. Die App prüft den Speicherort und offene Übernahmen und zeigt den freien Platz.</li><li><strong>Verbinden.</strong> Über + „Quelle hinzufügen“ kannst du Karten, Festplatten oder weitere lokale Ordner auswählen, auch mehrere gleichzeitig. Lege für jede Quelle fest, ob Unterordner dazugehören. Für Apple Fotos prüfst du den Zugriff auf die Systemfotomediathek dieses Mac-Benutzers. Für den Einstieg genügt eine erreichbare Quelle.</li><li><strong>Erste Übernahme.</strong> Wähle eine Quelle und „Bis zu 10 Bilder prüfen“. Lies die Vorschau und wähle Bilder bei Bedarf ab. Erst dein ausdrücklicher Start überträgt die Auswahl. Eigenständige Videos sind in diesem Einstieg ausgeschlossen; XMP-Dateien und zusammengehörige Live-Photo-Ressourcen bleiben dabei. Mit „Ohne Übernahme weiter“ kannst du den Schritt überspringen.</li><li><strong>Bereit.</strong> Sieh das Ergebnis und offene Hinweise an, öffne das Archiv und schließe die Einrichtung ab. Der optionale Einrichtungsbericht lässt sich vor dem Kopieren ansehen; er wird nicht automatisch versendet.</li></ol>
-          <p>Bei lokalen Quellen zählt die kleine Auswahl höchstens zehn Mediendateien, bei Apple Fotos höchstens zehn logische Bilder. Die lokale Stichprobe folgt Ordner- und Dateinamen, Apple Fotos dem neuesten Aufnahmedatum. Die Stichprobe ist keine vollständige Prüfung aller Quellen.</p>
+          <h2 id="setup-title">Dein erstes Archiv</h2>
+          <ol>
+            <li><strong>Quellen und Archiv verbinden.</strong> Füge Apple Fotos, eine SD-Karte oder lokale Bildordner hinzu. Wähle danach einen neuen leeren Archivordner oder dein vorhandenes TrueArchive-Archiv. Das Ziel benötigt APFS oder HFS+.</li>
+            <li><strong>Eine kleine Vorschau erstellen.</strong> Im Assistenten werden höchstens zehn Bilder geprüft. Wähle die gewünschten Bilder aus. Eigenständige Videos sind bei diesem Einstieg ausgeschlossen; RAW/XMP und zusammengehörige Live-Photo-Dateien bleiben zusammen.</li>
+            <li><strong>Ausgewählte Bilder archivieren.</strong> Erst diese Aktion überträgt die Dateien. Sieh das Ergebnis an und schließe die Einrichtung ab. Die erste Übernahme ist optional: Du kannst sie überspringen.</li>
+          </ol>
+          <p>Deine erste Übernahme landet direkt im gewählten Archiv. Ein zusätzlicher Testordner ist nicht nötig. Quellen und Archiv bleiben auf diesem Mac gespeichert.</p>
+          <div class="guide-note"><p><strong>Die Richtung ist immer Quelle → Archiv.</strong> TrueArchive verändert oder löscht keine Quellen. Auch wenn du später dort eine Datei löschst, bleibt die Archivkopie erhalten.</p></div>
         </section>
 
-        <section id="archiv-einrichten" aria-labelledby="archive-title">
-          <span id="testarchiv" aria-hidden="true"></span>
-          <h2 id="archive-title">Archiv und Verbindungen behalten</h2>
-          <p>Das Ziel ist ein neuer leerer Ordner oder ein vorhandenes TrueArchive-Archiv auf einer lokal angeschlossenen APFS- oder HFS+-Platte. Quellen dürfen auch auf FAT- oder exFAT-Laufwerken liegen. Ein fremdes bestehendes Jahresarchiv lässt sich noch nicht einfach als Archivziel anschließen.</p>
-          <p>TrueArchive speichert Quellen, Unterordnereinstellungen und das Archiv auf diesem Mac. Nach einem abgeschlossenen Setup öffnet sich beim nächsten Start die Übersicht. Fehlt eine Platte, bleibt ihre Verbindung gespeichert: Schließe sie an und wähle „Verbindungen erneut prüfen“ beziehungsweise „Erneut verbinden“. Eine andere Platte am gleichen Pfad wird nicht ungeprüft als dieselbe Quelle übernommen.</p>
-          <p>In der Seitenleiste stehen oben deine <strong>Quellen</strong>. Ein Klick auf eine Quelle öffnet ihre Einstellungen und Übernahme. Über <strong>+ Quelle hinzufügen</strong> ergänzt du weitere Ordner. Der Pfeil „Ins Archiv übernehmen“ zeigt auf das gemeinsame Ziel <strong>TrueArchive</strong> darunter. Jeder Abgleich wird manuell gestartet; Zeitpläne folgen später.</p>
-          <p>Das Minus an einer Quelle entfernt nur ihre gespeicherte Verbindung. Es löscht weder Quelldateien noch bereits archivierte Medien. Ein Umzug der Einrichtung auf einen anderen Mac ist noch kein automatisch unterstützter Ablauf.</p>
-          <div class="guide-note"><p><strong>Archivformat ab 0.3.0:</strong> Neue Schreibvorgänge erweitern eigene Archive auf Format 4. Danach musst du dieses Archiv mit TrueArchive 0.3.0 oder neuer weiterbearbeiten. Bestehende Medien werden dabei nicht umsortiert.</p></div>
-          <p>Während einer Übernahme nicht gleichzeitig mit Nitro oder digiKam in das Zielarchiv schreiben.</p>
+        <section class="detail-section" id="details" aria-labelledby="details-title">
+          <h2 id="details-title">Fragen und Details</h2>
+          <p class="detail-intro">Öffne nur, was du gerade brauchst.</p>
+
+          <details id="archiv-einrichten">
+            <summary>Wo liegen die Dateien, und was bleibt gespeichert?</summary>
+            <span id="testarchiv" aria-hidden="true"></span>
+            <p>Neue Archive legen Bilder direkt im gewählten Ordner ab: <code>2026/2026-09-08/</code>, ohne zusätzlichen Medien-Ordner. Ohne bekanntes Datum heißt der Ordner <code>Unbekannt</code>. Zu jeder Mediendatei gehört ein gemeinsames XMP.</p>
+            <p>Bestehende TrueArchive-Archive behalten ihre bisherige Ablage unter <code>Medien/</code>. Sie werden nicht automatisch umsortiert. Andere gefüllte Bildordner fügst du als Quellen hinzu.</p>
+            <p>Links stehen deine Quellen, darunter zeigt der Pfeil zum Archivziel. Über <strong>+</strong> ergänzt du weitere Quellen. In „Einstellungen“ änderst du Name und Unterordnerauswahl. „Quelle entfernen“ entfernt nur diese gespeicherte Verbindung.</p>
+            <p>Fehlt eine Platte, schließe sie an und wähle „Erneut verbinden“. Ein anderer Datenträger am gleichen Pfad wird nicht ungeprüft übernommen. Nach einem Macwechsel richtest du die Quellen auf dem neuen Mac erneut ein.</p>
+          </details>
+
+          <details id="apple-fotos">
+            <summary>Wie übernehme ich Bilder aus Apple Fotos?</summary>
+            <p>Verbinde die erwartete Systemfotomediathek dieses Mac-Benutzers und erlaube den angefragten Fotos-Zugriff. Eine externe Mediathek muss angeschlossen sein. Der Quellenname wechselt keinen Apple-Account.</p>
+            <p>Öffne die Fotos-Quelle und wähle <strong>„Vorschau erstellen“</strong>. Außerhalb des Assistenten prüfst du die neuesten 1–100 erreichbaren Aufnahmen, standardmäßig 20. Den Umfang änderst du in der Konfiguration. Wähle anschließend aus, was archiviert werden soll.</p>
+            <p>Beim Archivieren werden benötigte iCloud-Ressourcen angefordert; lokale Dateien müssen nicht erneut geladen werden. Originale, aktuelle Fassungen und verfügbare Zusatzressourcen kommen mit. Live Photos können mehrere Dateien ergeben.</p>
+            <p>Jeden Abgleich startest du selbst. Es gibt noch keinen regelmäßigen Vollabgleich der Mediathek und keine automatische Übernahme beim Anschließen.</p>
+          </details>
+
+          <details id="sd-karte">
+            <summary>Wie übernehme ich Karten und lokale Ordner?</summary>
+            <p>Füge über <strong>+</strong> eine SD-Karte, Festplatte oder weitere lokale Ordner hinzu. Mehrere Ordner lassen sich gleichzeitig wählen. Quellen dürfen auch auf FAT oder exFAT liegen; Quelle und Archiv müssen getrennt sein.</p>
+            <p>Klicke links auf eine Quelle und erstelle die Vorschau. Unter „Einstellungen“ entscheidest du, ob Unterordner dazugehören. Die reguläre Vorschau prüft den gewählten Umfang; nur der Einstieg im Assistenten ist auf zehn Bilder begrenzt.</p>
+            <p>Filter und Seitenwechsel helfen bei großen Beständen. Prüfe neue Dateien, Änderungen und offene Fälle, bevor du <strong>„ausgewählte archivieren“</strong> startest. Eine erneute Prüfung erkennt passende bereits archivierte Medien wieder.</p>
+            <p>RAWs und vorhandene XMPs werden zusammen übernommen. Fertige Bilder in Apple Fotos und RAWs auf der Karte werden nicht allein wegen ähnlicher Namen automatisch verknüpft.</p>
+          </details>
+
+          <details id="metadaten">
+            <summary>Welche Metadaten und Bearbeitungen kommen mit?</summary>
+            <ul>
+              <li><strong>Originale:</strong> unveränderte Dateien samt eingebetteten Metadaten.</li>
+              <li><strong>Apple Fotos:</strong> aktuelle Bearbeitungen, zugängliche Alben, Datum, GPS, Favorit und angebotene Bearbeitungsressourcen.</li>
+              <li><strong>Lokale Quellen:</strong> vorhandene XMP-Daten. Unterstützte Änderungen werden mit unabhängigen Archivangaben zusammengeführt; Konflikte bleiben sichtbar.</li>
+            </ul>
+            <p>Apple-Fotos-Titel, Beschreibung, Schlagwörter, Personen und ursprüngliche Zeitzone liefert der aktuelle Adapter nicht. Bereits eingebettete Angaben bleiben im Original erhalten.</p>
+            <p>Proprietäre Bearbeitungsrezepte lassen sich nicht automatisch in jeder anderen App weiterbearbeiten. Nitro-Dateien <code>.photo</code> und <code>.photo-edit</code> werden bisher nicht übernommen. Der vollständige Rücktest mit Nitro und digiKam steht aus.</p>
+          </details>
+
+          <details id="wiederherstellung">
+            <summary>Kann ich pausieren oder nach einer Unterbrechung fortsetzen?</summary>
+            <p>Über das TrueArchive-Symbol in der Menüleiste siehst du den aktuellen Status und öffnest das App-Fenster.</p>
+            <p>Lokale Übernahmen kannst du <strong>pausieren und im selben geöffneten Lauf fortsetzen</strong>. Quelle und Archiv müssen angeschlossen bleiben. Der Fotos-Export unterstützt Abbrechen, aber noch keine Pause.</p>
+            <p>Nach einer Unterbrechung wählst du dasselbe Archiv. Bei „Unterbrochene Übernahme gefunden“ kannst du <strong>„Übernahme wiederherstellen“</strong> starten. Die App prüft die Belege erneut und schließt eindeutig vorbereitete Schritte ab. Unklare Dateien bleiben zur Prüfung erhalten.</p>
+            <p>Erstelle danach eine neue Vorschau. Vollständig archivierte Bilder werden wiedererkannt. „Keine offenen Übernahmen“ ist keine vollständige Prüfung aller Archivdateien und kein Nachweis einer zweiten Sicherung.</p>
+            <p>Bei „Archiv wird bereits verwendet“ warte auf den anderen Vorgang. Lösche die Datei <code>.bildarchiv/write.lock</code> nicht zum Entsperren.</p>
+          </details>
+
+          <details id="digikam">
+            <summary>Kann ich das Archiv mit digiKam durchsuchen?</summary>
+            <p>Ja. Das Archiv besteht aus normalen Dateien und XMP-Begleitdateien. Du kannst es im Finder öffnen und mit einer vorhandenen digiKam-Installation durchsuchen. Suche und Gesichtserkennung bleiben Aufgaben von digiKam.</p>
+            <p>TrueArchive installiert oder konfiguriert digiKam noch nicht. Warte mit Änderungen im Archiv, bis die Übernahme beendet ist.</p>
+          </details>
         </section>
-
-        <section id="apple-fotos" aria-labelledby="photos-title">
-          <h2 id="photos-title">Aus Apple Fotos exportieren</h2>
-          <p>Der Pilot übernimmt eine ausgewählte Gruppe der neuesten Aufnahmen. Er führt noch keinen regelmäßigen Abgleich der ganzen Mediathek aus.</p>
-          <ol><li><strong>Apple Fotos prüfen.</strong> Öffne Fotos und kontrolliere, ob deine erwartete Systemfotomediathek erreichbar ist. Liegt sie auf einer externen Platte, muss diese angeschlossen sein.</li><li><strong>Die Fotos-Quelle in TrueArchive öffnen.</strong> Wähle ihren Eintrag unter „Quellen“. Ihr Name ist eine Bezeichnung; er wechselt keinen Apple-Account.</li><li><strong>Die Vorschau laden.</strong> Im Assistenten prüfst du bis zu zehn Bilder ohne eigenständige Videos. Außerhalb des Assistenten umfasst „Exportvorschau laden“ die neuesten 1–100 Aufnahmen, standardmäßig 20; dort werden Bilder und Videos zusammen gezählt. Erlaube den angefragten Fotos-Zugriff.</li><li><strong>Aufnahmen auswählen und exportieren.</strong> Lies die Hinweise zu den angebotenen Ressourcen. Erst beim Export werden benötigte iCloud-Ressourcen angefordert. Lokal vorhandene Dateien müssen nicht erneut heruntergeladen werden.</li><li><strong>Das Ergebnis kontrollieren.</strong> Öffne Originale und fertige Fassungen im Archiv. Lade danach eine neue Vorschau und prüfe dieselbe Auswahl erneut: unveränderte Aufnahmen sollen keine weiteren Medienkopien erzeugen.</li></ol>
-          <p>Der Fotos-Export lässt sich mit „Anhalten“ abbrechen. Pause/Fortsetzen wie bei lokalen Dateien ist hier noch nicht eingebaut. Vollständig abgeschlossene Aufnahmen bleiben erhalten; eine neue Prüfung klärt den nächsten Schritt.</p>
-          <p>Neue Aufnahmen liegen direkt unter <code>Medien/Jahr/Jahr-Monat-Tag</code>. Bereits früher exportierte Apple-Unterordner bleiben an ihrem bisherigen Ort. Ein Live Photo kann mehrere zusammengehörige Mediendateien erzeugen.</p>
-        </section>
-
-        <section id="sd-karte" aria-labelledby="sd-title">
-          <h2 id="sd-title">Karten und lokale Ordner übernehmen</h2>
-          <p>Du kannst SD-Karten, Ordner auf Festplatten und weitere lokale Ordner auf dem Mac als Quellen speichern. Auch der Ablauf mit Nitro bleibt möglich: auf dem iPad direkt auf der Karte bearbeiten, fertige JPEG-/HEIC-Bilder nach Apple Fotos exportieren und RAWs samt XMP später am Mac archivieren.</p>
-          <ol><li><strong>Quelle hinzufügen.</strong> Wähle über + „Quelle hinzufügen“ die passende Art und anschließend einen oder mehrere Ordner. Gleiche oder ineinander liegende Quellordner werden nicht doppelt eingerichtet. Quelle und Ziel müssen getrennt liegen.</li><li><strong>Die Quelle konfigurieren.</strong> Klicke ihren Eintrag in der Seitenleiste an. Entscheide mit „Unterordner einbeziehen“, ob auch darunter liegende Aufnahmeordner geprüft werden.</li><li><strong>Die Vorschau laden.</strong> Im Assistenten liest „Bis zu 10 Bilder prüfen“ nur die kleine Bildauswahl vollständig. Im normalen Ablauf prüft „Quelle prüfen“ die unterstützten Medien des gewählten Ordners entsprechend der Unterordnereinstellung. Phase, Datei- und Datenfortschritt bleiben sichtbar.</li><li><strong>Die Auswahl archivieren.</strong> Prüfe Hinweise und wähle bei Bedarf Dateien ab. Vor der Übernahme prüft TrueArchive denselben Umfang erneut; ein begrenzter Einstieg wird dabei nicht still auf die ganze Karte erweitert. Neue Medien werden kopiert, passende vorhandene Medien wiedererkannt. Unterstützte XMP-Änderungen werden zusammengeführt, Konflikte bleiben sichtbar.</li><li><strong>Bei Bedarf pausieren.</strong> „Pausieren“ wartet an einem sicheren Zwischenpunkt. „Fortsetzen“ arbeitet im selben geöffneten Lauf weiter. Quelle und Archiv müssen angeschlossen bleiben. „Abbrechen“ beendet auch einen pausierten Vorgang.</li><li><strong>Dateien und Wiederholung prüfen.</strong> Öffne einige Bilder und ihre XMPs im Archiv. Prüfe dieselbe Quelle erneut, um die Wiedererkennung zu kontrollieren. Weitere gespeicherte Quellen gleichst du anschließend einzeln ab.</li></ol>
-          <p><strong>Die Richtung bleibt Quelle → Archiv.</strong> Quellen werden nicht verändert. Wenn du später eine Quelldatei löschst, bleibt ihre Archivkopie erhalten. Für identische Medien aus unterschiedlichen Quellen wird eine unklare Mehrfachzuordnung gemeldet; die App ordnet sie nicht allein nach ähnlichen Namen automatisch zu.</p>
-          <p>Nitro-Dateien mit den Endungen <code>.photo</code> und <code>.photo-edit</code> werden bisher nicht übernommen; ihr Erhaltungsbedarf wird noch untersucht. Auch der vollständige Bearbeitungs-Rücktest mit Nitro und digiKam steht aus. Ein fertiges Bild in Apple Fotos und das RAW auf einer Karte bleiben zunächst eigenständige Quellenressourcen.</p>
-        </section>
-
-        <section id="metadaten" aria-labelledby="metadata-title"><h2 id="metadata-title">Was mitkommt</h2><p>Die Mediendateien bleiben unverändert. Zu jeder Mediendatei gehört eine eigene gemeinsame XMP-Begleitdatei mit verfügbaren zusätzlichen Angaben und der Archivzuordnung. Was die Quelle nicht bereitstellt, kann TrueArchive nicht vollständig ergänzen.</p><div class="table-scroll"><table><caption class="visually-hidden">Datenumfang des Pilots 0.4.0</caption><thead><tr><th scope="col">Aus der Quelle</th><th scope="col">Im Archiv</th></tr></thead><tbody><tr><td>Originale</td><td>Unveränderte Originaldateien; eingebettete Metadaten bleiben in den Medienbytes erhalten.</td></tr><tr><td>Fertige Bearbeitungen in Apple Fotos</td><td>Aktuelle Fassungen als eigene Ressourcen neben dem Original.</td></tr><tr><td>Bearbeitungsrezepte</td><td>Von Apple angebotene Zusatzressourcen sowie vorhandene XMP-Daten aus lokalen Quellen. Keine Zusage, proprietäre Rezepte in anderen Programmen erneut bearbeiten zu können.</td></tr><tr><td>Apple-Fotos-Alben</td><td>Zugängliche normale Alben einschließlich Ordnerpfaden. Keine vollständige Nachbildung der Fotos-Oberfläche.</td></tr><tr><td>GPS, Datum und Favorit</td><td>Soweit vom Adapter geliefert. Favorit wird getrennt von einer Sternebewertung behandelt.</td></tr><tr><td>Apple-Fotos-Titel, Beschreibung, Schlagwörter, Personen, ursprüngliche Zeitzone</td><td>Werden vom aktuellen Adapter nicht geliefert. Bereits eingebettete Angaben bleiben in den Originaldateien erhalten.</td></tr></tbody></table></div><p>Fehlende benötigte Ressourcen blockieren eine Aufnahme. Nicht angebotene Bearbeitungsrezepte werden als Einschränkung gemeldet. Die Beispielansicht auf der Startseite verwendet erfundene Daten; sie zeigt keine echte Fotos-Mediathek.</p></section>
-
-        <section id="wiederherstellung" aria-labelledby="recovery-title"><h2 id="recovery-title">Eine Unterbrechung klären</h2><p>Ab 0.3.0 erkennt TrueArchive belegte unterbrochene Datei- und Fotos-Vorgänge. Die Wiederherstellung arbeitet mit den vorbereiteten Dateien im Archiv; die Quelle wird dabei nicht verändert.</p><ol><li><strong>Dieselbe Archivplatte anschließen und das Archiv auswählen.</strong> Die App prüft automatisch auf offene Vorgänge. Dafür ist kein Zugriff auf SD-Karte oder Apple Fotos nötig.</li><li><strong>Den Status und die Details lesen.</strong> Bei „Unterbrochene Übernahme gefunden“ bietet die App „Übernahme wiederherstellen“ an.</li><li><strong>Die Wiederherstellung ausführen.</strong> TrueArchive prüft die Belege erneut. Eindeutig vorbereitete Dateischritte werden abgeschlossen; nachweislich eigene unvollständige Arbeitskopien können verworfen und später neu übertragen werden.</li><li><strong>Die Quelle neu prüfen.</strong> Sobald keine offenen Übernahmen mehr vorliegen, starte eine neue Quellenprüfung oder Fotos-Vorschau. Bereits vollständig archivierte Inhalte werden wiedererkannt.</li></ol><p>„Archiv wird bereits verwendet“ bedeutet, dass eine andere Instanz die Schreibsperre hält. Warte auf deren Abschluss und prüfe erneut. Bei „Archiv braucht Aufmerksamkeit“ fehlen Beweise oder Dateien passen nicht mehr zum vorbereiteten Vorgang. Diese Dateien werden nicht automatisch ersetzt oder entfernt.</p><div class="guide-note"><p>Die kleine Datei <code>.bildarchiv/write.lock</code> bleibt dauerhaft im Archiv. <strong>Nicht manuell löschen.</strong> Das Betriebssystem gibt die aktive Sperre nach Prozessende frei. Alte Verzeichnissperren und ältere unbelegte Teilvorgänge benötigen eine gezielte Prüfung.</p></div><p>Die Archivprüfung ist keine vollständige Prüfung aller Medienbytes. Getestete Prozessabbrüche sind außerdem keine Garantie für beliebige Stromausfälle oder beschädigte Laufwerke.</p></section>
-
-        <section id="digikam" aria-labelledby="digikam-title"><h2 id="digikam-title">Das Archiv mit digiKam ansehen</h2><p>TrueArchive legt lesbare Ordner und XMP-Begleitdateien an. Eine bereits installierte digiKam-App kannst du über „digiKam öffnen“ starten und dein Archiv dort ansehen.</p><p>Installation und Einrichtung von digiKam werden nicht automatisch übernommen. Suche und Gesichtserkennung sind Aufgaben von digiKam. Ein vollständiger Rücktest gemeinsam bearbeiteter XMP-Dateien steht noch aus; beginne auch dort mit deinem kleinen Testbestand.</p><p>Warte mit Änderungen in digiKam, bis die Übernahme in TrueArchive beendet ist.</p></section>
 
         <section id="hilfe" aria-labelledby="help-title">
-          <h2 id="help-title">Wenn etwas offen bleibt</h2>
-          <p>Öffne den Einrichtungsbericht am Ende des Assistenten oder in der Quellenübersicht. Er enthält App-Version, macOS-Version, Prozessorart und zusammengefasste Ergebnisse. Bilder, Dateinamen, Pfade, Alben, GPS und Quellenkennungen gehören nicht dazu. Lies ihn durch und kopiere ihn nur, wenn du ihn selbst teilen möchtest.</p>
-          <p>Notiere zusätzlich den Schritt, bei dem das Problem auftrat, und die sichtbare Meldung. Mitwirkende mit Projektzugriff können <a href="https://github.com/lutzkohl/TrueArchive/issues">einen Fehler im privaten GitHub-Projekt melden</a>. Teile dort keine privaten Fotos, vollständigen XMP-Dateien, Orte oder Zugangsdaten. Ein kleines erfundenes Beispiel reicht oft zur Eingrenzung.</p>
-          <p>Offene Entwicklungsschritte sind regelmäßige Abgleiche, die geführte Übernahme fremder Jahresarchive und das Wiederverbinden nach einem Macwechsel. Lightroom Cloud, eine umfassende Bestandssichtung, digiKam-Einrichtung und ein getrenntes Video-Löschmodul kommen gegebenenfalls später.</p>
-          <a class="button primary" href="index.html#download">Zum aktuellen Stand</a>
+          <h2 id="help-title">Bei Problemen</h2>
+          <p>Notiere den Schritt und die sichtbare Meldung. Am Ende des Assistenten kannst du den Einrichtungsbericht ansehen und bewusst kopieren. Er enthält technische Angaben und Anzahlen, keine privaten Bilder oder Dateipfade. Es wird nichts automatisch versendet.</p>
+          <p>Beachte den Prüfstand und die bekannten Einschränkungen in den Versionshinweisen deiner Testversion. TrueArchive ist ein persönliches Community-Projekt im Pilotbetrieb.</p>
+          <p><a href="index.html">Zurück zur Startseite</a></p>
         </section>
       </div>
     </div>
   </main>
-  <footer class="site-footer wrap"><a class="brand" href="index.html"><img src="assets/app-icon.png" width="34" height="34" alt=""><span>TrueArchive</span></a><p>Deine Bilder. Dein Archiv.<br><span>Persönliches Community-Projekt in Entwicklung.</span></p><nav aria-label="Weitere Informationen"><a href="index.html">Startseite</a><a href="index.html#download">Download</a><a href="https://github.com/lutzkohl/TrueArchive">GitHub (privat)</a></nav></footer>
+  <footer class="site-footer wrap"><p><strong>TrueArchive</strong><br>Ein persönliches Community-Projekt.</p><nav aria-label="Weitere Informationen"><a href="index.html">Startseite</a><a href="index.html#beta">Zur Beta anmelden</a><a href="mailto:lutz.kohl@gmail.com">Kontakt</a></nav></footer>
 </body>
 </html>
