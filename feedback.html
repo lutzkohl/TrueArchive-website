@@ -1,0 +1,95 @@
+<!doctype html>
+<html lang="de">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="TrueArchive gemeinsam verbessern: Erfahrungen aus der Testphase teilen oder eine neue Funktion vorschlagen.">
+  <meta name="robots" content="noindex, nofollow">
+  <meta name="theme-color" content="#1E3C93">
+  <title>Feedback und Wünsche – TrueArchive</title>
+  <link rel="icon" href="assets/app-icon.png" type="image/png">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <a class="skip-link" href="#inhalt">Zum Inhalt</a>
+  <header class="site-header wrap">
+    <a class="brand" href="index.html" aria-label="TrueArchive Startseite"><img src="assets/app-icon.png" width="40" height="40" alt=""><span>TrueArchive</span></a>
+    <nav aria-label="Hauptnavigation">
+      <a class="secondary-nav" href="index.html#funktionen">Funktionen</a>
+      <a class="secondary-nav" href="feedback.html" aria-current="page">Feedback</a>
+      <a class="secondary-nav" href="anleitung.html">Anleitung</a>
+      <a class="button small primary" href="index.html#beta">Zur Beta anmelden</a>
+    </nav>
+  </header>
+
+  <main id="inhalt" class="wrap feedback-main">
+    <div class="guide-heading feedback-heading">
+      <h1>TrueArchive mitgestalten.</h1>
+      <p>Teile deine Erfahrungen aus der Testphase oder schlage eine Funktion vor. Beides hilft uns bei den nächsten Schritten.</p>
+      <nav class="feedback-nav" aria-label="Rückmeldung wählen"><a href="#testfeedback">Feedback zur Testphase</a><a href="#featurewunsch">Featurewunsch abgeben</a></nav>
+    </div>
+
+    <div class="feedback-forms">
+      <section class="response-panel" id="testfeedback" tabindex="-1" aria-labelledby="testfeedback-title">
+        <h2 id="testfeedback-title">Feedback zur Testphase</h2>
+        <p class="form-intro" id="feedback-purpose">Was funktioniert gut, was ist unklar, wo gibt es ein Problem?</p>
+        <form id="testfeedback-form" action="https://formspree.io/f/xeaqrbwz" method="post" aria-labelledby="testfeedback-title" aria-describedby="feedback-purpose feedback-data-hint">
+          <input type="hidden" name="subject" value="TrueArchive – Feedback zur Testphase">
+          <input type="hidden" name="_language" value="de">
+          <div class="form-field">
+            <label for="feedback-message">Deine Erfahrung <span>(Pflichtfeld)</span></label>
+            <p class="field-hint" id="feedback-message-hint">Bei einem Problem: Was hast du getan, was erwartet und was ist stattdessen passiert?</p>
+            <textarea id="feedback-message" name="message" rows="6" maxlength="8000" aria-describedby="feedback-message-hint feedback-private-hint" required></textarea>
+            <p class="field-hint" id="feedback-private-hint">Bitte keine Zugangsdaten oder privaten Bild- und Protokolldaten einfügen.</p>
+          </div>
+          <div class="form-field">
+            <label for="feedback-context">App-Version und Mac <span>(optional)</span></label>
+            <input id="feedback-context" name="test_environment" type="text" maxlength="180" placeholder="z. B. 0.4.2, iMac Intel, macOS 15">
+          </div>
+          <div class="form-field">
+            <label for="feedback-email">E-Mail für Rückfragen <span>(optional)</span></label>
+            <input id="feedback-email" name="email" type="email" autocomplete="email" inputmode="email" autocapitalize="none" spellcheck="false" maxlength="254" placeholder="du@beispiel.de">
+          </div>
+          <p class="form-data-note">Versand über Formspree. E-Mail nur für Rückfragen, keine Beta-Anmeldung. <a href="#rueckmeldung-datenschutz">Datenschutz</a></p>
+          <button class="button secondary" type="submit">Testfeedback senden</button>
+          <p class="form-note">Nach dem Absenden bestätigt Formspree den Eingang.</p>
+        </form>
+      </section>
+
+      <section class="response-panel" id="featurewunsch" tabindex="-1" aria-labelledby="wish-title">
+        <h2 id="wish-title">Dein Featurewunsch</h2>
+        <p class="form-intro" id="wish-purpose">Welche Funktion würde dir beim Archivieren helfen?</p>
+        <form id="featurewish-form" action="https://formspree.io/f/xeaqrbwz" method="post" aria-labelledby="wish-title" aria-describedby="wish-purpose feedback-data-hint">
+          <input type="hidden" name="subject" value="TrueArchive – Featurewunsch">
+          <input type="hidden" name="_language" value="de">
+          <div class="form-field">
+            <label for="wish-message">Dein Wunsch <span>(Pflichtfeld)</span></label>
+            <p class="field-hint" id="wish-message-hint">Beschreibe kurz, was du tun möchtest und wobei dir TrueArchive helfen soll.</p>
+            <textarea id="wish-message" name="message" rows="6" maxlength="5000" aria-describedby="wish-message-hint wish-private-hint" required></textarea>
+            <p class="field-hint" id="wish-private-hint">Bitte keine Zugangsdaten oder privaten Bild- und Protokolldaten einfügen.</p>
+          </div>
+          <div class="form-field">
+            <label for="wish-email">E-Mail für Rückfragen <span>(optional)</span></label>
+            <input id="wish-email" name="email" type="email" autocomplete="email" inputmode="email" autocapitalize="none" spellcheck="false" maxlength="254" placeholder="du@beispiel.de">
+          </div>
+          <p class="form-data-note">Versand über Formspree. E-Mail nur für Rückfragen, keine Beta-Anmeldung. <a href="#rueckmeldung-datenschutz">Datenschutz</a></p>
+          <button class="button secondary" type="submit">Featurewunsch senden</button>
+          <p class="form-note">Nach dem Absenden bestätigt Formspree den Eingang.</p>
+        </form>
+        <p class="planned-link">Unsere bisherigen Vorhaben findest du unter <a href="index.html#module">geplante Module</a>.</p>
+      </section>
+    </div>
+
+    <div class="feedback-data" id="rueckmeldung-datenschutz" tabindex="-1">
+      <p id="feedback-data-hint">Deine Rückmeldung geht an Lutz Kohl und wird über Formspree übermittelt. Eine E-Mail-Adresse ist freiwillig und dient nur Rückfragen zu deiner Nachricht. Damit meldest du dich nicht zur Beta an.</p>
+      <details class="beta-privacy">
+        <summary>Was passiert mit meiner Rückmeldung?</summary>
+        <p>Lutz Kohl verwendet deine Angaben, um TrueArchive zu verbessern und gegebenenfalls auf deine Rückmeldung zu antworten. Die Nachricht und die von dir ausgefüllten Felder werden bei Formspree gespeichert. Formspree verarbeitet auch technische Daten wie IP-Adresse und Browserangaben; eine Verarbeitung in den USA ist möglich. <a href="https://formspree.io/legal/privacy-policy/">Datenschutz bei Formspree</a>.</p>
+        <p>Für Fragen oder Löschung deiner Rückmeldung schreib an <a href="mailto:lutz.kohl@gmail.com">lutz.kohl@gmail.com</a>.</p>
+      </details>
+    </div>
+  </main>
+
+  <footer class="site-footer wrap"><p><strong>TrueArchive</strong><br>Ein persönliches Community-Projekt.</p><nav aria-label="Weitere Informationen"><a href="index.html#funktionen">Funktionen</a><a href="index.html">Startseite</a><a href="anleitung.html">Anleitung</a><a href="mailto:lutz.kohl@gmail.com">Kontakt</a></nav></footer>
+</body>
+</html>

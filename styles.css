@@ -42,6 +42,8 @@ h3 { font-size: 22px; font-weight: 650; }
 .button { display: inline-flex; align-items: center; justify-content: center; gap: 10px; min-height: 52px; padding: 14px 22px; border-radius: 8px; font-size: 16px; font-weight: 600; line-height: 1.3; text-align: center; text-decoration: none; transition: background-color 150ms ease; }
 .button.primary { color: var(--paper); background: var(--blue); }
 .button.primary:hover { color: var(--paper); background: var(--blue-hover); }
+.button.secondary { color: var(--navy); background: white; border: 1px solid #a5b8df; }
+.button.secondary:hover { color: var(--navy); background: #e6edfa; }
 .button.small { min-height: 42px; padding: 10px 17px; font-size: 14px; }
 .button svg { flex: 0 0 auto; }
 .quiet-link { font-size: 14px; color: var(--muted); }
@@ -105,6 +107,25 @@ h3 { font-size: 22px; font-weight: 650; }
 .steps p { font-size: 16px; color: var(--muted); }
 .workflow-note { margin-top: 38px; font-size: 14px; color: var(--muted); }
 .workflow-note a { margin-left: 5px; white-space: nowrap; }
+.features-section { padding-block: 72px 0; scroll-margin-top: 28px; }
+.feature-list { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 30px 42px; margin: 0; }
+.feature-list > div { padding-top: 18px; border-top: 2px solid var(--line); }
+.feature-list dt { font-size: 19px; line-height: 1.35; font-weight: 600; letter-spacing: -.02em; }
+.feature-list dd { margin: 10px 0 0; font-size: 15px; line-height: 1.65; color: var(--muted); }
+.section-note { margin-top: 30px; font-size: 14px; color: var(--muted); }
+.planned-modules { margin-top: 36px; background: var(--wash); border-radius: 10px; scroll-margin-top: 28px; }
+.planned-modules > summary { padding: 22px 26px; cursor: pointer; font-size: 20px; font-weight: 600; line-height: 1.5; }
+.planned-modules > summary::marker { color: var(--blue); }
+.summary-hint { display: inline-block; margin-left: 16px; font-size: 14px; font-weight: 400; color: var(--muted); }
+.module-content { padding: 0 26px 26px; }
+.module-intro { color: var(--muted); font-size: 15px; }
+.module-list { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 22px 40px; margin: 25px 0; }
+.module-list > div { padding-top: 17px; border-top: 1px solid var(--line); }
+.module-list dt { font-size: 16px; font-weight: 600; line-height: 1.5; }
+.module-list dd { margin: 6px 0 0; font-size: 14px; line-height: 1.65; color: var(--muted); }
+.idea-label { display: inline-block; margin-left: 7px; padding: 1px 7px; border: 1px solid #c1cce0; border-radius: 4px; font-size: 12px; font-weight: 400; }
+.module-cta { font-size: 15px; }
+.module-cta a { display: inline-block; }
 .beta-invitation { margin-top: 12px; max-width: 40ch; color: var(--muted); font-size: 14px; }
 .beta-section { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); gap: 72px; align-items: start; padding-block: 76px; scroll-margin-top: 28px; }
 .eyebrow { display: block; color: var(--blue); font-size: 13px; font-weight: 600; margin-bottom: 16px; }
@@ -136,6 +157,25 @@ h3 { font-size: 22px; font-weight: 650; }
 .guide-heading h1 { font-size: clamp(40px, 4.5vw, 58px); }
 .guide-heading p { margin-top: 18px; color: var(--muted); font-size: 18px; }
 .guide-heading .guide-version { margin-top: 10px; font-size: 13px; }
+.feedback-main { padding-bottom: 60px; }
+.feedback-heading { max-width: 850px; }
+.feedback-nav { display: flex; flex-wrap: wrap; gap: 12px 26px; margin-top: 24px; font-size: 15px; }
+.feedback-forms { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 32px; align-items: start; }
+.response-panel { padding: 30px; border: 1px solid var(--line); border-radius: 12px; background: var(--wash); scroll-margin-top: 24px; min-width: 0; }
+.response-panel h2 { font-size: 26px; }
+.form-intro { margin-top: 14px; font-size: 15px; color: var(--muted); }
+.form-field { margin-top: 22px; }
+.form-field label { display: block; font-size: 15px; font-weight: 550; line-height: 1.5; }
+.form-field label span { color: var(--muted); font-weight: 400; }
+.field-hint { margin-top: 5px; color: var(--muted); font-size: 13px; }
+.form-field input, .form-field textarea { display: block; width: 100%; min-height: 50px; padding: 12px 14px; margin-top: 9px; border: 1px solid #acb8cd; border-radius: 6px; background: white; color: var(--ink); font: inherit; font-size: 16px; line-height: 1.5; }
+.form-field textarea { resize: vertical; min-height: 140px; }
+.response-panel button { width: 100%; margin-top: 24px; font-family: inherit; cursor: pointer; }
+.form-note { margin-top: 12px; color: var(--muted); font-size: 13px; }
+.form-data-note { margin-top: 20px; color: var(--muted); font-size: 13px; }
+.planned-link { margin-top: 24px; padding-top: 20px; border-top: 1px solid var(--line); font-size: 14px; }
+.feedback-data { max-width: 760px; margin-top: 30px; color: var(--muted); font-size: 14px; scroll-margin-top: 24px; }
+.feedback-data > p + p { margin-top: 12px; }
 .guide-layout { display: grid; grid-template-columns: 210px minmax(0, 760px); gap: 52px; align-items: start; padding-bottom: 64px; }
 .guide-nav { display: flex; flex-direction: column; gap: 3px; position: sticky; top: 28px; padding-block: 9px; }
 .guide-nav a { padding: 8px 0; text-decoration: none; font-size: 14px; color: var(--muted); }
@@ -179,6 +219,9 @@ code { padding: 2px 5px; border-radius: 4px; background: #edf1f7; font-size: .9e
 }
 
 @media (max-width: 850px) {
+  .feature-list { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 28px; }
+  .feedback-forms { grid-template-columns: 1fr; }
+  .response-panel { max-width: 680px; }
   .wrap { width: min(720px, calc(100% - 48px)); }
   .hero { grid-template-columns: 1fr; gap: 42px; padding-block: 38px 56px; }
   .hero-copy { max-width: 550px; }
@@ -209,6 +252,15 @@ code { padding: 2px 5px; border-radius: 4px; background: #edf1f7; font-size: .9e
 }
 
 @media (max-width: 540px) {
+  .features-section { padding-top: 46px; }
+  .feature-list, .module-list { grid-template-columns: 1fr; gap: 24px; }
+  .planned-modules > summary { padding: 20px; font-size: 19px; }
+  .summary-hint { display: block; margin: 5px 0 0; font-size: 13px; }
+  .module-content { padding: 0 20px 22px; }
+  .feedback-heading h1 { font-size: 39px; }
+  .feedback-nav { gap: 14px; }
+  .response-panel { padding: 24px 18px; }
+  .response-panel h2 { font-size: 25px; }
   .wrap { width: calc(100% - 40px); }
   .site-header { min-height: 80px; gap: 18px; }
   .brand { font-size: 19px; gap: 8px; }
