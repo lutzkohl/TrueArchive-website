@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="description" content="TrueArchive für Mac installieren, Quellen verbinden und die ersten Bilder archivieren. Kurze Anleitung und Antworten zum Pilot 0.4.2.">
+  <meta name="description" content="TrueArchive für Mac installieren, Quellen verbinden und die ersten Bilder archivieren. Kurze Anleitung und Antworten zum Pilot 0.5.0.">
   <meta name="robots" content="noindex, nofollow">
   <meta name="theme-color" content="#1E3C93">
   <title>Anleitung – TrueArchive</title>
@@ -18,7 +18,7 @@
   </header>
 
   <main id="inhalt" class="wrap">
-    <div class="guide-heading"><h1>Loslegen mit TrueArchive.</h1><p>Quellen verbinden, Vorschau prüfen, Bilder archivieren.</p><p class="guide-version">Anleitung für den kostenlosen Pilot 0.4.2</p></div>
+    <div class="guide-heading"><h1>Loslegen mit TrueArchive.</h1><p>Quellen verbinden, Vorschau prüfen, Bilder archivieren.</p><p class="guide-version">Anleitung für den kostenlosen Pilot 0.5.0</p></div>
     <div class="guide-layout">
       <nav class="guide-nav" aria-label="In dieser Anleitung"><a href="#installation">Installieren</a><a href="#einrichtung">Das erste Archiv</a><a href="#details">Fragen und Details</a><a href="#hilfe">Bei Problemen</a></nav>
       <div class="guide-content">
@@ -56,7 +56,7 @@
             <span id="testarchiv" aria-hidden="true"></span>
             <p>Neue Archive legen Bilder direkt im gewählten Ordner ab: <code>2026/2026-09-08/</code>, ohne zusätzlichen Medien-Ordner. Ohne bekanntes Datum heißt der Ordner <code>Unbekannt</code>. Zu jeder Mediendatei gehört ein gemeinsames XMP.</p>
             <p>Bestehende TrueArchive-Archive behalten ihre bisherige Ablage unter <code>Medien/</code>. Sie werden nicht automatisch umsortiert. Andere gefüllte Bildordner fügst du als Quellen hinzu.</p>
-            <p>Links stehen deine Quellen, darunter zeigt der Pfeil zum Archivziel. Über <strong>+</strong> ergänzt du weitere Quellen. In „Einstellungen“ änderst du Name und Unterordnerauswahl. „Quelle entfernen“ entfernt nur diese gespeicherte Verbindung.</p>
+            <p>Links stehen deine Quellen, darunter zeigt der Pfeil zum Archivziel. Über <strong>+</strong> ergänzt du weitere Quellen. In „Einstellungen“ änderst du Name und Unterordnerauswahl. „Quelle aus Liste entfernen“ entfernt nur diese gespeicherte Verbindung.</p>
             <p>Fehlt eine Platte, schließe sie an und wähle „Erneut verbinden“. Ein anderer Datenträger am gleichen Pfad wird nicht ungeprüft übernommen. Nach einem Macwechsel richtest du die Quellen auf dem neuen Mac erneut ein.</p>
           </details>
 
@@ -65,7 +65,7 @@
             <p>Verbinde die erwartete Systemfotomediathek dieses Mac-Benutzers und erlaube den angefragten Fotos-Zugriff. Eine externe Mediathek muss angeschlossen sein. Der Quellenname wechselt keinen Apple-Account.</p>
             <p>Öffne die Fotos-Quelle und wähle <strong>„Vorschau erstellen“</strong>. Außerhalb des Assistenten prüfst du die neuesten 1–100 erreichbaren Aufnahmen, standardmäßig 20. Den Umfang änderst du in der Konfiguration. Wähle anschließend aus, was archiviert werden soll.</p>
             <p>Beim Archivieren werden benötigte iCloud-Ressourcen angefordert; lokale Dateien müssen nicht erneut geladen werden. Originale, aktuelle Fassungen und verfügbare Zusatzressourcen kommen mit. Live Photos können mehrere Dateien ergeben.</p>
-            <p>Jeden Abgleich startest du selbst. Es gibt noch keinen regelmäßigen Vollabgleich der Mediathek und keine automatische Übernahme beim Anschließen.</p>
+            <p>Optional aktivierst du bei der Quelle unter „Zeitplan“ einen regelmäßigen Abgleich. Apple Fotos prüft dann die erreichbare Systemfotomediathek in Etappen mit höchstens 20 Aufnahmen, einschließlich Videos. Dafür muss voller Fotos-Zugriff bereits erlaubt sein.</p>
           </details>
 
           <details id="sd-karte">
@@ -73,7 +73,17 @@
             <p>Füge über <strong>+</strong> eine SD-Karte, Festplatte oder weitere lokale Ordner hinzu. Mehrere Ordner lassen sich gleichzeitig wählen. Quellen dürfen auch auf FAT oder exFAT liegen; Quelle und Archiv müssen getrennt sein.</p>
             <p>Klicke links auf eine Quelle und erstelle die Vorschau. Unter „Einstellungen“ entscheidest du, ob Unterordner dazugehören. Die reguläre Vorschau prüft den gewählten Umfang; nur der Einstieg im Assistenten ist auf zehn Bilder begrenzt.</p>
             <p>Filter und Seitenwechsel helfen bei großen Beständen. Prüfe neue Dateien, Änderungen und offene Fälle, bevor du <strong>„ausgewählte archivieren“</strong> startest. Eine erneute Prüfung erkennt passende bereits archivierte Medien wieder.</p>
+            <p>Nach einer erfolgreichen ausgewählten Übernahme entfernt <strong>„Quelle abschließen“</strong> die Verbindung aus der Seitenleiste. Dateien auf der alten Platte und im Archiv bleiben erhalten. Die Anzeige nennt den übernommenen Auswahlumfang; sie behauptet nicht, dass die gesamte Platte archiviert wurde.</p>
             <p>RAWs und vorhandene XMPs werden zusammen übernommen. Fertige Bilder in Apple Fotos und RAWs auf der Karte werden nicht allein wegen ähnlicher Namen automatisch verknüpft.</p>
+          </details>
+
+          <details id="automatisierung">
+            <summary>Wie funktionieren Zeitpläne und lokale Schlagwörter?</summary>
+            <p>Unter „Zeitplan“ aktivierst du jede gewünschte Quelle einzeln. Vorgeschlagen wird täglich; stündlich oder alle sechs Stunden sind ebenfalls möglich. „Jetzt abgleichen“ startet einen fälligen Abgleich. Beim Archivziel kannst du alle Zeitpläne pausieren.</p>
+            <p>TrueArchive muss laufen und der Mac wach sein; das Hauptfenster darf geschlossen werden. Verpasste Termine werden einmal nachgeholt. Fehlende Quellen warten, nach drei fehlgeschlagenen Versuchen hält der betroffene Zeitplan an. Manuelle Vorschauen werden nicht durch automatische Übernahmen verdrängt.</p>
+            <p>Apple Fotos prüft die erreichbare Mediathek schrittweise. Nach einem App-Neustart oder einer zwischenzeitlichen Änderung beginnt eine neue Prüfrunde; bereits archivierte Ressourcen werden wiedererkannt. Das ist kein gesonderter Nachweis aller Inhalte in der iCloud.</p>
+            <p>Beim Archivziel schaltest du <strong>„Englische Schlagwörter in XMP ergänzen“</strong> ein. Apple Vision verarbeitet neue, geänderte und bisher nicht verschlagwortete Archivbilder auf diesem Mac. Höchstens zehn ausreichend sichere englische Begriffe pro Bild werden direkt ergänzt; vorhandene Schlagwörter und Bearbeitungsdaten bleiben erhalten. Die Ergebnisse sind automatisch erkannt und können unzutreffend sein.</p>
+            <p>Videos werden übersprungen. Für manche RAW-Formate stellt macOS keine passende Vorschau bereit; betroffene Bilder erscheinen als Hinweis und die automatische Verschlagwortung hält an. „Erneut versuchen“ startet sie nach der Klärung neu. Anhalten wirkt spätestens nach der laufenden Erkennung.</p>
           </details>
 
           <details id="metadaten">
@@ -81,7 +91,7 @@
             <ul>
               <li><strong>Originale:</strong> unveränderte Dateien samt eingebetteten Metadaten.</li>
               <li><strong>Apple Fotos:</strong> aktuelle Bearbeitungen, zugängliche Alben, Datum, GPS, Favorit und angebotene Bearbeitungsressourcen.</li>
-              <li><strong>Lokale Quellen:</strong> vorhandene XMP-Daten. Unterstützte Änderungen werden mit unabhängigen Archivangaben zusammengeführt; Konflikte bleiben sichtbar.</li>
+              <li><strong>Lokale Quellen:</strong> vorhandene XMP-Daten sowie Name der Quellplatte, gewählter Ordner und relativer Dateipfad. Unterstützte Änderungen werden mit unabhängigen Archivangaben zusammengeführt; Konflikte bleiben sichtbar.</li>
             </ul>
             <p>Apple-Fotos-Titel, Beschreibung, Schlagwörter, Personen und ursprüngliche Zeitzone liefert der aktuelle Adapter nicht. Bereits eingebettete Angaben bleiben im Original erhalten.</p>
             <p>Proprietäre Bearbeitungsrezepte lassen sich nicht automatisch in jeder anderen App weiterbearbeiten. Nitro-Dateien <code>.photo</code> und <code>.photo-edit</code> werden bisher nicht übernommen. Der vollständige Rücktest mit Nitro und digiKam steht aus.</p>
