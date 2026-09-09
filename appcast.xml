@@ -5,15 +5,15 @@ IMPORTANT: This file was signed by Sparkle. Any modifications to this file requi
     <title>TrueArchive Updates</title>
     <link>https://lutzkohl.github.io/TrueArchive-website/</link>
     <item>
-      <title>TrueArchive 0.7.1</title>
-      <pubDate>Wed, 09 Sep 2026 05:18:51 GMT</pubDate>
-      <sparkle:version>14</sparkle:version>
-      <sparkle:shortVersionString>0.7.1</sparkle:shortVersionString>
+      <title>TrueArchive 0.8.0 Alpha</title>
+      <pubDate>Wed, 09 Sep 2026 06:04:55 GMT</pubDate>
+      <sparkle:version>15</sparkle:version>
+      <sparkle:shortVersionString>0.8.0</sparkle:shortVersionString>
       <sparkle:minimumSystemVersion>15.0</sparkle:minimumSystemVersion>
-      <enclosure url="https://github.com/lutzkohl/TrueArchive-website/releases/download/v0.7.1-pilot/TrueArchive-0.7.1-pilot-macos-universal.zip" length="6955534" type="application/octet-stream" sparkle:edSignature="rNHXBwfp53v65qRWWCwdnyG5/VilM65JpdH4qB0cg6YI+VSuszIP/yKwCIH867QV5ZJdcc9wDArboxfthrOODA=="></enclosure>
+      <enclosure url="https://github.com/lutzkohl/TrueArchive-website/releases/download/v0.8.0-alpha/TrueArchive-0.8.0-alpha-macos-universal.zip" length="6940751" type="application/octet-stream" sparkle:edSignature="R5vyJs5aTTYA2bfZXaneLQ0CQeb8j+aGgnB4N/f0VbY5x+VfIPoUdg7I0cjQy9uv1jkJ5ptIgmihqu4nWHVaCQ=="></enclosure>
     </item>
   </channel>
 </rss><!-- sparkle-signatures:
-edSignature: qXdtX/SoCDVW4Py+7QZ7Wk1D7KnZ2iZ56Qx0+ltwlXuypB/uT+TSQZNRKVPMsHyTDCsBZjhN5u6bPcm56bXPCA==
-length: 1135
+edSignature: 9qHYPdABqGXdcw3jyOEmo74tCYrs5Wax7LQMcEWomXor4/Ng4U+iS0aKOS0P5WoA3tnGIBG/DavUhP+xORPRBg==
+length: 1141
 -->

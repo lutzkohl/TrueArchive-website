@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="description" content="TrueArchive für Mac installieren, Quellen verbinden und die ersten Bilder archivieren. Kurze Anleitung und Antworten zum Pilot 0.7.1.">
+  <meta name="description" content="TrueArchive für Mac installieren, Quellen verbinden und Bilder archivieren. Kurze Anleitung und Antworten zur Alpha 0.8.0.">
   <meta name="robots" content="noindex, nofollow">
   <meta name="theme-color" content="#1E3C93">
   <title>Anleitung – TrueArchive</title>
@@ -18,7 +18,7 @@
   </header>
 
   <main id="inhalt" class="wrap">
-    <div class="guide-heading"><h1>Loslegen mit TrueArchive.</h1><p>Quellen verbinden, Vorschau prüfen, Bilder archivieren.</p><p class="guide-version">Anleitung für den kostenlosen Pilot 0.7.1</p></div>
+    <div class="guide-heading"><h1>Loslegen mit TrueArchive.</h1><p>Quellen verbinden, Archiv wählen, Abgleich starten.</p><p class="guide-version">Anleitung für die kostenlose Alpha 0.8.0</p></div>
     <div class="guide-layout">
       <nav class="guide-nav" aria-label="In dieser Anleitung"><a href="#installation">Installieren</a><a href="#updates">App-Updates</a><a href="#einrichtung">Das erste Archiv</a><a href="#arbeitsbereich">Quellen und Ziel</a><a href="#details">Fragen und Details</a><a href="#hilfe">Bei Problemen</a></nav>
       <div class="guide-content">
@@ -32,7 +32,7 @@
             <li><strong>App öffnen.</strong> Beim ersten Start beginnt der Einrichtungsassistent.</li>
           </ol>
           <p>Noch keine Einladung erhalten? <a href="index.html#beta">Melde dich für die Beta an.</a></p>
-          <div class="guide-note"><p>Der Pilot ist noch nicht notarisiert. Falls macOS den Start blockiert, prüfe Herkunft und Version des Pakets. Schalte die Sicherheitseinstellungen nicht pauschal ab.</p></div>
+          <div class="guide-note"><p>Die Alpha ist noch nicht notarisiert. Falls macOS den Start blockiert, prüfe Herkunft und Version des Pakets. Schalte die Sicherheitseinstellungen nicht pauschal ab.</p></div>
           <p>Lies die <a href="release-notes.html">Release Notes</a> zu deinem App-Paket. Dort findest du auch den Link zur passenden Prüfsumme.</p>
         </section>
 
@@ -43,16 +43,17 @@
           <p>Unter <strong>TrueArchive → Einstellungen → App-Updates</strong> kannst du die Automatik ausschalten. <strong>„Jetzt nach Updates suchen“</strong> bleibt für manuelle Updates verfügbar. Das geht auch über das TrueArchive-Menü; „App-Updates …“ im Menüleistenfenster öffnet die Einstellung.</p>
           <p>Die eigene Moduswahl ist während eines Updates gesperrt. Eine Automatik-Auswahl im Update-Dialog gilt für folgende Updates; sie nimmt ein bereits vorbereitetes Update nicht zurück. Bei einer gestörten Verbindung oder einem Installationsfehler kannst du später erneut prüfen.</p>
           <div class="guide-note"><p><strong>Einmaliger Wechsel von 0.5.0 und älter:</strong> Installiere die erste Ausgabe mit Updater noch manuell aus dem Paket deiner Einladung. Ältere Apps können sich diese Funktion nicht selbst nachladen. Die Paketsignatur bestätigt die Herkunft des Updates; der Pilot ist weiterhin nicht von Apple notarisiert.</p></div>
+          <div class="guide-note"><p><strong>Nicht auf 0.7.x zurückwechseln:</strong> Sobald die Alpha 0.8.0 die lokale Einrichtung im neuen Schema 2 gespeichert hat, können Versionen 0.7.x diese Einstellungen absichtlich nicht lesen. So wird ein begrenzter Fotos-Abgleich nicht versehentlich als unbegrenzt ausgeführt. Das Archivformat und bereits archivierte Dateien bleiben unverändert.</p></div>
         </section>
 
         <section id="einrichtung" aria-labelledby="setup-title">
           <h2 id="setup-title">Dein erstes Archiv</h2>
           <ol>
-            <li><strong>Quellen und Archiv verbinden.</strong> Füge Apple Fotos, eine SD-Karte oder lokale Bildordner hinzu. Wähle danach einen neuen leeren Archivordner oder dein vorhandenes TrueArchive-Archiv. Das Ziel benötigt APFS oder HFS+.</li>
-            <li><strong>Eine kleine Vorschau erstellen.</strong> Im Assistenten werden höchstens zehn Bilder geprüft. Wähle die gewünschten Bilder aus. Eigenständige Videos sind bei diesem Einstieg ausgeschlossen; RAW/XMP und zusammengehörige Live-Photo-Dateien bleiben zusammen.</li>
-            <li><strong>Ausgewählte Bilder archivieren.</strong> Erst diese Aktion überträgt die Dateien. Sieh das Ergebnis an und schließe die Einrichtung ab. Die erste Übernahme ist optional: Du kannst sie überspringen.</li>
+            <li><strong>Quellen verbinden.</strong> Füge Apple Fotos, eine SD-Karte oder lokale Bildordner hinzu.</li>
+            <li><strong>Archiv verbinden.</strong> Wähle einen neuen leeren Archivordner oder dein vorhandenes TrueArchive-Archiv. Das Ziel benötigt APFS oder HFS+.</li>
+            <li><strong>Einrichtung abschließen.</strong> Danach öffnest du eine Quelle und startest dort den gewünschten Abgleich. Der Assistent führt keine begrenzte Zehn-Bilder-Probe mehr aus.</li>
           </ol>
-          <p>Deine erste Übernahme landet direkt im gewählten Archiv. Ein zusätzlicher Testordner ist nicht nötig. Quellen und Archiv bleiben auf diesem Mac gespeichert.</p>
+          <p>Deine erste Übernahme landet direkt im gewählten Archiv. Ein zusätzlicher Testordner ist nicht nötig. Quellen, Archiv und ein optionaler Fotos-Aufnahmezeitraum bleiben auf diesem Mac gespeichert.</p>
           <div class="guide-note"><p><strong>Die Richtung ist immer Quelle → Archiv.</strong> TrueArchive verändert oder löscht keine Quellen. Auch wenn du später dort eine Datei löschst, bleibt die Archivkopie erhalten.</p></div>
         </section>
 
@@ -81,20 +82,17 @@
           <details id="apple-fotos">
             <summary>Wie übernehme ich Bilder aus Apple Fotos?</summary>
             <p>Verbinde die erwartete Systemfotomediathek dieses Mac-Benutzers und erlaube den angefragten Fotos-Zugriff. Eine externe Mediathek muss angeschlossen sein. Der Quellenname wechselt keinen Apple-Account.</p>
-            <p>Auf der Fotos-Seite wählst du zwischen zwei Aufgaben:</p>
-            <ul>
-              <li><strong>„Mediathek abgleichen“:</strong> Starte unten den gleichnamigen Button für einen einmaligen Abgleich der gesamten erreichbaren Systemfotomediathek einschließlich Videos. Dafür muss voller Fotos-Zugriff bereits erlaubt sein. Je Etappe werden höchstens 20 Aufnahmen geprüft; zwischen bestätigten Etappen liegen mindestens 15 Sekunden. Der Fortschritt und das Ergebnis gelten für die ganze Runde.</li>
-              <li><strong>„Neueste auswählen“:</strong> Lege den Umfang von 1–100 Aufnahmen fest, standardmäßig 20. „Vorschau erstellen“ zeigt die neuesten erreichbaren Aufnahmen. Wähle anschließend aus und starte die Übernahme.</li>
-            </ul>
-            <p>Vor dem einmaligen Mediathek-Abgleich archivierst oder verwirfst du vorhandene Vorschauen. Der Abgleich aktiviert keinen Zeitplan und verändert keine Zeitplanpause. Bei einem Fehler oder einer unvollständigen Etappe stoppt er; nach der Klärung kannst du neu starten. Bereits archivierte Aufnahmen werden wiedererkannt.</p>
+            <p>Mit <strong>„Alle Aufnahmen archivieren“</strong> startest du direkt einen Abgleich aller erreichbaren Bilder und Videos. TrueArchive setzt keine Gesamtmengenbegrenzung. Technisch werden weiterhin höchstens 20 Aufnahmen je Etappe geprüft; zwischen bestätigten Etappen liegen mindestens 15 Sekunden. Fortschritt und Ergebnis gelten für die ganze Runde.</p>
+            <p>Unter <strong>„Einstellungen … → Aufnahmezeitraum“</strong> kannst du den Abgleich auf inklusive Kalendertage begrenzen. „Ab“ und „Bis“ lassen sich gemeinsam oder einzeln setzen. Ist der Filter aktiv, werden Aufnahmen ohne bekanntes Aufnahmedatum ausgeschlossen. Ohne Filter gehören auch undatierte Aufnahmen zum Abgleich.</p>
+            <p>Der Aufnahmezeitraum bleibt bei der Fotosquelle gespeichert und gilt gleichermaßen für den direkten und einen geplanten Abgleich. Eine Änderung startet oder aktiviert keinen Zeitplan. Bei einem Fehler oder einer unvollständigen Etappe stoppt der Abgleich; nach der Klärung kannst du neu starten. Bereits archivierte Aufnahmen werden wiedererkannt.</p>
             <p>Beim Archivieren werden benötigte iCloud-Ressourcen angefordert; lokale Dateien müssen nicht erneut geladen werden. Originale, aktuelle Fassungen und verfügbare Zusatzressourcen kommen mit. Live Photos können mehrere Dateien ergeben. Fotos und Videos bleiben in Apple Fotos erhalten.</p>
-            <p>Einen wiederkehrenden Abgleich aktivierst du separat über <strong>„Einstellungen … → Zeitplan → Regelmäßig ins Archiv übernehmen“</strong>. Auch dieser arbeitet in begrenzten Etappen. Die erreichbare Systemfotomediathek ist kein unabhängiger Nachweis des vollständigen iCloud-Bestands.</p>
+            <p>Einen wiederkehrenden Abgleich aktivierst du separat über <strong>„Einstellungen … → Zeitplan → Regelmäßig ins Archiv übernehmen“</strong>. Auch dieser arbeitet in begrenzten Etappen und ohne Gesamtmengenlimit. Die erreichbare Systemfotomediathek ist kein unabhängiger Nachweis des vollständigen iCloud-Bestands.</p>
           </details>
 
           <details id="sd-karte">
             <summary>Wie übernehme ich Karten und lokale Ordner?</summary>
             <p>Füge über <strong>+</strong> eine SD-Karte, Festplatte oder weitere lokale Ordner hinzu. Mehrere Ordner lassen sich gleichzeitig wählen. Quellen dürfen auch auf FAT oder exFAT liegen; Quelle und Archiv müssen getrennt sein.</p>
-            <p>Klicke links auf eine Quelle und erstelle die Vorschau. Unter <strong>„Einstellungen …“</strong> entscheidest du, ob Unterordner dazugehören. Die reguläre Vorschau prüft den gewählten Umfang; nur der Einstieg im Assistenten ist auf zehn Bilder begrenzt.</p>
+            <p>Klicke links auf eine Quelle und erstelle die Vorschau. Unter <strong>„Einstellungen …“</strong> entscheidest du, ob Unterordner dazugehören. Die Vorschau prüft den gewählten Umfang; die Einrichtung selbst startet keine Probeübernahme.</p>
             <p>Filter und Seitenwechsel helfen bei großen Beständen. Prüfe neue Dateien, Änderungen und offene Fälle, bevor du <strong>„ausgewählte archivieren“</strong> startest. Eine erneute Prüfung erkennt passende bereits archivierte Medien wieder.</p>
             <p>Nach der Übernahme siehst du neue Dateien, aktualisierte Metadaten, bereits vorhandene Inhalte und offene Fälle. <strong>„Archiv öffnen“</strong> führt zum Ergebnis im Finder. Du kannst die Quelle für spätere Abgleiche behalten oder mit <strong>„Quelle aus Liste entfernen …“</strong> die Verbindung entfernen. Dateien auf der alten Platte und im Archiv bleiben erhalten. Eine Teilübernahme bestätigt nicht den gesamten Inhalt der Platte.</p>
             <p>RAWs und vorhandene XMPs werden zusammen übernommen. Fertige Bilder in Apple Fotos und RAWs auf der Karte werden nicht allein wegen ähnlicher Namen automatisch verknüpft.</p>
@@ -105,7 +103,7 @@
             <p>Unter <strong>„Einstellungen … → Zeitplan“</strong> aktivierst du jede gewünschte Quelle einzeln. Vorgeschlagen wird täglich; stündlich oder alle sechs Stunden sind ebenfalls möglich. <strong>„Nächsten Abgleich vorziehen“</strong> macht einen bereits aktivierten Zeitplan sofort fällig. Bei angehaltenen Fehlern heißt die Aktion „Abgleich erneut freigeben“.</p>
             <p>Beim Archivziel stoppt <strong>„Automatische Abgleiche pausieren“</strong> nur den Start weiterer geplanter Läufe. Einen bereits laufenden lokalen Vorgang hältst du separat mit <strong>„Pausieren“</strong> an und setzt ihn mit „Fortsetzen“ fort. Die Menüleiste und der feste Statusbereich zeigen denselben Vorgang.</p>
             <p>TrueArchive muss laufen und der Mac wach sein; das Hauptfenster darf geschlossen werden. Verpasste Termine werden einmal nachgeholt. Fehlende Quellen warten, nach drei fehlgeschlagenen Versuchen hält der betroffene Zeitplan an. Offene Vorschauen bleiben erhalten und verhindern automatische Übernahmen sowie lokale Verschlagwortung, auch wenn gerade eine andere Quelle angezeigt wird.</p>
-            <p>Apple Fotos prüft die erreichbare Mediathek schrittweise. Nach einem App-Neustart oder einer zwischenzeitlichen Änderung beginnt eine neue Prüfrunde; bereits archivierte Ressourcen werden wiedererkannt. Das ist kein gesonderter Nachweis aller Inhalte in der iCloud.</p>
+            <p>Apple Fotos prüft die erreichbare Mediathek schrittweise und mit dem gespeicherten Aufnahmezeitraum. Nach einem App-Neustart, einer Bereichsänderung oder einer zwischenzeitlichen Änderung beginnt eine neue Prüfrunde; bereits archivierte Ressourcen werden wiedererkannt. Das ist kein gesonderter Nachweis aller Inhalte in der iCloud.</p>
             <p>Beim Archivziel öffnest du unter <strong>„Automatische Schlagwörter“</strong> die <strong>„Einstellungen …“</strong> und schaltest <strong>„Englische Schlagwörter automatisch ergänzen“</strong> ein. Apple Vision verarbeitet neue, geänderte und bisher nicht verschlagwortete Archivbilder auf diesem Mac. Höchstens zehn ausreichend sichere englische Begriffe pro Bild werden direkt ergänzt; vorhandene Schlagwörter und Bearbeitungsdaten bleiben erhalten. Die Ergebnisse sind automatisch erkannt und können unzutreffend sein.</p>
             <p>Videos werden übersprungen. Für manche RAW-Formate stellt macOS keine passende Vorschau bereit; betroffene Bilder erscheinen als Hinweis und die automatische Verschlagwortung hält an. „Erneut versuchen“ startet sie nach der Klärung neu. Anhalten wirkt spätestens nach der laufenden Erkennung.</p>
           </details>
