@@ -24,6 +24,7 @@
       <div class="guide-content">
         <section id="installation" aria-labelledby="installation-title">
           <h2 id="installation-title">Installieren</h2>
+          <div class="guide-note"><p><strong>Die erste Testrunde wird vorbereitet.</strong> Im öffentlichen Download 0.10.0 ist ein Problem bekannt, bei dem die Menüleistenanzeige die App blockieren und sehr viel Arbeitsspeicher belegen kann. Warte für einen neuen Test auf die Einladung mit der korrigierten, geprüften Version. <a href="index.html#beta">Für die Testrunde anmelden</a>.</p></div>
           <p>Du brauchst einen Mac mit <strong>macOS 15 oder neuer</strong>. Ein gemeinsames Paket ist für Intel und Apple Silicon vorgesehen. Den Prüfstand deiner Version findest du in den Release Notes.</p>
           <p>Wenn du deine Beta-Einladung erhalten hast, kannst du das darin verlinkte App-Paket so installieren:</p>
           <ol>
@@ -32,7 +33,17 @@
             <li><strong>App öffnen.</strong> Beim ersten Start beginnt der Einrichtungsassistent.</li>
           </ol>
           <p>Noch keine Einladung erhalten? <a href="index.html#beta">Melde dich für die Beta an.</a></p>
-          <div class="guide-note"><p>Die Alpha ist noch nicht notarisiert. Falls macOS den Start blockiert, prüfe Herkunft und Version des Pakets. Schalte die Sicherheitseinstellungen nicht pauschal ab.</p></div>
+          <div class="guide-note"><p>Diese Alpha ist nicht von Apple notarisiert. macOS kann deshalb beim ersten Öffnen eine zusätzliche Freigabe verlangen. Verwende das unveränderte Paket aus deiner Einladung und prüfe, ob die Version stimmt.</p></div>
+          <details id="macos-startfreigabe">
+            <summary>macOS blockiert den ersten Start</summary>
+            <p>Wenn macOS den Entwickler nicht bestätigen oder die App nicht auf Schadsoftware überprüfen kann, beschreibt Apple diesen Weg für Apps, deren Herkunft du vertraust:</p>
+            <ol>
+              <li>Versuche, <strong>TrueArchive</strong> aus „Programme“ zu öffnen, und schließe die Warnmeldung.</li>
+              <li>Öffne <strong>Systemeinstellungen → Datenschutz &amp; Sicherheit</strong>. Scrolle zum Abschnitt „Sicherheit“.</li>
+              <li>Klicke bei TrueArchive auf <strong>„Dennoch öffnen“</strong> und bestätige anschließend mit <strong>„Öffnen“</strong>.</li>
+            </ol>
+            <p>Diese Ausnahme gilt für die App. Bei einer Meldung über eine beschädigte App oder erkannte Schadsoftware, oder wenn die Freigabe fehlt, <a href="#hilfe">melde uns den genauen Wortlaut</a>. Schalte den Schutz deines Mac nicht pauschal ab. <a href="https://support.apple.com/de-de/102445">Apples Erklärung zum ersten Start</a>.</p>
+          </details>
           <p>Lies die <a href="release-notes.html">Release Notes</a> zu deinem App-Paket. Dort findest du auch den Link zur passenden Prüfsumme.</p>
         </section>
 
