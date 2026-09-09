@@ -193,6 +193,7 @@ h3 { font-size: 22px; font-weight: 650; }
 .guide-content section:first-child { padding-top: 12px; }
 .guide-content h2 { font-size: 27px; }
 .guide-content h3 { font-size: 20px; }
+.release-notes h3 { margin-top: 28px; }
 .guide-content p { margin-top: 15px; font-size: 16px; }
 .guide-content ol, .guide-content ul { padding-left: 23px; margin: 20px 0 0; }
 .guide-content li { line-height: 1.65; padding-left: 5px; margin-top: 12px; font-size: 16px; }
