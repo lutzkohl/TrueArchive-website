@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="description" content="TrueArchive für Mac installieren, Quellen verbinden und Bilder archivieren. Kurze Anleitung und Antworten zur Alpha 0.8.0.">
+  <meta name="description" content="TrueArchive für Mac installieren, alle Quellen archivieren und Quelllaufwerke sicher trennen. Kurze Anleitung und Antworten zur Alpha 0.9.0.">
   <meta name="robots" content="noindex, nofollow">
   <meta name="theme-color" content="#1E3C93">
   <title>Anleitung – TrueArchive</title>
@@ -18,9 +18,9 @@
   </header>
 
   <main id="inhalt" class="wrap">
-    <div class="guide-heading"><h1>Loslegen mit TrueArchive.</h1><p>Quellen verbinden, Archiv wählen, Abgleich starten.</p><p class="guide-version">Anleitung für die kostenlose Alpha 0.8.1</p></div>
+    <div class="guide-heading"><h1>Loslegen mit TrueArchive.</h1><p>Quellen verbinden, Archiv wählen, Abgleich starten.</p><p class="guide-version">Anleitung für die kostenlose Alpha 0.9.0</p></div>
     <div class="guide-layout">
-      <nav class="guide-nav" aria-label="In dieser Anleitung"><a href="#installation">Installieren</a><a href="#updates">App-Updates</a><a href="#einrichtung">Das erste Archiv</a><a href="#arbeitsbereich">Quellen und Ziel</a><a href="#details">Fragen und Details</a><a href="#hilfe">Bei Problemen</a></nav>
+      <nav class="guide-nav" aria-label="In dieser Anleitung"><a href="#installation">Installieren</a><a href="#updates">App-Updates</a><a href="#einrichtung">Das erste Archiv</a><a href="#arbeitsbereich">Quellen und Ziel</a><a href="#alle-quellen">Alle Quellen archivieren</a><a href="#details">Fragen und Details</a><a href="#hilfe">Bei Problemen</a></nav>
       <div class="guide-content">
         <section id="installation" aria-labelledby="installation-title">
           <h2 id="installation-title">Installieren</h2>
@@ -51,7 +51,7 @@
           <ol>
             <li><strong>Quellen verbinden.</strong> Füge Apple Fotos, eine SD-Karte oder lokale Bildordner hinzu.</li>
             <li><strong>Archiv verbinden.</strong> Wähle einen neuen leeren Archivordner oder dein vorhandenes TrueArchive-Archiv. Das Ziel benötigt APFS oder HFS+.</li>
-            <li><strong>Einrichtung abschließen.</strong> Danach öffnest du eine Quelle und startest dort den gewünschten Abgleich. Der Assistent führt keine begrenzte Zehn-Bilder-Probe mehr aus.</li>
+            <li><strong>Einrichtung abschließen.</strong> Danach startest du links „Alle Quellen archivieren“ oder öffnest eine einzelne Quelle für eine gezielte Übernahme. Der Assistent führt keine begrenzte Zehn-Bilder-Probe mehr aus.</li>
           </ol>
           <p>Die Schritte links sind anklickbar: Quellen und Archiv kannst du direkt öffnen; „Fertig“ wird nach gültiger Quellen- und Archivwahl freigeschaltet. Der Wechsel behält deine Angaben und startet keine Übernahme. Deine erste Übernahme landet direkt im gewählten Archiv. Ein zusätzlicher Testordner ist nicht nötig. Quellen, Archiv und ein optionaler Fotos-Aufnahmezeitraum bleiben auf diesem Mac gespeichert.</p>
           <div class="guide-note"><p><strong>Die Richtung ist immer Quelle → Archiv.</strong> TrueArchive verändert oder löscht keine Quellen. Auch wenn du später dort eine Datei löschst, bleibt die Archivkopie erhalten.</p></div>
@@ -60,10 +60,19 @@
         <section id="arbeitsbereich" aria-labelledby="workspace-title">
           <h2 id="workspace-title">Quellen und Ziel im Blick</h2>
           <p>Links stehen die Quellen, darunter zeigt der Pfeil zu deinem gewählten Archivordner. Über <strong>+</strong> ergänzt du weitere Quellen. Ein Klick öffnet die jeweilige Seite; <strong>„Einstellungen …“</strong> enthält ihre Konfiguration und den optionalen Zeitplan.</p>
-          <p>Eine erstellte Vorschau samt Auswahl bleibt während dieser App-Sitzung erhalten, wenn du zum Ziel oder zu einer anderen Quelle wechselst. Auch während einer Übernahme kannst du dich umsehen. Der feste Statusbereich zeigt die aktive Arbeit; <strong>„Zum Vorgang“</strong> führt zurück. Ein automatischer Abgleich wechselt deine Seite nicht.</p>
+          <p>Eine erstellte Vorschau samt Auswahl bleibt während dieser App-Sitzung erhalten, wenn du zum Ziel oder zu einer anderen Quelle wechselst. Mit „Alle Quellen archivieren“ ersetzt du diese Vorschauen bewusst durch einen vollständigen Abgleich. Auch während einer Übernahme kannst du dich umsehen. Der feste Statusbereich zeigt die aktive Arbeit; <strong>„Zum Vorgang“</strong> führt zurück. Ein automatischer Abgleich wechselt deine Seite nicht.</p>
           <p>Auf der Archivseite siehst du den vollständigen Zielpfad, die Verbindung und den freien Speicher des Laufwerks. Über <strong>„Archiv ändern …“</strong> wählst du den gewünschten Ordner direkt. Bei der ersten Einrichtung heißt der Knopf <strong>„Archivordner wählen …“</strong>. In der Auswahl kannst du über <strong>„Neuer Ordner“</strong> einen Ordner anlegen und mit <strong>„Als Archiv verwenden“</strong> bestätigen. Dieser Ordner selbst wird dein Archiv; es wird kein zusätzlicher „Bildarchiv“-Ordner darunter angelegt. Das Ziel benötigt APFS oder HFS+.</p>
           <div class="guide-note"><p><strong>„Zielwechsel noch offen“:</strong> Die letzte Auswahl konnte nicht übernommen werden. Weitere Übernahmen bleiben gesperrt, auch nach einem App-Neustart. Wähle das gewünschte Ziel erneut und warte auf „Archiv bereit“. Der bisherige Ordner wird nicht still weiterverwendet.</p></div>
           <p>Ein Archivwechsel macht bisherige Vorschauen ungültig. Änderst du „Unterordner einbeziehen“ bei einer Quelle, prüfst du diese Quelle neu; die Auswahl einer anderen Quelle bleibt erhalten. Nach einem App-Neustart erstellst du ebenfalls eine neue Vorschau.</p>
+        </section>
+
+        <section id="alle-quellen" aria-labelledby="all-sources-title">
+          <h2 id="all-sources-title">Alle Quellen archivieren</h2>
+          <p>Mit <strong>„Alle Quellen archivieren“</strong> in der Seitenleiste startest du einen einmaligen Durchlauf: zuerst alle eingerichteten lokalen Quellen nacheinander, danach die verbundene Apple-Fotos-Quelle. Für Ordner gilt die jeweilige Unterordnerauswahl, für Apple Fotos der gespeicherte Aufnahmezeitraum. Ohne Datumsfilter wird die gesamte erreichbare Mediathek in kleinen Etappen abgeglichen.</p>
+          <div class="guide-note"><p><strong>Offene Vorschauen werden ersetzt.</strong> Der Knopf prüft den vollständigen eingerichteten Umfang neu und übernimmt neue oder geänderte Inhalte. Bisherige Teilauswahlen begrenzen diesen Lauf nicht. Für eine gezielte Auswahl archivierst du stattdessen auf der einzelnen Quellseite.</p></div>
+          <p>Der Quellenfortschritt steht direkt unter dem Knopf. Mit <strong>„Ergebnis anzeigen“</strong> siehst du danach je Quelle neue, aktualisierte und bereits vorhandene Inhalte sowie Hinweise. Fehlende Quelllaufwerke werden übersprungen; andere Quellen können weiterlaufen. Bei einem unsicheren Archiv oder geänderter Einrichtung stoppt der Lauf.</p>
+          <p>Lokale Arbeit lässt sich mit <strong>„Pausieren“</strong> anhalten und mit „Fortsetzen“ weiterführen. <strong>„Abgleich abbrechen“</strong> beendet den gesamten Durchlauf; spätere Quellen starten dann nicht mehr. Apple Fotos unterstützt Abbrechen, aber noch keine Pause. Bereits archivierte Dateien bleiben erhalten und werden beim nächsten Start wiedererkannt.</p>
+          <p>Deine Zeitpläne und deren globale Pause bleiben unverändert. Für Apple Fotos muss voller Zugriff bereits erlaubt sein. Laufende Archivarbeit und App-Updates verhindern einen zweiten gleichzeitigen Durchlauf.</p>
         </section>
 
         <section class="detail-section" id="details" aria-labelledby="details-title">
@@ -96,6 +105,13 @@
             <p>Filter und Seitenwechsel helfen bei großen Beständen. Prüfe neue Dateien, Änderungen und offene Fälle, bevor du <strong>„ausgewählte archivieren“</strong> startest. Eine erneute Prüfung erkennt passende bereits archivierte Medien wieder.</p>
             <p>Nach der Übernahme siehst du neue Dateien, aktualisierte Metadaten, bereits vorhandene Inhalte und offene Fälle. <strong>„Archiv öffnen“</strong> führt zum Ergebnis im Finder. Du kannst die Quelle für spätere Abgleiche behalten oder mit <strong>„Quelle aus Liste entfernen …“</strong> die Verbindung entfernen. Dateien auf der alten Platte und im Archiv bleiben erhalten. Eine Teilübernahme bestätigt nicht den gesamten Inhalt der Platte.</p>
             <p>RAWs und vorhandene XMPs werden zusammen übernommen. Fertige Bilder in Apple Fotos und RAWs auf der Karte werden nicht allein wegen ähnlicher Namen automatisch verknüpft.</p>
+          </details>
+
+          <details id="laufwerk-trennen">
+            <summary>Wie trenne ich eine Quellplatte nach der Übernahme?</summary>
+            <p>Warte, bis die Archivarbeit beendet ist, und klicke auf das <strong>Auswurfsymbol neben der externen Quelle</strong>. TrueArchive trennt das zugehörige Volume. Alle eingerichteten Quellordner auf diesem Volume sind danach nicht mehr verbunden; ihre Einstellungen bleiben gespeichert. Warte auf die Erfolgsmeldung. Hat der Datenträger weitere verbundene Volumes, trenne diese ebenfalls, bevor du ihn abziehst.</p>
+            <p>Das Volume mit deinem Archiv wird nicht getrennt. Die Aktion erzwingt kein Trennen und betrifft nicht pauschal alle Volumes eines Datenträgers. Meldet macOS, dass das Volume noch verwendet wird, beende den anderen Zugriff und versuche es erneut.</p>
+            <p><strong>Trennen</strong> macht das Quellvolume vorübergehend nicht erreichbar. <strong>„Quelle aus Liste entfernen …“</strong> entfernt dagegen nur die gespeicherte Verbindung zu einem Ordner und wirft den Datenträger nicht aus. Beide Aktionen erhalten die Dateien auf Quelle und Archiv.</p>
           </details>
 
           <details id="automatisierung">
