@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><!-- sparkle-sign-warning:
+IMPORTANT: This file was signed by Sparkle. Any modifications to this file requires re-signing this file with generate_appcast or sign_update! The signed signature will be embedded at the end of this file.
+--><rss xmlns:sparkle="http://www.andymatuschak.org/xml-namespaces/sparkle" version="2.0">
+  <channel>
+    <title>TrueArchive Updates</title>
+    <link>https://lutzkohl.github.io/TrueArchive-website/</link>
+    <item>
+      <title>TrueArchive 0.6.0</title>
+      <pubDate>Wed, 09 Sep 2026 03:21:44 GMT</pubDate>
+      <sparkle:version>12</sparkle:version>
+      <sparkle:shortVersionString>0.6.0</sparkle:shortVersionString>
+      <sparkle:minimumSystemVersion>15.0</sparkle:minimumSystemVersion>
+      <enclosure url="https://github.com/lutzkohl/TrueArchive-website/releases/download/v0.6.0-pilot/TrueArchive-0.6.0-pilot-macos-universal.zip" length="6581617" type="application/octet-stream" sparkle:edSignature="CvENngpfLxUt/E0BQxSkg0wbxwCW+sZlp3/se8LeJ61K87eo7q+zduRURbcCgRLLY/5OSRBQrT/yrSUgnZ4yDQ=="></enclosure>
+    </item>
+  </channel>
+</rss><!-- sparkle-signatures:
+edSignature: 0B/zDSRBxLU9UsPsaTXsmz/ir3zYUDfYtpS3YgHnysqkaup0Dri92Xj6mDAJFxhK9GZSGK2+aJUp2pMw8Xq6Ag==
+length: 1135
+-->
