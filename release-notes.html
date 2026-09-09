@@ -14,7 +14,7 @@
   <a class="skip-link" href="#inhalt">Zum Inhalt</a>
   <header class="site-header wrap">
     <a class="brand" href="index.html" aria-label="TrueArchive Startseite"><img src="assets/app-icon.png" width="40" height="40" alt=""><span>TrueArchive</span></a>
-    <nav aria-label="Hauptnavigation"><a class="secondary-nav" href="index.html#funktionen">Funktionen</a><a class="secondary-nav" href="feedback.html">Feedback</a><a class="secondary-nav" href="anleitung.html">Anleitung</a><a class="button small primary" href="index.html#beta">Zur Beta anmelden</a></nav>
+    <nav aria-label="Hauptnavigation"><a class="secondary-nav" href="index.html#funktionen">Funktionen</a><a class="secondary-nav" href="feedback.html">Feedback</a><a class="secondary-nav" href="anleitung.html">Handbuch</a><a class="button small primary" href="index.html#beta">Zur Beta anmelden</a></nav>
   </header>
 
   <main id="inhalt" class="wrap">
@@ -24,8 +24,26 @@
       <p>Neue Funktionen, Korrekturen und wichtige Hinweise zu jedem neuen Release. Die neueste Version steht zuerst.</p>
     </div>
     <div class="guide-layout">
-      <nav class="guide-nav" aria-label="Versionen"><a href="#v0-9-0">0.9.0 · Alle Quellen archivieren</a><a href="#v0-8-1">0.8.1 · Einfacher einrichten</a><a href="#v0-8-0">0.8.0 · Unbegrenzter Fotos-Abgleich</a><a href="#v0-7-1">0.7.1 · Robustere Fotos-Abgleiche</a><a href="#v0-7-0">0.7.0 · Übersicht und Vorschau</a><a href="#v0-6-0">0.6.0 · App-Updates</a><a href="#fruehere-versionen">Frühere Versionen</a></nav>
+      <nav class="guide-nav" aria-label="Versionen"><a href="anleitung.html#release-notes">Zum Handbuch</a><a href="#v0-10-0">0.10.0 · Duplikate und Nitro-Varianten</a><a href="#v0-9-0">0.9.0 · Alle Quellen archivieren</a><a href="#v0-8-1">0.8.1 · Einfacher einrichten</a><a href="#v0-8-0">0.8.0 · Unbegrenzter Fotos-Abgleich</a><a href="#v0-7-1">0.7.1 · Robustere Fotos-Abgleiche</a><a href="#v0-7-0">0.7.0 · Übersicht und Vorschau</a><a href="#v0-6-0">0.6.0 · App-Updates</a><a href="#fruehere-versionen">Frühere Versionen</a></nav>
       <div class="guide-content release-notes">
+        <section id="v0-10-0" aria-labelledby="v0-10-0-title">
+          <h2 id="v0-10-0-title">0.10.0 · Duplikate und Nitro-Varianten</h2>
+          <p><time datetime="2026-09-09">9. September 2026</time> · Build 18 · Alpha</p>
+          <ul>
+            <li><strong>Identische Medien aus mehreren Quellen:</strong> Nach vollständiger Prüfung der Bytes und verträglicher Metadaten wird dieselbe Archivdatei wiederverwendet. Ihre XMP-Datei enthält alle Herkünfte. Das gilt auch für lokale Bilder und passende Ressourcen aus Apple Fotos.</li>
+            <li><strong>Nitro-Bearbeitungen behalten:</strong> Unterschiedliche lesbare Rezepte erhalten bei ansonsten verträglichen Metadaten automatisch eigene Medien-/XMP-Paare. Gleiche Rezepte werden wiedererkannt. Andere Konflikte lassen sich in der Vorschau mit „Beide Fassungen behalten“ getrennt übernehmen oder für später offenlassen.</li>
+            <li><strong>Bestehende Duplikate prüfen:</strong> Auf der Archivseite gibt es einen ausdrücklich gestarteten Leselauf mit Fortschritt, Pause und Abbruch. Er unterscheidet identische Kopien, Bearbeitungsvarianten und Hardlinks; er löscht oder vereinigt keine Archivdateien.</li>
+            <li><strong>Hilfe direkt an der Funktion:</strong> „?“-Buttons öffnen das passende Handbuchkapitel. Auch das Hilfe-Menü führt zum Handbuch und zu den Release Notes. Bedienung und Versionshistorie werden mit jeder Ausgabe gepflegt.</li>
+            <li><strong>Aktivität in der Menüleiste:</strong> Kleine drehende Pfeile zeigen laufende Arbeit. Leerlauf, Pause und Probleme bleiben ruhig; die macOS-Einstellung „Bewegung reduzieren“ wird berücksichtigt. Beim Gesamtabgleich gibt es im Statusfenster einen eindeutigen Abbruchknopf.</li>
+            <li><strong>Geschwindigkeit absichern:</strong> Feste synthetische Performance-Tests vergleichen Import, Wiederholung und gemeinsame Herkünfte mit einer passenden Rechnerreferenz. Laufzeit- und Speichergrenzen gehören künftig zur Release-Prüfung.</li>
+          </ul>
+          <div class="guide-note"><p><strong>Archivformat beachten:</strong> Sobald neue gemeinsame Herkunfts- oder Variantendaten geschrieben werden, erhält das Archiv den Formatschutz 6. Verwende danach auf allen Macs mindestens TrueArchive 0.10.0. Ältere Apps verweigern das Schreiben. Bestehende Ordner werden nicht umsortiert; Medien und XMPs bleiben normale Dateien.</p></div>
+          <p>Eine bestätigte neue Herkunft zählt als Metadatenänderung; eine eigenständige Variante als neue Datei. Die vermiedene Kopiermenge ist keine Messung des frei gewordenen Plattenplatzes. Quellen bleiben unverändert.</p>
+          <p>Der Fotos-Abgleich ist mit den zusätzlichen Herkunftsprüfungen im Entwicklertest langsamer als in 0.9. Die neue Performance-Suite sichert den aktuellen Funktionsumfang als Referenz; weitere Optimierung steht aus.</p>
+          <p>Für macOS 15+, Intel und Apple Silicon. Weiterhin nicht von Apple notarisiert. Die tatsächliche Laufzeit auf Intel, reale iCloud-Übernahmen und der Rücktest mit Nitro und digiKam bleiben für diese Ausgabe separat offen. RAW/JPEG-Zuordnung und die Suche nach nur ähnlich aussehenden Bildern sind nicht enthalten.</p>
+          <p><a href="https://github.com/lutzkohl/TrueArchive-website/releases/tag/v0.10.0-alpha">Alpha-Paket und Prüfsumme</a> · <a href="anleitung.html#duplikate">Duplikate und Bearbeitungen erklärt</a> · <a href="feedback.html#testfeedback">Testfeedback</a></p>
+        </section>
+
         <section id="v0-9-0" aria-labelledby="v0-9-0-title">
           <h2 id="v0-9-0-title">0.9.0 · Alle Quellen archivieren</h2>
           <p><time datetime="2026-09-09">9. September 2026</time> · Build 17 · Alpha</p>
@@ -137,6 +155,6 @@
       </div>
     </div>
   </main>
-  <footer class="site-footer wrap"><p><strong>TrueArchive</strong><br>Ein persönliches Community-Projekt.</p><nav aria-label="Weitere Informationen"><a href="index.html">Startseite</a><a href="anleitung.html">Anleitung</a><a href="release-notes.html" aria-current="page">Release Notes</a><a href="feedback.html">Feedback &amp; Wünsche</a><a href="index.html#unterstuetzen">Projekt unterstützen</a><a href="mailto:lutz.kohl@gmail.com">Kontakt</a></nav></footer>
+  <footer class="site-footer wrap"><p><strong>TrueArchive</strong><br>Ein persönliches Community-Projekt.</p><nav aria-label="Weitere Informationen"><a href="index.html">Startseite</a><a href="anleitung.html">Handbuch</a><a href="release-notes.html" aria-current="page">Release Notes</a><a href="feedback.html">Feedback &amp; Wünsche</a><a href="index.html#unterstuetzen">Projekt unterstützen</a><a href="mailto:lutz.kohl@gmail.com">Kontakt</a></nav></footer>
 </body>
 </html>
