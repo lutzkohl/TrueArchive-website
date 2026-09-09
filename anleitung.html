@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="description" content="TrueArchive für Mac installieren, Quellen verbinden und die ersten Bilder archivieren. Kurze Anleitung und Antworten zum Pilot 0.6.0.">
+  <meta name="description" content="TrueArchive für Mac installieren, Quellen verbinden und die ersten Bilder archivieren. Kurze Anleitung und Antworten zum Pilot 0.7.0.">
   <meta name="robots" content="noindex, nofollow">
   <meta name="theme-color" content="#1E3C93">
   <title>Anleitung – TrueArchive</title>
@@ -18,13 +18,13 @@
   </header>
 
   <main id="inhalt" class="wrap">
-    <div class="guide-heading"><h1>Loslegen mit TrueArchive.</h1><p>Quellen verbinden, Vorschau prüfen, Bilder archivieren.</p><p class="guide-version">Anleitung für den kostenlosen Pilot 0.6.0</p></div>
+    <div class="guide-heading"><h1>Loslegen mit TrueArchive.</h1><p>Quellen verbinden, Vorschau prüfen, Bilder archivieren.</p><p class="guide-version">Anleitung für den kostenlosen Pilot 0.7.0</p></div>
     <div class="guide-layout">
-      <nav class="guide-nav" aria-label="In dieser Anleitung"><a href="#installation">Installieren</a><a href="#updates">App-Updates</a><a href="#einrichtung">Das erste Archiv</a><a href="#details">Fragen und Details</a><a href="#hilfe">Bei Problemen</a></nav>
+      <nav class="guide-nav" aria-label="In dieser Anleitung"><a href="#installation">Installieren</a><a href="#updates">App-Updates</a><a href="#einrichtung">Das erste Archiv</a><a href="#arbeitsbereich">Quellen und Ziel</a><a href="#details">Fragen und Details</a><a href="#hilfe">Bei Problemen</a></nav>
       <div class="guide-content">
         <section id="installation" aria-labelledby="installation-title">
           <h2 id="installation-title">Installieren</h2>
-          <p>Du brauchst einen Mac mit <strong>macOS 15 oder neuer</strong>. Dasselbe Paket läuft auf Intel und Apple Silicon.</p>
+          <p>Du brauchst einen Mac mit <strong>macOS 15 oder neuer</strong>. Ein gemeinsames Paket ist für Intel und Apple Silicon vorgesehen. Den Prüfstand deiner Version findest du in den Release Notes.</p>
           <p>Wenn du deine Beta-Einladung erhalten hast, kannst du das darin verlinkte App-Paket so installieren:</p>
           <ol>
             <li><strong>Laufende Übernahmen beenden.</strong> Schließe die ältere TrueArchive-App vor einem Update.</li>
@@ -39,7 +39,7 @@
         <section id="updates" aria-labelledby="updates-title">
           <h2 id="updates-title">App-Updates</h2>
           <p>Ab Version 0.6.0 sind <strong>automatische App-Updates voreingestellt</strong>. TrueArchive prüft ungefähr täglich, solange die App läuft und der Mac wach ist. Ein neues, geprüftes Paket wird im Leerlauf installiert; anschließend startet die App neu.</p>
-          <p>Während einer Prüfung, Übernahme, Pause oder Verschlagwortung wartet das Update. Auch eine offene Einrichtung oder Importvorschau verhindert einen automatischen Neustart. Während des Updatevorgangs starten keine neuen Archivaufträge.</p>
+          <p>Während einer Prüfung, Übernahme, Pause oder Verschlagwortung wartet das Update. Auch eine offene Einrichtung oder Importvorschau verhindert einen automatischen Neustart. Das gilt ebenso für eine erhaltene Vorschau auf einer gerade nicht angezeigten Quellseite. Während des Updatevorgangs starten keine neuen Archivaufträge.</p>
           <p>Unter <strong>TrueArchive → Einstellungen → App-Updates</strong> kannst du die Automatik ausschalten. <strong>„Jetzt nach Updates suchen“</strong> bleibt für manuelle Updates verfügbar. Das geht auch über das TrueArchive-Menü; „App-Updates …“ im Menüleistenfenster öffnet die Einstellung.</p>
           <p>Die eigene Moduswahl ist während eines Updates gesperrt. Eine Automatik-Auswahl im Update-Dialog gilt für folgende Updates; sie nimmt ein bereits vorbereitetes Update nicht zurück. Bei einer gestörten Verbindung oder einem Installationsfehler kannst du später erneut prüfen.</p>
           <div class="guide-note"><p><strong>Einmaliger Wechsel von 0.5.0 und älter:</strong> Installiere die erste Ausgabe mit Updater noch manuell aus dem Paket deiner Einladung. Ältere Apps können sich diese Funktion nicht selbst nachladen. Die Paketsignatur bestätigt die Herkunft des Updates; der Pilot ist weiterhin nicht von Apple notarisiert.</p></div>
@@ -56,6 +56,15 @@
           <div class="guide-note"><p><strong>Die Richtung ist immer Quelle → Archiv.</strong> TrueArchive verändert oder löscht keine Quellen. Auch wenn du später dort eine Datei löschst, bleibt die Archivkopie erhalten.</p></div>
         </section>
 
+        <section id="arbeitsbereich" aria-labelledby="workspace-title">
+          <h2 id="workspace-title">Quellen und Ziel im Blick</h2>
+          <p>Links stehen die Quellen, darunter zeigt der Pfeil zu deinem gewählten Archivordner. Über <strong>+</strong> ergänzt du weitere Quellen. Ein Klick öffnet die jeweilige Seite; <strong>„Einstellungen …“</strong> enthält ihre Konfiguration und den optionalen Zeitplan.</p>
+          <p>Eine erstellte Vorschau samt Auswahl bleibt während dieser App-Sitzung erhalten, wenn du zum Ziel oder zu einer anderen Quelle wechselst. Auch während einer Übernahme kannst du dich umsehen. Der feste Statusbereich zeigt die aktive Arbeit; <strong>„Zum Vorgang“</strong> führt zurück. Ein automatischer Abgleich wechselt deine Seite nicht.</p>
+          <p>Auf der Archivseite siehst du den vollständigen Zielpfad, die Verbindung und den freien Speicher des Laufwerks. Unter <strong>„Archiv ändern …“</strong> kannst du <strong>„Vorhandenes Archiv wählen …“</strong> oder <strong>„Neues Archiv anlegen …“</strong> wählen. Ein bereits vorhandener leerer Ordner lässt sich ebenfalls als Archiv wählen. Das Ziel benötigt APFS oder HFS+.</p>
+          <div class="guide-note"><p><strong>„Zielwechsel noch offen“:</strong> Die letzte Auswahl konnte nicht übernommen werden. Weitere Übernahmen bleiben gesperrt, auch nach einem App-Neustart. Wähle das gewünschte Ziel erneut und warte auf „Archiv bereit“. Der bisherige Ordner wird nicht still weiterverwendet.</p></div>
+          <p>Ein Archivwechsel macht bisherige Vorschauen ungültig. Änderst du „Unterordner einbeziehen“ bei einer Quelle, prüfst du diese Quelle neu; die Auswahl einer anderen Quelle bleibt erhalten. Nach einem App-Neustart erstellst du ebenfalls eine neue Vorschau.</p>
+        </section>
+
         <section class="detail-section" id="details" aria-labelledby="details-title">
           <h2 id="details-title">Fragen und Details</h2>
           <p class="detail-intro">Öffne nur, was du gerade brauchst.</p>
@@ -65,33 +74,39 @@
             <span id="testarchiv" aria-hidden="true"></span>
             <p>Neue Archive legen Bilder direkt im gewählten Ordner ab: <code>2026/2026-09-08/</code>, ohne zusätzlichen Medien-Ordner. Ohne bekanntes Datum heißt der Ordner <code>Unbekannt</code>. Zu jeder Mediendatei gehört ein gemeinsames XMP.</p>
             <p>Bestehende TrueArchive-Archive behalten ihre bisherige Ablage unter <code>Medien/</code>. Sie werden nicht automatisch umsortiert. Andere gefüllte Bildordner fügst du als Quellen hinzu.</p>
-            <p>Links stehen deine Quellen, darunter zeigt der Pfeil zum Archivziel. Über <strong>+</strong> ergänzt du weitere Quellen. In „Einstellungen“ änderst du Name und Unterordnerauswahl. „Quelle aus Liste entfernen“ entfernt nur diese gespeicherte Verbindung.</p>
-            <p>Fehlt eine Platte, schließe sie an und wähle „Erneut verbinden“. Ein anderer Datenträger am gleichen Pfad wird nicht ungeprüft übernommen. Nach einem Macwechsel richtest du die Quellen auf dem neuen Mac erneut ein.</p>
+            <p>Quellen und Ziel bleiben auf diesem Mac eingerichtet. Über <strong>„Einstellungen …“</strong> änderst du den Anzeigenamen und die Unterordnerauswahl einer Quelle. <strong>„Quelle aus Liste entfernen …“</strong> entfernt nur diese gespeicherte Verbindung.</p>
+            <p>Fehlt eine Quellplatte, schließe sie an und wähle in ihren Einstellungen „Verbindung erneut prüfen“. Beim Archivziel heißt die Aktion „Erneut verbinden“. Ein anderer Datenträger am gleichen Pfad wird nicht ungeprüft übernommen. Nach einem Macwechsel richtest du die Quellen auf dem neuen Mac erneut ein.</p>
           </details>
 
           <details id="apple-fotos">
             <summary>Wie übernehme ich Bilder aus Apple Fotos?</summary>
             <p>Verbinde die erwartete Systemfotomediathek dieses Mac-Benutzers und erlaube den angefragten Fotos-Zugriff. Eine externe Mediathek muss angeschlossen sein. Der Quellenname wechselt keinen Apple-Account.</p>
-            <p>Öffne die Fotos-Quelle und wähle <strong>„Vorschau erstellen“</strong>. Außerhalb des Assistenten prüfst du die neuesten 1–100 erreichbaren Aufnahmen, standardmäßig 20. Den Umfang änderst du in der Konfiguration. Wähle anschließend aus, was archiviert werden soll.</p>
-            <p>Beim Archivieren werden benötigte iCloud-Ressourcen angefordert; lokale Dateien müssen nicht erneut geladen werden. Originale, aktuelle Fassungen und verfügbare Zusatzressourcen kommen mit. Live Photos können mehrere Dateien ergeben.</p>
-            <p>Optional aktivierst du bei der Quelle unter „Zeitplan“ einen regelmäßigen Abgleich. Apple Fotos prüft dann die erreichbare Systemfotomediathek in Etappen mit höchstens 20 Aufnahmen, einschließlich Videos. Dafür muss voller Fotos-Zugriff bereits erlaubt sein.</p>
+            <p>Auf der Fotos-Seite wählst du zwischen zwei Aufgaben:</p>
+            <ul>
+              <li><strong>„Mediathek abgleichen“:</strong> Starte unten den gleichnamigen Button für einen einmaligen Abgleich der gesamten erreichbaren Systemfotomediathek einschließlich Videos. Dafür muss voller Fotos-Zugriff bereits erlaubt sein. Je Etappe werden höchstens 20 Aufnahmen geprüft; zwischen bestätigten Etappen liegen mindestens 15 Sekunden. Der Fortschritt und das Ergebnis gelten für die ganze Runde.</li>
+              <li><strong>„Neueste auswählen“:</strong> Lege den Umfang von 1–100 Aufnahmen fest, standardmäßig 20. „Vorschau erstellen“ zeigt die neuesten erreichbaren Aufnahmen. Wähle anschließend aus und starte die Übernahme.</li>
+            </ul>
+            <p>Vor dem einmaligen Mediathek-Abgleich archivierst oder verwirfst du vorhandene Vorschauen. Der Abgleich aktiviert keinen Zeitplan und verändert keine Zeitplanpause. Bei einem Fehler oder einer unvollständigen Etappe stoppt er; nach der Klärung kannst du neu starten. Bereits archivierte Aufnahmen werden wiedererkannt.</p>
+            <p>Beim Archivieren werden benötigte iCloud-Ressourcen angefordert; lokale Dateien müssen nicht erneut geladen werden. Originale, aktuelle Fassungen und verfügbare Zusatzressourcen kommen mit. Live Photos können mehrere Dateien ergeben. Fotos und Videos bleiben in Apple Fotos erhalten.</p>
+            <p>Einen wiederkehrenden Abgleich aktivierst du separat über <strong>„Einstellungen … → Zeitplan → Regelmäßig ins Archiv übernehmen“</strong>. Auch dieser arbeitet in begrenzten Etappen. Die erreichbare Systemfotomediathek ist kein unabhängiger Nachweis des vollständigen iCloud-Bestands.</p>
           </details>
 
           <details id="sd-karte">
             <summary>Wie übernehme ich Karten und lokale Ordner?</summary>
             <p>Füge über <strong>+</strong> eine SD-Karte, Festplatte oder weitere lokale Ordner hinzu. Mehrere Ordner lassen sich gleichzeitig wählen. Quellen dürfen auch auf FAT oder exFAT liegen; Quelle und Archiv müssen getrennt sein.</p>
-            <p>Klicke links auf eine Quelle und erstelle die Vorschau. Unter „Einstellungen“ entscheidest du, ob Unterordner dazugehören. Die reguläre Vorschau prüft den gewählten Umfang; nur der Einstieg im Assistenten ist auf zehn Bilder begrenzt.</p>
+            <p>Klicke links auf eine Quelle und erstelle die Vorschau. Unter <strong>„Einstellungen …“</strong> entscheidest du, ob Unterordner dazugehören. Die reguläre Vorschau prüft den gewählten Umfang; nur der Einstieg im Assistenten ist auf zehn Bilder begrenzt.</p>
             <p>Filter und Seitenwechsel helfen bei großen Beständen. Prüfe neue Dateien, Änderungen und offene Fälle, bevor du <strong>„ausgewählte archivieren“</strong> startest. Eine erneute Prüfung erkennt passende bereits archivierte Medien wieder.</p>
-            <p>Nach einer erfolgreichen ausgewählten Übernahme entfernt <strong>„Quelle abschließen“</strong> die Verbindung aus der Seitenleiste. Dateien auf der alten Platte und im Archiv bleiben erhalten. Die Anzeige nennt den übernommenen Auswahlumfang; sie behauptet nicht, dass die gesamte Platte archiviert wurde.</p>
+            <p>Nach der Übernahme siehst du neue Dateien, aktualisierte Metadaten, bereits vorhandene Inhalte und offene Fälle. <strong>„Archiv öffnen“</strong> führt zum Ergebnis im Finder. Du kannst die Quelle für spätere Abgleiche behalten oder mit <strong>„Quelle aus Liste entfernen …“</strong> die Verbindung entfernen. Dateien auf der alten Platte und im Archiv bleiben erhalten. Eine Teilübernahme bestätigt nicht den gesamten Inhalt der Platte.</p>
             <p>RAWs und vorhandene XMPs werden zusammen übernommen. Fertige Bilder in Apple Fotos und RAWs auf der Karte werden nicht allein wegen ähnlicher Namen automatisch verknüpft.</p>
           </details>
 
           <details id="automatisierung">
             <summary>Wie funktionieren Zeitpläne und lokale Schlagwörter?</summary>
-            <p>Unter „Zeitplan“ aktivierst du jede gewünschte Quelle einzeln. Vorgeschlagen wird täglich; stündlich oder alle sechs Stunden sind ebenfalls möglich. „Jetzt abgleichen“ startet einen fälligen Abgleich. Beim Archivziel kannst du alle Zeitpläne pausieren.</p>
-            <p>TrueArchive muss laufen und der Mac wach sein; das Hauptfenster darf geschlossen werden. Verpasste Termine werden einmal nachgeholt. Fehlende Quellen warten, nach drei fehlgeschlagenen Versuchen hält der betroffene Zeitplan an. Manuelle Vorschauen werden nicht durch automatische Übernahmen verdrängt.</p>
+            <p>Unter <strong>„Einstellungen … → Zeitplan“</strong> aktivierst du jede gewünschte Quelle einzeln. Vorgeschlagen wird täglich; stündlich oder alle sechs Stunden sind ebenfalls möglich. <strong>„Nächsten Abgleich vorziehen“</strong> macht einen bereits aktivierten Zeitplan sofort fällig. Bei angehaltenen Fehlern heißt die Aktion „Abgleich erneut freigeben“.</p>
+            <p>Beim Archivziel stoppt <strong>„Automatische Abgleiche pausieren“</strong> nur den Start weiterer geplanter Läufe. Einen bereits laufenden lokalen Vorgang hältst du separat mit <strong>„Pausieren“</strong> an und setzt ihn mit „Fortsetzen“ fort. Die Menüleiste und der feste Statusbereich zeigen denselben Vorgang.</p>
+            <p>TrueArchive muss laufen und der Mac wach sein; das Hauptfenster darf geschlossen werden. Verpasste Termine werden einmal nachgeholt. Fehlende Quellen warten, nach drei fehlgeschlagenen Versuchen hält der betroffene Zeitplan an. Offene Vorschauen bleiben erhalten und verhindern automatische Übernahmen sowie lokale Verschlagwortung, auch wenn gerade eine andere Quelle angezeigt wird.</p>
             <p>Apple Fotos prüft die erreichbare Mediathek schrittweise. Nach einem App-Neustart oder einer zwischenzeitlichen Änderung beginnt eine neue Prüfrunde; bereits archivierte Ressourcen werden wiedererkannt. Das ist kein gesonderter Nachweis aller Inhalte in der iCloud.</p>
-            <p>Beim Archivziel schaltest du <strong>„Englische Schlagwörter in XMP ergänzen“</strong> ein. Apple Vision verarbeitet neue, geänderte und bisher nicht verschlagwortete Archivbilder auf diesem Mac. Höchstens zehn ausreichend sichere englische Begriffe pro Bild werden direkt ergänzt; vorhandene Schlagwörter und Bearbeitungsdaten bleiben erhalten. Die Ergebnisse sind automatisch erkannt und können unzutreffend sein.</p>
+            <p>Beim Archivziel öffnest du unter <strong>„Automatische Schlagwörter“</strong> die <strong>„Einstellungen …“</strong> und schaltest <strong>„Englische Schlagwörter automatisch ergänzen“</strong> ein. Apple Vision verarbeitet neue, geänderte und bisher nicht verschlagwortete Archivbilder auf diesem Mac. Höchstens zehn ausreichend sichere englische Begriffe pro Bild werden direkt ergänzt; vorhandene Schlagwörter und Bearbeitungsdaten bleiben erhalten. Die Ergebnisse sind automatisch erkannt und können unzutreffend sein.</p>
             <p>Videos werden übersprungen. Für manche RAW-Formate stellt macOS keine passende Vorschau bereit; betroffene Bilder erscheinen als Hinweis und die automatische Verschlagwortung hält an. „Erneut versuchen“ startet sie nach der Klärung neu. Anhalten wirkt spätestens nach der laufenden Erkennung.</p>
           </details>
 

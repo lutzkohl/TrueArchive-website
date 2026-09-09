@@ -24,8 +24,34 @@
       <p>Neue Funktionen, Korrekturen und wichtige Hinweise zu jedem neuen Release. Die neueste Version steht zuerst.</p>
     </div>
     <div class="guide-layout">
-      <nav class="guide-nav" aria-label="Versionen"><a href="#v0-6-0">0.6.0 · App-Updates</a><a href="#fruehere-versionen">Frühere Versionen</a></nav>
+      <nav class="guide-nav" aria-label="Versionen"><a href="#v0-7-0">0.7.0 · Übersicht und Vorschau</a><a href="#v0-6-0">0.6.0 · App-Updates</a><a href="#fruehere-versionen">Frühere Versionen</a></nav>
       <div class="guide-content release-notes">
+        <section id="v0-7-0" aria-labelledby="v0-7-0-title">
+          <h2 id="v0-7-0-title">0.7.0 · Vorschau behalten, Ziel klar wählen</h2>
+          <p><time datetime="2026-09-09">9. September 2026</time> · Build 13 · Beta</p>
+          <p>Quellen, Archivziel und laufende Arbeit sind leichter zu unterscheiden. Du kannst dich in der App umsehen und anschließend mit deiner Auswahl weiterarbeiten.</p>
+          <h3>Übersichtlicher arbeiten</h3>
+          <ul>
+            <li><strong>Vorschauen bleiben erhalten:</strong> Ein Wechsel zum Archivziel oder zu einer anderen Quelle verwirft die geprüfte Auswahl nicht mehr. Jede lokale Quelle behält ihre eigene Vorschau und Auswahl während der laufenden App-Sitzung.</li>
+            <li><strong>Navigation bleibt bei dir:</strong> Automatische Abgleiche öffnen keine andere Quellseite mehr. Ein fester Statusbereich zeigt die laufende Arbeit; „Zum Vorgang“ bringt dich direkt dorthin. Ergebnisse gehören zur tatsächlich bearbeiteten Quelle.</li>
+            <li><strong>Einstellungen an einem Ort:</strong> Jede Quelle hat „Einstellungen …“ für ihre Konfiguration und den Zeitplan. Beim Archivziel stehen Verbindung, Ordner und freier Speicher zuerst; die lokalen Schlagwörter haben eigene Einstellungen.</li>
+            <li><strong>Klarer Abschluss:</strong> Nach der Übernahme stehen Ergebnis und „Archiv öffnen“ im Vordergrund. „Quelle aus Liste entfernen …“ bezeichnet ausdrücklich das Entfernen der Verbindung; Dateien bleiben erhalten.</li>
+          </ul>
+          <h3>Archivziel zuverlässig wechseln</h3>
+          <p>Ein gewählter Zielordner wird geprüft und erst danach als aktives Archiv übernommen. Scheitert die Auswahl, zeigt die App „Zielwechsel noch offen“ und sperrt weitere Übernahmen. Sie fällt auch nach einem Neustart nicht still auf das vorige Archiv zurück. Wähle das gewünschte Ziel erneut und prüfe den angezeigten Ordner.</p>
+          <p>Ein Archivwechsel verwirft alte Vorschauen. Ändert sich der Umfang einer Quelle, wird deren Vorschau ungültig. Noch gültige Vorschauen anderer Quellen bleiben erhalten und schützen auch im Hintergrund vor automatischen Übernahmen, Verschlagwortung und App-Updates.</p>
+          <h3>Apple Fotos einmalig abgleichen</h3>
+          <ul>
+            <li><strong>„Mediathek abgleichen“:</strong> übernimmt die gesamte erreichbare Systemfotomediathek einschließlich Videos in Etappen mit höchstens 20 Aufnahmen. Fortschritt und Ergebnis zählen über die ganze Runde. Vorhandene Zeitpläne und ihre Pause bleiben unverändert.</li>
+            <li><strong>„Neueste auswählen“:</strong> erstellt weiterhin eine begrenzte Vorschau für eine bewusste Auswahl. Vor einem Mediathek-Abgleich müssen offene Vorschauen archiviert oder verworfen werden.</li>
+            <li>Der einmalige Abgleich lässt sich abbrechen und stoppt bei einer unvollständigen Etappe oder einem Fehler. Bereits archivierte Dateien bleiben erhalten; ein erneuter bewusster Start erkennt sie wieder. Fotos und Videos werden in Apple Fotos nicht gelöscht.</li>
+          </ul>
+          <h3>Update und Prüfstand</h3>
+          <p>Ab 0.6.0 kann das vorhandene App-Update diese Ausgabe beziehen, sobald laufende Arbeit und offene Vorschauen beendet sind. Von 0.5.0 oder älter kommend ist weiterhin eine manuelle Installation nötig. Nach dem Start kontrollierst du deinen Zielordner auf der Archivseite, bevor du eine echte Übernahme beginnst.</p>
+          <p>Für macOS 15 oder neuer; der Pilot bleibt nicht von Apple notarisiert. Die Laufzeitabnahme auf Intel, die vollständige native Bedienprüfung und reale Übernahmen von externen Datenträgern sowie aus iCloud stehen für diese Version noch aus. Die erreichbare Systemfotomediathek ist kein unabhängiger Nachweis aller iCloud-Inhalte.</p>
+          <p><a href="anleitung.html#arbeitsbereich">Im Arbeitsbereich zurechtfinden</a> · <a href="anleitung.html#apple-fotos">Apple Fotos abgleichen</a> · <a href="https://github.com/lutzkohl/TrueArchive-website/releases/tag/v0.7.0-pilot">App-Paket und Prüfsumme</a> · <a href="feedback.html#testfeedback">Feedback zu dieser Version</a></p>
+        </section>
+
         <section id="v0-6-0" aria-labelledby="v0-6-0-title">
           <h2 id="v0-6-0-title">0.6.0 · Die App hält sich aktuell</h2>
           <p><time datetime="2026-09-09">9. September 2026</time> · Build 12 · Beta</p>
