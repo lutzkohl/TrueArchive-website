@@ -9,17 +9,22 @@
   <title>TrueArchive – Deine Bilder. Dein Archiv.</title>
   <link rel="icon" href="assets/app-icon.png" type="image/png">
   <link rel="stylesheet" href="styles.css">
+  <script src="language.js" defer></script>
+  <link rel="canonical" href="https://truearchive.app/index.html">
+  <link rel="alternate" hreflang="de" href="https://truearchive.app/index.html">
+  <link rel="alternate" hreflang="en" href="https://truearchive.app/en/index.html">
 </head>
 <body>
   <a class="skip-link" href="#inhalt">Zum Inhalt</a>
   <header class="site-header wrap">
-    <a class="brand" href="index.html" aria-label="TrueArchive Startseite"><img src="assets/app-icon.png" width="40" height="40" alt=""><span>TrueArchive</span></a>
-    <nav aria-label="Hauptnavigation">
+    <div class="brand"><a class="brand-home" href="index.html" aria-label="TrueArchive Startseite"><img src="assets/app-icon.png" width="40" height="40" alt=""><span>TrueArch</span></a><a class="brand-download" href="https://github.com/lutzkohl/TrueArchive-website/releases/download/v0.12.0-alpha/TrueArchive-0.12.0-alpha-macos-universal.zip" aria-label="TrueArchive 0.12.0 herunterladen">i</a><a class="brand-ending" href="index.html" aria-label="TrueArchive Startseite">ve</a></div>
+    <nav aria-label="Hauptnavigation"><a class="secondary-nav" href="warum-truearchive.html">Warum TrueArchive?</a>
       <a class="secondary-nav" href="#funktionen">Funktionen</a>
       <a class="secondary-nav" href="feedback.html">Feedback</a>
       <a class="secondary-nav" href="anleitung.html">Handbuch</a>
       <a class="button small primary" href="#beta">Zur Beta anmelden</a>
     </nav>
+    <nav class="language-switch" aria-label="Sprache wählen"><a href="index.html?lang=system" data-language="system">Automatisch</a><a href="index.html?lang=de" data-language="de" lang="de">Deutsch</a><a href="en/index.html?lang=en" data-language="en" lang="en">English</a></nav>
   </header>
 
   <main id="inhalt">
@@ -28,9 +33,11 @@
         <h1 id="hero-title">Deine Bilder.<br>Dein Archiv.</h1>
         <p class="lead">Aus Apple Fotos, von SD-Karten und deinen Ordnern. Gemeinsam auf deiner Archivplatte.</p>
         <p class="hero-detail">Originale, fertige Fassungen und verfügbare Metadaten bleiben beieinander. In normalen Ordnern, die dir gehören.</p>
+        <a class="story-entry" href="warum-truearchive.html">Warum ein gemeinsames Bildarchiv?</a>
         <a class="button primary beta-button" href="#beta">Zur Beta anmelden</a>
         <p class="beta-meta">Für Mac · macOS 15+ · Intel und Apple Silicon</p>
         <p class="beta-invitation">Trag dich ein. Wir melden uns per E-Mail, wenn du TrueArchive testen kannst.</p>
+        <a class="hero-cause" href="#unterstuetzen">Mit TrueArchive Dentists for Africa unterstützen</a>
       </div>
 
       <figure class="app-figure" aria-labelledby="app-caption">
@@ -52,7 +59,6 @@
               <div class="app-page-heading"><strong>Reisekarte</strong><span>✓ Verbunden</span></div>
               <div class="app-content-body">
                 <p class="app-settings">Einstellungen …</p>
-                <div class="app-target"><span>↓</span><div><strong>Ziel: Bildarchiv</strong><small>Verbunden · keine offenen Übernahmen</small></div></div>
                 <div class="app-preview-heading"><strong>Vorschau</strong><span>3 Dateien geprüft</span></div>
                 <div class="app-filters"><span class="is-selected">Alle</span><span>Neu</span><span>Geändert</span><span>Probleme</span></div>
                 <table class="app-files"><thead><tr><th></th><th>Dateiname</th><th>Status</th></tr></thead><tbody>
@@ -72,11 +78,11 @@
 
     <section class="workflow" id="archiv" aria-labelledby="workflow-title">
       <div class="wrap">
-        <div class="section-heading"><h2 id="workflow-title">In drei Schritten eingerichtet.</h2><p>Du verbindest Quellen und Archiv.<br>Deine Quellen bleiben unverändert.</p></div>
+        <div class="section-heading"><h2 id="workflow-title">In drei Schritten zum Archiv.</h2><p>Du verbindest Quellen und Archiv.<br>Deine Quellen bleiben unverändert.</p></div>
         <ol class="steps">
           <li><span class="step-number" aria-hidden="true">1</span><h3>Quellen wählen</h3><p>Apple Fotos, Karten, Platten oder lokale Ordner hinzufügen.</p></li>
           <li><span class="step-number" aria-hidden="true">2</span><h3>Archiv wählen</h3><p>Einen neuen leeren Ordner oder ein vorhandenes TrueArchive-Archiv verbinden.</p></li>
-          <li><span class="step-number" aria-hidden="true">3</span><h3>Abschließen</h3><p>Die Einrichtung beenden und danach eine Quelle oder alle Quellen gemeinsam archivieren.</p></li>
+          <li><span class="step-number" aria-hidden="true">3</span><h3>Abgleich starten</h3><p>Sobald Quelle und Archiv geprüft sind, ist die Einrichtung vollständig. Eine Quelle oder alle Quellen gemeinsam archivieren.</p></li>
         </ol>
         <p class="workflow-note">Eine begrenzte Probe ist nicht nötig. Den ersten Abgleich startest du selbst; danach kannst du je Quelle einen Zeitplan aktivieren. <a href="anleitung.html#einrichtung">Zur Anleitung</a></p>
       </div>
@@ -85,7 +91,7 @@
     <section class="features-section wrap" id="funktionen" tabindex="-1" aria-labelledby="features-title">
       <div class="section-heading">
         <h2 id="features-title">Was TrueArchive kann.</h2>
-        <p>Jetzt in der Alpha 0.10.0.<br><a href="release-notes.html#v0-10-0">Was ist neu in 0.10.0?</a></p>
+        <p>Aktuelle Testversion: Alpha 0.12.0.<br><a href="release-notes.html#v0-12-0">Was sich verbessert hat</a></p>
       </div>
       <dl class="feature-list">
         <div><dt>Duplikate erkennen, Bearbeitungen behalten</dt><dd>Identische Dateien aus mehreren Quellen gemeinsam nutzen und die Herkünfte im XMP erhalten. Unterschiedliche Nitro-Rezepte bleiben bei verträglichen übrigen Metadaten eigenständige Varianten. <a href="anleitung.html#duplikate">So funktioniert es.</a></dd></div>
@@ -105,7 +111,7 @@
       <p class="section-note">Zeitpläne und Verschlagwortung schaltest du bewusst ein. Welche Metadaten mitkommen und wo der Pilot Grenzen hat, steht im <a href="anleitung.html#details">Handbuch</a>.</p>
 
       <details class="planned-modules" id="module">
-        <summary><span>Geplante Module</span><span class="summary-hint">7 Vorhaben · noch nicht verfügbar</span></summary>
+        <summary><span>Geplante Module</span><span class="summary-hint">8 Vorhaben · noch nicht verfügbar</span></summary>
         <div class="module-content">
           <p class="module-intro">Das möchten wir ergänzen. Umfang und Reihenfolge können sich durch eure Rückmeldungen ändern; feste Veröffentlichungstermine gibt es noch nicht.</p>
           <dl class="module-list">
@@ -113,6 +119,7 @@
             <div><dt>Adobe Lightroom Cloud</dt><dd>Bilder und verfügbare Metadaten regelmäßig aus Lightroom Cloud ins Archiv holen.</dd></div>
             <div><dt>Alte Bildplatten sichten</dt><dd>Unbekannte Bestände überblicken und gezielt Ordner zur Übernahme auswählen. Konkrete lokale Ordner lassen sich heute schon importieren.</dd></div>
             <div><dt>digiKam einrichten</dt><dd>Bei Installation und Einrichtung für das Archiv helfen. Suche und Gesichtserkennung bleiben bei digiKam.</dd></div>
+            <div><dt>Cloud-Backup bei Hetzner <span class="idea-label">Idee</span></dt><dd>Das Archiv mit Bildern, Videos und Metadaten regelmäßig verschlüsselt sichern. Neue und geänderte Dateien hochladen, frühere Sicherungsstände behalten und das Archiv bei einem Festplattenausfall wiederherstellen. Der Cloud-Speicher wird separat benötigt.</dd></div>
             <div><dt>Speicher freigeben</dt><dd>Separates, optionales Modul: später große Videos gezielt aus Apple Fotos entfernen, nachdem ihre Archivierung geprüft wurde. Gehört nicht zur Kern-App.</dd></div>
             <div><dt>Immich anbinden <span class="idea-label">Idee</span></dt><dd>Das Archiv später über einen eigenen Immich-Server ansehen, ohne die Archivstruktur zu verändern.</dd></div>
             <div><dt>Fotobücher gestalten <span class="idea-label">Idee</span></dt><dd>Lokale Bildvorschläge aus deinem Archiv erhalten und per Wischen oder Tastatur auswählen. Buchgestaltung und Übergabe an einen Druckdienst sollen später dazukommen.</dd></div>
@@ -145,26 +152,39 @@
         <details class="beta-privacy" id="datenschutz">
           <summary>Was passiert mit meiner E-Mail?</summary>
           <p>Lutz Kohl verwendet deine E-Mail-Adresse für die Einladung zur TrueArchive-Beta. Die Anmeldung wird über Formspree übertragen und dort gespeichert. Formspree verarbeitet auch technische Daten wie IP-Adresse und Browserangaben; eine Verarbeitung in den USA ist möglich. <a href="https://formspree.io/legal/privacy-policy/">Datenschutz bei Formspree</a>.</p>
-          <p>Für Fragen, Widerruf deiner Anmeldung oder Löschung deiner Adresse schreib an <a href="mailto:lutz.kohl@gmail.com">lutz.kohl@gmail.com</a>.</p>
+          <p>Für Fragen, Widerruf deiner Anmeldung oder Löschung deiner Adresse schreib an <a href="mailto:lutz@truearchive.app">lutz@truearchive.app</a>.</p>
         </details>
       </div>
     </section>
     <section class="support-section wrap" id="unterstuetzen" aria-labelledby="support-title" tabindex="-1">
       <div class="support-copy">
-        <h2 id="support-title">Hilf TrueArchive zu wachsen.</h2>
-        <p>TrueArchive entsteht als persönliches Community-Projekt. Mit einem freiwilligen Beitrag unterstützt du die Weiterentwicklung und Tests.</p>
+        <span class="eyebrow">Ein persönliches Projekt für einen guten Zweck</span>
+        <h2 id="support-title">TrueArchive für Dentists for Africa.</h2>
+        <p class="support-promise"><strong>100 % der Beiträge über TrueArchive gehen an Dentists for Africa.</strong> Zahlungsgebühren übernehme ich persönlich.</p>
+        <p>Mit deiner freiwilligen Unterstützung hilfst du <a href="https://dentists-for-africa.org/">Dentists for Africa e.V.</a> Der Verein fördert zahnmedizinische Versorgung, Ausbildung und soziale Projekte in Kenia.</p>
       </div>
-      <div class="support-action">
-        <!-- Erst mit bestätigter persönlicher Zahlungsseite durch einen aktiven Link ersetzen. -->
-        <button class="button secondary support-button" type="button" disabled aria-describedby="support-hint">
-          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20.5 4.8a5.1 5.1 0 0 0-7.2 0L12 6.1l-1.3-1.3a5.1 5.1 0 0 0-7.2 7.2L12 20.5l8.5-8.5a5.1 5.1 0 0 0 0-7.2Z"/></svg>
-          Projekt unterstützen
-        </button>
-        <p class="support-hint" id="support-hint">Der Zahlungslink wird noch eingerichtet.</p>
+      <div class="support-options">
+        <article class="support-option" aria-labelledby="personal-support-title">
+          <h3 id="personal-support-title">Über TrueArchive beitragen</h3>
+          <p>Ich bin Lutz Kohl und entwickle TrueArchive als persönliches Community-Projekt. Beiträge sammle ich persönlich und spende anschließend den vollen Unterstützungsbetrag an Dentists for Africa e.V.</p>
+          <p class="support-note">Für Beiträge an mich stelle ich keine Spendenbescheinigung aus.</p>
+          <!-- Erst nach Bestätigung der persönlichen Zahlungsseite als aktiven Link freischalten. -->
+          <button class="button secondary support-button" type="button" disabled aria-describedby="support-hint">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20.5 4.8a5.1 5.1 0 0 0-7.2 0L12 6.1l-1.3-1.3a5.1 5.1 0 0 0-7.2 7.2L12 20.5l8.5-8.5a5.1 5.1 0 0 0 0-7.2Z"/></svg>
+            Über TrueArchive beitragen
+          </button>
+          <p class="support-hint" id="support-hint">Dieser Zahlungsweg wird noch eingerichtet.</p>
+        </article>
+        <article class="support-option" aria-labelledby="direct-support-title">
+          <h3 id="direct-support-title">Direkt an den Verein spenden</h3>
+          <p>Du kannst Dentists for Africa auch direkt unterstützen. Über die offizielle Spendenseite geht dein Beitrag ohne Umweg über TrueArchive an den Verein.</p>
+          <p class="support-note" id="donation-receipt-hint">Du benötigst eine Spendenbescheinigung? Nutze bitte diesen Weg. Informationen dazu findest du auf der Spendenseite des Vereins.</p>
+          <a class="button secondary support-button" href="https://dentists-for-africa.org/spenden/" aria-describedby="donation-receipt-hint">Direkt an Dentists for Africa spenden</a>
+        </article>
       </div>
     </section>
   </main>
 
-  <footer class="site-footer wrap"><p><strong>TrueArchive</strong><br>Ein persönliches Community-Projekt.</p><nav aria-label="Weitere Informationen"><a href="release-notes.html">Release Notes</a><a href="#funktionen">Funktionen</a><a href="feedback.html">Feedback &amp; Wünsche</a><a href="anleitung.html">Handbuch</a><a href="#unterstuetzen">Projekt unterstützen</a><a href="mailto:lutz.kohl@gmail.com">Kontakt</a><a href="https://github.com/lutzkohl/TrueArchive-website">Website auf GitHub</a></nav></footer>
+  <footer class="site-footer wrap"><p><strong>TrueArchive</strong><br>Ein persönliches Community-Projekt.</p><nav aria-label="Weitere Informationen"><a href="warum-truearchive.html">Warum TrueArchive?</a><a href="release-notes.html">Release Notes</a><a href="#funktionen">Funktionen</a><a href="feedback.html">Feedback &amp; Wünsche</a><a href="anleitung.html">Handbuch</a><a href="#unterstuetzen">Projekt unterstützen</a><a href="mailto:lutz@truearchive.app">Kontakt</a><a href="https://github.com/lutzkohl/TrueArchive-website">Website auf GitHub</a></nav></footer>
 </body>
 </html>

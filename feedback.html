@@ -9,17 +9,22 @@
   <title>Feedback und Wünsche – TrueArchive</title>
   <link rel="icon" href="assets/app-icon.png" type="image/png">
   <link rel="stylesheet" href="styles.css">
+  <script src="language.js" defer></script>
+  <link rel="canonical" href="https://truearchive.app/feedback.html">
+  <link rel="alternate" hreflang="de" href="https://truearchive.app/feedback.html">
+  <link rel="alternate" hreflang="en" href="https://truearchive.app/en/feedback.html">
 </head>
 <body>
   <a class="skip-link" href="#inhalt">Zum Inhalt</a>
   <header class="site-header wrap">
-    <a class="brand" href="index.html" aria-label="TrueArchive Startseite"><img src="assets/app-icon.png" width="40" height="40" alt=""><span>TrueArchive</span></a>
-    <nav aria-label="Hauptnavigation">
+    <div class="brand"><a class="brand-home" href="index.html" aria-label="TrueArchive Startseite"><img src="assets/app-icon.png" width="40" height="40" alt=""><span>TrueArch</span></a><a class="brand-download" href="https://github.com/lutzkohl/TrueArchive-website/releases/download/v0.12.0-alpha/TrueArchive-0.12.0-alpha-macos-universal.zip" aria-label="TrueArchive 0.12.0 herunterladen">i</a><a class="brand-ending" href="index.html" aria-label="TrueArchive Startseite">ve</a></div>
+    <nav aria-label="Hauptnavigation"><a class="secondary-nav" href="warum-truearchive.html">Warum TrueArchive?</a>
       <a class="secondary-nav" href="index.html#funktionen">Funktionen</a>
       <a class="secondary-nav" href="feedback.html" aria-current="page">Feedback</a>
       <a class="secondary-nav" href="anleitung.html">Handbuch</a>
       <a class="button small primary" href="index.html#beta">Zur Beta anmelden</a>
     </nav>
+    <nav class="language-switch" aria-label="Sprache wählen"><a href="feedback.html?lang=system" data-language="system">Automatisch</a><a href="feedback.html?lang=de" data-language="de" lang="de">Deutsch</a><a href="en/feedback.html?lang=en" data-language="en" lang="en">English</a></nav>
   </header>
 
   <main id="inhalt" class="wrap feedback-main">
@@ -44,7 +49,7 @@
           </div>
           <div class="form-field">
             <label for="feedback-context">App-Version und Mac <span>(optional)</span></label>
-            <input id="feedback-context" name="test_environment" type="text" maxlength="180" placeholder="z. B. 0.10.0, iMac Intel, macOS 15">
+            <input id="feedback-context" name="test_environment" type="text" maxlength="180" placeholder="z. B. 0.10.1, iMac Intel, macOS 15">
           </div>
           <div class="form-field">
             <label for="feedback-email">E-Mail für Rückfragen <span>(optional)</span></label>
@@ -85,11 +90,11 @@
       <details class="beta-privacy">
         <summary>Was passiert mit meiner Rückmeldung?</summary>
         <p>Lutz Kohl verwendet deine Angaben, um TrueArchive zu verbessern und gegebenenfalls auf deine Rückmeldung zu antworten. Die Nachricht und die von dir ausgefüllten Felder werden bei Formspree gespeichert. Formspree verarbeitet auch technische Daten wie IP-Adresse und Browserangaben; eine Verarbeitung in den USA ist möglich. <a href="https://formspree.io/legal/privacy-policy/">Datenschutz bei Formspree</a>.</p>
-        <p>Für Fragen oder Löschung deiner Rückmeldung schreib an <a href="mailto:lutz.kohl@gmail.com">lutz.kohl@gmail.com</a>.</p>
+        <p>Für Fragen oder Löschung deiner Rückmeldung schreib an <a href="mailto:lutz@truearchive.app">lutz@truearchive.app</a>.</p>
       </details>
     </div>
   </main>
 
-  <footer class="site-footer wrap"><p><strong>TrueArchive</strong><br>Ein persönliches Community-Projekt.</p><nav aria-label="Weitere Informationen"><a href="release-notes.html">Release Notes</a><a href="index.html#funktionen">Funktionen</a><a href="index.html">Startseite</a><a href="anleitung.html">Handbuch</a><a href="index.html#unterstuetzen">Projekt unterstützen</a><a href="mailto:lutz.kohl@gmail.com">Kontakt</a></nav></footer>
+  <footer class="site-footer wrap"><p><strong>TrueArchive</strong><br>Ein persönliches Community-Projekt.</p><nav aria-label="Weitere Informationen"><a href="warum-truearchive.html">Warum TrueArchive?</a><a href="release-notes.html">Release Notes</a><a href="index.html#funktionen">Funktionen</a><a href="index.html">Startseite</a><a href="anleitung.html">Handbuch</a><a href="index.html#unterstuetzen">Projekt unterstützen</a><a href="mailto:lutz@truearchive.app">Kontakt</a></nav></footer>
 </body>
 </html>

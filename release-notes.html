@@ -9,12 +9,17 @@
   <title>Release Notes – TrueArchive</title>
   <link rel="icon" href="assets/app-icon.png" type="image/png">
   <link rel="stylesheet" href="styles.css">
+  <script src="language.js" defer></script>
+  <link rel="canonical" href="https://truearchive.app/release-notes.html">
+  <link rel="alternate" hreflang="de" href="https://truearchive.app/release-notes.html">
+  <link rel="alternate" hreflang="en" href="https://truearchive.app/en/release-notes.html">
 </head>
 <body>
   <a class="skip-link" href="#inhalt">Zum Inhalt</a>
   <header class="site-header wrap">
-    <a class="brand" href="index.html" aria-label="TrueArchive Startseite"><img src="assets/app-icon.png" width="40" height="40" alt=""><span>TrueArchive</span></a>
-    <nav aria-label="Hauptnavigation"><a class="secondary-nav" href="index.html#funktionen">Funktionen</a><a class="secondary-nav" href="feedback.html">Feedback</a><a class="secondary-nav" href="anleitung.html">Handbuch</a><a class="button small primary" href="index.html#beta">Zur Beta anmelden</a></nav>
+    <div class="brand"><a class="brand-home" href="index.html" aria-label="TrueArchive Startseite"><img src="assets/app-icon.png" width="40" height="40" alt=""><span>TrueArch</span></a><a class="brand-download" href="https://github.com/lutzkohl/TrueArchive-website/releases/download/v0.12.0-alpha/TrueArchive-0.12.0-alpha-macos-universal.zip" aria-label="TrueArchive 0.12.0 herunterladen">i</a><a class="brand-ending" href="index.html" aria-label="TrueArchive Startseite">ve</a></div>
+    <nav aria-label="Hauptnavigation"><a class="secondary-nav" href="warum-truearchive.html">Warum TrueArchive?</a><a class="secondary-nav" href="index.html#funktionen">Funktionen</a><a class="secondary-nav" href="feedback.html">Feedback</a><a class="secondary-nav" href="anleitung.html">Handbuch</a><a class="button small primary" href="index.html#beta">Zur Beta anmelden</a></nav>
+    <nav class="language-switch" aria-label="Sprache wählen"><a href="release-notes.html?lang=system" data-language="system">Automatisch</a><a href="release-notes.html?lang=de" data-language="de" lang="de">Deutsch</a><a href="en/release-notes.html?lang=en" data-language="en" lang="en">English</a></nav>
   </header>
 
   <main id="inhalt" class="wrap">
@@ -24,8 +29,82 @@
       <p>Neue Funktionen, Korrekturen und wichtige Hinweise zu jedem neuen Release. Die neueste Version steht zuerst.</p>
     </div>
     <div class="guide-layout">
-      <nav class="guide-nav" aria-label="Versionen"><a href="anleitung.html#release-notes">Zum Handbuch</a><a href="#v0-10-0">0.10.0 · Duplikate und Nitro-Varianten</a><a href="#v0-9-0">0.9.0 · Alle Quellen archivieren</a><a href="#v0-8-1">0.8.1 · Einfacher einrichten</a><a href="#v0-8-0">0.8.0 · Unbegrenzter Fotos-Abgleich</a><a href="#v0-7-1">0.7.1 · Robustere Fotos-Abgleiche</a><a href="#v0-7-0">0.7.0 · Übersicht und Vorschau</a><a href="#v0-6-0">0.6.0 · App-Updates</a><a href="#fruehere-versionen">Frühere Versionen</a></nav>
+      <nav class="guide-nav" aria-label="Versionen"><a href="anleitung.html#release-notes">Zum Handbuch</a><a href="#v0-12-0">0.12.0 · Deutsch und Englisch</a><a href="#v0-11-1">0.11.1</a><a href="#v0-11-0">0.11.0 · Direkt in der App starten</a><a href="#v0-10-3">0.10.3 · Quellen direkt bedienen</a><a href="#v0-10-2">0.10.2 · Berichte bei den Quellen</a><a href="#v0-10-1">0.10.1 · Stabilere Menüleiste</a><a href="#v0-10-0">0.10.0 · Duplikate und Nitro-Varianten</a><a href="#v0-9-0">0.9.0 · Alle Quellen archivieren</a><a href="#v0-8-1">0.8.1 · Einfacher einrichten</a><a href="#v0-8-0">0.8.0 · Unbegrenzter Fotos-Abgleich</a><a href="#v0-7-1">0.7.1 · Robustere Fotos-Abgleiche</a><a href="#v0-7-0">0.7.0 · Übersicht und Vorschau</a><a href="#v0-6-0">0.6.0 · App-Updates</a><a href="#fruehere-versionen">Frühere Versionen</a></nav>
       <div class="guide-content release-notes">
+        <section id="v0-12-0" aria-labelledby="v0-12-0-title">
+          <h2 id="v0-12-0-title">0.12.0 · Deutsch und Englisch</h2>
+          <p><time datetime="2026-09-10">10. September 2026</time> · Build 24 · Alpha</p>
+          <ul>
+            <li><strong>Sprache in der App wählen:</strong> System, Deutsch und English stehen in den allgemeinen Einstellungen bereit. Die Systemwahl berücksichtigt die bevorzugten Sprachen und verwendet Englisch, wenn keine unterstützte Sprache dabei ist.</li>
+            <li><strong>Website und Handbuch auf Englisch:</strong> Alle fünf Seiten stehen in beiden Sprachen bereit. Die Sprachauswahl erhält die aktuelle Seite und das Kapitel; direkte Sprachlinks funktionieren auch ohne JavaScript.</li>
+            <li><strong>Eigene Daten bleiben erhalten:</strong> Die Darstellung ändert keine Quellnamen, Dateipfade, Medien oder archivierten Metadaten.</li>
+          </ul>
+          <p>Enthält außerdem die unten dokumentierten Verbesserungen aus den internen Ständen 0.10.1 bis 0.11.1: stabilere Menüleistenanimation, Berichte bei der jeweiligen Quelle, direktes Einrichten ohne Assistenten sowie Archivieren und Einstellungen neben jeder Quelle.</p>
+          <p>Geprüft: 533 synthetische Tests mit fünf vorgesehenen Auslassungen und null Fehlern; zusätzliche Sprach- und Ansichtenprüfungen in beiden Sprachen. Der Performancevergleich besteht auf Deutsch und Englisch alle neun Messphasen gegen die unveränderte Referenz. Die native Menüleiste bleibt im 124-Sekunden-Dauertest reaktionsfähig, bei rund 91 MiB Spitzenspeicher.</p>
+          <p>macOS 15+, Universal-Paket für Intel und Apple Silicon. Nicht von Apple notarisiert. Reale Intel-/iCloud-/Nitro-/digiKam- und Erstinstallationsprüfungen bleiben offen. Native System- und Update-Dialoge folgen macOS; bereits erzeugte Meldungen behalten zunächst ihre Sprache. Diese Alpha wird manuell verteilt, der gemeinsame automatische Updatekanal bleibt unverändert.</p>
+          <p><a href="https://github.com/lutzkohl/TrueArchive-website/releases/download/v0.12.0-alpha/TrueArchive-0.12.0-alpha-macos-universal.zip.sha256">SHA-256-Prüfsumme</a> · <a href="anleitung.html#sprache">Sprache einstellen</a> · <a href="feedback.html#testfeedback">Testfeedback</a></p>
+        </section>
+        <section id="v0-11-1" aria-labelledby="v0-11-1-title">
+          <h2 id="v0-11-1-title">0.11.1 · Klare Aktionen an jeder Quelle</h2>
+          <p>Build 23 · Interner Entwicklungsstand · In 0.12.0 enthalten</p>
+          <ul>
+            <li><strong>Archivieren erkennen:</strong> Ein Pfeil in eine Festplatte kennzeichnet die Übernahme bei einzelnen Quellen und beim Gesamtabgleich.</li>
+            <li><strong>Einstellungen direkt an der Quelle:</strong> Das Zahnrad öffnet genau deren Konfiguration und Zeitplan. Die App-Einstellungen sind unten ausdrücklich so benannt.</li>
+            <li><strong>Quelle gezielt entfernen:</strong> „Aus Quellenliste entfernen …“ steht am Kopf der Quellseite und im Kontextmenü. Die Bestätigung erklärt den Erhalt der Dateien. Andere Quellen und ihre Vorschauen bleiben bestehen.</li>
+            <li><strong>Passende Hinweise:</strong> Quellfehler erscheinen nur auf der betroffenen Quellseite und als Warnzeichen an ihrer Zeile. Gemeinsame Archivprobleme bleiben sichtbar.</li>
+            <li><strong>Native Hilfe:</strong> Runde macOS-Hilfeknöpfe erhalten die Tastaturbedienung und öffnen den passenden Handbuchabschnitt.</li>
+          </ul>
+          <p>Lokale Abnahme: 516 Tests mit fünf gezielten Skips und null Fehlern; native Ansichten sowie Quellzahnrad, Entfernen-Abbruch und Hilfe-Fokus im fertigen Programm geprüft. Diese Angaben beschreiben den damaligen Prüfstand; die Veröffentlichung erfolgt gemeinsam mit 0.12.0.</p>
+        </section>
+        <section id="v0-11-0" aria-labelledby="v0-11-0-title">
+          <h2 id="v0-11-0-title">0.11.0 · Direkt in der App starten</h2>
+          <p>Build 22 · Interner Entwicklungsstand · In 0.12.0 enthalten</p>
+          <ul>
+            <li><strong>Eine Oberfläche von Anfang an:</strong> Quellen und Archiv werden auf den normalen Seiten eingerichtet. Kurze Hinweise zeigen fehlende Verbindungen. Sobald eine Quelle verbunden und das Archiv geprüft ist, wird die Einrichtung automatisch als vollständig gespeichert. Der separate Assistent und der Abschlussknopf entfallen; der Abschluss selbst startet keinen Import.</li>
+            <li><strong>Kürzere Seiten:</strong> Quellen tragen ein sichtbar beschriftetes Namensfeld. Die Einstellungen konzentrieren sich auf die Quelle, ihren Zeitplan und „Quelle entfernen“. Umfangserklärungen stehen unter „?“ oder „Details“.</li>
+            <li><strong>Fotos-Freigabe direkt bei Apple Fotos:</strong> „Zugriff prüfen“ liest nur den Berechtigungsstatus. „Fotos-Zugriff erlauben“ fordert die Freigabe ausdrücklich an. Bei vollem Zugriff steht „Verbunden“; andernfalls zeigt die Seite passende Hilfe und bei Bedarf den Weg zu den Systemeinstellungen. Es wird dadurch keine Mediathek inventarisiert und kein Import gestartet.</li>
+            <li><strong>Zeitpläne klar schalten:</strong> „Automatisch archivieren“ gehört zu den Einstellungen der jeweiligen Quelle. „Zeitpläne ausführen“ steht zentral unter „TrueArchive → Einstellungen → Allgemein“, sobald Zeitpläne vorhanden sind. Ausschalten verhindert weitere Starts und lässt den laufenden Abgleich enden.</li>
+            <li><strong>Schlagwörter direkt ein- und ausschalten:</strong> Der Schalter steht auf der Archivseite. Ausschalten wird gespeichert und stoppt auch eine laufende lokale Verschlagwortung am sicheren Haltepunkt. Vorhandene Schlagwörter bleiben erhalten.</li>
+            <li><strong>Diagnosebericht im Hilfe-Menü:</strong> Der technische Bericht ist unabhängig von der Einrichtung erreichbar und lässt sich nach eigener Prüfung bewusst kopieren.</li>
+          </ul>
+          <p>Keine Änderung des Archivformats. Bestehende Quellen, Archivverbindungen und bewusst gewählte Einstellungen bleiben nutzbar. Die synthetischen Funktionstests und die Prüfung der gerenderten Ansichten sind abgeschlossen. Dieser interne Stand hatte keinen eigenen öffentlichen Download und ist nun in 0.12.0 enthalten.</p>
+          <p><a href="anleitung.html#einrichtung">Direkt einrichten</a> · <a href="anleitung.html#apple-fotos">Fotos-Zugriff</a> · <a href="anleitung.html#automatisierung">Zeitpläne</a> · <a href="anleitung.html#vision">Lokale Schlagwörter</a></p>
+        </section>
+        <section id="v0-10-3" aria-labelledby="v0-10-3-title">
+          <h2 id="v0-10-3-title">0.10.3 · Quellen direkt bedienen</h2>
+          <p>Build 21 · Interner Entwicklungsstand · In 0.12.0 enthalten</p>
+          <ul>
+            <li><strong>Konkrete Hilfe:</strong> Problemhinweise im Hauptfenster nennen die betroffene Quelle und führen zu ihrem Bericht. Die Aufforderung, die bereits offene App zu öffnen, entfällt.</li>
+            <li><strong>Kompakte Quellenzeilen:</strong> Verbindungsanzeige, „Jetzt archivieren“ und bei geeigneten externen Volumes „Sicher auswerfen“ stehen als Icons direkt neben der Quelle. Hovertexte erklären die Bedeutung; Fortschritt erscheint während der Arbeit.</li>
+            <li><strong>Nur diese Quelle starten:</strong> Der kleine Archivierungspfeil prüft die angeklickte Quelle neu und übernimmt neue oder geänderte Inhalte. Ihre offene Vorschau wird ersetzt. Andere Quellen und Zeitpläne werden nicht gestartet; gültige fremde Vorschauen bleiben erhalten.</li>
+            <li><strong>Bericht auch nach dem Trennen:</strong> Wird eine Quelle unerreichbar oder sicher ausgeworfen, bleibt ihr letzter Bericht in dieser Sitzung lesbar. Alte Importauswahlen werden ungültig.</li>
+          </ul>
+          <p>Keine Änderung des Archivformats. Der Status für Apple Fotos zeigt die Zugriffsfreigabe; einzelne iCloud-Originale werden erst beim Archivieren abgerufen.</p>
+          <p><a href="anleitung.html#arbeitsbereich">Quellen bedienen</a> · <a href="anleitung.html#laufwerk-trennen">Quellplatte trennen</a> · <a href="feedback.html#testfeedback">Testfeedback</a></p>
+        </section>
+        <section id="v0-10-2" aria-labelledby="v0-10-2-title">
+          <h2 id="v0-10-2-title">0.10.2 · Berichte bei den Quellen</h2>
+          <p>Build 20 · Interner Entwicklungsstand · In 0.12.0 enthalten</p>
+          <ul>
+            <li><strong>Ergebnisse direkt bei der Quelle:</strong> Lokale Ordner und Apple Fotos zeigen ihren letzten Abgleich auf der jeweiligen Quellseite. Das schwer lesbare Ergebnis-Popover entfällt. Links bleibt ein kurzer Status.</li>
+            <li><strong>Lesbare Berichte:</strong> Systemfarben für helle und dunkle Darstellung, umbrechende Meldungen sowie aufklappbare offene Einträge und Hinweise. Herkunftsergänzungen und Nitro-Varianten bleiben in den Zahlen enthalten.</li>
+            <li><strong>Passende Zuordnung:</strong> Ein Seitenwechsel erhält die Berichte; ein neuer Versuch ersetzt das Ergebnis derselben Quelle. Berichte des alten Archivziels erscheinen nach einem Zielwechsel nicht als Ergebnis für das neue Ziel.</li>
+          </ul>
+          <p><a href="anleitung.html#alle-quellen">Berichte im Handbuch</a> · <a href="feedback.html#testfeedback">Testfeedback</a></p>
+        </section>
+        <section id="v0-10-1" aria-labelledby="v0-10-1-title">
+          <h2 id="v0-10-1-title">0.10.1 · Stabilere Menüleiste</h2>
+          <p>Build 19 · Interner Entwicklungsstand · In 0.12.0 enthalten</p>
+          <ul>
+            <li><strong>Hänger beim Verbindungsaufbau behoben:</strong> Die Animation des Menüleistensymbols konnte in 0.10.0 die Oberfläche blockieren und sehr viel Speicher belegen. Ein unabhängiger, begrenzter Animationstakt ersetzt den betroffenen Darstellungsablauf. Pfeile bewegen sich bei aktiver Arbeit; Pause, Leerlauf und Probleme bleiben ruhig.</li>
+            <li><strong>Ein gemeinsames Archivziel:</strong> Der normale Zielblock entfällt auf den Quellseiten. Das Ziel steht in der linken Navigation und auf der Archivseite. Konkrete Probleme mit dem Ziel bleiben als Hinweis erreichbar.</li>
+            <li><strong>Schlafende Laufwerke:</strong> Die Anzeige eines gespeicherten Archivnamens und das Wiederherstellen einer offenen Ordnerauswahl lösen keine zusätzliche Dateisystemprüfung zur Ermittlung des Ordnertyps aus.</li>
+            <li><strong>Native Laufzeitprüfung:</strong> Ein isolierter Test prüft das echte Menüleistensymbol, Reaktionsfähigkeit, Speicher und den Wechsel zwischen Aktivität, Pause und Ruhe. Ein externer Wächter beendet ausschließlich den Testprozess bei Hängern oder zu hohem Speicherverbrauch.</li>
+          </ul>
+          <p>Keine neue Einrichtung oder Archivmigration gegenüber 0.10.0. Für macOS 15+, Intel und Apple Silicon. Weiterhin nicht notarisiert; reale Intel-/iCloud- und Nitro-/digiKam-Abnahme bleiben separat offen.</p>
+          <p><a href="anleitung.html#arbeitsbereich">Quellen und gemeinsames Ziel</a> · <a href="feedback.html#testfeedback">Testfeedback</a></p>
+        </section>
+
         <section id="v0-10-0" aria-labelledby="v0-10-0-title">
           <h2 id="v0-10-0-title">0.10.0 · Duplikate und Nitro-Varianten</h2>
           <p><time datetime="2026-09-09">9. September 2026</time> · Build 18 · Alpha</p>
@@ -156,6 +235,6 @@
       </div>
     </div>
   </main>
-  <footer class="site-footer wrap"><p><strong>TrueArchive</strong><br>Ein persönliches Community-Projekt.</p><nav aria-label="Weitere Informationen"><a href="index.html">Startseite</a><a href="anleitung.html">Handbuch</a><a href="release-notes.html" aria-current="page">Release Notes</a><a href="feedback.html">Feedback &amp; Wünsche</a><a href="index.html#unterstuetzen">Projekt unterstützen</a><a href="mailto:lutz.kohl@gmail.com">Kontakt</a></nav></footer>
+  <footer class="site-footer wrap"><p><strong>TrueArchive</strong><br>Ein persönliches Community-Projekt.</p><nav aria-label="Weitere Informationen"><a href="warum-truearchive.html">Warum TrueArchive?</a><a href="index.html">Startseite</a><a href="anleitung.html">Handbuch</a><a href="release-notes.html" aria-current="page">Release Notes</a><a href="feedback.html">Feedback &amp; Wünsche</a><a href="index.html#unterstuetzen">Projekt unterstützen</a><a href="mailto:lutz@truearchive.app">Kontakt</a></nav></footer>
 </body>
 </html>

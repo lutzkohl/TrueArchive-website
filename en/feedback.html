@@ -1,0 +1,100 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Help improve TrueArchive: share your experience from testing or suggest a new feature.">
+  <meta name="robots" content="noindex, nofollow">
+  <meta name="theme-color" content="#1E3C93">
+  <title>Feedback and ideas – TrueArchive</title>
+  <link rel="icon" href="../assets/app-icon.png" type="image/png">
+  <link rel="stylesheet" href="../styles.css">
+  <script src="../language.js" defer></script>
+  <link rel="canonical" href="https://truearchive.app/en/feedback.html">
+  <link rel="alternate" hreflang="de" href="https://truearchive.app/feedback.html">
+  <link rel="alternate" hreflang="en" href="https://truearchive.app/en/feedback.html">
+</head>
+<body>
+  <a class="skip-link" href="#inhalt">Skip to content</a>
+  <header class="site-header wrap">
+    <div class="brand"><a class="brand-home" href="index.html" aria-label="TrueArchive home"><img src="../assets/app-icon.png" width="40" height="40" alt=""><span>TrueArch</span></a><a class="brand-download" href="https://github.com/lutzkohl/TrueArchive-website/releases/download/v0.12.0-alpha/TrueArchive-0.12.0-alpha-macos-universal.zip" aria-label="Download TrueArchive 0.12.0">i</a><a class="brand-ending" href="index.html" aria-label="TrueArchive home">ve</a></div>
+    <nav aria-label="Main navigation"><a class="secondary-nav" href="warum-truearchive.html">Why TrueArchive?</a>
+      <a class="secondary-nav" href="index.html#funktionen">Features</a>
+      <a class="secondary-nav" href="feedback.html" aria-current="page">Feedback</a>
+      <a class="secondary-nav" href="anleitung.html">Handbook</a>
+      <a class="button small primary" href="index.html#beta">Join the beta</a>
+    </nav>
+    <nav class="language-switch" aria-label="Choose language"><a href="../feedback.html?lang=system" data-language="system">Automatic</a><a href="../feedback.html?lang=de" data-language="de" lang="de">Deutsch</a><a href="feedback.html?lang=en" data-language="en" lang="en">English</a></nav>
+  </header>
+
+  <main id="inhalt" class="wrap feedback-main">
+    <div class="guide-heading feedback-heading">
+      <h1>Help shape TrueArchive.</h1>
+      <p>Share your experience from testing or suggest a feature. Both help us decide what comes next.</p>
+      <nav class="feedback-nav" aria-label="Choose feedback type"><a href="#testfeedback">Feedback on testing</a><a href="#featurewunsch">Suggest a feature</a></nav>
+    </div>
+
+    <div class="feedback-forms">
+      <section class="response-panel" id="testfeedback" tabindex="-1" aria-labelledby="testfeedback-title">
+        <h2 id="testfeedback-title">Feedback on testing</h2>
+        <p class="form-intro" id="feedback-purpose">What works well, what is unclear, and where have you run into a problem?</p>
+        <form id="testfeedback-form" action="https://formspree.io/f/xeaqrbwz" method="post" aria-labelledby="testfeedback-title" aria-describedby="feedback-purpose feedback-data-hint">
+          <input type="hidden" name="subject" value="TrueArchive – Feedback zur Testphase">
+          <input type="hidden" name="_language" value="en">
+          <div class="form-field">
+            <label for="feedback-message">Your experience <span>(required)</span></label>
+            <p class="field-hint" id="feedback-message-hint">If something went wrong: what did you do, what did you expect, and what happened instead?</p>
+            <textarea id="feedback-message" name="message" rows="6" maxlength="8000" aria-describedby="feedback-message-hint feedback-private-hint" required></textarea>
+            <p class="field-hint" id="feedback-private-hint">Please do not include login details or private picture and log data.</p>
+          </div>
+          <div class="form-field">
+            <label for="feedback-context">App version and Mac <span>(optional)</span></label>
+            <input id="feedback-context" name="test_environment" type="text" maxlength="180" placeholder="e.g. 0.10.1, Intel iMac, macOS 15">
+          </div>
+          <div class="form-field">
+            <label for="feedback-email">Email for follow-up questions <span>(optional)</span></label>
+            <input id="feedback-email" name="email" type="email" autocomplete="email" inputmode="email" autocapitalize="none" spellcheck="false" maxlength="254" placeholder="you@example.com">
+          </div>
+          <p class="form-data-note">Sent through Formspree. Your email is only for follow-up questions; this is not a beta signup. <a href="#rueckmeldung-datenschutz">Privacy</a></p>
+          <button class="button secondary" type="submit">Send test feedback</button>
+          <p class="form-note">After you submit, Formspree confirms receipt.</p>
+        </form>
+      </section>
+
+      <section class="response-panel" id="featurewunsch" tabindex="-1" aria-labelledby="wish-title">
+        <h2 id="wish-title">Your feature idea</h2>
+        <p class="form-intro" id="wish-purpose">Which feature would help you archive your pictures?</p>
+        <form id="featurewish-form" action="https://formspree.io/f/xeaqrbwz" method="post" aria-labelledby="wish-title" aria-describedby="wish-purpose feedback-data-hint">
+          <input type="hidden" name="subject" value="TrueArchive – Featurewunsch">
+          <input type="hidden" name="_language" value="en">
+          <div class="form-field">
+            <label for="wish-message">Your idea <span>(required)</span></label>
+            <p class="field-hint" id="wish-message-hint">Briefly describe what you want to do and how TrueArchive could help.</p>
+            <textarea id="wish-message" name="message" rows="6" maxlength="5000" aria-describedby="wish-message-hint wish-private-hint" required></textarea>
+            <p class="field-hint" id="wish-private-hint">Please do not include login details or private picture and log data.</p>
+          </div>
+          <div class="form-field">
+            <label for="wish-email">Email for follow-up questions <span>(optional)</span></label>
+            <input id="wish-email" name="email" type="email" autocomplete="email" inputmode="email" autocapitalize="none" spellcheck="false" maxlength="254" placeholder="you@example.com">
+          </div>
+          <p class="form-data-note">Sent through Formspree. Your email is only for follow-up questions; this is not a beta signup. <a href="#rueckmeldung-datenschutz">Privacy</a></p>
+          <button class="button secondary" type="submit">Send feature idea</button>
+          <p class="form-note">After you submit, Formspree confirms receipt.</p>
+        </form>
+        <p class="planned-link">You can find our current plans under <a href="index.html#module">planned modules</a>.</p>
+      </section>
+    </div>
+
+    <div class="feedback-data" id="rueckmeldung-datenschutz" tabindex="-1">
+      <p id="feedback-data-hint">Your feedback goes to Lutz Kohl and is sent through Formspree. An email address is optional and is only used for follow-up questions about your message. This does not sign you up for the beta.</p>
+      <details class="beta-privacy">
+        <summary>What happens to my feedback?</summary>
+        <p>Lutz Kohl uses your information to improve TrueArchive and, where appropriate, respond to your feedback. Your message and the fields you fill in are stored at Formspree. Formspree also processes technical data such as your IP address and browser information; processing in the USA is possible. <a href="https://formspree.io/legal/privacy-policy/">Formspree privacy policy</a>.</p>
+        <p>For questions or to delete your feedback, email <a href="mailto:lutz@truearchive.app">lutz@truearchive.app</a>.</p>
+      </details>
+    </div>
+  </main>
+
+  <footer class="site-footer wrap"><p><strong>TrueArchive</strong><br>A personal community project.</p><nav aria-label="Further information"><a href="warum-truearchive.html">Why TrueArchive?</a><a href="release-notes.html">Release Notes</a><a href="index.html#funktionen">Features</a><a href="index.html">Home</a><a href="anleitung.html">Handbook</a><a href="index.html#unterstuetzen">Support the project</a><a href="mailto:lutz@truearchive.app">Contact</a></nav></footer>
+</body>
+</html>

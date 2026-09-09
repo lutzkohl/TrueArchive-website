@@ -3,34 +3,39 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="description" content="TrueArchive für Mac installieren, alle Quellen archivieren und Quelllaufwerke sicher trennen. Handbuch mit Duplikaten, Nitro-Bearbeitungen und Release Notes zur Alpha 0.10.0.">
+  <meta name="description" content="TrueArchive für Mac installieren, alle Quellen archivieren und Quelllaufwerke sicher trennen. Handbuch mit Duplikaten, Nitro-Bearbeitungen und Release Notes zur Alpha 0.12.0.">
   <meta name="robots" content="noindex, nofollow">
   <meta name="theme-color" content="#1E3C93">
   <title>Handbuch – TrueArchive</title>
   <link rel="icon" href="assets/app-icon.png" type="image/png">
   <link rel="stylesheet" href="styles.css">
+  <script src="language.js" defer></script>
+  <link rel="canonical" href="https://truearchive.app/anleitung.html">
+  <link rel="alternate" hreflang="de" href="https://truearchive.app/anleitung.html">
+  <link rel="alternate" hreflang="en" href="https://truearchive.app/en/anleitung.html">
 </head>
 <body>
   <a class="skip-link" href="#inhalt">Zum Inhalt</a>
   <header class="site-header wrap">
-    <a class="brand" href="index.html" aria-label="TrueArchive Startseite"><img src="assets/app-icon.png" width="40" height="40" alt=""><span>TrueArchive</span></a>
-    <nav aria-label="Hauptnavigation"><a class="secondary-nav" href="index.html#funktionen">Funktionen</a><a class="secondary-nav" href="feedback.html">Feedback</a><a class="secondary-nav" href="anleitung.html" aria-current="page">Handbuch</a><a class="button small primary" href="index.html#beta">Zur Beta anmelden</a></nav>
+    <div class="brand"><a class="brand-home" href="index.html" aria-label="TrueArchive Startseite"><img src="assets/app-icon.png" width="40" height="40" alt=""><span>TrueArch</span></a><a class="brand-download" href="https://github.com/lutzkohl/TrueArchive-website/releases/download/v0.12.0-alpha/TrueArchive-0.12.0-alpha-macos-universal.zip" aria-label="TrueArchive 0.12.0 herunterladen">i</a><a class="brand-ending" href="index.html" aria-label="TrueArchive Startseite">ve</a></div>
+    <nav aria-label="Hauptnavigation"><a class="secondary-nav" href="warum-truearchive.html">Warum TrueArchive?</a><a class="secondary-nav" href="index.html#funktionen">Funktionen</a><a class="secondary-nav" href="feedback.html">Feedback</a><a class="secondary-nav" href="anleitung.html" aria-current="page">Handbuch</a><a class="button small primary" href="index.html#beta">Zur Beta anmelden</a></nav>
+    <nav class="language-switch" aria-label="Sprache wählen"><a href="anleitung.html?lang=system" data-language="system">Automatisch</a><a href="anleitung.html?lang=de" data-language="de" lang="de">Deutsch</a><a href="en/anleitung.html?lang=en" data-language="en" lang="en">English</a></nav>
   </header>
 
   <main id="inhalt" class="wrap">
-    <div class="guide-heading"><h1>Das TrueArchive-Handbuch.</h1><p>Quellen verbinden, Archiv wählen, Abgleich starten.</p><p>Die „?“-Buttons in der App öffnen direkt das passende Kapitel. Weiter unten findest du die <a href="#release-notes">Release Notes und frühere Versionen</a>.</p><p class="guide-version">Handbuch für die kostenlose Alpha 0.10.0</p></div>
+    <div class="guide-heading"><h1>Das TrueArchive-Handbuch.</h1><p>Quellen verbinden, Archiv wählen, Abgleich starten.</p><p>Die „?“-Buttons in der App öffnen direkt das passende Kapitel. Weiter unten findest du die <a href="#release-notes">Release Notes und frühere Versionen</a>.</p><p class="guide-version">Handbuch für Alpha 0.12.0 · Build 24 · 10. September 2026</p></div>
     <div class="guide-layout">
-      <nav class="guide-nav" aria-label="Im Handbuch"><a href="#installation">Installieren</a><a href="#updates">App-Updates</a><a href="#einrichtung">Das erste Archiv</a><a href="#arbeitsbereich">Quellen und Ziel</a><a href="#alle-quellen">Alle Quellen archivieren</a><a href="#duplikate">Duplikate und Nitro</a><a href="#vision">Automatische Schlagwörter</a><a href="#details">Fragen und Details</a><a href="#release-notes">Release Notes</a><a href="#hilfe">Bei Problemen</a></nav>
+      <nav class="guide-nav" aria-label="Im Handbuch"><a href="#installation">Installieren</a><a href="#updates">App-Updates</a><a href="#sprache">Sprache wählen</a><a href="#einrichtung">Das erste Archiv</a><a href="#arbeitsbereich">Quellen und Ziel</a><a href="#alle-quellen">Alle Quellen archivieren</a><a href="#duplikate">Duplikate und Nitro</a><a href="#vision">Automatische Schlagwörter</a><a href="#details">Fragen und Details</a><a href="#release-notes">Release Notes</a><a href="#hilfe">Bei Problemen</a></nav>
       <div class="guide-content">
         <section id="installation" aria-labelledby="installation-title">
           <h2 id="installation-title">Installieren</h2>
-          <div class="guide-note"><p><strong>Die erste Testrunde wird vorbereitet.</strong> Im öffentlichen Download 0.10.0 ist ein Problem bekannt, bei dem die Menüleistenanzeige die App blockieren und sehr viel Arbeitsspeicher belegen kann. Warte für einen neuen Test auf die Einladung mit der korrigierten, geprüften Version. <a href="index.html#beta">Für die Testrunde anmelden</a>.</p></div>
-          <p>Du brauchst einen Mac mit <strong>macOS 15 oder neuer</strong>. Ein gemeinsames Paket ist für Intel und Apple Silicon vorgesehen. Den Prüfstand deiner Version findest du in den Release Notes.</p>
-          <p>Wenn du deine Beta-Einladung erhalten hast, kannst du das darin verlinkte App-Paket so installieren:</p>
+          <div class="guide-note"><p><strong>Alpha 0.12.0 ist für die erste Testrunde bereit.</strong> Sie enthält die Korrektur für den Menüleistenhänger von 0.10.0 und die vereinfachte Oberfläche. Beginne mit einer kleinen, zusätzlich gesicherten Auswahl. <a href="index.html#beta">Für die Testrunde anmelden</a>.</p></div>
+          <p>Du brauchst einen Mac mit <strong>macOS 15 oder neuer</strong>. Ein gemeinsames Paket enthält die App für Intel und Apple Silicon. Den Prüfstand deiner Version findest du in den Release Notes.</p>
+          <p>So installierst du das App-Paket aus deiner Beta-Einladung:</p>
           <ol>
             <li><strong>Laufende Übernahmen beenden.</strong> Schließe die ältere TrueArchive-App vor einem Update.</li>
             <li><strong>Das App-Paket aus deiner Beta-Einladung entpacken.</strong> Lege <code>TrueArchive.app</code> in den Ordner „Programme“.</li>
-            <li><strong>App öffnen.</strong> Beim ersten Start beginnt der Einrichtungsassistent.</li>
+            <li><strong>App öffnen.</strong> Beim ersten Start öffnet sich die normale Oberfläche mit Hinweisen zum Verbinden von Quellen und Archiv.</li>
           </ol>
           <p>Noch keine Einladung erhalten? <a href="index.html#beta">Melde dich für die Beta an.</a></p>
           <div class="guide-note"><p>Diese Alpha ist nicht von Apple notarisiert. macOS kann deshalb beim ersten Öffnen eine zusätzliche Freigabe verlangen. Verwende das unveränderte Paket aus deiner Einladung und prüfe, ob die Version stimmt.</p></div>
@@ -49,6 +54,7 @@
 
         <section id="updates" aria-labelledby="updates-title">
           <h2 id="updates-title">App-Updates</h2>
+          <div class="guide-note"><p>Die Testversion 0.12.0 wird zunächst als manuelles Paket verteilt. Sie erscheint noch nicht im gemeinsamen automatischen Updatekanal. Lass eine laufende Übernahme enden, beende die ältere App und ersetze sie wie oben beschrieben. Deine gespeicherten Quellen und das Archiv bleiben erhalten.</p></div>
           <p>Ab Version 0.6.0 sind <strong>automatische App-Updates voreingestellt</strong>. TrueArchive prüft ungefähr täglich, solange die App läuft und der Mac wach ist. Ein neues, geprüftes Paket wird im Leerlauf installiert; anschließend startet die App neu.</p>
           <p>Während einer Prüfung, Übernahme, Pause oder Verschlagwortung wartet das Update. Auch eine offene Einrichtung oder Importvorschau verhindert einen automatischen Neustart. Das gilt ebenso für eine erhaltene Vorschau auf einer gerade nicht angezeigten Quellseite. Während des Updatevorgangs starten keine neuen Archivaufträge.</p>
           <p>Unter <strong>TrueArchive → Einstellungen → App-Updates</strong> kannst du die Automatik ausschalten. <strong>„Jetzt nach Updates suchen“</strong> bleibt für manuelle Updates verfügbar. Das geht auch über das TrueArchive-Menü; „App-Updates …“ im Menüleistenfenster öffnet die Einstellung.</p>
@@ -57,20 +63,32 @@
           <div class="guide-note"><p><strong>Nicht auf 0.7.x zurückwechseln:</strong> Sobald die Alpha 0.8.0 die lokale Einrichtung im neuen Schema 2 gespeichert hat, können Versionen 0.7.x diese Einstellungen absichtlich nicht lesen. So wird ein begrenzter Fotos-Abgleich nicht versehentlich als unbegrenzt ausgeführt. Das Archivformat und bereits archivierte Dateien bleiben unverändert.</p></div>
         </section>
 
+        <section id="sprache" aria-labelledby="language-title">
+          <h2 id="language-title">Sprache wählen</h2>
+          <p>Unter <strong>TrueArchive → Einstellungen → Allgemein → Sprache / Language</strong> wählst du <strong>System, Deutsch oder English</strong>. Bei „System“ verwendet TrueArchive die erste unterstützte Sprache aus den bevorzugten Systemsprachen. Ist weder Deutsch noch Englisch dabei, wird Englisch verwendet. Deine ausdrückliche Auswahl bleibt auf diesem Mac gespeichert.</p>
+          <p>Navigation und Einstellungen wechseln sofort. Bereits angezeigte Meldungen behalten ihre Sprache bis zur nächsten Aktion. Systemeigene Dialogelemente und Update-Dialoge verwenden die von macOS gewählte Sprache. Laufende Archivarbeit wird durch die Sprachwahl nicht neu gestartet. Eigene Quellnamen, Dateinamen, Pfade und archivierte Metadaten bleiben unverändert. Apple Vision ergänzt weiterhin englische Schlagwörter.</p>
+          <p>Die Website hat oben eine eigene Auswahl für Deutsch, English und Automatisch. Bei Automatisch richtet sich die Sprache nach den bevorzugten Browsersprachen, mit Englisch als Rückfall. Die Auswahl bleibt gespeichert, wenn der Browser dies erlaubt. Sprachlinks funktionieren auch ohne JavaScript; dann wählst du Deutsch oder English selbst.</p>
+        </section>
+
         <section id="einrichtung" aria-labelledby="setup-title">
           <h2 id="setup-title">Dein erstes Archiv</h2>
           <ol>
-            <li><strong>Quellen verbinden.</strong> Füge Apple Fotos, eine SD-Karte oder lokale Bildordner hinzu.</li>
-            <li><strong>Archiv verbinden.</strong> Wähle einen neuen leeren Archivordner oder dein vorhandenes TrueArchive-Archiv. Das Ziel benötigt APFS oder HFS+.</li>
-            <li><strong>Einrichtung abschließen.</strong> Danach startest du links „Alle Quellen archivieren“ oder öffnest eine einzelne Quelle für eine gezielte Übernahme. Der Assistent führt keine begrenzte Zehn-Bilder-Probe mehr aus.</li>
+            <li><strong>Quellen verbinden.</strong> Füge über „+ Quelle hinzufügen“ Apple Fotos, eine SD-Karte oder lokale Bildordner hinzu. Die gewählte Quelle öffnet sich direkt.</li>
+            <li><strong>Archiv verbinden.</strong> Wähle auf der Archivseite einen neuen leeren Archivordner oder dein vorhandenes TrueArchive-Archiv. Das Ziel benötigt APFS oder HFS+.</li>
+            <li><strong>Abgleich bewusst starten.</strong> Sobald mindestens eine Quelle verbunden und das Archiv geprüft ist, merkt sich TrueArchive die vollständige Einrichtung automatisch. Starte danach „Alle Quellen archivieren“ oder eine einzelne Quelle.</li>
           </ol>
-          <p>Die Schritte links sind anklickbar: Quellen und Archiv kannst du direkt öffnen; „Fertig“ wird nach gültiger Quellen- und Archivwahl freigeschaltet. Der Wechsel behält deine Angaben und startet keine Übernahme. Deine erste Übernahme landet direkt im gewählten Archiv. Ein zusätzlicher Testordner ist nicht nötig. Quellen, Archiv und ein optionaler Fotos-Aufnahmezeitraum bleiben auf diesem Mac gespeichert.</p>
+          <p>Quellen und Archiv richtest du auf denselben Seiten ein, die du später verwendest. Kurze Hinweise zeigen, was noch fehlt. Es gibt keinen separaten Assistenten, keinen „Fertig“-Knopf und keine Probeübernahme. Der automatische Einrichtungsabschluss selbst startet keinen Import. Quellen, Archiv und ein optionaler Fotos-Aufnahmezeitraum bleiben auf diesem Mac gespeichert.</p>
           <div class="guide-note"><p><strong>Die Richtung ist immer Quelle → Archiv.</strong> TrueArchive verändert oder löscht keine Quellen. Auch wenn du später dort eine Datei löschst, bleibt die Archivkopie erhalten.</p></div>
         </section>
 
         <section id="arbeitsbereich" aria-labelledby="workspace-title">
           <h2 id="workspace-title">Quellen und Ziel im Blick</h2>
-          <p>Links stehen die Quellen, darunter zeigt der Pfeil zu deinem gewählten Archivordner. Über <strong>+</strong> ergänzt du weitere Quellen. Ein Klick öffnet die jeweilige Seite; <strong>„Einstellungen …“</strong> enthält ihre Konfiguration und den optionalen Zeitplan.</p>
+          <p>Links stehen die Quellen, darunter zeigt der Pfeil zu deinem gewählten Archivordner. Über <strong>+</strong> ergänzt du weitere Quellen. Ein Klick auf den Quellnamen öffnet ihre Seite. Daneben stehen <strong>Jetzt archivieren</strong> (Pfeil in eine Festplatte), <strong>Einstellungen</strong> (Zahnrad) und bei externen Quellen das Auswurfsymbol. Das Zahnrad öffnet immer die Einstellungen dieser Quelle, auch wenn gerade eine andere Seite geöffnet ist.</p>
+          <p>Das kleine Zeichen am Quellensymbol zeigt die zuletzt geprüfte Verbindung: <strong>grüner Punkt</strong> verbunden, <strong>leerer Kreis</strong> nicht erreichbar, <strong>gestrichelter Kreis</strong> noch nicht geprüft und <strong>oranges Ausrufezeichen</strong> fehlende Fotos-Freigabe. Hovertexte erklären Status und Aktionen. Bei Apple Fotos bedeutet Grün, dass voller Fotos-Zugriff erlaubt ist; ob ein einzelnes iCloud-Original verfügbar ist, zeigt erst der Abruf.</p>
+          <p>Der <strong>Pfeil nach unten neben einer Quelle</strong> startet nur deren vollständigen Abgleich. Er prüft neu und übernimmt neue oder geänderte Inhalte in das gemeinsame Archiv. Eine offene Vorschau dieser Quelle wird ersetzt; Vorschauen und Berichte anderer Quellen bleiben erhalten. Bei der allerersten Übernahme in einen noch leeren Archivordner entsteht die feste Archivkennung; vorher erstellte Vorschauen musst du dann erneut prüfen. Unterordnerauswahl, Fotos-Zeitraum und Zeitpläne bleiben unverändert. Während anderer Arbeit sind die Startaktionen gesperrt.</p>
+          <p>Das <strong>Auswurfsymbol</strong> erscheint bei trennbaren externen Quellvolumes. Es trennt alle Quellordner auf demselben Volume; das Archivvolume bleibt geschützt. <a href="#laufwerk-trennen">Quellplatte sicher trennen.</a></p>
+          <p>Ein Problemhinweis im Hauptfenster nennt die betroffene Quelle oder das Archivziel und bietet die passende Aktion. <strong>„Zur betroffenen Quelle“</strong> führt zu deren Bericht. Auf der bereits geöffneten Quellseite steht die Ursache unter „Letzter Abgleich“. Bei fehlendem Fotos-Zugriff wird dort erklärt, wo du ihn freigibst. Ein erfolgreicher Bericht einer anderen Quelle bleibt sichtbar.</p>
+          <p>Alle Quellen verwenden dasselbe Archivziel. In den Quelldetails erscheint ein Archivhinweis nur dann, wenn das Ziel die Übernahme verhindert; über „Archivziel prüfen“ gelangst du zu den Einzelheiten.</p>
           <p>Eine erstellte Vorschau samt Auswahl bleibt während dieser App-Sitzung erhalten, wenn du zum Ziel oder zu einer anderen Quelle wechselst. Mit „Alle Quellen archivieren“ ersetzt du diese Vorschauen bewusst durch einen vollständigen Abgleich. Auch während einer Übernahme kannst du dich umsehen. Der feste Statusbereich zeigt die aktive Arbeit; <strong>„Zum Vorgang“</strong> führt zurück. Ein automatischer Abgleich wechselt deine Seite nicht.</p>
           <p>Auf der Archivseite siehst du den vollständigen Zielpfad, die Verbindung und den freien Speicher des Laufwerks. Über <strong>„Archiv ändern …“</strong> wählst du den gewünschten Ordner direkt. Bei der ersten Einrichtung heißt der Knopf <strong>„Archivordner wählen …“</strong>. In der Auswahl kannst du über <strong>„Neuer Ordner“</strong> einen Ordner anlegen und mit <strong>„Als Archiv verwenden“</strong> bestätigen. Dieser Ordner selbst wird dein Archiv; es wird kein zusätzlicher „Bildarchiv“-Ordner darunter angelegt. Das Ziel benötigt APFS oder HFS+.</p>
           <div class="guide-note"><p><strong>„Zielwechsel noch offen“:</strong> Die letzte Auswahl konnte nicht übernommen werden. Weitere Übernahmen bleiben gesperrt, auch nach einem App-Neustart. Wähle das gewünschte Ziel erneut und warte auf „Archiv bereit“. Der bisherige Ordner wird nicht still weiterverwendet.</p></div>
@@ -81,7 +99,7 @@
           <h2 id="all-sources-title">Alle Quellen archivieren</h2>
           <p>Mit <strong>„Alle Quellen archivieren“</strong> in der Seitenleiste startest du einen einmaligen Durchlauf: zuerst alle eingerichteten lokalen Quellen nacheinander, danach die verbundene Apple-Fotos-Quelle. Für Ordner gilt die jeweilige Unterordnerauswahl, für Apple Fotos der gespeicherte Aufnahmezeitraum. Ohne Datumsfilter wird die gesamte erreichbare Mediathek in kleinen Etappen abgeglichen.</p>
           <div class="guide-note"><p><strong>Offene Vorschauen werden ersetzt.</strong> Der Knopf prüft den vollständigen eingerichteten Umfang neu und übernimmt neue oder geänderte Inhalte. Bisherige Teilauswahlen begrenzen diesen Lauf nicht. Für eine gezielte Auswahl archivierst du stattdessen auf der einzelnen Quellseite.</p></div>
-          <p>Der Quellenfortschritt steht direkt unter dem Knopf. Mit <strong>„Ergebnis anzeigen“</strong> siehst du danach je Quelle neue, aktualisierte und bereits vorhandene Inhalte sowie Hinweise. Fehlende Quelllaufwerke werden übersprungen; andere Quellen können weiterlaufen. Bei einem unsicheren Archiv oder geänderter Einrichtung stoppt der Lauf.</p>
+          <p>Der Gesamtfortschritt steht direkt unter dem Knopf, der Fortschritt einer Quelle bei ihrem Namen. <strong>Klicke links auf die gewünschte Quelle:</strong> Unter „Letzter Abgleich“ stehen dort neue, aktualisierte und bereits vorhandene Inhalte, Herkunftsergänzungen, Bearbeitungsvarianten sowie offene Einträge und Hinweise. Links bleibt nur der Verbindungsstatus; konkrete Probleme und Berichte stehen im Hauptbereich. Die Berichte bleiben beim Seitenwechsel in dieser App-Sitzung erhalten. Ein neuer Versuch ersetzt den Bericht dieser Quelle; nach einem Archivwechsel gelten die bisherigen Ergebnisse nicht für das neue Ziel. Fehlende Quelllaufwerke werden übersprungen; andere Quellen können weiterlaufen. Bei einem unsicheren Archiv oder geänderter Einrichtung stoppt der Lauf.</p>
           <p>Lokale Arbeit lässt sich mit <strong>„Pausieren“</strong> anhalten und mit „Fortsetzen“ weiterführen. <strong>„Abgleich abbrechen“</strong> beendet den gesamten Durchlauf; spätere Quellen starten dann nicht mehr. Apple Fotos unterstützt Abbrechen, aber noch keine Pause. Bereits archivierte Dateien bleiben erhalten und werden beim nächsten Start wiedererkannt.</p>
           <p>Deine Zeitpläne und deren globale Pause bleiben unverändert. Für Apple Fotos muss voller Zugriff bereits erlaubt sein. Laufende Archivarbeit und App-Updates verhindern einen zweiten gleichzeitigen Durchlauf.</p>
         </section>
@@ -95,26 +113,29 @@
             <span id="testarchiv" aria-hidden="true"></span>
             <p>Neue Archive legen Bilder direkt im gewählten Ordner ab: <code>2026/2026-09-08/</code>, ohne zusätzlichen Medien-Ordner. Ohne bekanntes Datum heißt der Ordner <code>Unbekannt</code>. Zu jeder Mediendatei gehört ein gemeinsames XMP.</p>
             <p>Bestehende TrueArchive-Archive behalten ihre bisherige Ablage unter <code>Medien/</code>. Sie werden nicht automatisch umsortiert. Andere gefüllte Bildordner fügst du als Quellen hinzu.</p>
-            <p>Quellen und Ziel bleiben auf diesem Mac eingerichtet. Über <strong>„Einstellungen …“</strong> änderst du den Anzeigenamen und die Unterordnerauswahl einer Quelle. <strong>„Quelle aus Liste entfernen …“</strong> entfernt nur diese gespeicherte Verbindung.</p>
+            <p>Quellen und Ziel bleiben auf diesem Mac eingerichtet. Über das <strong>Zahnrad neben der Quelle</strong> änderst du unter „Name“ die Bezeichnung und bei Ordnerquellen die Unterordnerauswahl. <strong>„Aus Quellenliste entfernen …“</strong> steht im Kopf der geöffneten Quelle und im Kontextmenü ihres Namens. Nach Bestätigung wird nur die gespeicherte Verbindung entfernt; Dateien auf der Quelle und im Archiv bleiben erhalten. Vorschauen anderer Quellen bleiben bestehen.</p>
             <p>Fehlt eine Quellplatte, schließe sie an und wähle in ihren Einstellungen „Verbindung erneut prüfen“. Beim Archivziel heißt die Aktion „Erneut verbinden“. Ein anderer Datenträger am gleichen Pfad wird nicht ungeprüft übernommen. Nach einem Macwechsel richtest du die Quellen auf dem neuen Mac erneut ein.</p>
           </details>
 
           <details id="apple-fotos">
             <summary>Wie übernehme ich Bilder aus Apple Fotos?</summary>
-            <p>Verbinde die erwartete Systemfotomediathek dieses Mac-Benutzers und erlaube den angefragten Fotos-Zugriff. Eine externe Mediathek muss angeschlossen sein. Der Quellenname wechselt keinen Apple-Account.</p>
+            <p>Füge Apple Fotos hinzu und öffne die Fotos-Seite. Bei noch nicht erteilter Freigabe wählst du <strong>„Fotos-Zugriff erlauben“</strong>. Ist der Status unbekannt, liest <strong>„Zugriff prüfen“</strong> zunächst nur die Berechtigung; erst der anschließende Freigabeknopf kann einen Systemdialog öffnen. Diese Aktionen lesen keine Mediathekinhalte und starten weder Vorschau noch Import.</p>
+            <p>Bei vollem Zugriff steht <strong>„Verbunden“</strong>. Nach verweigertem oder eingeschränktem Zugriff führt <strong>„Systemeinstellungen öffnen“</strong> zur macOS-App; wähle dort „Datenschutz &amp; Sicherheit“ → „Fotos“ und erlaube TrueArchive den vollständigen Zugriff. Bei einer Systembeschränkung prüfst du Bildschirmzeit oder die Verwaltung des Macs.</p>
+            <p>Verwendet wird die Systemfotomediathek dieses Mac-Benutzers. Eine externe Mediathek muss angeschlossen sein. Der Quellenname wechselt keinen Apple-Account; weitere Umfangshinweise stehen unter „Details“.</p>
             <p>Mit <strong>„Alle Aufnahmen archivieren“</strong> startest du direkt einen Abgleich aller erreichbaren Bilder und Videos. TrueArchive setzt keine Gesamtmengenbegrenzung. Technisch werden weiterhin höchstens 20 Aufnahmen je Etappe geprüft; zwischen bestätigten Etappen liegen mindestens 15 Sekunden. Fortschritt und Ergebnis gelten für die ganze Runde.</p>
             <p>Über <strong>„Zeitraum ändern …“</strong> auf der Fotos-Seite kannst du den Abgleich auf inklusive Kalendertage begrenzen. „Ab“ und „Bis“ lassen sich gemeinsam oder einzeln setzen. Ist der Filter aktiv, werden Aufnahmen ohne bekanntes Aufnahmedatum ausgeschlossen. Ohne Filter gehören auch undatierte Aufnahmen zum Abgleich.</p>
             <p>Der Aufnahmezeitraum bleibt bei der Fotosquelle gespeichert und gilt gleichermaßen für den direkten und einen geplanten Abgleich. Eine Änderung startet oder aktiviert keinen Zeitplan. Bei einem Fehler oder einer unvollständigen Etappe stoppt der Abgleich; nach der Klärung kannst du neu starten. Bereits archivierte Aufnahmen werden wiedererkannt.</p>
             <p>Beim Archivieren werden benötigte iCloud-Ressourcen angefordert; lokale Dateien müssen nicht erneut geladen werden. Originale, aktuelle Fassungen und verfügbare Zusatzressourcen kommen mit. Live Photos können mehrere Dateien ergeben. Fotos und Videos bleiben in Apple Fotos erhalten.</p>
-            <p>Einen wiederkehrenden Abgleich aktivierst du separat über <strong>„Einstellungen … → Zeitplan → Regelmäßig ins Archiv übernehmen“</strong>. Auch dieser arbeitet in begrenzten Etappen und ohne Gesamtmengenlimit. Die erreichbare Systemfotomediathek ist kein unabhängiger Nachweis des vollständigen iCloud-Bestands.</p>
+            <p>Einen wiederkehrenden Abgleich aktivierst du separat über <strong>Zahnrad neben der Quelle → Automatisch archivieren</strong>. Auch dieser arbeitet in begrenzten Etappen und ohne Gesamtmengenlimit. Die erreichbare Systemfotomediathek ist kein unabhängiger Nachweis des vollständigen iCloud-Bestands.</p>
           </details>
 
           <details id="sd-karte">
             <summary>Wie übernehme ich Karten und lokale Ordner?</summary>
             <p>Füge über <strong>+</strong> eine SD-Karte, Festplatte oder weitere lokale Ordner hinzu. Mehrere Ordner lassen sich gleichzeitig wählen. Quellen dürfen auch auf FAT oder exFAT liegen; Quelle und Archiv müssen getrennt sein.</p>
-            <p>Für eine direkte Übernahme aller verbundenen Quellen nutze links „Alle Quellen archivieren“. Für eine gezielte Übernahme klicke auf eine einzelne lokale Quelle und erstelle ihre Vorschau; dort wählst du Dateien aus und klärst offene Metadatenfälle. Unter <strong>„Einstellungen …“</strong> entscheidest du, ob Unterordner dazugehören. Die Vorschau prüft den gewählten Umfang; die Einrichtung selbst startet keine Probeübernahme.</p>
+            <p>Für eine direkte Übernahme dieser Quelle nutze das <strong>Festplatten-Pfeil-Symbol „Jetzt archivieren“</strong> neben ihrem Namen. „Alle Quellen archivieren“ übernimmt dagegen alle verbundenen Quellen. Für eine gezielte Übernahme klicke auf eine einzelne lokale Quelle und erstelle ihre Vorschau; dort wählst du Dateien aus und klärst offene Metadatenfälle. Über das <strong>Zahnrad neben der Quelle</strong> entscheidest du, ob Unterordner dazugehören. Die Vorschau prüft den gewählten Umfang; die Einrichtung selbst startet keine Probeübernahme.</p>
             <p>Filter und Seitenwechsel helfen bei großen Beständen. Prüfe neue Dateien, Änderungen und offene Fälle, bevor du <strong>„ausgewählte archivieren“</strong> startest. Eine erneute Prüfung erkennt passende bereits archivierte Medien wieder.</p>
-            <p>Nach der Übernahme siehst du neue Dateien, aktualisierte Metadaten, bereits vorhandene Inhalte und offene Fälle. <strong>„Archiv öffnen“</strong> führt zum Ergebnis im Finder. Du kannst die Quelle für spätere Abgleiche behalten oder mit <strong>„Quelle aus Liste entfernen …“</strong> die Verbindung entfernen. Dateien auf der alten Platte und im Archiv bleiben erhalten. Eine Teilübernahme bestätigt nicht den gesamten Inhalt der Platte.</p>
+            <p><strong>Hinweise gehören zur jeweiligen Quelle.</strong> Ein fehlgeschlagener Fotos-Abgleich erscheint auf der Fotos-Seite. Bei einer anderen geöffneten Quelle bleibt nur das Warnzeichen an der betroffenen Quelle sichtbar; der Hovertext nennt den Grund. Klicke auf ihren Namen, um den Bericht zu lesen. Gemeinsame Hindernisse wie ein nicht erreichbares Archiv bleiben für alle Quellen sichtbar.</p>
+            <p>Nach der Übernahme siehst du neue Dateien, aktualisierte Metadaten, bereits vorhandene Inhalte und offene Fälle. <strong>„Archiv öffnen“</strong> führt zum Ergebnis im Finder. Du kannst die Quelle für spätere Abgleiche behalten oder mit <strong>„Quelle entfernen“</strong> die Verbindung entfernen. Dateien auf der alten Platte und im Archiv bleiben erhalten. Eine Teilübernahme bestätigt nicht den gesamten Inhalt der Platte.</p>
             <p>RAWs und vorhandene XMPs werden zusammen übernommen. Fertige Bilder in Apple Fotos und RAWs auf der Karte werden nicht allein wegen ähnlicher Namen automatisch verknüpft.</p>
           </details>
 
@@ -122,13 +143,13 @@
             <summary>Wie trenne ich eine Quellplatte nach der Übernahme?</summary>
             <p>Warte, bis die Archivarbeit beendet ist, und klicke auf das <strong>Auswurfsymbol neben der externen Quelle</strong>. TrueArchive trennt das zugehörige Volume. Alle eingerichteten Quellordner auf diesem Volume sind danach nicht mehr verbunden; ihre Einstellungen bleiben gespeichert. Warte auf die Erfolgsmeldung. Hat der Datenträger weitere verbundene Volumes, trenne diese ebenfalls, bevor du ihn abziehst.</p>
             <p>Das Volume mit deinem Archiv wird nicht getrennt. Die Aktion erzwingt kein Trennen und betrifft nicht pauschal alle Volumes eines Datenträgers. Meldet macOS, dass das Volume noch verwendet wird, beende den anderen Zugriff und versuche es erneut.</p>
-            <p><strong>Trennen</strong> macht das Quellvolume vorübergehend nicht erreichbar. <strong>„Quelle aus Liste entfernen …“</strong> entfernt dagegen nur die gespeicherte Verbindung zu einem Ordner und wirft den Datenträger nicht aus. Beide Aktionen erhalten die Dateien auf Quelle und Archiv.</p>
+            <p><strong>Trennen</strong> macht das Quellvolume vorübergehend nicht erreichbar. <strong>„Quelle entfernen“</strong> entfernt dagegen nur die gespeicherte Verbindung zu einem Ordner und wirft den Datenträger nicht aus. Beide Aktionen erhalten die Dateien auf Quelle und Archiv.</p>
           </details>
 
           <details id="automatisierung">
             <summary>Wie funktionieren Zeitpläne?</summary>
-            <p>Unter <strong>„Einstellungen … → Zeitplan“</strong> aktivierst du jede gewünschte Quelle einzeln. Vorgeschlagen wird täglich; stündlich oder alle sechs Stunden sind ebenfalls möglich. <strong>„Nächsten Abgleich vorziehen“</strong> macht einen bereits aktivierten Zeitplan sofort fällig. Bei angehaltenen Fehlern heißt die Aktion „Abgleich erneut freigeben“.</p>
-            <p>Beim Archivziel stoppt <strong>„Automatische Abgleiche pausieren“</strong> nur den Start weiterer geplanter Läufe. Einen bereits laufenden lokalen Vorgang hältst du separat mit <strong>„Pausieren“</strong> an und setzt ihn mit „Fortsetzen“ fort. Die Menüleiste und der feste Statusbereich zeigen denselben Vorgang.</p>
+            <p>Über das <strong>Zahnrad neben der gewünschten Quelle</strong> schaltest du <strong>„Automatisch archivieren“</strong> ein. Danach wählst du den Zeitabstand: täglich, stündlich oder alle sechs Stunden. Nach angehaltenen Fehlern bietet <strong>„Zeitplan fortsetzen“</strong> einen erneuten Versuch.</p>
+            <p>Unter <strong>TrueArchive → Einstellungen → Allgemein</strong> steuert <strong>„Zeitpläne ausführen“</strong> alle eingerichteten Zeitpläne gemeinsam. Solange kein Zeitplan eingerichtet ist, steht dort nur der Hinweis zur Aktivierung bei einer Quelle. Ausschalten verhindert weitere geplante Läufe; ein bereits laufender Abgleich wird noch abgeschlossen. Einen laufenden lokalen Vorgang hältst du separat mit „Pausieren“ an oder brichst ihn ab. Die Archivseite hat keine zweite globale Zeitplansteuerung.</p>
             <p>TrueArchive muss laufen und der Mac wach sein; das Hauptfenster darf geschlossen werden. Verpasste Termine werden einmal nachgeholt. Fehlende Quellen warten, nach drei fehlgeschlagenen Versuchen hält der betroffene Zeitplan an. Offene Vorschauen bleiben erhalten und verhindern automatische Übernahmen sowie lokale Verschlagwortung, auch wenn gerade eine andere Quelle angezeigt wird.</p>
             <p>Apple Fotos prüft die erreichbare Mediathek schrittweise und mit dem gespeicherten Aufnahmezeitraum. Nach einem App-Neustart, einer Bereichsänderung oder einer zwischenzeitlichen Änderung beginnt eine neue Prüfrunde; bereits archivierte Ressourcen werden wiedererkannt. Das ist kein gesonderter Nachweis aller Inhalte in der iCloud.</p>
             <p>Die lokale Verschlagwortung hat einen eigenen Schalter. <a href="#vision">Automatische Schlagwörter erklärt.</a></p>
@@ -136,8 +157,8 @@
 
           <details id="vision">
             <summary>Wie ergänze ich englische Schlagwörter mit Apple Vision?</summary>
-            <p>Beim Archivziel öffnest du unter <strong>„Automatische Schlagwörter“</strong> die <strong>„Einstellungen …“</strong> und schaltest <strong>„Englische Schlagwörter automatisch ergänzen“</strong> ein. Apple Vision verarbeitet neue, geänderte und bisher nicht verschlagwortete Archivbilder auf diesem Mac. Höchstens zehn ausreichend sichere englische Begriffe pro Bild werden direkt ergänzt; vorhandene Schlagwörter und Bearbeitungsdaten bleiben erhalten. Die Ergebnisse sind automatisch erkannt und können unzutreffend sein.</p>
-            <p>Videos werden übersprungen. Für manche RAW-Formate stellt macOS keine passende Vorschau bereit; betroffene Bilder erscheinen als Hinweis und die automatische Verschlagwortung hält an. „Erneut versuchen“ startet sie nach der Klärung neu. Anhalten wirkt spätestens nach der laufenden Erkennung.</p>
+            <p>Auf der Archivseite schaltest du <strong>„Schlagwörter automatisch ergänzen“</strong> direkt ein. Apple Vision verarbeitet neue, geänderte und bisher nicht verschlagwortete Archivbilder auf diesem Mac. Höchstens zehn ausreichend sichere englische Begriffe pro Bild werden direkt ergänzt; vorhandene Schlagwörter und Bearbeitungsdaten bleiben erhalten. Die Ergebnisse sind automatisch erkannt und können unzutreffend sein.</p>
+            <p>Videos werden übersprungen. Für manche RAW-Formate stellt macOS keine passende Vorschau bereit; betroffene Bilder erscheinen als Hinweis und die automatische Verschlagwortung hält an. „Erneut versuchen“ startet sie nach der Klärung neu. Ausschalten bleibt gespeichert und beendet auch eine laufende Verschlagwortung am sicheren Haltepunkt. Bereits ergänzte Schlagwörter bleiben erhalten.</p>
             <p>Die Analyse läuft lokal. Es wird kein Bild an einen KI-Onlinedienst übertragen und niemand muss Bilder einzeln freigeben. Die Begriffe landen im gemeinsamen XMP unter <code>dc:subject</code>. Wenn mehrere Quellen dieselbe Archivdatei nutzen, wird diese Datei nur einmal analysiert; eigenständige Bearbeitungsvarianten bleiben getrennt.</p>
           </details>
 
@@ -195,14 +216,14 @@
 
         <section id="hilfe" aria-labelledby="help-title">
           <h2 id="help-title">Bei Problemen</h2>
-          <p>Notiere den Schritt und die sichtbare Meldung. Am Ende des Assistenten kannst du den Einrichtungsbericht ansehen und bewusst kopieren. Er enthält technische Angaben und Anzahlen, keine privaten Bilder oder Dateipfade. Es wird nichts automatisch versendet.</p>
+          <p>Notiere die Aktion und die sichtbare Meldung. Unter <strong>Hilfe → Diagnosebericht …</strong> kannst du den technischen Bericht ansehen und bewusst kopieren. Prüfe den Text, bevor du ihn selbst weitergibst. Es wird nichts automatisch versendet.</p>
           <p>Beachte den Prüfstand und die bekannten Einschränkungen in den <a href="release-notes.html">Release Notes deiner Testversion</a>. TrueArchive ist ein persönliches Community-Projekt im Pilotbetrieb.</p>
           <p><a href="feedback.html#testfeedback">Feedback zur Testphase senden</a> oder einen <a href="feedback.html#featurewunsch">Featurewunsch abgeben</a>.</p>
         </section>
       </div>
     </div>
   </main>
-  <footer class="site-footer wrap"><p><strong>TrueArchive</strong><br>Ein persönliches Community-Projekt.</p><nav aria-label="Weitere Informationen"><a href="release-notes.html">Release Notes</a><a href="index.html">Startseite</a><a href="feedback.html">Feedback &amp; Wünsche</a><a href="index.html#beta">Zur Beta anmelden</a><a href="index.html#unterstuetzen">Projekt unterstützen</a><a href="mailto:lutz.kohl@gmail.com">Kontakt</a></nav></footer>
+  <footer class="site-footer wrap"><p><strong>TrueArchive</strong><br>Ein persönliches Community-Projekt.</p><nav aria-label="Weitere Informationen"><a href="warum-truearchive.html">Warum TrueArchive?</a><a href="release-notes.html">Release Notes</a><a href="index.html">Startseite</a><a href="feedback.html">Feedback &amp; Wünsche</a><a href="index.html#beta">Zur Beta anmelden</a><a href="index.html#unterstuetzen">Projekt unterstützen</a><a href="mailto:lutz@truearchive.app">Kontakt</a></nav></footer>
   <script>
     // Contextual app help must reveal a chapter even when its details are collapsed.
     function openHelpChapter() {

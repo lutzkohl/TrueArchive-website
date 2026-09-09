@@ -1,0 +1,245 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Install TrueArchive for Mac, archive all sources and safely disconnect source drives. Handbook covering duplicates, Nitro edits and release notes for Alpha 0.12.0.">
+  <meta name="robots" content="noindex, nofollow">
+  <meta name="theme-color" content="#1E3C93">
+  <title>Handbook – TrueArchive</title>
+  <link rel="icon" href="../assets/app-icon.png" type="image/png">
+  <link rel="stylesheet" href="../styles.css">
+  <script src="../language.js" defer></script>
+  <link rel="canonical" href="https://truearchive.app/en/anleitung.html">
+  <link rel="alternate" hreflang="de" href="https://truearchive.app/anleitung.html">
+  <link rel="alternate" hreflang="en" href="https://truearchive.app/en/anleitung.html">
+</head>
+<body>
+  <a class="skip-link" href="#inhalt">Skip to content</a>
+  <header class="site-header wrap">
+    <div class="brand"><a class="brand-home" href="index.html" aria-label="TrueArchive home"><img src="../assets/app-icon.png" width="40" height="40" alt=""><span>TrueArch</span></a><a class="brand-download" href="https://github.com/lutzkohl/TrueArchive-website/releases/download/v0.12.0-alpha/TrueArchive-0.12.0-alpha-macos-universal.zip" aria-label="Download TrueArchive 0.12.0">i</a><a class="brand-ending" href="index.html" aria-label="TrueArchive home">ve</a></div>
+    <nav aria-label="Main navigation"><a class="secondary-nav" href="warum-truearchive.html">Why TrueArchive?</a><a class="secondary-nav" href="index.html#funktionen">Features</a><a class="secondary-nav" href="feedback.html">Feedback</a><a class="secondary-nav" href="anleitung.html" aria-current="page">Handbook</a><a class="button small primary" href="index.html#beta">Join the beta</a></nav>
+    <nav class="language-switch" aria-label="Choose language"><a href="../anleitung.html?lang=system" data-language="system">Automatic</a><a href="../anleitung.html?lang=de" data-language="de" lang="de">Deutsch</a><a href="anleitung.html?lang=en" data-language="en" lang="en">English</a></nav>
+  </header>
+
+  <main id="inhalt" class="wrap">
+    <div class="guide-heading"><h1>The TrueArchive handbook.</h1><p>Connect sources, choose an archive, start a sync.</p><p>The app’s “?” buttons open the relevant chapter directly. Further down, you will find the <a href="#release-notes">release notes and earlier versions</a>.</p><p class="guide-version">Handbook for Alpha 0.12.0 · Build 24 · 10 September 2026</p></div>
+    <div class="guide-layout">
+      <nav class="guide-nav" aria-label="In this handbook"><a href="#installation">Installation</a><a href="#updates">App updates</a><a href="#sprache">Choose language</a><a href="#einrichtung">Your first archive</a><a href="#arbeitsbereich">Sources and destination</a><a href="#alle-quellen">Archive all sources</a><a href="#duplikate">Duplicates and Nitro</a><a href="#vision">Automatic keywords</a><a href="#details">Questions and details</a><a href="#release-notes">Release Notes</a><a href="#hilfe">Troubleshooting</a></nav>
+      <div class="guide-content">
+        <section id="installation" aria-labelledby="installation-title">
+          <h2 id="installation-title">Installation</h2>
+          <div class="guide-note"><p><strong>Alpha 0.12.0 is ready for the first round of testing.</strong> It includes the fix for the 0.10.0 menu bar freeze and a simpler interface. Start with a small selection that has a separate backup. <a href="index.html#beta">Sign up for testing</a>.</p></div>
+          <p>You need a Mac with <strong>macOS 15 or later</strong>. A single package is intended for Intel and Apple Silicon. Check the release notes for your version’s testing status.</p>
+          <p>Once you have received your beta invitation, install the linked app package as follows:</p>
+          <ol>
+            <li><strong>Finish any running imports.</strong> Close the older TrueArchive app before updating.</li>
+            <li><strong>Extract the app package from your beta invitation.</strong> Move <code>TrueArchive.app</code> to the Applications folder.</li>
+            <li><strong>Open the app.</strong> On first launch, the normal interface opens with guidance on connecting sources and an archive.</li>
+          </ol>
+          <p>Have not received an invitation yet? <a href="index.html#beta">Sign up for the beta.</a></p>
+          <div class="guide-note"><p>This alpha is not notarized by Apple. macOS may therefore require additional approval when you first open it. Use the unmodified package from your invitation and check that its version matches.</p></div>
+          <details id="macos-startfreigabe">
+            <summary>macOS blocks the first launch</summary>
+            <p>If macOS cannot verify the developer or check the app for malicious software, Apple describes these steps for apps whose origin you trust:</p>
+            <ol>
+              <li>Try opening <strong>TrueArchive</strong> from Applications, then close the warning.</li>
+              <li>Open <strong>System Settings → Privacy &amp; Security</strong>. Scroll to the Security section.</li>
+              <li>For TrueArchive, click <strong>“Open Anyway”</strong> and then confirm with <strong>“Open”</strong>.</li>
+            </ol>
+            <p>This exception applies to the app. If you see a message about a damaged app or detected malware, or if the approval option is missing, <a href="#hilfe">send us the exact wording</a>. Do not disable your Mac’s protection across the board. <a href="https://support.apple.com/en-us/102445">Apple’s explanation of first launch</a>.</p>
+          </details>
+          <p>Read the <a href="release-notes.html">Release Notes</a> for your app package. You will also find a link to the matching checksum there.</p>
+        </section>
+
+        <section id="updates" aria-labelledby="updates-title">
+          <h2 id="updates-title">App updates</h2>
+          <div class="guide-note"><p>Test version 0.12.0 is initially distributed as a manual package. It is not yet in the shared automatic update channel. Let any import finish, close the older app and replace it as described above. Your saved sources and archive are preserved.</p></div>
+          <p>From version 0.6.0, <strong>automatic app updates are enabled by default</strong>. TrueArchive checks roughly once a day while the app is running and the Mac is awake. A new, verified package is installed when idle; the app then restarts.</p>
+          <p>Updates wait during checking, importing, pauses or keyword tagging. An unfinished setup or open import preview also prevents an automatic restart. This includes a retained preview on a source page that is not currently visible. No new archive jobs start during an update.</p>
+          <p>Under <strong>TrueArchive → Settings → App updates</strong> you can turn off automatic updates. <strong>“Check for updates now”</strong> remains available for manual updates. You can also use the TrueArchive menu; “App updates …” in the menu bar window opens the setting.</p>
+          <p>The app’s update mode control is locked during an update. Selecting automatic updates in the update dialog applies to future updates; it does not cancel an update that has already been prepared. If the connection fails or installation encounters an error, you can check again later.</p>
+          <div class="guide-note"><p><strong>One-time upgrade from 0.5.0 and earlier:</strong> Install the first version with the updater manually from your invitation’s package. Older apps cannot download this feature themselves. The package signature confirms the update’s origin; the pilot is still not notarized by Apple.</p></div>
+          <div class="guide-note"><p><strong>Do not downgrade to 0.7.x:</strong> Once Alpha 0.8.0 saves the local setup in the new schema 2, versions 0.7.x deliberately cannot read those settings. This prevents a limited Photos sync from accidentally running without a limit. The archive format and files already archived remain unchanged.</p></div>
+        </section>
+
+        <section id="sprache" aria-labelledby="language-title">
+          <h2 id="language-title">Choose language</h2>
+          <p>Under <strong>TrueArchive → Settings → General → Sprache / Language</strong> choose <strong>System, Deutsch or English</strong>. With “System”, TrueArchive uses the first supported language in your preferred system languages. If neither German nor English is listed, it uses English. Your explicit choice stays saved on this Mac.</p>
+          <p>Navigation and settings change immediately. Existing messages keep their language until the next action. System dialog controls and update dialogs use the language selected by macOS. Changing language does not restart ongoing archive work. Your source names, filenames, paths and archived metadata remain unchanged. Apple Vision continues to add English keywords.</p>
+          <p>The website has its own selection at the top for Deutsch, English and Automatic. Automatic follows your preferred browser languages, with English as the fallback. Your choice stays saved if the browser permits it. Language links also work without JavaScript; in that case, choose Deutsch or English yourself.</p>
+        </section>
+
+        <section id="einrichtung" aria-labelledby="setup-title">
+          <h2 id="setup-title">Your first archive</h2>
+          <ol>
+            <li><strong>Connect sources.</strong> Use “+ Add source” to add Apple Photos, an SD card or local picture folders. The selected source opens directly.</li>
+            <li><strong>Connect an archive.</strong> On the archive page, choose a new empty archive folder or your existing TrueArchive archive. The destination requires APFS or HFS+.</li>
+            <li><strong>Start a sync when ready.</strong> Once at least one source is connected and the archive has been checked, TrueArchive automatically remembers the completed setup. Then start “Archive all sources” or a single source.</li>
+          </ol>
+          <p>Set up your sources and archive on the same pages you will use later. Short hints show what is still missing. There is no separate wizard, “Done” button or trial import. Automatic setup completion does not itself start an import. Sources, the archive and an optional Photos capture date range stay saved on this Mac.</p>
+          <div class="guide-note"><p><strong>The direction is always source → archive.</strong> TrueArchive does not change or delete sources. Even if you later delete a file there, its archive copy remains.</p></div>
+        </section>
+
+        <section id="arbeitsbereich" aria-labelledby="workspace-title">
+          <h2 id="workspace-title">Keep sources and destination in view</h2>
+          <p>Your sources appear on the left, with an arrow below pointing to your chosen archive folder. Use <strong>+</strong> to add more sources. Clicking a source name opens its page. Next to it are <strong>Archive now</strong> (an arrow into a drive), <strong>Settings</strong> (a gear) and, for external sources, an eject icon. The gear always opens that source’s settings, even when a different page is open.</p>
+          <p>The small mark on the source icon shows the last checked connection: <strong>green dot</strong> connected, <strong>empty circle</strong> unreachable, <strong>dashed circle</strong> not yet checked, and <strong>orange exclamation mark</strong> Photos permission missing. Tooltips explain statuses and actions. For Apple Photos, green means full Photos access is allowed; whether a particular iCloud original is available is only known when it is requested.</p>
+          <p>The <strong>down arrow next to a source</strong> starts a full sync of that source only. It checks again and imports new or changed content into the shared archive. An open preview for this source is replaced; previews and reports for other sources remain. The first import into an empty archive folder creates the permanent archive identifier; previews created before that need to be checked again. Subfolder selection, the Photos date range and schedules remain unchanged. Start actions are locked while other work is running.</p>
+          <p>The <strong>eject icon</strong> appears for external source volumes that can be disconnected. It disconnects all source folders on the same volume; the archive volume stays protected. <a href="#laufwerk-trennen">Safely disconnect a source drive.</a></p>
+          <p>An issue notice in the main window names the affected source or archive destination and offers the appropriate action. <strong>“Go to affected source”</strong> opens its report. If that source page is already open, the cause appears under “Last sync”. When Photos access is missing, the page explains where to enable it. A successful report for a different source remains visible.</p>
+          <p>All sources use the same archive destination. Source details show an archive notice only when the destination prevents an import; “Check Archive Destination” takes you to the details.</p>
+          <p>A preview and its selection remain available during this app session when you switch to the destination or another source. “Archive all sources” deliberately replaces those previews with a full sync. You can also browse the app during an import. The fixed status area shows the active work; <strong>“Go to operation”</strong> takes you back to it. An automatic sync does not change your current page.</p>
+          <p>The archive page shows the full destination path, connection and available drive space. Use <strong>“Change archive …”</strong> to select the folder directly. During initial setup, the button is called <strong>“Choose archive folder …”</strong>. In the folder picker, use <strong>“New Folder”</strong> to create a folder and confirm with <strong>“Use as archive”</strong> . That folder itself becomes your archive; no extra “Bildarchiv” folder is created inside it. The destination requires APFS or HFS+.</p>
+          <div class="guide-note"><p><strong>“Destination change still pending”:</strong> The last selection could not be applied. Further imports remain blocked, even after restarting the app. Choose the intended destination again and wait for “Archive ready”. The previous folder is not silently reused.</p></div>
+          <p>Changing the archive invalidates existing previews. If you change “Include subfolders” for a source, check that source again; a different source’s selection remains. You also create a fresh preview after restarting the app.</p>
+        </section>
+
+        <section id="alle-quellen" aria-labelledby="all-sources-title">
+          <h2 id="all-sources-title">Archive all sources</h2>
+          <p>Use <strong>“Archive all sources”</strong> in the sidebar to start a one-time run: all configured local sources in sequence, followed by the connected Apple Photos source. Each folder uses its own subfolder selection; Apple Photos uses the saved capture date range. Without a date filter, the entire accessible library is synced in small batches.</p>
+          <div class="guide-note"><p><strong>Open previews are replaced.</strong> The button checks the full configured scope again and imports new or changed content. Previous partial selections do not limit this run. To archive a specific selection, use the individual source page instead.</p></div>
+          <p>Overall progress appears directly below the button; each source’s progress appears by its name. <strong>Click the source you want on the left:</strong> “Last sync” lists new, updated and existing content, added origins, edit variants, unresolved entries and notices. Only connection status remains on the left; specific issues and reports appear in the main area. Reports stay available as you switch pages during this app session. A new attempt replaces that source’s report; after an archive change, earlier results do not apply to the new destination. Missing source drives are skipped; other sources can continue. The run stops if the archive is unsafe or the setup changes.</p>
+          <p>Pause local work with <strong>“Pause”</strong> and continue it with “Resume”. <strong>“Cancel sync”</strong> ends the entire run; later sources will not start. Apple Photos supports cancellation but does not yet support pausing. Files already archived are kept and recognized on the next run.</p>
+          <p>Your schedules and their global pause remain unchanged. Apple Photos must already have full access. Running archive work and app updates prevent a second simultaneous run.</p>
+        </section>
+
+        <section class="detail-section" id="details" aria-labelledby="details-title">
+          <h2 id="details-title">Questions and details</h2>
+          <p class="detail-intro">Open only what you need right now.</p>
+
+          <details id="archiv-einrichten">
+            <summary>Where are files stored, and what is remembered?</summary>
+            <span id="testarchiv" aria-hidden="true"></span>
+            <p>New archives place pictures directly in the chosen folder: <code>2026/2026-09-08/</code>, without an extra media folder. If no date is known, the folder is called <code>Unbekannt</code>. Each media file has one shared XMP sidecar.</p>
+            <p>Existing TrueArchive archives keep their earlier layout under <code>Medien/</code>. They are not automatically reorganized. Add other picture folders that already contain files as sources.</p>
+            <p>Sources and the destination stay configured on this Mac. Use the <strong>gear next to the source</strong> to change its label under “Name” and, for folder sources, its subfolder selection. <strong>“Remove from source list …”</strong> appears at the top of the open source page and in the context menu for its name. After confirmation, only the saved connection is removed; files in the source and archive stay intact. Other sources’ previews remain.</p>
+            <p>If a source drive is missing, connect it and select “Check connection again” in its settings. For the archive destination, the action is called “Reconnect”. A different drive at the same path is not accepted without checking. After moving to another Mac, configure your sources again on that Mac.</p>
+          </details>
+
+          <details id="apple-fotos">
+            <summary>How do I import pictures from Apple Photos?</summary>
+            <p>Add Apple Photos and open its page. If permission has not yet been granted, choose <strong>“Allow Photos access”</strong>. If the status is unknown, <strong>“Check access”</strong> first reads the permission status only; only the subsequent permission button can open a system dialog. These actions do not read library contents and do not start a preview or import.</p>
+            <p>With full access, the status is <strong>“Connected”</strong>. After denied or limited access, <strong>“Open System Settings”</strong> opens the macOS app; choose “Privacy &amp; Security” → “Photos” there and allow TrueArchive full access. For a system restriction, check Screen Time or the Mac’s management settings.</p>
+            <p>The app uses this Mac user’s System Photo Library. An external library must be connected. The source name does not switch Apple Accounts; further scope details are under “Details”.</p>
+            <p>Use <strong>“Archive all items”</strong> to start syncing all accessible pictures and videos directly. TrueArchive does not impose an overall item limit. Processing still checks at most 20 items per batch, with at least 15 seconds between confirmed batches. Progress and results apply to the whole run.</p>
+            <p>Use <strong>“Change date range …”</strong> on the Photos page to limit the sync to inclusive calendar dates. “From” and “To” can be set together or individually. When the filter is active, items with no known capture date are excluded. Without a filter, undated items are included too.</p>
+            <p>The capture date range stays saved with the Photos source and applies equally to direct and scheduled syncs. Changing it does not start or enable a schedule. A sync stops on an error or an incomplete batch; once the issue is resolved, you can start again. Already archived items are recognized.</p>
+            <p>Archiving requests any iCloud resources it needs; local files do not have to be downloaded again. Originals, current versions and available additional resources are included. Live Photos may produce several files. Photos and videos stay in Apple Photos.</p>
+            <p>Enable recurring syncs separately through <strong>gear next to the source → Archive automatically</strong>. These also work in limited batches without an overall item limit. The accessible System Photo Library is not independent proof of the complete iCloud collection.</p>
+          </details>
+
+          <details id="sd-karte">
+            <summary>How do I import cards and local folders?</summary>
+            <p>Use <strong>+</strong> to add an SD card, drive or more local folders. You can select several folders at once. Sources can also use FAT or exFAT; source and archive must be separate.</p>
+            <p>To import this source directly, use the <strong>“Archive now” drive-and-arrow icon</strong> next to its name. “Archive all sources” imports all connected sources. For a specific selection, click an individual local source and create its preview; select files and resolve open metadata cases there. Use the <strong>gear next to the source</strong> to choose whether to include subfolders. The preview checks the selected scope; setup itself does not start a trial import.</p>
+            <p>Filters and page navigation help with large collections. Check new files, changes and unresolved cases before starting <strong>“Archive Selected”</strong> . Checking again recognizes matching media that is already archived.</p>
+            <p><strong>Notices belong to their source.</strong> A failed Photos sync appears on the Photos page. When another source is open, only the warning mark remains beside the affected source; its tooltip gives the reason. Click its name to read the report. Shared obstacles such as an unreachable archive remain visible for all sources.</p>
+            <p>After importing, you see new files, updated metadata, existing content and unresolved cases. <strong>“Open archive”</strong> opens the result in Finder. Keep the source for later syncs or use <strong>“Remove source”</strong> to remove the connection. Files on the old drive and in the archive remain. A partial import does not verify the entire contents of the drive.</p>
+            <p>RAW files and existing XMP sidecars are imported together. Finished pictures in Apple Photos and RAW files on a card are not automatically linked just because their names are similar.</p>
+          </details>
+
+          <details id="laufwerk-trennen">
+            <summary>How do I disconnect a source drive after importing?</summary>
+            <p>Wait until archive work has finished, then click the <strong>eject icon next to the external source</strong>. TrueArchive disconnects the corresponding volume. All configured source folders on that volume then become disconnected; their settings stay saved. Wait for the success message. If the drive has other connected volumes, disconnect those too before unplugging it.</p>
+            <p>The volume containing your archive is not disconnected. The action does not force disconnection and does not apply indiscriminately to every volume on a drive. If macOS reports that the volume is still in use, stop the other access and try again.</p>
+            <p><strong>Disconnecting</strong> makes the source volume temporarily unreachable. <strong>“Remove source”</strong> only removes the saved connection to a folder and does not eject the drive. Both actions preserve files in the source and archive.</p>
+          </details>
+
+          <details id="automatisierung">
+            <summary>How do schedules work?</summary>
+            <p>Use the <strong>gear next to the source you want</strong> to enable <strong>“Archive automatically”</strong> . Then choose the interval: daily, hourly or every six hours. After errors have stopped a schedule, <strong>“Resume schedule”</strong> offers another attempt.</p>
+            <p>Under <strong>TrueArchive → Settings → General</strong> the <strong>“Run schedules”</strong> control manages all configured schedules together. Until a schedule is configured, you only see a hint explaining how to enable one at a source. Turning this off prevents further scheduled runs; a sync already running still finishes. Use “Pause” separately to pause a running local operation, or cancel it. There is no second global schedule control on the archive page.</p>
+            <p>TrueArchive must be running and the Mac awake; the main window may be closed. Missed runs are caught up once. Missing sources wait; after three failed attempts, the affected schedule stops. Open previews are preserved and prevent automatic imports and local keyword tagging, even when another source is displayed.</p>
+            <p>Apple Photos checks the accessible library in stages, using the saved capture date range. After an app restart, a date range change or an intervening change, a new check round begins; archived resources are recognized. This is not a separate verification of all iCloud content.</p>
+            <p>Local keyword tagging has its own switch. <a href="#vision">Automatic keywords explained.</a></p>
+          </details>
+
+          <details id="vision">
+            <summary>How do I add English keywords with Apple Vision?</summary>
+            <p>On the archive page, enable <strong>“Add keywords automatically”</strong> directly. Apple Vision processes new, changed and previously untagged archive pictures on this Mac. It adds at most ten English terms per picture when confidence is high enough; existing keywords and editing data remain. Results are recognized automatically and may be inaccurate.</p>
+            <p>Videos are skipped. For some RAW formats, macOS does not provide a suitable preview; affected pictures appear in a notice and automatic tagging stops. “Try again” restarts it after the issue is resolved. Turning it off is remembered and also stops ongoing tagging at a safe stopping point. Keywords already added remain.</p>
+            <p>Analysis runs locally. No picture is sent to an online AI service, and nobody needs to approve pictures individually. The terms are written to the shared XMP under <code>dc:subject</code>. When several sources share the same archive file, it is analyzed only once; separate edit variants stay separate.</p>
+          </details>
+
+          <details id="duplikate">
+            <summary>What happens to duplicate pictures and multiple Nitro edits?</summary>
+            <p><strong>Same file, multiple sources:</strong> TrueArchive checks the entire file contents. If the media bytes are identical and XMP information is compatible, the existing archive file is reused. The additional origin is added to its shared XMP. Names and source folders may differ. Similar-looking pictures, or a RAW and its finished JPEG, are not automatically considered duplicates.</p>
+            <ul>
+              <li><strong>Same RAW file, same Nitro edit:</strong> one media/XMP pair with multiple origins. Differences only in XML syntax or indentation do not create a new edit.</li>
+              <li><strong>Same RAW file, different Nitro edits:</strong> each distinct readable edit automatically gets its own media file and XMP when the other metadata is compatible. Both versions can be edited independently. Three distinct recipes therefore result in three preserved variants.</li>
+              <li><strong>Importing again:</strong> known files, origins and edits are recognized. Repeating the same import should not create more variants.</li>
+            </ul>
+            <p>For example, two drives contain the same RAW file, once in colour and once with a different Nitro edit. Both versions stay in the archive. If you bring the same card again later, those versions are recognized. Separate filenames distinguish the pairs; their relationship is also recorded in the XMP.</p>
+            <p><strong>Other conflicting metadata:</strong> For incompatible ratings, GPS information or third-party XMP fields, the preview shows “Review metadata”. Choose “Keep both versions” to archive separate pairs, or “Review later” to leave the case unresolved. A different Nitro recipe alone does not require this decision. Additional conflicting information still needs review. While other conflicts remain unresolved, the source is not confirmed as complete.</p>
+            <p><strong>What the result counts mean:</strong> “Origin Added” means no additional media file was copied. A preserved edit variant counts as a new file. “Additional Copying Avoided” refers to media bytes not copied again during import; this does not mean additional disk space was freed.</p>
+            <p><strong>Where did a picture come from?</strong> The origin list in the shared XMP contains the source identifier, role and relative file path. For local sources, available drive and selected folder names are included. For Apple Photos, logical items and roles remain associated; albums and keywords are added compatibly. The archive remains readable without a mandatory catalogue database.</p>
+            <p><strong>Check existing copies:</strong> On the archive page, “Check duplicates” starts a read-only run. It checks supported picture, RAW and video formats, distinguishing identical copies, intentional edit variants and hard links. Separate editing data and other file types are outside this scan. Unmanaged or unreadable files also appear as notices. The check can be paused or cancelled; a partial result is not a complete check. Existing copies are not automatically deleted or merged.</p>
+            <div class="guide-note"><p><strong>Archive format from 0.10.0:</strong> The first time shared origin or variant data is written, format protection is raised to version 6. Existing folders are not reorganized. Older TrueArchive versions can no longer write to that archive afterwards; use at least 0.10.0 on every Mac. Media and XMP files remain ordinary files.</p></div>
+            <p>None of these steps changes or deletes sources. Nitro recipes in XMP are preserved; additional Nitro files <code>.photo</code> and <code>.photo-edit</code> are still not imported. The status of actual round-trip testing with Nitro and digiKam is listed in the <a href="release-notes.html">version’s testing notes</a> .</p>
+          </details>
+
+          <details id="metadaten">
+            <summary>Which metadata and edits are included?</summary>
+            <ul>
+              <li><strong>Originals:</strong> unchanged files with their embedded metadata.</li>
+              <li><strong>Apple Photos:</strong> current edits, accessible albums, date, GPS, favourite status and available editing resources.</li>
+              <li><strong>Local sources:</strong> existing XMP data, source drive name, selected folder and relative file path. Supported changes are merged with independent archive information; conflicts remain visible.</li>
+            </ul>
+            <p>The current adapter does not provide Apple Photos titles, descriptions, keywords, people or the original time zone. Information already embedded in the original remains intact.</p>
+            <p>Proprietary editing recipes cannot automatically be edited further in every other app. Nitro files <code>.photo</code> and <code>.photo-edit</code> are not yet imported. Full round-trip testing with Nitro and digiKam is still pending.</p>
+          </details>
+
+          <details id="wiederherstellung">
+            <summary>Can I pause or continue after an interruption?</summary>
+            <p>The TrueArchive menu bar icon shows the current status and opens the app window.</p>
+            <p>During checking or importing, the small arrows beside the drive rotate. The icon stays still when idle; pause and issue states have their own fixed marks. If macOS “Reduce Motion” is enabled, the arrows also remain still. Click to see the exact operation and its progress. During a full sync, “Cancel entire sync” also stops all remaining sources.</p>
+            <p>You can <strong>pause local imports and resume them within the same open run</strong>. Source and archive must stay connected. Photos export supports cancellation but does not yet support pausing.</p>
+            <p>After an interruption, select the same archive. If “Interrupted import found” appears, you can start <strong>“Recover import”</strong> . The app checks the records again and completes clearly prepared steps. Uncertain files are preserved for review.</p>
+            <p>Create a new preview afterwards. Fully archived pictures are recognized. “No pending imports” is not a full check of all archive files and does not prove that a second backup exists.</p>
+            <p>If “Archive already in use” appears, wait for the other operation. Do not delete <code>.bildarchiv/write.lock</code> to unlock it.</p>
+          </details>
+
+          <details id="digikam">
+            <summary>Can I search the archive with digiKam?</summary>
+            <p>Yes. The archive consists of ordinary files and XMP sidecars. You can open it in Finder and search it with an existing digiKam installation. Search and face recognition remain digiKam’s responsibility.</p>
+            <p>TrueArchive does not yet install or configure digiKam. Wait until importing has finished before making changes in the archive.</p>
+          </details>
+        </section>
+
+        <section id="release-notes" aria-labelledby="release-notes-title">
+          <h2 id="release-notes-title">Release Notes</h2>
+          <p>For each version, we document new features, fixes, important update notes and known limitations. Earlier entries remain available so you can look up your installed version too.</p>
+          <p><a class="button primary" href="release-notes.html">Read all release notes</a></p>
+          <p>Find the version number in the app under <strong>TrueArchive → About TrueArchive</strong>. The handbook explains the current state; the version history shows when each feature became available.</p>
+        </section>
+
+        <section id="hilfe" aria-labelledby="help-title">
+          <h2 id="help-title">Troubleshooting</h2>
+          <p>Note the action and the message shown. Under <strong>Help → Diagnostic report …</strong> you can view the technical report and deliberately copy it. Review the text before sharing it yourself. Nothing is sent automatically.</p>
+          <p>Check the testing status and known limitations in the <a href="release-notes.html">release notes for your test version</a>. TrueArchive is a personal community project in its pilot phase.</p>
+          <p><a href="feedback.html#testfeedback">Send feedback on testing</a> or <a href="feedback.html#featurewunsch">Suggest a feature</a>.</p>
+        </section>
+      </div>
+    </div>
+  </main>
+  <footer class="site-footer wrap"><p><strong>TrueArchive</strong><br>A personal community project.</p><nav aria-label="Further information"><a href="warum-truearchive.html">Why TrueArchive?</a><a href="release-notes.html">Release Notes</a><a href="index.html">Home</a><a href="feedback.html">Feedback &amp; ideas</a><a href="index.html#beta">Join the beta</a><a href="index.html#unterstuetzen">Support the project</a><a href="mailto:lutz@truearchive.app">Contact</a></nav></footer>
+  <script>
+    // Contextual app help must reveal a chapter even when its details are collapsed.
+    function openHelpChapter() {
+      let id;
+      try { id = decodeURIComponent(location.hash.slice(1)); } catch { return; }
+      const target = document.getElementById(id);
+      if (!target) return;
+      let node = target;
+      while (node) {
+        if (node.tagName === 'DETAILS') node.open = true;
+        node = node.parentElement;
+      }
+      requestAnimationFrame(() => target.scrollIntoView({block: 'start'}));
+    }
+    window.addEventListener('hashchange', openHelpChapter);
+    openHelpChapter();
+  </script>
+</body>
+</html>

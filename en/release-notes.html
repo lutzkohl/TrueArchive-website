@@ -1,0 +1,240 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="What is new in TrueArchive? Release notes with new features, improvements and important information for each new app version.">
+  <meta name="robots" content="noindex, nofollow">
+  <meta name="theme-color" content="#1E3C93">
+  <title>Release Notes – TrueArchive</title>
+  <link rel="icon" href="../assets/app-icon.png" type="image/png">
+  <link rel="stylesheet" href="../styles.css">
+  <script src="../language.js" defer></script>
+  <link rel="canonical" href="https://truearchive.app/en/release-notes.html">
+  <link rel="alternate" hreflang="de" href="https://truearchive.app/release-notes.html">
+  <link rel="alternate" hreflang="en" href="https://truearchive.app/en/release-notes.html">
+</head>
+<body>
+  <a class="skip-link" href="#inhalt">Skip to content</a>
+  <header class="site-header wrap">
+    <div class="brand"><a class="brand-home" href="index.html" aria-label="TrueArchive home"><img src="../assets/app-icon.png" width="40" height="40" alt=""><span>TrueArch</span></a><a class="brand-download" href="https://github.com/lutzkohl/TrueArchive-website/releases/download/v0.12.0-alpha/TrueArchive-0.12.0-alpha-macos-universal.zip" aria-label="Download TrueArchive 0.12.0">i</a><a class="brand-ending" href="index.html" aria-label="TrueArchive home">ve</a></div>
+    <nav aria-label="Main navigation"><a class="secondary-nav" href="warum-truearchive.html">Why TrueArchive?</a><a class="secondary-nav" href="index.html#funktionen">Features</a><a class="secondary-nav" href="feedback.html">Feedback</a><a class="secondary-nav" href="anleitung.html">Handbook</a><a class="button small primary" href="index.html#beta">Join the beta</a></nav>
+    <nav class="language-switch" aria-label="Choose language"><a href="../release-notes.html?lang=system" data-language="system">Automatic</a><a href="../release-notes.html?lang=de" data-language="de" lang="de">Deutsch</a><a href="release-notes.html?lang=en" data-language="en" lang="en">English</a></nav>
+  </header>
+
+  <main id="inhalt" class="wrap">
+    <div class="guide-heading">
+      <span class="eyebrow">Release Notes</span>
+      <h1>What is improving.</h1>
+      <p>New features, fixes and important information for every new release. The newest version comes first.</p>
+    </div>
+    <div class="guide-layout">
+      <nav class="guide-nav" aria-label="Versions"><a href="anleitung.html#release-notes">Back to the handbook</a><a href="#v0-12-0">0.12.0 · German and English</a><a href="#v0-11-1">0.11.1</a><a href="#v0-11-0">0.11.0 · Start directly in the app</a><a href="#v0-10-3">0.10.3 · Control sources directly</a><a href="#v0-10-2">0.10.2 · Reports on source pages</a><a href="#v0-10-1">0.10.1 · A more stable menu bar</a><a href="#v0-10-0">0.10.0 · Duplicates and Nitro variants</a><a href="#v0-9-0">0.9.0 · Archive all sources</a><a href="#v0-8-1">0.8.1 · Easier setup</a><a href="#v0-8-0">0.8.0 · Unlimited Photos sync</a><a href="#v0-7-1">0.7.1 · More robust Photos syncs</a><a href="#v0-7-0">0.7.0 · Overview and preview</a><a href="#v0-6-0">0.6.0 · App updates</a><a href="#fruehere-versionen">Earlier versions</a></nav>
+      <div class="guide-content release-notes">
+        <section id="v0-12-0" aria-labelledby="v0-12-0-title">
+          <h2 id="v0-12-0-title">0.12.0 · German and English</h2>
+          <p><time datetime="2026-09-10">10 September 2026</time> · Build 24 · Alpha</p>
+          <ul>
+            <li><strong>Choose the app language:</strong> System, Deutsch and English are available in General settings. System mode follows your preferred languages and uses English if none of them is supported.</li>
+            <li><strong>Website and handbook in English:</strong> All five pages are available in both languages. The language selection keeps the current page and chapter; direct language links also work without JavaScript.</li>
+            <li><strong>Your data stays intact:</strong> The display does not change source names, file paths, media or archived metadata.</li>
+          </ul>
+          <p>Also includes the improvements documented below from internal builds 0.10.1 through 0.11.1: a more stable menu bar animation, reports on each source page, setup directly in the app, and archive and settings actions next to each source.</p>
+          <p>Verified: 533 synthetic tests with five intentional skips and zero failures, plus language and rendered-view checks in both languages. All nine performance phases pass in German and English against the unchanged reference. The native menu bar stays responsive in a 124-second endurance test, with peak memory of about 91 MiB.</p>
+          <p>macOS 15+, universal package for Intel and Apple Silicon. Not notarized by Apple. Real Intel/iCloud/Nitro/digiKam and first-install checks remain pending. Native system and update dialogs follow macOS; existing messages initially keep their language. This alpha is distributed manually; the shared automatic update channel stays unchanged.</p>
+          <p><a href="https://github.com/lutzkohl/TrueArchive-website/releases/download/v0.12.0-alpha/TrueArchive-0.12.0-alpha-macos-universal.zip.sha256">SHA-256 checksum</a> · <a href="anleitung.html#sprache">Set the language</a> · <a href="feedback.html#testfeedback">Test feedback</a></p>
+        </section>
+        <section id="v0-11-1" aria-labelledby="v0-11-1-title">
+          <h2 id="v0-11-1-title">0.11.1 · Clear actions for every source</h2>
+          <p>Build 23 · Internal development build · Included in 0.12.0</p>
+          <ul>
+            <li><strong>Recognizable archive actions:</strong> An arrow into a drive identifies importing for individual sources and the full sync.</li>
+            <li><strong>Settings next to the source:</strong> The gear opens that source’s configuration and schedule. App settings at the bottom are explicitly labelled as such.</li>
+            <li><strong>Remove a specific source:</strong> “Remove from source list …” appears at the top of the source page and in its context menu. The confirmation explains that files are preserved. Other sources and their previews remain.</li>
+            <li><strong>Relevant notices:</strong> Source errors appear only on the affected source page and as a warning mark in its row. Shared archive issues remain visible.</li>
+            <li><strong>Native help:</strong> Round macOS help buttons remain keyboard accessible and open the relevant handbook section.</li>
+          </ul>
+          <p>Local acceptance checks: 516 tests with five intentional skips and zero failures; native views, the source gear, cancelling removal and help focus were checked in the built app. These checks describe the development state at that time; these changes ship with 0.12.0.</p>
+        </section>
+        <section id="v0-11-0" aria-labelledby="v0-11-0-title">
+          <h2 id="v0-11-0-title">0.11.0 · Start directly in the app</h2>
+          <p>Build 22 · Internal development build · Included in 0.12.0</p>
+          <ul>
+            <li><strong>One interface from the start:</strong> Sources and the archive are configured on their normal pages. Short hints show missing connections. Once a source is connected and the archive has been checked, setup is automatically saved as complete. The separate wizard and completion button are removed; completion itself does not start an import.</li>
+            <li><strong>Shorter pages:</strong> Sources have a visibly labelled name field. Settings focus on the source, its schedule and “Remove source”. Explanations of scope are under “?” or “Details”.</li>
+            <li><strong>Photos permission on the Apple Photos page:</strong> “Check access” reads only the permission status. “Allow Photos access” explicitly requests permission. Full access shows “Connected”; otherwise, the page shows relevant help and, when needed, the route to System Settings. These actions do not inventory the library or start an import.</li>
+            <li><strong>Clear schedule controls:</strong> “Archive automatically” belongs to each source’s settings. “Run schedules” is centrally located under “TrueArchive → Settings → General” once schedules exist. Turning it off prevents further starts and lets the running sync finish.</li>
+            <li><strong>Turn keywords on and off directly:</strong> The switch is on the archive page. Turning it off is remembered and also stops running local tagging at a safe stopping point. Existing keywords remain.</li>
+            <li><strong>Diagnostic report in the Help menu:</strong> The technical report is accessible independently of setup and can be deliberately copied after your own review.</li>
+          </ul>
+          <p>No archive format change. Existing sources, archive connections and deliberately chosen settings remain usable. Synthetic functional tests and checks of rendered views are complete. This internal build had no separate public download and is now included in 0.12.0.</p>
+          <p><a href="anleitung.html#einrichtung">Set up directly</a> · <a href="anleitung.html#apple-fotos">Photos access</a> · <a href="anleitung.html#automatisierung">Schedules</a> · <a href="anleitung.html#vision">Local keywords</a></p>
+        </section>
+        <section id="v0-10-3" aria-labelledby="v0-10-3-title">
+          <h2 id="v0-10-3-title">0.10.3 · Control sources directly</h2>
+          <p>Build 21 · Internal development build · Included in 0.12.0</p>
+          <ul>
+            <li><strong>Specific help:</strong> Issue notices in the main window name the affected source and open its report. The prompt to open an app that is already open has been removed.</li>
+            <li><strong>Compact source rows:</strong> Connection status, “Archive now” and, for suitable external volumes, “Safely eject” appear as icons next to the source. Tooltips explain their meaning; progress appears during work.</li>
+            <li><strong>Start only this source:</strong> The small archive arrow checks the clicked source again and imports new or changed content. Its open preview is replaced. Other sources and schedules are not started; valid previews for other sources remain.</li>
+            <li><strong>Reports remain after disconnecting:</strong> If a source becomes unreachable or is safely ejected, its last report remains readable during this session. Old import selections become invalid.</li>
+          </ul>
+          <p>No archive format change. Apple Photos status shows the access permission; individual iCloud originals are only requested when archiving.</p>
+          <p><a href="anleitung.html#arbeitsbereich">Work with sources</a> · <a href="anleitung.html#laufwerk-trennen">Disconnect a source drive</a> · <a href="feedback.html#testfeedback">Test feedback</a></p>
+        </section>
+        <section id="v0-10-2" aria-labelledby="v0-10-2-title">
+          <h2 id="v0-10-2-title">0.10.2 · Reports on source pages</h2>
+          <p>Build 20 · Internal development build · Included in 0.12.0</p>
+          <ul>
+            <li><strong>Results on the source page:</strong> Local folders and Apple Photos show their last sync on the relevant source page. The difficult-to-read result popover is removed. A short status remains on the left.</li>
+            <li><strong>Readable reports:</strong> System colours for light and dark appearance, wrapping messages, and expandable unresolved entries and notices. Added origins and Nitro variants remain included in the counts.</li>
+            <li><strong>Correct association:</strong> Switching pages preserves reports; a new attempt replaces that source’s result. After a destination change, reports for the old archive do not appear as results for the new destination.</li>
+          </ul>
+          <p><a href="anleitung.html#alle-quellen">Reports in the handbook</a> · <a href="feedback.html#testfeedback">Test feedback</a></p>
+        </section>
+        <section id="v0-10-1" aria-labelledby="v0-10-1-title">
+          <h2 id="v0-10-1-title">0.10.1 · A more stable menu bar</h2>
+          <p>Build 19 · Internal development build · Included in 0.12.0</p>
+          <ul>
+            <li><strong>Fixed a freeze during connection:</strong> In 0.10.0, menu bar icon animation could freeze the interface and use a large amount of memory. An independent, bounded animation timer replaces the affected rendering process. Arrows move during active work; pause, idle and issue states stay still.</li>
+            <li><strong>One shared archive destination:</strong> The regular destination block is removed from source pages. The destination appears in the left navigation and on the archive page. Specific destination issues remain accessible as notices.</li>
+            <li><strong>Sleeping drives:</strong> Displaying a saved archive name and restoring an open folder selection no longer triggers an additional filesystem check to determine the folder type.</li>
+            <li><strong>Native runtime check:</strong> An isolated test checks the real menu bar icon, responsiveness, memory and transitions between activity, pause and idle. An external watchdog ends only the test process if it freezes or uses too much memory.</li>
+          </ul>
+          <p>No new setup or archive migration compared with 0.10.0. For macOS 15+, Intel and Apple Silicon. Still not notarized; real Intel/iCloud and Nitro/digiKam acceptance remain separately pending.</p>
+          <p><a href="anleitung.html#arbeitsbereich">Sources and shared destination</a> · <a href="feedback.html#testfeedback">Test feedback</a></p>
+        </section>
+
+        <section id="v0-10-0" aria-labelledby="v0-10-0-title">
+          <h2 id="v0-10-0-title">0.10.0 · Duplicates and Nitro variants</h2>
+          <p><time datetime="2026-09-09">9 September 2026</time> · Build 18 · Alpha</p>
+          <div class="guide-note"><p><strong>Note added on 9 September:</strong> With an active menu bar display, this version may freeze and use a large amount of memory. We recommend that new testers wait for an invitation with a corrected, verified version.</p></div>
+          <ul>
+            <li><strong>Identical media from multiple sources:</strong> After a full byte check and compatibility check of the metadata, the same archive file is reused. Its XMP contains all origins. This also applies to local pictures and matching resources from Apple Photos.</li>
+            <li><strong>Keep Nitro edits:</strong> Different readable recipes automatically get their own media/XMP pairs when the remaining metadata is compatible. Identical recipes are recognized. Other conflicts can be imported separately in the preview with “Keep both versions” or left unresolved for later.</li>
+            <li><strong>Check existing duplicates:</strong> The archive page offers an explicitly started read-only scan with progress, pause and cancellation. It distinguishes identical copies, edit variants and hard links; it does not delete or merge archive files.</li>
+            <li><strong>Help next to the feature:</strong> “?” buttons open the relevant handbook chapter. The Help menu also links to the handbook and release notes. Operating instructions and version history are maintained with each release.</li>
+            <li><strong>Activity in the menu bar:</strong> Small rotating arrows show ongoing work. Idle, pause and issue states stay still; the macOS “Reduce Motion” setting is respected. The status window has a clear cancel button for a full sync.</li>
+            <li><strong>Protecting performance:</strong> Fixed synthetic performance tests compare importing, repeat runs and shared origins against a matching reference for the machine. Runtime and memory limits will be part of release checks going forward.</li>
+          </ul>
+          <div class="guide-note"><p><strong>Mind the archive format:</strong> Once new shared origin or variant data is written, the archive receives format protection 6. Use at least TrueArchive 0.10.0 on every Mac afterwards. Older apps refuse to write. Existing folders are not reorganized; media and XMPs remain ordinary files.</p></div>
+          <p>A confirmed new origin counts as a metadata change; a separate variant counts as a new file. The amount of copying avoided does not measure freed disk space. Sources remain unchanged.</p>
+          <p>With the additional origin checks, Photos sync is slower in developer testing than in 0.9. The new performance suite establishes a reference for the current functionality; further optimization is pending.</p>
+          <p>For macOS 15+, Intel and Apple Silicon. Still not notarized by Apple. Actual Intel runtime checks, real iCloud imports and round-trip tests with Nitro and digiKam remain separately pending for this release. RAW/JPEG matching and searching for pictures that only look similar are not included.</p>
+          <p><a href="https://github.com/lutzkohl/TrueArchive-website/releases/tag/v0.10.0-alpha">Alpha package and checksum</a> · <a href="anleitung.html#duplikate">Duplicates and edits explained</a> · <a href="feedback.html#testfeedback">Test feedback</a></p>
+        </section>
+
+        <section id="v0-9-0" aria-labelledby="v0-9-0-title">
+          <h2 id="v0-9-0-title">0.9.0 · Archive all sources</h2>
+          <p><time datetime="2026-09-09">9 September 2026</time> · Build 17 · Alpha</p>
+          <ul>
+            <li><strong>One shared start:</strong> “Archive all sources” in the sidebar first checks configured local sources in sequence, then syncs Apple Photos fully within the saved capture date range. Subfolder selections and date filters still apply.</li>
+            <li><strong>Results for each source:</strong> Progress and “Show Result” display what is new, updated or already present. Missing sources are skipped. Cancelling also stops all later sources; local operations can be paused and resumed.</li>
+            <li><strong>Safely disconnect source volumes:</strong> The eject icon next to an external source disconnects its volume once work has finished. All source folders on it are disconnected; their connections stay saved. The archive volume is protected; disconnection is not forced.</li>
+          </ul>
+          <div class="guide-note"><p><strong>“Archive all sources” replaces open previews.</strong> Previous partial selections do not apply to this full run. Continue using the individual source page for a specific selection.</p></div>
+          <p>Existing schedules and their global pause remain unchanged. A second archive run or app update cannot start at the same time. Already archived files are preserved on cancellation; sources are not changed or deleted. No new setup or archive migration is needed.</p>
+          <p>For macOS 15+, Intel and Apple Silicon. Still not notarized by Apple. Real Intel/iCloud acceptance and disconnecting real external drives remain separately pending for this version. Apple Photos still supports cancellation but not pausing.</p>
+          <p><a href="https://github.com/lutzkohl/TrueArchive-website/releases/download/v0.9.0-alpha/TrueArchive-0.9.0-alpha-macos-universal.zip">Download alpha</a> · <a href="https://github.com/lutzkohl/TrueArchive-website/releases/tag/v0.9.0-alpha">Package and checksum</a> · <a href="anleitung.html#alle-quellen">Archive all sources</a> · <a href="anleitung.html#laufwerk-trennen">Disconnect a source volume</a> · <a href="feedback.html#testfeedback">Test feedback</a></p>
+        </section>
+
+        <section id="v0-8-1" aria-labelledby="v0-8-1-title">
+          <h2 id="v0-8-1-title">0.8.1 · Easier setup</h2>
+          <p><time datetime="2026-09-09">9 September 2026</time> · Build 16 · Alpha</p>
+          <ul>
+            <li><strong>Open setup steps directly:</strong> In the setup wizard, “Your Sources” and “Your Archive” on the left are clickable. “Done” becomes available once a source is connected and the archive has been checked. Your entries remain; switching does not start an import.</li>
+            <li><strong>The chosen folder is the archive:</strong> A shared folder picker for new and existing archives replaces the previous save dialog. Create the intended folder with “New Folder” and confirm it with “Use as archive”. No extra “Bildarchiv” subfolder is created.</li>
+          </ul>
+          <p>Date filtering and unlimited importing from 0.8.0 remain. No new setup or archive migration is needed. Existing archives keep their layout.</p>
+          <p>For macOS 15+, Intel and Apple Silicon. Still not notarized by Apple; real Intel/iCloud acceptance remains separately pending.</p>
+          <p><a href="https://github.com/lutzkohl/TrueArchive-website/releases/tag/v0.8.1-alpha">Download alpha and checksum</a> · <a href="anleitung.html#einrichtung">Setup explained</a> · <a href="feedback.html#testfeedback">Test feedback</a></p>
+        </section>
+
+        <section id="v0-8-0" aria-labelledby="v0-8-0-title">
+          <h2 id="v0-8-0-title">0.8.0 · Unlimited Photos sync</h2>
+          <p><time datetime="2026-09-09">9 September 2026</time> · Build 15 · Alpha</p>
+          <p>Apple Photos gets a direct sync without an overall item limit and an optional, persistently saved capture date range.</p>
+          <ul>
+            <li><strong>Entire accessible library:</strong> “Archive all items” processes all accessible pictures and videos. Technical processing remains limited to at most 20 items per checked batch.</li>
+            <li><strong>Inclusive capture date range:</strong> “From” and “To” can be set together or individually; both selected calendar dates are included. With the filter active, items with no known capture date are skipped. Without a filter, there is no date restriction.</li>
+            <li><strong>One range for every sync:</strong> The saved capture date range applies to direct and explicitly enabled scheduled Photos syncs. Changing the range does not enable a schedule.</li>
+            <li><strong>Setup in three steps:</strong> Choose sources, choose an archive and finish. The earlier ten-picture trial is removed; start the first sync afterwards on the source page.</li>
+          </ul>
+          <div class="guide-note"><p><strong>Downgrade note:</strong> The alpha saves local setup as schema 2. TrueArchive 0.7.x rejects these new settings so a date filter cannot be silently lost. This does not change the archive format or already archived files.</p></div>
+          <p>For macOS 15 or later, Intel and Apple Silicon. The alpha package is ad hoc signed and not notarized by Apple. Real runtime acceptance on Intel and complete real iCloud imports are still pending.</p>
+          <p><a href="https://github.com/lutzkohl/TrueArchive-website/releases/download/v0.8.0-alpha/TrueArchive-0.8.0-alpha-macos-universal.zip">Download alpha</a> · <a href="https://github.com/lutzkohl/TrueArchive-website/releases/tag/v0.8.0-alpha">Package and checksum</a> · <a href="anleitung.html#apple-fotos">Sync Apple Photos</a> · <a href="feedback.html#testfeedback">Feedback on this version</a></p>
+        </section>
+
+        <section id="v0-7-1" aria-labelledby="v0-7-1-title">
+          <h2 id="v0-7-1-title">0.7.1 · More robust Photos syncs</h2>
+          <p><time datetime="2026-09-09">9 September 2026</time> · Build 14 · Beta</p>
+          <p>A maintenance release with consistent checks for Photos batches and clearer separation of internal responsibilities.</p>
+          <ul>
+            <li><strong>Check batches before copying:</strong> One-time and scheduled Photos syncs use the same rules for size, source binding and progress. Inconsistent batches are rejected before export.</li>
+            <li><strong>Central management of source previews:</strong> A shared access layer checks that the preview, selection and result still match the source and archive.</li>
+            <li><strong>Test status separately:</strong> Rules for status, progress and storage display live in a dedicated module. The main window, menu bar and sidebar continue to use the same displays.</li>
+          </ul>
+          <p>The interaction from 0.7.0 remains. This release does not require a new setup or archive reorganization. Sources remain unchanged; schedules are not enabled automatically.</p>
+          <p>The built-in app updater is available from 0.6.0. For macOS 15 or later, Intel and Apple Silicon. The pilot is still not notarized by Apple; real Intel/iCloud acceptance and complete native interaction checks remain separately pending for this release.</p>
+          <p><a href="https://github.com/lutzkohl/TrueArchive-website/releases/tag/v0.7.1-pilot">App package and checksum</a> · <a href="feedback.html#testfeedback">Feedback on this version</a></p>
+        </section>
+
+        <section id="v0-7-0" aria-labelledby="v0-7-0-title">
+          <h2 id="v0-7-0-title">0.7.0 · Keep previews, choose destinations clearly</h2>
+          <p><time datetime="2026-09-09">9 September 2026</time> · Build 13 · Beta</p>
+          <p>Sources, the archive destination and ongoing work are easier to distinguish. You can browse the app and then continue working with your selection.</p>
+          <h3>A clearer workspace</h3>
+          <ul>
+            <li><strong>Previews are preserved:</strong> Switching to the archive destination or another source no longer discards a checked selection. Each local source retains its own preview and selection during the current app session.</li>
+            <li><strong>You control navigation:</strong> Automatic syncs no longer open a different source page. A fixed status area shows ongoing work; “Go to operation” takes you straight there. Results belong to the source actually processed.</li>
+            <li><strong>Settings in one place:</strong> Each source has “Settings …” for its configuration and schedule. The archive destination shows connection, folder and free space first; local keywords have their own settings.</li>
+            <li><strong>Clear completion:</strong> After importing, the result and “Open archive” take priority. “Remove source from List …” explicitly refers to removing the connection; files are preserved.</li>
+          </ul>
+          <h3>Switch archive destinations reliably</h3>
+          <p>A selected destination folder is checked before becoming the active archive. If selection fails, the app shows “Destination change still pending” and blocks further imports. It does not silently return to the previous archive, even after a restart. Select the intended destination again and check the displayed folder.</p>
+          <p>Changing the archive discards old previews. If a source’s scope changes, its preview becomes invalid. Still-valid previews for other sources remain and continue to prevent automatic imports, keyword tagging and app updates in the background.</p>
+          <h3>Sync Apple Photos once</h3>
+          <ul>
+            <li><strong>“Sync Library”:</strong> imports the entire accessible System Photo Library, including videos, in batches of at most 20 items. Progress and results count across the entire run. Existing schedules and their pause remain unchanged.</li>
+            <li><strong>“Select Latest”:</strong> still creates a limited preview for an explicit selection. Before a library sync, open previews must be archived or discarded.</li>
+            <li>The one-time sync can be cancelled and stops on an incomplete batch or an error. Already archived files are preserved; another deliberate start recognizes them. Photos and videos are not deleted from Apple Photos.</li>
+          </ul>
+          <h3>Updates and testing status</h3>
+          <p>From 0.6.0, the existing app updater can obtain this release once ongoing work and open previews are finished. Coming from 0.5.0 or earlier still requires a manual installation. After launch, check the destination folder on the archive page before starting a real import.</p>
+          <p>For macOS 15 or later; the pilot is still not notarized by Apple. Intel runtime acceptance, complete native interaction checks and real imports from external drives and iCloud are still pending for this version. The accessible System Photo Library is not independent proof of all iCloud content.</p>
+          <p><a href="anleitung.html#arbeitsbereich">Find your way around the workspace</a> · <a href="anleitung.html#apple-fotos">Sync Apple Photos</a> · <a href="https://github.com/lutzkohl/TrueArchive-website/releases/tag/v0.7.0-pilot">App package and checksum</a> · <a href="feedback.html#testfeedback">Feedback on this version</a></p>
+        </section>
+
+        <section id="v0-6-0" aria-labelledby="v0-6-0-title">
+          <h2 id="v0-6-0-title">0.6.0 · The app keeps itself up to date</h2>
+          <p><time datetime="2026-09-09">9 September 2026</time> · Build 12 · Beta</p>
+          <p>TrueArchive can download and install new app versions itself. Running and paused archive work takes priority.</p>
+          <h3>New</h3>
+          <ul>
+            <li><strong>Automatic app updates:</strong> enabled by default. TrueArchive checks roughly once a day while the app is running and the Mac is awake. Installation takes place when idle, followed by a restart.</li>
+            <li><strong>Manual mode:</strong> automatic updates can be turned off under “TrueArchive → Settings → App updates”. Your choice stays saved.</li>
+            <li><strong>Check for updates yourself:</strong> through the app menu or settings. In the menu bar window, “App updates …” goes directly to the setting.</li>
+            <li><strong>Verified origin:</strong> The update feed and app packages are digitally signed and verified before installation.</li>
+          </ul>
+          <h3>Protecting ongoing work</h3>
+          <ul>
+            <li>Checking, copying, paused imports, Photos export, recovery and local keyword tagging prevent updates and quitting the app.</li>
+            <li>An unfinished setup or open import preview prevents an automatic restart. No new archive jobs start during an update.</li>
+          </ul>
+          <h3>Before updating</h3>
+          <div class="guide-note"><p><strong>Coming from 0.5.0 or earlier:</strong> Install 0.6.0 manually once. Only then can TrueArchive obtain further versions itself. Finish running archive work and close the older app first.</p></div>
+          <p>Changing automatic updates in the update dialog applies to future updates; it does not cancel an update already prepared.</p>
+          <p>For macOS 15 or later, as one package for Intel and Apple Silicon. The pilot is still not notarized by Apple. Intel runtime testing for this version and full interaction checks of the update interface are still pending.</p>
+          <p><a href="anleitung.html#updates">Set up updates</a> · <a href="https://github.com/lutzkohl/TrueArchive-website/releases/tag/v0.6.0-pilot">App package and checksum</a> · <a href="feedback.html#testfeedback">Feedback on this version</a></p>
+        </section>
+
+        <section id="fruehere-versionen" aria-labelledby="fruehere-versionen-title">
+          <h2 id="fruehere-versionen-title">Earlier versions</h2>
+          <p>Release notes on this website start with 0.6.0. Notes and packages for earlier releases are available in <a href="https://github.com/lutzkohl/TrueArchive-website/releases">GitHub Releases</a>.</p>
+        </section>
+      </div>
+    </div>
+  </main>
+  <footer class="site-footer wrap"><p><strong>TrueArchive</strong><br>A personal community project.</p><nav aria-label="Further information"><a href="warum-truearchive.html">Why TrueArchive?</a><a href="index.html">Home</a><a href="anleitung.html">Handbook</a><a href="release-notes.html" aria-current="page">Release Notes</a><a href="feedback.html">Feedback &amp; ideas</a><a href="index.html#unterstuetzen">Support the project</a><a href="mailto:lutz@truearchive.app">Contact</a></nav></footer>
+</body>
+</html>
