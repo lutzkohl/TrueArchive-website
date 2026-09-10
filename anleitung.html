@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="description" content="TrueArchive für Mac installieren, alle Quellen archivieren und Quelllaufwerke sicher trennen. Handbuch mit Duplikaten, Nitro-Bearbeitungen und Release Notes zur Alpha 0.12.1.">
+  <meta name="description" content="TrueArchive für Mac installieren, alle Quellen archivieren und Quelllaufwerke sicher trennen. Handbuch mit Duplikaten, Nitro-Bearbeitungen und Google Takeout in Alpha 0.13.0.">
   <meta name="robots" content="noindex, nofollow">
   <meta name="theme-color" content="#1E3C93">
   <title>Handbuch – TrueArchive</title>
@@ -17,18 +17,18 @@
 <body>
   <a class="skip-link" href="#inhalt">Zum Inhalt</a>
   <header class="site-header wrap">
-    <div class="brand"><a class="brand-home" href="index.html" aria-label="TrueArchive Startseite"><img src="assets/app-icon.png" width="40" height="40" alt=""><span>TrueArchiv</span></a><a class="brand-download" href="https://github.com/lutzkohl/TrueArchive-website/releases/download/v0.12.1-alpha/TrueArchive-0.12.1-alpha-macos-universal.zip" aria-label="TrueArchive 0.12.1 herunterladen">e</a></div>
+    <div class="brand"><a class="brand-home" href="index.html" aria-label="TrueArchive Startseite"><img src="assets/app-icon.png" width="40" height="40" alt=""><span>TrueArchiv</span></a><a class="brand-download" href="https://github.com/lutzkohl/TrueArchive-website/releases/download/v0.13.0-alpha/TrueArchive-0.13.0-alpha-macos-universal.zip" aria-label="TrueArchive 0.13.0 herunterladen">e</a></div>
     <nav aria-label="Hauptnavigation"><a class="secondary-nav" href="warum-truearchive.html">Warum TrueArchive?</a><a class="secondary-nav" href="index.html#funktionen">Funktionen</a><a class="secondary-nav" href="feedback.html">Feedback</a><a class="secondary-nav" href="anleitung.html" aria-current="page">Handbuch</a><a class="button small primary" href="index.html#beta">Zur Beta anmelden</a></nav>
   </header>
 
   <main id="inhalt" class="wrap">
-    <div class="guide-heading"><h1>Das TrueArchive-Handbuch.</h1><p>Quellen verbinden, Archiv wählen, Abgleich starten.</p><p>Die „?“-Buttons in der App öffnen direkt das passende Kapitel. Weiter unten findest du die <a href="#release-notes">Release Notes und frühere Versionen</a>.</p><p class="guide-version">Handbuch für Alpha 0.12.1 · Build 25 · 10. September 2026</p></div>
+    <div class="guide-heading"><h1>Das TrueArchive-Handbuch.</h1><p>Quellen verbinden, Archiv wählen, Abgleich starten.</p><p>Die „?“-Buttons in der App öffnen direkt das passende Kapitel. Weiter unten findest du die <a href="#release-notes">Release Notes und frühere Versionen</a>.</p><p class="guide-version">Handbuch für Alpha 0.13.0 · Build 26 · Stand 10. September 2026</p></div>
     <div class="guide-layout">
-      <nav class="guide-nav" aria-label="Im Handbuch"><a href="#installation">Installieren</a><a href="#updates">App-Updates</a><a href="#sprache">Sprache wählen</a><a href="#einrichtung">Das erste Archiv</a><a href="#arbeitsbereich">Quellen und Ziel</a><a href="#alle-quellen">Alle Quellen archivieren</a><a href="#duplikate">Duplikate und Nitro</a><a href="#vision">Automatische Schlagwörter</a><a href="#details">Fragen und Details</a><a href="#release-notes">Release Notes</a><a href="#hilfe">Bei Problemen</a></nav>
+      <nav class="guide-nav" aria-label="Im Handbuch"><a href="#installation">Installieren</a><a href="#updates">App-Updates</a><a href="#sprache">Sprache wählen</a><a href="#einrichtung">Das erste Archiv</a><a href="#arbeitsbereich">Quellen und Ziel</a><a href="#alle-quellen">Alle Quellen archivieren</a><a href="#google-photos">Google Fotos (Takeout)</a><a href="#duplikate">Duplikate und Nitro</a><a href="#vision">Automatische Schlagwörter</a><a href="#details">Fragen und Details</a><a href="#release-notes">Release Notes</a><a href="#hilfe">Bei Problemen</a></nav>
       <div class="guide-content">
         <section id="installation" aria-labelledby="installation-title">
           <h2 id="installation-title">Installieren</h2>
-          <div class="guide-note"><p><strong>Alpha 0.12.1 ist für die erste Testrunde bereit.</strong> Sie enthält die Korrektur für den Menüleistenhänger von 0.10.0 und die vereinfachte Oberfläche. Beginne mit einer kleinen, zusätzlich gesicherten Auswahl. <a href="index.html#beta">Für die Testrunde anmelden</a>.</p></div>
+          <div class="guide-note"><p><strong>Alpha 0.13.0 ist für die erste Testrunde bereit.</strong> Neu ist die manuelle Übernahme entpackter Google-Fotos-Exporte; die Korrektur für den Menüleistenhänger von 0.10.0 ist enthalten. Beginne mit einer kleinen, zusätzlich gesicherten Auswahl. <a href="index.html#beta">Für die Testrunde anmelden</a>.</p></div>
           <p>Du brauchst einen Mac mit <strong>macOS 15 oder neuer</strong>. Ein gemeinsames Paket enthält die App für Intel und Apple Silicon. Den Prüfstand deiner Version findest du in den Release Notes.</p>
           <p>So installierst du das App-Paket aus deiner Beta-Einladung:</p>
           <ol>
@@ -53,13 +53,14 @@
 
         <section id="updates" aria-labelledby="updates-title">
           <h2 id="updates-title">App-Updates</h2>
-          <div class="guide-note"><p>Die Testversion 0.12.1 wird zunächst als manuelles Paket verteilt. Sie erscheint noch nicht im gemeinsamen automatischen Updatekanal. Lass eine laufende Übernahme enden, beende die ältere App und ersetze sie wie oben beschrieben. Deine gespeicherten Quellen und das Archiv bleiben erhalten.</p></div>
+          <div class="guide-note"><p>Die Testversion 0.13.0 wird zunächst als manuelles Paket verteilt. Sie erscheint noch nicht im gemeinsamen automatischen Updatekanal. Lass eine laufende Übernahme enden, beende die ältere App und ersetze sie wie oben beschrieben. Deine gespeicherten Quellen und das Archiv bleiben erhalten.</p></div>
           <p>Ab Version 0.6.0 sind <strong>automatische App-Updates voreingestellt</strong>. TrueArchive prüft ungefähr täglich, solange die App läuft und der Mac wach ist. Ein neues, geprüftes Paket wird im Leerlauf installiert; anschließend startet die App neu.</p>
           <p>Während einer Prüfung, Übernahme, Pause oder Verschlagwortung wartet das Update. Auch eine offene Einrichtung oder Importvorschau verhindert einen automatischen Neustart. Das gilt ebenso für eine erhaltene Vorschau auf einer gerade nicht angezeigten Quellseite. Während des Updatevorgangs starten keine neuen Archivaufträge.</p>
           <p>Unter <strong>TrueArchive → Einstellungen → App-Updates</strong> kannst du die Automatik ausschalten. <strong>„Jetzt nach Updates suchen“</strong> bleibt für manuelle Updates verfügbar. Das geht auch über das TrueArchive-Menü; „App-Updates …“ im Menüleistenfenster öffnet die Einstellung.</p>
           <p>Die eigene Moduswahl ist während eines Updates gesperrt. Eine Automatik-Auswahl im Update-Dialog gilt für folgende Updates; sie nimmt ein bereits vorbereitetes Update nicht zurück. Bei einer gestörten Verbindung oder einem Installationsfehler kannst du später erneut prüfen.</p>
           <div class="guide-note"><p><strong>Einmaliger Wechsel von 0.5.0 und älter:</strong> Installiere die erste Ausgabe mit Updater noch manuell aus dem Paket deiner Einladung. Ältere Apps können sich diese Funktion nicht selbst nachladen. Die Paketsignatur bestätigt die Herkunft des Updates; der Pilot ist weiterhin nicht von Apple notarisiert.</p></div>
           <div class="guide-note"><p><strong>Nicht auf 0.7.x zurückwechseln:</strong> Sobald die Alpha 0.8.0 die lokale Einrichtung im neuen Schema 2 gespeichert hat, können Versionen 0.7.x diese Einstellungen absichtlich nicht lesen. So wird ein begrenzter Fotos-Abgleich nicht versehentlich als unbegrenzt ausgeführt. Das Archivformat und bereits archivierte Dateien bleiben unverändert.</p></div>
+          <div class="guide-note"><p><strong>Lokale Einstellungen ab 0.13.0:</strong> Die neue Quellart wird im Einstellungsschema 3 gespeichert. Ältere Apps können diese Einstellungen absichtlich nicht laden. Bestehende Quellen und der gewählte Fotos-Zeitraum werden beim Wechsel aus Schema 1 oder 2 erhalten.</p></div>
         </section>
 
         <section id="sprache" aria-labelledby="language-title">
@@ -72,7 +73,7 @@
         <section id="einrichtung" aria-labelledby="setup-title">
           <h2 id="setup-title">Dein erstes Archiv</h2>
           <ol>
-            <li><strong>Quellen verbinden.</strong> Füge über „+ Quelle hinzufügen“ Apple Fotos, eine SD-Karte oder lokale Bildordner hinzu. Die gewählte Quelle öffnet sich direkt.</li>
+            <li><strong>Quellen verbinden.</strong> Füge über „+ Quelle hinzufügen“ Apple Fotos, eine SD-Karte, lokale Bildordner oder einen <a href="#google-photos">Google-Takeout-Export</a> hinzu. Die gewählte Quelle öffnet sich direkt.</li>
             <li><strong>Archiv verbinden.</strong> Wähle auf der Archivseite einen neuen leeren Archivordner oder dein vorhandenes TrueArchive-Archiv. Das Ziel benötigt APFS oder HFS+.</li>
             <li><strong>Abgleich bewusst starten.</strong> Sobald mindestens eine Quelle verbunden und das Archiv geprüft ist, merkt sich TrueArchive die vollständige Einrichtung automatisch. Starte danach „Alle Quellen archivieren“ oder eine einzelne Quelle.</li>
           </ol>
@@ -101,6 +102,22 @@
           <p>Der Gesamtfortschritt steht direkt unter dem Knopf, der Fortschritt einer Quelle bei ihrem Namen. <strong>Klicke links auf die gewünschte Quelle:</strong> Unter „Letzter Abgleich“ stehen dort neue, aktualisierte und bereits vorhandene Inhalte, Herkunftsergänzungen, Bearbeitungsvarianten sowie offene Einträge und Hinweise. Links bleibt nur der Verbindungsstatus; konkrete Probleme und Berichte stehen im Hauptbereich. Die Berichte bleiben beim Seitenwechsel in dieser App-Sitzung erhalten. Ein neuer Versuch ersetzt den Bericht dieser Quelle; nach einem Archivwechsel gelten die bisherigen Ergebnisse nicht für das neue Ziel. Fehlende Quelllaufwerke werden übersprungen; andere Quellen können weiterlaufen. Bei einem unsicheren Archiv oder geänderter Einrichtung stoppt der Lauf.</p>
           <p>Lokale Arbeit lässt sich mit <strong>„Pausieren“</strong> anhalten und mit „Fortsetzen“ weiterführen. <strong>„Abgleich abbrechen“</strong> beendet den gesamten Durchlauf; spätere Quellen starten dann nicht mehr. Apple Fotos unterstützt Abbrechen, aber noch keine Pause. Bereits archivierte Dateien bleiben erhalten und werden beim nächsten Start wiedererkannt.</p>
           <p>Deine Zeitpläne und deren globale Pause bleiben unverändert. Für Apple Fotos muss voller Zugriff bereits erlaubt sein. Laufende Archivarbeit und App-Updates verhindern einen zweiten gleichzeitigen Durchlauf.</p>
+        </section>
+
+        <section id="google-photos" aria-labelledby="google-photos-title">
+          <h2 id="google-photos-title">Google Fotos aus Takeout übernehmen</h2>
+          <div class="guide-note"><p><strong>Neu in Alpha 0.13.0.</strong> Der lokale Import ist mit synthetischen Exporten und einem kleinen echten Google-Export mit sechs JPEGs geprüft. Weitere reale Formate, die Anzeige in digiKam und die Laufzeitprüfung auf Intel stehen noch aus.</p></div>
+          <ol>
+            <li><strong>Export bereitstellen.</strong> Lade deinen Google-Takeout-Export selbst herunter und entpacke ihn außerhalb von TrueArchive. Bei mehreren Teilen lege die entpackten Teile unter einen gemeinsamen übergeordneten Ordner; behalte die Unterordner und Dateinamen bei.</li>
+            <li><strong>Quelle hinzufügen.</strong> Wähle unter <strong>+ → Google Fotos (Takeout)</strong> den entpackten Exportordner oder den gemeinsamen Elternordner. Das Verbinden startet noch keine Übernahme.</li>
+            <li><strong>Manuell archivieren.</strong> Nutze <strong>„Jetzt archivieren“</strong> an dieser Quelle oder <strong>„Alle Quellen archivieren“</strong>. Eine Vorschau ist optional; dort kannst du Dateien auswählen und offene Fälle prüfen. Unterordner müssen eingeschlossen sein, wenn deine Exportteile darunter liegen.</li>
+          </ol>
+          <p><strong>Medien und passende JSON-Dateien gehören zusammen.</strong> Unterstützt sind Begleitdateien mit dem vollständigen Mediendateinamen plus <code>.json</code> oder <code>.supplemental-metadata.json</code>; der Titel im JSON muss genau zum Mediendateinamen passen. Über mehrere Teile hinweg wird nur eine eindeutige Zuordnung unter <code>Google Photos</code> oder <code>Google Fotos</code> verwendet. Gekürzte Namen, mehrere passende Dateien und beschädigte Metadaten werden nicht geraten.</p>
+          <p>Fehlt eine passende JSON-Datei, bleibt das Medium zunächst zurückgestellt. Wenn du diesen Verlust bewusst akzeptierst, schalte in den Quelleinstellungen <strong>„Fehlende JSON-Metadaten akzeptieren“</strong> ein und prüfe neu. Der fehlende Metadatenumfang bleibt dauerhaft im Archiv vermerkt. Diese Option erlaubt ausschließlich fehlende Begleitdaten; beschädigte, ungültige oder mehrdeutige JSON-Dateien bleiben gesperrt. Eine Änderung verwirft nur die Vorschau dieser Quelle.</p>
+          <p>Gültige Google-Aufnahmezeit, Beschreibung und GPS-Angaben werden in das gemeinsame Standard-XMP übernommen. Die belegte Aufnahmezeit bestimmt die Jahres- und Tagesordner; Download- und Exportzeit ersetzen sie nicht. Ein durch unterstützte Album-Metadaten belegter Albumtitel wird zum lesbaren Schlagwort. Der Ordnername allein genügt dafür nicht. Favoriten bleiben als Quellenangabe erhalten und werden nicht in Sterne umgerechnet. Widersprüche zu vorhandenem XMP müssen geklärt werden; lokale Bearbeitungen werden nicht still überschrieben. Auch Änderungen des gespeicherten Metadatenumfangs oder Favoritenstatus werden bei Folgeexporten nicht automatisch ersetzt.</p>
+          <p><strong>TrueArchive erhält die gelieferten Medienbytes und verändert die Exportquelle nicht.</strong> Die JSON-Dateien werden nicht zusätzlich ins Archiv kopiert. Nicht unterstützte Metadaten bleiben in der Exportquelle und werden als Einschränkung gemeldet. Die ursprüngliche Kameraqualität und die Vollständigkeit deiner Google-Mediathek sind durch einen Export nicht belegt; diese Grenze bleibt bei der Herkunft vermerkt.</p>
+          <p>Für einen späteren Export derselben Quelle öffne ihr <strong>Zahnrad → „Neuen Exportordner wählen …“</strong>. Die gespeicherte Quellenkennung bleibt erhalten. TrueArchive prüft den Ordner und mögliche Überschneidungen vor dem Wechsel; die eigene Vorschau wird verworfen, fremde Vorschauen bleiben erhalten. Entfernen und neu Hinzufügen erzeugt dagegen eine neue Quelle.</p>
+          <p>TrueArchive bietet für Takeout keine Google-Anmeldung, keinen automatischen Download und keinen Zeitplan an. Es liest nur die bewusst bereitgestellten lokalen Dateien. Pause, Abbruch und Ergebnisbericht verwenden die vorhandene Quellenbedienung.</p>
         </section>
 
         <section class="detail-section" id="details" aria-labelledby="details-title">
@@ -147,6 +164,7 @@
 
           <details id="automatisierung">
             <summary>Wie funktionieren Zeitpläne?</summary>
+            <p>Google-Takeout-Quellen werden ausschließlich manuell übernommen und bieten keinen Zeitplan an.</p>
             <p>Über das <strong>Zahnrad neben der gewünschten Quelle</strong> schaltest du <strong>„Zeitplan für Archivierung“</strong> ein. Danach wählst du den Zeitabstand: täglich, stündlich oder alle sechs Stunden. Nach angehaltenen Fehlern bietet <strong>„Zeitplan fortsetzen“</strong> einen erneuten Versuch.</p>
             <p>Unter <strong>TrueArchive → Einstellungen → Allgemein</strong> steuert <strong>„Zeitpläne ausführen“</strong> alle eingerichteten Zeitpläne gemeinsam. Solange kein Zeitplan eingerichtet ist, steht dort nur der Hinweis zur Aktivierung bei einer Quelle. Ausschalten verhindert weitere geplante Läufe; ein bereits laufender Abgleich wird noch abgeschlossen. Einen laufenden lokalen Vorgang hältst du separat mit „Pausieren“ an oder brichst ihn ab. Die Archivseite hat keine zweite globale Zeitplansteuerung.</p>
             <p>TrueArchive muss laufen und der Mac wach sein; das Hauptfenster darf geschlossen werden. Verpasste Termine werden einmal nachgeholt. Fehlende Quellen warten, nach drei fehlgeschlagenen Versuchen hält der betroffene Zeitplan an. Offene Vorschauen bleiben erhalten und verhindern automatische Übernahmen sowie lokale Verschlagwortung, auch wenn gerade eine andere Quelle angezeigt wird.</p>

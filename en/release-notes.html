@@ -17,7 +17,7 @@
 <body>
   <a class="skip-link" href="#inhalt">Skip to content</a>
   <header class="site-header wrap">
-    <div class="brand"><a class="brand-home" href="index.html" aria-label="TrueArchive home"><img src="../assets/app-icon.png" width="40" height="40" alt=""><span>TrueArchiv</span></a><a class="brand-download" href="https://github.com/lutzkohl/TrueArchive-website/releases/download/v0.12.1-alpha/TrueArchive-0.12.1-alpha-macos-universal.zip" aria-label="Download TrueArchive 0.12.1">e</a></div>
+    <div class="brand"><a class="brand-home" href="index.html" aria-label="TrueArchive home"><img src="../assets/app-icon.png" width="40" height="40" alt=""><span>TrueArchiv</span></a><a class="brand-download" href="https://github.com/lutzkohl/TrueArchive-website/releases/download/v0.13.0-alpha/TrueArchive-0.13.0-alpha-macos-universal.zip" aria-label="Download TrueArchive 0.13.0">e</a></div>
     <nav aria-label="Main navigation"><a class="secondary-nav" href="warum-truearchive.html">Why TrueArchive?</a><a class="secondary-nav" href="index.html#funktionen">Features</a><a class="secondary-nav" href="feedback.html">Feedback</a><a class="secondary-nav" href="anleitung.html">Handbook</a><a class="button small primary" href="index.html#beta">Join the beta</a></nav>
   </header>
 
@@ -28,8 +28,21 @@
       <p>New features, fixes and important information for every new release. The newest version comes first.</p>
     </div>
     <div class="guide-layout">
-      <nav class="guide-nav" aria-label="Versions"><a href="anleitung.html#release-notes">Back to the handbook</a><a href="#v0-12-1">0.12.1</a><a href="#v0-12-0">0.12.0 · German and English</a><a href="#v0-11-1">0.11.1</a><a href="#v0-11-0">0.11.0 · Start directly in the app</a><a href="#v0-10-3">0.10.3 · Control sources directly</a><a href="#v0-10-2">0.10.2 · Reports on source pages</a><a href="#v0-10-1">0.10.1 · A more stable menu bar</a><a href="#v0-10-0">0.10.0 · Duplicates and Nitro variants</a><a href="#v0-9-0">0.9.0 · Archive all sources</a><a href="#v0-8-1">0.8.1 · Easier setup</a><a href="#v0-8-0">0.8.0 · Unlimited Photos sync</a><a href="#v0-7-1">0.7.1 · More robust Photos syncs</a><a href="#v0-7-0">0.7.0 · Overview and preview</a><a href="#v0-6-0">0.6.0 · App updates</a><a href="#fruehere-versionen">Earlier versions</a></nav>
+      <nav class="guide-nav" aria-label="Versions"><a href="anleitung.html#release-notes">Back to the handbook</a><a href="#v0-13-0">0.13.0 · Google Photos</a><a href="#v0-12-1">0.12.1</a><a href="#v0-12-0">0.12.0 · German and English</a><a href="#v0-11-1">0.11.1</a><a href="#v0-11-0">0.11.0 · Start directly in the app</a><a href="#v0-10-3">0.10.3 · Control sources directly</a><a href="#v0-10-2">0.10.2 · Reports on source pages</a><a href="#v0-10-1">0.10.1 · A more stable menu bar</a><a href="#v0-10-0">0.10.0 · Duplicates and Nitro variants</a><a href="#v0-9-0">0.9.0 · Archive all sources</a><a href="#v0-8-1">0.8.1 · Easier setup</a><a href="#v0-8-0">0.8.0 · Unlimited Photos sync</a><a href="#v0-7-1">0.7.1 · More robust Photos syncs</a><a href="#v0-7-0">0.7.0 · Overview and preview</a><a href="#v0-6-0">0.6.0 · App updates</a><a href="#fruehere-versionen">Earlier versions</a></nav>
       <div class="guide-content release-notes">
+        <section id="v0-13-0" aria-labelledby="v0-13-0-title">
+          <h2 id="v0-13-0-title">0.13.0 · Google Photos from Takeout</h2>
+          <p>Build 26 · Alpha · <time datetime="2026-09-10">10 September 2026</time></p>
+          <ul>
+            <li><strong>New manual source:</strong> “Google Photos (Takeout)” reads an extracted export folder or several extracted parts under a common parent folder. Preview, single-source sync and “Archive all sources” use the same metadata checks. No Google sign-in, automatic download or schedule.</li>
+            <li><strong>Supported metadata in the shared XMP:</strong> Unambiguously matching JSON files supply supported capture times, GPS data and descriptions. Proven album titles become keywords. Media bytes stay unchanged; JSON files are not additionally archived. Export quality and cloud completeness remain explicitly unconfirmed.</li>
+            <li><strong>Handle unresolved cases explicitly:</strong> Missing JSON metadata initially blocks import. A separate option permits only that missing coverage, with a permanent record in the archive. Damaged, invalid or ambiguous matches remain blocked.</li>
+            <li><strong>Later exports from the same source:</strong> “Choose a new export folder …” retains the saved source identifier and checks the folder before switching. Other sources, their previews and their selections are preserved.</li>
+          </ul>
+          <p>Local settings use schema 3. Sources and Photos date ranges from schemas 1 and 2 are preserved; older apps intentionally cannot load the new settings schema.</p>
+          <p>The local import and source controls have been tested with synthetic data; a small real Google export containing six JPEGs was also imported and checked again. Other real-world formats, viewing results in digiKam and runtime testing on Intel remain pending. For macOS 15+, Intel and Apple Silicon. Manual alpha package, ad hoc signed and not notarized by Apple. Finish archive work and replace the app as described in the handbook. The shared automatic update feed remains unchanged.</p>
+          <p><a href="anleitung.html#google-photos">Takeout import and limitations</a> · <a href="feedback.html#testfeedback">Test feedback</a></p>
+        </section>
         <section id="v0-12-1" aria-labelledby="v0-12-1-title">
           <h2 id="v0-12-1-title">0.12.1 · Clearer language and a compact website</h2>
           <p><time datetime="2026-09-10">10 September 2026</time> · Build 25 · Alpha</p>
