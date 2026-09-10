@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="description" content="TrueArchive für Mac installieren, alle Quellen archivieren und Quelllaufwerke sicher trennen. Handbuch für Alpha 0.16.0 mit Monatsordnern, Duplikaten, Nitro-Bearbeitungen und Google Takeout.">
+  <meta name="description" content="TrueArchive für Mac installieren, alle Quellen archivieren und Quelllaufwerke sicher trennen. Handbuch für Alpha 0.17.0 mit Monatsordnern, Duplikaten, Nitro-Bearbeitungen und Google Takeout.">
   <meta name="robots" content="noindex, nofollow">
   <meta name="theme-color" content="#1E3C93">
   <title>Handbuch – TrueArchive</title>
@@ -22,7 +22,7 @@
   </header>
 
   <main id="inhalt" class="wrap">
-    <div class="guide-heading"><h1>Das TrueArchive-Handbuch.</h1><p>Quellen verbinden, Archiv wählen, Abgleich starten.</p><p>Die „?“-Buttons in der App öffnen direkt das passende Kapitel. Weiter unten findest du die <a href="#release-notes">Release Notes und frühere Versionen</a>.</p><p class="guide-version">Handbuch für Alpha 0.16.0 · Build 34 · Alpha-Testversion.</p></div>
+    <div class="guide-heading"><h1>Das TrueArchive-Handbuch.</h1><p>Quellen verbinden, Archiv wählen, Abgleich starten.</p><p>Die „?“-Buttons in der App öffnen direkt das passende Kapitel. Weiter unten findest du die <a href="#release-notes">Release Notes und frühere Versionen</a>.</p><p class="guide-version">Handbuch für Alpha 0.17.0 · Build 35 · lokaler Testkandidat, noch nicht veröffentlicht.</p></div>
     <div class="guide-layout">
       <nav class="guide-nav" aria-label="Im Handbuch"><a href="#installation">Installieren</a><a href="#updates">App-Updates</a><a href="#sprache">Sprache wählen</a><a href="#einrichtung">Das erste Archiv</a><a href="#arbeitsbereich">Quellen und Ziel</a><a href="#alle-quellen">Alle Quellen archivieren</a><a href="#google-photos">Google Fotos (Takeout)</a><a href="#monatsordner">Monatsordner</a><a href="#duplikate">Duplikate und Nitro</a><a href="#vision">Automatische Schlagwörter</a><a href="#details">Fragen und Details</a><a href="#release-notes">Release Notes</a><a href="#hilfe">Bei Problemen</a></nav>
       <div class="guide-content">
@@ -74,11 +74,24 @@
           <h2 id="setup-title">Dein erstes Archiv</h2>
           <ol>
             <li><strong>Quellen verbinden.</strong> Füge über „+ Quelle hinzufügen“ Apple Fotos, eine SD-Karte, lokale Bildordner oder einen <a href="#google-photos">Google-Takeout-Export</a> hinzu. Die gewählte Quelle öffnet sich direkt.</li>
-            <li><strong>Archiv verbinden.</strong> Wähle auf der Archivseite einen neuen leeren Archivordner oder dein vorhandenes TrueArchive-Archiv. Das Ziel benötigt APFS oder HFS+.</li>
+            <li><strong>Archiv verbinden.</strong> Wähle auf der Archivseite einen neuen leeren Archivordner, dein vorhandenes TrueArchive-Archiv oder im Kandidaten 0.17.0 einen <a href="#vorhandenes-archiv">vorhandenen Bildordner</a>. Das Ziel benötigt APFS oder HFS+.</li>
             <li><strong>Abgleich bewusst starten.</strong> Sobald mindestens eine Quelle verbunden und das Archiv geprüft ist, merkt sich TrueArchive die vollständige Einrichtung automatisch. Starte danach „Alle Quellen archivieren“ oder eine einzelne Quelle.</li>
           </ol>
           <p>Quellen und Archiv richtest du auf denselben Seiten ein, die du später verwendest. Kurze Hinweise zeigen, was noch fehlt. Es gibt keinen separaten Assistenten, keinen „Fertig“-Knopf und keine Probeübernahme. Der automatische Einrichtungsabschluss selbst startet keinen Import. Quellen, Archiv und ein optionaler Fotos-Aufnahmezeitraum bleiben auf diesem Mac gespeichert.</p>
           <div class="guide-note"><p><strong>Die Richtung ist immer Quelle → Archiv.</strong> TrueArchive verändert oder löscht keine Quellen. Auch wenn du später dort eine Datei löschst, bleibt die Archivkopie erhalten.</p></div>
+        </section>
+
+        <section id="vorhandenes-archiv" aria-labelledby="existing-archive-title">
+          <h2 id="existing-archive-title">Vorhandenen Bildordner als Archiv verwenden</h2>
+          <div class="guide-note"><p><strong>Im Kandidaten 0.17.0:</strong> Ein gewöhnlicher Bildordner mit bereits vorhandenen Dateien kann zum Archivziel werden. Die Erfassung startet erst nach deiner ausdrücklichen Aktion.</p></div>
+          <ol>
+            <li><strong>Ziel auswählen.</strong> Wähle den vorhandenen Bildordner auf der Archivseite. TrueArchive behält ihn als vorgesehenes Ziel und bietet dort die Erfassung des Bestands an.</li>
+            <li><strong>Bestand erfassen.</strong> Starte die Erfassung ausdrücklich. Du siehst Fortschritt, Zähler und die gerade geprüfte Datei. Mit <strong>„Pausieren“</strong> hältst du die Arbeit an und mit <strong>„Fortsetzen“</strong> führst du sie weiter. Bis die Erfassung vollständig abgeschlossen ist, bleiben Importe und andere Archivarbeiten gesperrt.</li>
+            <li><strong>Echte Konflikte klären.</strong> Mehrdeutige oder beschädigte XMP-Dateien und andere nicht sicher auflösbare Fälle erscheinen als konkrete Probleme. Die betroffenen Dateien bleiben unverändert und das Archiv wird erst nach der Klärung und einer erneuten Erfassung bereit.</li>
+          </ol>
+          <p>Vorhandene Medien bleiben unter ihren bisherigen Namen und an ihrem bisherigen Platz; sie werden weder kopiert noch in Datumsordner verschoben. Vorhandenes XMP bleibt erhalten, fehlendes gemeinsames XMP wird ergänzt. TrueArchive legt nur kleine Verwaltungsdateien im versteckten Ordner <code>.bildarchiv</code> an.</p>
+          <p>Nach erfolgreicher Erfassung legt TrueArchive neue Importe wie gewohnt unter <strong>Jahr → Monat → Tag</strong> ab. Der bereits vorhandene Bestand behält seine bisherige Ordnerstruktur.</p>
+          <p><strong>Dateipakete bleiben geschlossen.</strong> Fotomediatheken, Programme und andere Finder-Pakete bleiben als Ganzes unverändert. TrueArchive erfasst nur Medien in gewöhnlichen Ordnern und legt keine XMP-Dateien im Inneren solcher Pakete an. Ein Paket selbst kann nicht als Archivziel dienen.</p>
         </section>
 
         <section id="arbeitsbereich" aria-labelledby="workspace-title">
@@ -117,7 +130,7 @@
             <li>Gehe zum nächsten Schritt. Wähle den <strong>Downloadlink per E-Mail</strong>, einen <strong>einmaligen Export</strong> und <strong>ZIP</strong>. Für den Einstieg empfehlen wir <strong>2 GB je Datei</strong>; die Teilgröße begrenzt nicht die ausgewählte Bildmenge.</li>
             <li>Erstelle den Export. Warte auf Googles E-Mail und beachte die darin genannte Downloadfrist. <a href="https://support.google.com/accounts/answer/3024190?hl=de">Offizielle Google-Anleitung</a>.</li>
           </ol>
-          <p><strong>Kann Google weitere Exporte automatisch erstellen?</strong> Google Takeout bietet geplante Exporte alle zwei Monate für ein Jahr an. Wenn ausschließlich Google Fotos ausgewählt ist, können auch neue und aktualisierte Daten exportiert werden. <a href="https://support.google.com/accounts/answer/3024190?hl=de">Googles Erklärung zu geplanten Exporten</a>. TrueArchive hat keinen Google-Zeitplan und lädt nichts selbst herunter. Lade spätere Exporte weiterhin manuell herunter, entpacke sie und wähle bei derselben Quelle <strong>Zahnrad → „Neuen Exportordner wählen …“</strong>. Starte danach die Übernahme selbst; die gespeicherte Quellenkennung bleibt erhalten.</p>
+          <p>Für spätere Sicherungen gibt es einen eigenen Abschnitt: <a href="#google-wiederkehrend">Google-Exporte wiederkehrend übernehmen</a>.</p>
           <h3 id="google-export-entpacken">2. Alle Teile herunterladen und entpacken</h3>
           <ol>
             <li><strong>Fertig-Mail öffnen.</strong> Folge dem Downloadlink, melde dich bei Bedarf erneut bei Google an und lade <strong>alle ZIP-Teile dieses Exports</strong> vollständig herunter.</li>
@@ -136,12 +149,20 @@
           </ol>
           <p><strong>Es werden keine Bilder gefunden?</strong> Prüfe, ob wirklich entpackte Bilder im ausgewählten Ordner liegen und Unterordner eingeschlossen sind. <strong>JSONs fehlen?</strong> Prüfe zuerst, ob alle ZIP-Teile desselben Exports vollständig heruntergeladen und entpackt wurden.</p>
           <h3 id="google-export-metadaten">Was mit den Metadaten passiert</h3>
-          <p><strong>Was bedeutet „Weitere Google-Metadatenbereiche werden nicht übernommen“?</strong> Diese Meldung betrifft zusätzliche Angaben, für die TrueArchive noch keine sichere Zuordnung hat, etwa <code>googlePhotosOrigin</code> oder weitere Felder innerhalb der GPS-Angaben. Sie bedeutet nicht automatisch, dass Bilder fehlen. Unterstütztes Aufnahmedatum, GPS, Beschreibung und belegte Albumtitel werden weiterhin übernommen, soweit sie vorhanden und gültig sind. Der begrenzte Metadatenumfang bleibt im Archiv vermerkt; die zusätzlichen Angaben bleiben in den unveränderten JSON-Dateien des Exports. Prüfe im Ergebnis separat, ob Dateien als zurückgestellt oder fehlgeschlagen gemeldet werden.</p>
+          <p><strong>Welche zusätzlichen Google-Angaben werden nicht übernommen?</strong> Für Angaben wie <code>googlePhotosOrigin</code> oder weitere Felder innerhalb der GPS-Daten hat TrueArchive noch keine sichere Zuordnung. Das bedeutet nicht automatisch, dass Bilder fehlen. Unterstütztes Aufnahmedatum, GPS, Beschreibung und belegte Albumtitel werden weiterhin übernommen, soweit sie vorhanden und gültig sind. Der begrenzte Metadatenumfang bleibt im Archiv vermerkt; die zusätzlichen Angaben bleiben in den unveränderten JSON-Dateien des Exports. Prüfe im Ergebnis separat, ob Dateien als zurückgestellt oder fehlgeschlagen gemeldet werden.</p>
           <p><strong>Medien und passende JSON-Dateien gehören zusammen.</strong> Unterstützt sind Begleitdateien mit dem vollständigen Mediendateinamen plus <code>.json</code> oder <code>.supplemental-metadata.json</code>; der Titel im JSON muss genau zum Mediendateinamen passen. Über mehrere Teile hinweg wird nur eine eindeutige Zuordnung unter <code>Google Photos</code> oder <code>Google Fotos</code> verwendet. Gekürzte Namen, mehrere passende Dateien und beschädigte Metadaten werden nicht geraten.</p>
           <p>Fehlt eine passende JSON-Datei, bleibt das Medium zunächst zurückgestellt. Wenn du diesen Verlust bewusst akzeptierst, schalte in den Quelleinstellungen <strong>„Fehlende JSON-Metadaten akzeptieren“</strong> ein und prüfe neu. Der fehlende Metadatenumfang bleibt dauerhaft im Archiv vermerkt. Diese Option erlaubt ausschließlich fehlende Begleitdaten; beschädigte, ungültige oder mehrdeutige JSON-Dateien bleiben gesperrt. Eine Änderung verwirft nur die Vorschau dieser Quelle.</p>
           <p>Gültige Google-Aufnahmezeit, Beschreibung und GPS-Angaben werden in das gemeinsame Standard-XMP übernommen. Die belegte Aufnahmezeit bestimmt die Datumsordner des Archivlayouts, bei neuen Archiven ab 0.14.0 Jahr, Monat und Tag; Download- und Exportzeit ersetzen sie nicht. Ein durch unterstützte Album-Metadaten belegter Albumtitel wird zum lesbaren Schlagwort. Der Ordnername allein genügt dafür nicht. Favoriten bleiben als Quellenangabe erhalten und werden nicht in Sterne umgerechnet. Widersprüche zu vorhandenem XMP müssen geklärt werden; lokale Bearbeitungen werden nicht still überschrieben. Auch Änderungen des gespeicherten Metadatenumfangs oder Favoritenstatus werden bei Folgeexporten nicht automatisch ersetzt.</p>
-          <p><strong>TrueArchive erhält die gelieferten Medienbytes und verändert die Exportquelle nicht.</strong> Die JSON-Dateien werden nicht zusätzlich ins Archiv kopiert. Nicht unterstützte Metadaten bleiben in der Exportquelle und werden als Einschränkung gemeldet. Die ursprüngliche Kameraqualität und die Vollständigkeit deiner Google-Mediathek sind durch einen Export nicht belegt; diese Grenze bleibt bei der Herkunft vermerkt.</p>
+          <p><strong>TrueArchive erhält die gelieferten Medienbytes und verändert die Exportquelle nicht.</strong> Die JSON-Dateien werden nicht zusätzlich ins Archiv kopiert. Nicht unterstützte Zusatzfelder und Albumangaben bleiben in der Exportquelle. Google-Nullkoordinaten werden nicht als Aufnahmeort übernommen; belegte Aufnahmezeiten werden für die Ablage in UTC eingeordnet. Im Kandidaten 0.17.0 erscheinen diese allgemeinen Grenzen nicht mehr für jedes Bild als Hinweis. Konkrete Zuordnungs- und Datenfehler bleiben im Ergebnis sichtbar. Die ursprüngliche Kameraqualität und die Vollständigkeit deiner Google-Mediathek sind durch einen Export nicht belegt; diese Grenze bleibt bei der Herkunft vermerkt.</p>
           <p>Für einen späteren Export derselben Quelle öffne ihr <strong>Zahnrad → „Neuen Exportordner wählen …“</strong>. Die gespeicherte Quellenkennung bleibt erhalten. TrueArchive prüft den Ordner und mögliche Überschneidungen vor dem Wechsel; die eigene Vorschau wird verworfen, fremde Vorschauen bleiben erhalten. Entfernen und neu Hinzufügen erzeugt dagegen eine neue Quelle.</p>
+          <h3 id="google-wiederkehrend">Google-Exporte wiederkehrend übernehmen</h3>
+          <ol>
+            <li><strong>Bei Google planen:</strong> Wähle in <a href="https://takeout.google.com/">Google Takeout</a> ausschließlich Google Fotos. Aktiviere geplante Exporte alle zwei Monate für ein Jahr. Für Google Fotos bietet Google dabei auch neue und aktualisierte Daten an. <a href="https://support.google.com/accounts/answer/3024190?hl=de">Offizielle Google-Anleitung</a>.</li>
+            <li><strong>Auf die Export-Mail warten:</strong> Lade alle Teile des neuen Exports innerhalb der angegebenen Frist herunter und entpacke sie in einen eigenen Ordner. Alte und neue Exporte nicht durch Überschreiben vermischen.</li>
+            <li><strong>Dieselbe Quelle verwenden:</strong> Öffne in TrueArchive das Zahnrad neben deiner Google-Quelle und wähle <strong>„Neuen Exportordner wählen …“</strong>. Wähle den frisch entpackten Export. Die gespeicherte Quellenkennung bleibt erhalten.</li>
+            <li><strong>Jetzt archivieren:</strong> Starte die Übernahme bei dieser Quelle. Bereits archivierte Inhalte werden geprüft und wiedererkannt; widersprüchliche Metadaten bleiben zur Klärung offen. Nach einem Jahr muss der Exportplan bei Google erneuert werden.</li>
+          </ol>
+          <p><strong>Was geschieht automatisch?</strong> Google erstellt die geplanten Exporte. Herunterladen, Entpacken und Starten der Übernahme bleiben manuelle Schritte; TrueArchive hat für Google noch keinen automatischen Abgleich. Entfernen und erneutes Hinzufügen der Quelle ist für einen Folgeexport nicht nötig.</p>
           <p>TrueArchive bietet für Takeout keine Google-Anmeldung, keinen automatischen Download und keinen Zeitplan an. Es liest nur die bewusst bereitgestellten lokalen Dateien. Pause, Abbruch und Ergebnisbericht verwenden die vorhandene Quellenbedienung.</p>
         </section>
 

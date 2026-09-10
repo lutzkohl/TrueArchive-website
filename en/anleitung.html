@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="description" content="Install TrueArchive for Mac, archive all sources and safely disconnect source drives. Handbook for Alpha 0.16.0, covering monthly folders, duplicates, Nitro edits and Google Takeout.">
+  <meta name="description" content="Install TrueArchive for Mac, archive all sources and safely disconnect source drives. Handbook for Alpha 0.17.0, covering monthly folders, duplicates, Nitro edits and Google Takeout.">
   <meta name="robots" content="noindex, nofollow">
   <meta name="theme-color" content="#1E3C93">
   <title>Handbook – TrueArchive</title>
@@ -22,7 +22,7 @@
   </header>
 
   <main id="inhalt" class="wrap">
-    <div class="guide-heading"><h1>The TrueArchive handbook.</h1><p>Connect sources, choose an archive, start a sync.</p><p>The app’s “?” buttons open the relevant chapter directly. Further down, you will find the <a href="#release-notes">release notes and earlier versions</a>.</p><p class="guide-version">Handbook for Alpha 0.16.0 · Build 34 · Alpha test version.</p></div>
+    <div class="guide-heading"><h1>The TrueArchive handbook.</h1><p>Connect sources, choose an archive, start a sync.</p><p>The app’s “?” buttons open the relevant chapter directly. Further down, you will find the <a href="#release-notes">release notes and earlier versions</a>.</p><p class="guide-version">Handbook for Alpha 0.17.0 · Build 35 · local test candidate, not yet published.</p></div>
     <div class="guide-layout">
       <nav class="guide-nav" aria-label="In this handbook"><a href="#installation">Installation</a><a href="#updates">App updates</a><a href="#sprache">Choose language</a><a href="#einrichtung">Your first archive</a><a href="#arbeitsbereich">Sources and destination</a><a href="#alle-quellen">Archive all sources</a><a href="#google-photos">Google Photos (Takeout)</a><a href="#monatsordner">Monthly folders</a><a href="#duplikate">Duplicates and Nitro</a><a href="#vision">Automatic keywords</a><a href="#details">Questions and details</a><a href="#release-notes">Release Notes</a><a href="#hilfe">Troubleshooting</a></nav>
       <div class="guide-content">
@@ -74,11 +74,24 @@
           <h2 id="setup-title">Your first archive</h2>
           <ol>
             <li><strong>Connect sources.</strong> Use “+ Add source” to add Apple Photos, an SD card, local picture folders or a <a href="#google-photos">Google Takeout export</a>. The selected source opens directly.</li>
-            <li><strong>Connect an archive.</strong> On the archive page, choose a new empty archive folder or your existing TrueArchive archive. The destination requires APFS or HFS+.</li>
+            <li><strong>Connect an archive.</strong> On the archive page, choose a new empty archive folder, your existing TrueArchive archive or, in the 0.17.0 candidate, an <a href="#vorhandenes-archiv">existing picture folder</a>. The destination requires APFS or HFS+.</li>
             <li><strong>Start a sync when ready.</strong> Once at least one source is connected and the archive has been checked, TrueArchive automatically remembers the completed setup. Then start “Archive all sources” or a single source.</li>
           </ol>
           <p>Set up your sources and archive on the same pages you will use later. Short hints show what is still missing. There is no separate wizard, “Done” button or trial import. Automatic setup completion does not itself start an import. Sources, the archive and an optional Photos capture date range stay saved on this Mac.</p>
           <div class="guide-note"><p><strong>The direction is always source → archive.</strong> TrueArchive does not change or delete sources. Even if you later delete a file there, its archive copy remains.</p></div>
+        </section>
+
+        <section id="vorhandenes-archiv" aria-labelledby="existing-archive-title">
+          <h2 id="existing-archive-title">Use an existing picture folder as the archive</h2>
+          <div class="guide-note"><p><strong>In the 0.17.0 candidate:</strong> An ordinary picture folder that already contains files can become the archive destination. Scanning starts only after your explicit action.</p></div>
+          <ol>
+            <li><strong>Select the destination.</strong> Choose the existing picture folder on the archive page. TrueArchive keeps it as the intended destination and offers the action to scan its contents.</li>
+            <li><strong>Scan the existing contents.</strong> Start the scan explicitly. You can see progress, counts and the file currently being checked. Use <strong>“Pause”</strong> to stop temporarily and <strong>“Resume”</strong> to continue. Imports and other archive work remain blocked until the scan finishes completely.</li>
+            <li><strong>Resolve real conflicts.</strong> Ambiguous or damaged XMP files and other cases that cannot be resolved safely appear as specific issues. The affected files remain unchanged, and the archive becomes ready only after you resolve them and run the scan again.</li>
+          </ol>
+          <p>Existing media keep their names and locations; they are neither copied nor moved into date folders. Existing XMP is preserved and missing shared XMP is added. TrueArchive creates only small management files in the hidden <code>.bildarchiv</code> folder.</p>
+          <p>After the scan succeeds, TrueArchive places new imports under <strong>year → month → day</strong> as usual. The existing collection keeps its current folder structure.</p>
+          <p><strong>File packages stay closed.</strong> Photo libraries, applications and other Finder packages are preserved as a whole. TrueArchive registers media in ordinary folders and does not add XMP files inside packages. A package itself cannot be used as the archive destination.</p>
         </section>
 
         <section id="arbeitsbereich" aria-labelledby="workspace-title">
@@ -117,7 +130,7 @@
             <li>Continue to the next step. Choose an <strong>email download link</strong>, a <strong>one-time export</strong> and <strong>ZIP</strong>. We suggest <strong>2 GB per file</strong> to start; the part size does not limit the number of selected photos.</li>
             <li>Create the export. Wait for Google’s email and download before the deadline it gives. <a href="https://support.google.com/accounts/answer/3024190?hl=en">Google’s official instructions</a>.</li>
           </ol>
-          <p><strong>Can Google create later exports automatically?</strong> Google Takeout offers scheduled exports every two months for one year. When only Google Photos is selected, new and updated data can also be exported. <a href="https://support.google.com/accounts/answer/3024190?hl=en">Google’s explanation of scheduled exports</a>. TrueArchive has no Google schedule and downloads nothing itself. Download and extract later exports manually, then use the same source’s <strong>gear → “Choose a new export folder …”</strong>. Start the import yourself afterwards; the saved source identifier is retained.</p>
+          <p>For later backups, see <a href="#google-wiederkehrend">Import recurring Google exports</a>.</p>
           <h3 id="google-export-entpacken">2. Download and extract every part</h3>
           <ol>
             <li><strong>Open the completion email.</strong> Follow the download link, sign in to Google again if asked, and finish downloading <strong>every ZIP part of this export</strong>.</li>
@@ -136,12 +149,20 @@
           </ol>
           <p><strong>No photos found?</strong> Check that the selected folder contains extracted photos and that subfolders are included. <strong>Missing JSON files?</strong> First check that every ZIP part of the same export has finished downloading and extracting.</p>
           <h3 id="google-export-metadaten">What happens to metadata</h3>
-          <p><strong>What does “Additional Google metadata fields are not imported” mean?</strong> This message concerns extra information that TrueArchive cannot yet map reliably, such as <code>googlePhotosOrigin</code> or additional fields within GPS data. It does not automatically mean that pictures are missing. Supported capture dates, GPS, descriptions and proven album titles are still imported when present and valid. The limited metadata coverage remains recorded in the archive; the extra information stays in the export’s unchanged JSON files. Check the result separately for any files reported as deferred or failed.</p>
+          <p><strong>Which additional Google fields are not imported?</strong> TrueArchive cannot yet map information such as <code>googlePhotosOrigin</code> or additional fields within GPS data reliably. This does not automatically mean that pictures are missing. Supported capture dates, GPS, descriptions and proven album titles are still imported when present and valid. The limited metadata coverage remains recorded in the archive; the extra information stays in the export’s unchanged JSON files. Check the result separately for any files reported as deferred or failed.</p>
           <p><strong>Media and matching JSON files belong together.</strong> Supported sidecars use the full media filename followed by <code>.json</code> or <code>.supplemental-metadata.json</code>; the title inside the JSON must match the media filename exactly. Matching across parts must be unambiguous under <code>Google Photos</code> or <code>Google Fotos</code>. Shortened names, multiple matching files and damaged metadata are not guessed.</p>
           <p>If a matching JSON file is missing, the media item is initially deferred. To explicitly accept that loss, enable <strong>“Accept missing JSON metadata”</strong> in the source settings and check again. The missing metadata remains permanently recorded in the archive. This option only permits missing sidecars; damaged, invalid or ambiguous JSON files remain blocked. Changing the option discards only this source’s preview.</p>
           <p>Valid Google capture time, description and GPS data are added to the shared standard XMP. The supported capture time determines date folders according to the archive layout: year, month and day for new archives from 0.14.0; download and export times do not replace it. An album title established by supported album metadata becomes a readable keyword. A folder name alone is not enough. Favorites remain source information and are not converted into star ratings. Conflicts with existing XMP need to be resolved; local edits are not silently overwritten. Changes to the stored metadata coverage or favorite status are not automatically replaced by later exports either.</p>
-          <p><strong>TrueArchive preserves the supplied media bytes and leaves the export source unchanged.</strong> JSON files are not additionally copied into the archive. Unsupported metadata stays in the export source and is reported as a limitation. An export does not prove original camera quality or completeness of your Google library; the provenance retains that limitation.</p>
+          <p><strong>TrueArchive preserves the supplied media bytes and leaves the export source unchanged.</strong> JSON files are not additionally copied into the archive. Unsupported extra fields and album information stay in the export source. Google’s zero-coordinate placeholders do not become a capture location; verified capture times use UTC for archive placement. In the 0.17.0 candidate these general limitations no longer produce a notice for every photo. Specific association and data errors remain visible in the report. An export does not prove original camera quality or completeness of your Google library; the provenance retains that limitation.</p>
           <p>For a later export from the same source, open its <strong>gear → “Choose a new export folder …”</strong>. The saved source identifier is retained. TrueArchive checks the folder and possible overlaps before switching; this source’s preview is discarded and other previews are preserved. Removing the source and adding it again creates a new source instead.</p>
+          <h3 id="google-wiederkehrend">Import recurring Google exports</h3>
+          <ol>
+            <li><strong>Schedule with Google:</strong> Select only Google Photos in <a href="https://takeout.google.com/">Google Takeout</a>. Enable scheduled exports every two months for one year. For Google Photos, Google also offers exports of new and updated data. <a href="https://support.google.com/accounts/answer/3024190?hl=en">Official Google instructions</a>.</li>
+            <li><strong>Wait for the export email:</strong> Download every part of the new export before its deadline and extract it into a separate folder. Do not combine old and new exports by overwriting files.</li>
+            <li><strong>Use the same source:</strong> In TrueArchive, open the gear next to your Google source and select <strong>“Choose a new export folder …”</strong>. Select the newly extracted export. Your saved source identifier is retained.</li>
+            <li><strong>Archive now:</strong> Start the import for this source. Previously archived content is checked and recognized; conflicting metadata still needs a decision. Renew the export schedule with Google after one year.</li>
+          </ol>
+          <p><strong>What happens automatically?</strong> Google creates the scheduled exports. Downloading, extracting and starting the import remain manual steps; TrueArchive does not yet run an automatic Google sync. You do not need to remove and add the source again for a later export.</p>
           <p>TrueArchive provides no Google sign-in, automatic download or schedule for Takeout. It reads only the local files you deliberately provide. Pause, cancel and the result report use the existing source controls.</p>
         </section>
 
