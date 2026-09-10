@@ -79,6 +79,27 @@ h3 { font-size: 22px; font-weight: 650; }
 .app-screenshot img { width: 100%; height: auto; border: 1px solid #d4dce9; border-radius: 10px; box-shadow: 0 16px 48px #1e3c9316, 0 3px 9px #1e3c930a; }
 .archive-story { display: grid; grid-template-columns: minmax(0, .9fr) minmax(0, 1.1fr); gap: 72px; padding-block: 64px 72px; }
 .archive-story h2 { font-size: clamp(28px, 3vw, 38px); }
+.archive-story-visual { min-width: 0; }
+.archive-example { max-width: 440px; margin: 28px 0 0; }
+.archive-window { overflow: hidden; border: 1px solid #d4dce9; border-radius: 10px; background: white; box-shadow: 0 8px 24px #17263c0b; }
+.archive-window-heading { padding: 13px 17px; border-bottom: 1px solid #d4dce9; background: #f5f6f8; color: var(--muted); font-size: 13px; font-weight: 600; }
+.archive-tree { padding-block: 6px; font-size: 15px; line-height: 1.25; color: #2a2f37; }
+.archive-row { display: flex; align-items: center; gap: 7px; min-height: 32px; padding: 5px 12px 5px calc(12px + var(--depth) * 18px); white-space: nowrap; }
+.archive-row > span:last-child { min-width: 0; white-space: normal; overflow-wrap: anywhere; }
+.archive-row-stripe { background: #f3f4f5; }
+.archive-row-selected { background: #3366cc; color: white; }
+.archive-chevron, .archive-chevron-spacer { flex: 0 0 7px; width: 7px; height: 7px; margin-right: 3px; }
+.archive-chevron { border-right: 1.8px solid currentColor; border-top: 1.8px solid currentColor; transform: rotate(45deg); opacity: .65; }
+.archive-chevron.open { transform: rotate(135deg) translate(-1px, 1px); }
+.folder-icon { position: relative; flex: 0 0 22px; height: 16px; border: 1px solid #60add1; border-radius: 2px; background: linear-gradient(#9cddf7, #4eafd8); box-shadow: inset 0 1px #d4f2ff; }
+.folder-icon::before { content: ""; position: absolute; top: -4px; left: -1px; width: 10px; height: 4px; border: 1px solid #60add1; border-bottom: 0; border-radius: 3px 3px 0 0; background: #8cd4f1; }
+.archive-row svg { flex: 0 0 22px; width: 22px; height: 22px; }
+.archive-example figcaption { margin-top: 13px; font-size: 13px; line-height: 1.55; color: var(--muted); }
+@media (max-width: 540px) {
+  .archive-tree { font-size: 13px; }
+  .archive-row { gap: 5px; padding-left: calc(8px + var(--depth) * 12px); }
+}
+
 
 .workflow { padding-block: 66px 56px; background: var(--wash); border-block: 1px solid #e6ecf5; }
 .section-heading { display: flex; align-items: flex-end; justify-content: space-between; gap: 40px; margin-bottom: 42px; }
