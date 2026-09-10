@@ -17,7 +17,7 @@
 <body>
   <a class="skip-link" href="#inhalt">Skip to content</a>
   <header class="site-header wrap">
-    <div class="brand"><a class="brand-home" href="index.html" aria-label="TrueArchive home"><img src="../assets/app-icon.png" width="40" height="40" alt=""><span>TrueArchiv</span></a><a class="brand-download" href="https://github.com/lutzkohl/TrueArchive-website/releases/download/v0.13.1-alpha/TrueArchive-0.13.1-alpha-macos-universal.zip" aria-label="Download TrueArchive 0.13.1">e</a></div>
+    <div class="brand"><a class="brand-home" href="index.html" aria-label="TrueArchive home"><img src="../assets/app-icon.png" width="40" height="40" alt=""><span>TrueArchiv</span></a><a class="brand-download" href="https://github.com/lutzkohl/TrueArchive-website/releases/download/v0.16.0-alpha/TrueArchive-0.16.0-alpha-macos-universal.zip" aria-label="Download TrueArchive 0.15.1">e</a></div>
     <nav aria-label="Main navigation"><a class="secondary-nav" href="warum-truearchive.html">Why TrueArchive?</a><a class="secondary-nav" href="index.html#funktionen">Features</a><a class="secondary-nav" href="feedback.html">Feedback</a><a class="secondary-nav" href="anleitung.html">Handbook</a><a class="button small primary" href="index.html#beta">Join the beta</a></nav>
   </header>
 
@@ -28,8 +28,45 @@
       <p>New features, fixes and important information for every new release. The newest version comes first.</p>
     </div>
     <div class="guide-layout">
-      <nav class="guide-nav" aria-label="Versions"><a href="anleitung.html#release-notes">Back to the handbook</a><a href="#v0-13-1">0.13.1 · Source controls</a><a href="#v0-13-0">0.13.0 · Google Photos</a><a href="#v0-12-1">0.12.1</a><a href="#v0-12-0">0.12.0 · German and English</a><a href="#v0-11-1">0.11.1</a><a href="#v0-11-0">0.11.0 · Start directly in the app</a><a href="#v0-10-3">0.10.3 · Control sources directly</a><a href="#v0-10-2">0.10.2 · Reports on source pages</a><a href="#v0-10-1">0.10.1 · A more stable menu bar</a><a href="#v0-10-0">0.10.0 · Duplicates and Nitro variants</a><a href="#v0-9-0">0.9.0 · Archive all sources</a><a href="#v0-8-1">0.8.1 · Easier setup</a><a href="#v0-8-0">0.8.0 · Unlimited Photos sync</a><a href="#v0-7-1">0.7.1 · More robust Photos syncs</a><a href="#v0-7-0">0.7.0 · Overview and preview</a><a href="#v0-6-0">0.6.0 · App updates</a><a href="#fruehere-versionen">Earlier versions</a></nav>
+      <nav class="guide-nav" aria-label="Versions"><a href="anleitung.html#release-notes">Back to the handbook</a><a href="#v0-16-0">0.16.0 · German and English keywords</a><a href="#v0-15-1">0.15.1 · Simpler archive page</a><a href="#v0-15-0">0.15.0 · Video keywords</a><a href="#v0-14-0">0.14.0 · Candidate: monthly folders</a><a href="#v0-13-1">0.13.1 · Source controls</a><a href="#v0-13-0">0.13.0 · Google Photos</a><a href="#v0-12-1">0.12.1</a><a href="#v0-12-0">0.12.0 · German and English</a><a href="#v0-11-1">0.11.1</a><a href="#v0-11-0">0.11.0 · Start directly in the app</a><a href="#v0-10-3">0.10.3 · Control sources directly</a><a href="#v0-10-2">0.10.2 · Reports on source pages</a><a href="#v0-10-1">0.10.1 · A more stable menu bar</a><a href="#v0-10-0">0.10.0 · Duplicates and Nitro variants</a><a href="#v0-9-0">0.9.0 · Archive all sources</a><a href="#v0-8-1">0.8.1 · Easier setup</a><a href="#v0-8-0">0.8.0 · Unlimited Photos sync</a><a href="#v0-7-1">0.7.1 · More robust Photos syncs</a><a href="#v0-7-0">0.7.0 · Overview and preview</a><a href="#v0-6-0">0.6.0 · App updates</a><a href="#fruehere-versionen">Earlier versions</a></nav>
       <div class="guide-content release-notes">
+        <section id="v0-16-0" aria-labelledby="v0-16-0-title">
+          <h2 id="v0-16-0-title">0.16.0 · German and English keywords</h2>
+          <p>Build 34 · Alpha · <time datetime="2026-09-10">10 September 2026</time></p>
+          <ul><li><strong>Choose a language:</strong> Automatic photo and video keywords in German, English or both. Local on your Mac, with no online translation.</li><li><strong>Supplement existing analyses:</strong> A new language selection processes previously analysed archive files again. Existing keywords stay intact.</li><li><strong>Clear status:</strong> Enabling analysis queues it immediately. Waiting, progress and pause appear next to the switches.</li><li><strong>Since the last public package:</strong> Year/month/day folders, separately enabled video analysis every ten seconds with XMP time markers, and a simpler destination page without a folder migration control.</li></ul>
+          <p>The selection applies only to automatic words. Imported metadata and original files are retained. Existing English settings stay English until you choose another language. Reanalysis updates TrueArchive’s own video time markers in the selected language.</p>
+          <p>For macOS 15+, Intel and Apple Silicon. Manual alpha, ad hoc signed and not notarized; the shared automatic update feed stays unchanged. Real Intel runtime, further video formats and exchange with other photo tools have not yet been fully verified. <a href="anleitung.html#vision">Language selection and analysis in the handbook</a> · <a href="anleitung.html#installation">Installation</a></p>
+        </section>
+
+        <section id="v0-15-1" aria-labelledby="v0-15-1-title">
+          <h2 id="v0-15-1-title">0.15.1 · Simpler archive page</h2>
+          <p>Build 33 · Local development version · Not released separately</p>
+          <p>The folder layout review and migration controls are removed from the regular destination page. New archives automatically use year, month and day. The handbook explains this fixed layout. Only an already interrupted migration still offers verified recovery.</p>
+          <ul><li><strong>First available test package:</strong> Includes the changes from development versions 0.14.0 and 0.15.0: fixed monthly folders for new archives and separately enabled video tagging.</li><li><strong>Local video analysis:</strong> Apple Vision analyses one frame every ten seconds from the start. English keywords and actual sample timestamps are stored in XMP. Timestamps have no dedicated viewer yet.</li><li><strong>Simpler destination page:</strong> No layout selection or migration controls during normal use.</li></ul>
+          <p>For macOS 15+, Intel and Apple Silicon. Manual alpha package, ad hoc signed and not notarized by Apple. <a href="anleitung.html#installation">Installation and macOS approval</a>. The shared automatic update feed remains unchanged. Real Intel runtime, further video formats and external tool compatibility have not been fully validated.</p>
+          <p><a href="anleitung.html#monatsordner">Folder layout in the handbook</a></p>
+        </section>
+
+        <section id="v0-15-0" aria-labelledby="v0-15-0-title">
+          <h2 id="v0-15-0-title">0.15.0 · Video keywords</h2>
+          <p>Build 32 · Local alpha candidate · Not yet released</p>
+          <ul><li>Separate switch for local video tagging, off by default and independent of pictures.</li><li>Apple Vision analyses one reduced frame every ten seconds, starting at the beginning. English terms are combined across the video.</li><li>Actual finding times are stored as point markers in the shared XMP. No marker view or seek function.</li><li>Sequential processing with progress and controlled interruption. Completed results remain; unchanged videos already analysed are skipped.</li></ul>
+          <p>Original files and existing metadata remain intact. The <a href="anleitung.html#vision">local tagging handbook</a> explains limits, restart behaviour and tool compatibility. Public download and automatic update feed remain unchanged. Real Intel runtime and compatibility with external programs are checked separately.</p>
+        </section>
+
+        <section id="v0-14-0" aria-labelledby="v0-14-0-title">
+          <h2 id="v0-14-0-title">0.14.0 · Monthly archive folders</h2>
+          <p>Build 31 · Local alpha candidate · Not yet released</p>
+          <ul>
+            <li><strong>New archives:</strong> Fixed layout under <code>YYYY/YYYY-MM/YYYY-MM-DD</code>, such as <code>2026/2026-09/2026-09-10</code>. Only months and days containing files are created; folder names remain complete. <code>Unbekannt</code> stays directly in the chosen archive, without an extra media folder.</li>
+            <li><strong>Explicitly migrate existing day folders:</strong> “Review folder structure…” creates a preview first. Only “Switch to monthly folders” followed by confirmation starts the migration. Opening the archive and later imports do not change its existing layout.</li>
+            <li><strong>Keep pairs and relationships:</strong> Archive media move together with their XMP files; identities, origins, variants and metadata are preserved. Nothing is copied from the sources again. After an interruption, “Resume migration” checks the existing evidence before continuing.</li>
+            <li><strong>Very old media archives:</strong> The layout under <code>Medien/YYYY/YYYY-MM-DD</code> remains supported. This monthly migration is not offered for it.</li>
+          </ul>
+          <p>Before migration, make an independent backup of the archive including XMP and pause other programs that write to it. Afterwards, digiKam and other existing libraries may need a new scan or their folder links updated. Older TrueArchive versions cannot read or continue using the monthly layout; use at least 0.14.0 on all Macs working with it.</p>
+          <p>This entry describes the local candidate, not a published release or completed release validation. The public package remains 0.13.1; the shared automatic update feed stays unchanged. It does not establish migration of personal archives or real Intel/Nitro/digiKam acceptance testing.</p>
+          <p><a href="anleitung.html#monatsordner">Steps, recovery and limitations</a> · <a href="feedback.html#testfeedback">Test feedback</a></p>
+        </section>
         <section id="v0-13-1" aria-labelledby="v0-13-1-title">
           <h2 id="v0-13-1-title">0.13.1 · Source controls and Finder</h2>
           <p>Build 30 · Alpha · <time datetime="2026-09-10">10 September 2026</time></p>

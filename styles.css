@@ -417,6 +417,7 @@ a.tool-name:hover span { text-decoration: underline; text-underline-offset: 4px;
 .archive-foundation h2 { font-size: 29px; margin-bottom: 6px; }
 .archive-foundation p { font-size: 16px; }
 .archive-foundation .archive-order { font-size: 14px; margin-top: 10px; color: #dce6ff; }
+.archive-order a { color: inherit; }
 .archive-order code { display: block; width: fit-content; font-size: 13px; margin-top: 6px; color: white; background: #314fa4; }
 .flow-outputs { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 18px; }
 .output-lane { display: flex; flex-direction: column; min-width: 0; }

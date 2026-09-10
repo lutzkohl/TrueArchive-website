@@ -17,7 +17,7 @@
 <body>
   <a class="skip-link" href="#inhalt">Zum Inhalt</a>
   <header class="site-header wrap">
-    <div class="brand"><a class="brand-home" href="index.html" aria-label="TrueArchive Startseite"><img src="assets/app-icon.png" width="40" height="40" alt=""><span>TrueArchiv</span></a><a class="brand-download" href="https://github.com/lutzkohl/TrueArchive-website/releases/download/v0.13.1-alpha/TrueArchive-0.13.1-alpha-macos-universal.zip" aria-label="TrueArchive 0.13.1 herunterladen">e</a></div>
+    <div class="brand"><a class="brand-home" href="index.html" aria-label="TrueArchive Startseite"><img src="assets/app-icon.png" width="40" height="40" alt=""><span>TrueArchiv</span></a><a class="brand-download" href="https://github.com/lutzkohl/TrueArchive-website/releases/download/v0.16.0-alpha/TrueArchive-0.16.0-alpha-macos-universal.zip" aria-label="TrueArchive 0.15.1 herunterladen">e</a></div>
     <nav aria-label="Hauptnavigation"><a class="secondary-nav" href="warum-truearchive.html">Warum TrueArchive?</a><a class="secondary-nav" href="index.html#funktionen">Funktionen</a><a class="secondary-nav" href="feedback.html">Feedback</a><a class="secondary-nav" href="anleitung.html">Handbuch</a><a class="button small primary" href="index.html#beta">Zur Beta anmelden</a></nav>
   </header>
 
@@ -28,8 +28,45 @@
       <p>Neue Funktionen, Korrekturen und wichtige Hinweise zu jedem neuen Release. Die neueste Version steht zuerst.</p>
     </div>
     <div class="guide-layout">
-      <nav class="guide-nav" aria-label="Versionen"><a href="anleitung.html#release-notes">Zum Handbuch</a><a href="#v0-13-1">0.13.1 · Quellen bedienen</a><a href="#v0-13-0">0.13.0 · Google Fotos</a><a href="#v0-12-1">0.12.1</a><a href="#v0-12-0">0.12.0 · Deutsch und Englisch</a><a href="#v0-11-1">0.11.1</a><a href="#v0-11-0">0.11.0 · Direkt in der App starten</a><a href="#v0-10-3">0.10.3 · Quellen direkt bedienen</a><a href="#v0-10-2">0.10.2 · Berichte bei den Quellen</a><a href="#v0-10-1">0.10.1 · Stabilere Menüleiste</a><a href="#v0-10-0">0.10.0 · Duplikate und Nitro-Varianten</a><a href="#v0-9-0">0.9.0 · Alle Quellen archivieren</a><a href="#v0-8-1">0.8.1 · Einfacher einrichten</a><a href="#v0-8-0">0.8.0 · Unbegrenzter Fotos-Abgleich</a><a href="#v0-7-1">0.7.1 · Robustere Fotos-Abgleiche</a><a href="#v0-7-0">0.7.0 · Übersicht und Vorschau</a><a href="#v0-6-0">0.6.0 · App-Updates</a><a href="#fruehere-versionen">Frühere Versionen</a></nav>
+      <nav class="guide-nav" aria-label="Versionen"><a href="anleitung.html#release-notes">Zum Handbuch</a><a href="#v0-16-0">0.16.0 · Schlagwörter auf Deutsch und Englisch</a><a href="#v0-15-1">0.15.1 · Einfachere Archivansicht</a><a href="#v0-15-0">0.15.0 · Schlagwörter für Videos</a><a href="#v0-14-0">0.14.0 · Kandidat: Monatsordner</a><a href="#v0-13-1">0.13.1 · Quellen bedienen</a><a href="#v0-13-0">0.13.0 · Google Fotos</a><a href="#v0-12-1">0.12.1</a><a href="#v0-12-0">0.12.0 · Deutsch und Englisch</a><a href="#v0-11-1">0.11.1</a><a href="#v0-11-0">0.11.0 · Direkt in der App starten</a><a href="#v0-10-3">0.10.3 · Quellen direkt bedienen</a><a href="#v0-10-2">0.10.2 · Berichte bei den Quellen</a><a href="#v0-10-1">0.10.1 · Stabilere Menüleiste</a><a href="#v0-10-0">0.10.0 · Duplikate und Nitro-Varianten</a><a href="#v0-9-0">0.9.0 · Alle Quellen archivieren</a><a href="#v0-8-1">0.8.1 · Einfacher einrichten</a><a href="#v0-8-0">0.8.0 · Unbegrenzter Fotos-Abgleich</a><a href="#v0-7-1">0.7.1 · Robustere Fotos-Abgleiche</a><a href="#v0-7-0">0.7.0 · Übersicht und Vorschau</a><a href="#v0-6-0">0.6.0 · App-Updates</a><a href="#fruehere-versionen">Frühere Versionen</a></nav>
       <div class="guide-content release-notes">
+        <section id="v0-16-0" aria-labelledby="v0-16-0-title">
+          <h2 id="v0-16-0-title">0.16.0 · Schlagwörter auf Deutsch und Englisch</h2>
+          <p>Build 34 · Alpha · <time datetime="2026-09-10">10. September 2026</time></p>
+          <ul><li><strong>Sprache wählen:</strong> Automatische Schlagwörter für Fotos und Videos auf Deutsch, Englisch oder in beiden Sprachen. Lokal auf dem Mac; keine Online-Übersetzung.</li><li><strong>Bestehende Analysen ergänzen:</strong> Eine neue Sprachwahl verarbeitet auch bereits analysierte Archivdateien erneut. Vorhandene Schlagwörter bleiben erhalten.</li><li><strong>Klarer Ablauf:</strong> Einschalten merkt die Analyse sofort vor. Wartezustand, Fortschritt und Pause stehen direkt bei den Schaltern.</li><li><strong>Seit dem letzten öffentlichen Paket:</strong> Monatsordner unter Jahr/Monat/Tag, separat einschaltbare Videoanalyse alle zehn Sekunden samt XMP-Zeitmarken und eine vereinfachte Zielansicht ohne Ordnerumstellung.</li></ul>
+          <p>Die Sprachwahl betrifft nur automatische Wörter. Importierte Metadaten und Originaldateien bleiben erhalten. Bisherige englische Einstellungen behalten Englisch, bis du eine andere Sprache auswählst. TrueArchives eigene Videozeitmarken werden bei erneuter Analyse in der gewählten Sprache aktualisiert.</p>
+          <p>Für macOS 15+, Intel und Apple Silicon. Manuelle Alpha, ad hoc signiert und nicht notarisiert; der gemeinsame automatische Updatefeed bleibt unverändert. Reale Intel-Laufzeit, weitere Videoformate und der Austausch mit anderen Foto-Tools sind noch nicht vollständig abgenommen. <a href="anleitung.html#vision">Sprachwahl und Analyse im Handbuch</a> · <a href="anleitung.html#installation">Installation</a></p>
+        </section>
+
+        <section id="v0-15-1" aria-labelledby="v0-15-1-title">
+          <h2 id="v0-15-1-title">0.15.1 · Einfachere Archivansicht</h2>
+          <p>Build 33 · Lokaler Entwicklungsstand · Nicht separat veröffentlicht</p>
+          <p>Der Bereich „Ordnerstruktur“ mit Prüfung und Umstellung entfällt aus der normalen Zielansicht. Neue Archive verwenden automatisch Jahr, Monat und Tag. Das Handbuch erklärt die feste Ablage. Nur eine bereits unterbrochene Umstellung bietet weiterhin eine geprüfte Wiederaufnahme.</p>
+          <ul><li><strong>Erstmals als Testpaket:</strong> Die Änderungen der Entwicklungsstände 0.14.0 und 0.15.0 sind enthalten: feste Monatsordner für neue Archive und separat einschaltbare Video-Verschlagwortung.</li><li><strong>Videos lokal verschlagworten:</strong> Apple Vision analysiert ab Beginn alle zehn Sekunden ein Einzelbild. Englische Schlagwörter und tatsächliche Fundzeitpunkte werden im XMP gespeichert. Die Zeitmarken haben noch keine eigene Anzeige.</li><li><strong>Einfachere Zielansicht:</strong> Keine Auswahl oder Umstellung der Ordnerstruktur im normalen Betrieb.</li></ul>
+          <p>Für macOS 15+, Intel und Apple Silicon. Manuelles Alpha-Paket, ad hoc signiert und nicht von Apple notarisiert. <a href="anleitung.html#installation">Installation und macOS-Freigabe</a>. Der gemeinsame automatische Updatefeed bleibt unverändert. Reale Intel-Laufzeit, weitere Videoformate und externe Programmkompatibilität sind noch nicht vollständig abgenommen.</p>
+          <p><a href="anleitung.html#monatsordner">Ordnerablage im Handbuch</a></p>
+        </section>
+
+        <section id="v0-15-0" aria-labelledby="v0-15-0-title">
+          <h2 id="v0-15-0-title">0.15.0 · Schlagwörter für Videos</h2>
+          <p>Build 32 · Lokaler Alpha-Kandidat · Noch nicht veröffentlicht</p>
+          <ul><li>Eigener Schalter für lokale Video-Verschlagwortung; zunächst aus, unabhängig von Bildern.</li><li>Apple Vision analysiert ab dem Anfang alle zehn Sekunden ein verkleinertes Einzelbild. Englische Begriffe werden über das Video zusammengeführt.</li><li>Die tatsächlichen Fundzeitpunkte werden als Punktmarker im gemeinsamen XMP gespeichert. Keine Markeransicht oder Sprungfunktion.</li><li>Serielle Verarbeitung mit Fortschritt und kontrollierter Unterbrechung. Fertige Ergebnisse bleiben erhalten; unveränderte bereits analysierte Videos werden übersprungen.</li></ul>
+          <p>Originaldateien und vorhandene Metadaten bleiben erhalten. Grenzen, Wiederanlauf und Werkzeugkompatibilität erklärt das <a href="anleitung.html#vision">Handbuch zur lokalen Verschlagwortung</a>. Öffentlicher Download und automatischer Updatefeed bleiben unverändert. Reale Intel- und externe Programmkompatibilität werden separat geprüft.</p>
+        </section>
+
+        <section id="v0-14-0" aria-labelledby="v0-14-0-title">
+          <h2 id="v0-14-0-title">0.14.0 · Monatsordner im Archiv</h2>
+          <p>Build 31 · Lokaler Alpha-Kandidat · Noch nicht veröffentlicht</p>
+          <ul>
+            <li><strong>Neue Archive:</strong> Feste Ablage unter <code>YYYY/YYYY-MM/YYYY-MM-DD</code>, etwa <code>2026/2026-09/2026-09-10</code>. Nur belegte Monate und Tage werden angelegt; die Ordnernamen bleiben vollständig. <code>Unbekannt</code> bleibt direkt im gewählten Archiv, ohne zusätzlichen Medien-Ordner.</li>
+            <li><strong>Bestehende Tagesarchive bewusst umstellen:</strong> „Ordnerstruktur prüfen …“ erstellt zuerst eine Vorschau. Erst „Auf Monatsordner umstellen“ mit anschließender Bestätigung startet den Vorgang. Das Öffnen des Archivs und weitere Importe ändern seine bisherige Struktur nicht.</li>
+            <li><strong>Paare und Zuordnungen erhalten:</strong> Archivmedien werden zusammen mit ihren XMP-Dateien verschoben; Identitäten, Herkünfte, Varianten und Metadaten bleiben erhalten. Es wird nichts erneut aus den Quellen kopiert. Eine unterbrochene Umstellung lässt sich nach erneuter Nachweisprüfung über „Umstellung fortsetzen“ weiterführen.</li>
+            <li><strong>Sehr alte Medien-Archive:</strong> Die Ablage unter <code>Medien/YYYY/YYYY-MM-DD</code> bleibt unterstützt. Diese Monatsumstellung wird dafür nicht angeboten.</li>
+          </ul>
+          <p>Vor der Umstellung das Archiv einschließlich XMP unabhängig sichern und fremde Schreibprogramme pausieren. Danach können digiKam und andere vorhandene Bibliotheken einen neuen Scan oder eine korrigierte Ordnerzuordnung benötigen. Ältere TrueArchive-Versionen können das Monatslayout nicht lesen oder weiterführen; auf allen beteiligten Macs mindestens 0.14.0 verwenden.</p>
+          <p>Dieser Eintrag beschreibt den lokalen Kandidaten, keinen veröffentlichten Release oder abgeschlossene Gesamtfreigabe. Das öffentliche Paket bleibt 0.13.1; der gemeinsame automatische Updatefeed bleibt unverändert. Eine Umstellung persönlicher Archive sowie reale Intel-/Nitro-/digiKam-Abnahmen sind hiermit nicht belegt.</p>
+          <p><a href="anleitung.html#monatsordner">Ablauf, Wiederaufnahme und Grenzen</a> · <a href="feedback.html#testfeedback">Testfeedback</a></p>
+        </section>
         <section id="v0-13-1" aria-labelledby="v0-13-1-title">
           <h2 id="v0-13-1-title">0.13.1 · Quellen direkt bedienen und Finder</h2>
           <p>Build 30 · Alpha · <time datetime="2026-09-10">10. September 2026</time></p>
