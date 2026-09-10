@@ -2,7 +2,7 @@
 (() => {
   'use strict';
   const choices = ['system', 'de', 'en'];
-  const pages = ['index.html', 'anleitung.html', 'feedback.html', 'release-notes.html', 'warum-truearchive.html'];
+  const pages = ['index.html', 'anleitung.html', 'feedback.html', 'release-notes.html', 'warum-truearchive.html', 'workflow.html'];
   const current = new URL(location.href);
   const parts = current.pathname.split('/');
   const page = parts.pop() || 'index.html';

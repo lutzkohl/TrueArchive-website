@@ -377,3 +377,88 @@ code { padding: 2px 5px; border-radius: 4px; background: #edf1f7; font-size: .9e
   .app-figure figcaption { font-size: 12px; }
   .archive-story .story-prose p { font-size: 16px; }
 }
+
+/* The archive is the shared foundation; two distinct paths lead out of Nitro. */
+.tool-logo { width: 48px; height: 48px; flex: 0 0 48px; object-fit: contain; }
+.drive-logo { color: var(--blue); padding: 3px; }
+.tool-name { display: flex; align-items: center; gap: 12px; color: var(--ink); font-weight: 650; text-decoration: none; }
+a.tool-name:hover span { text-decoration: underline; text-underline-offset: 4px; }
+.tools-overview { display: grid; grid-template-columns: minmax(0, .8fr) minmax(0, 1.2fr); gap: 72px; padding-block: 64px 80px; border-top: 1px solid var(--line); }
+.tools-intro h2 { margin-block: 14px 20px; }
+.tools-intro .text-link { display: inline-block; margin-top: 24px; font-weight: 600; }
+.tool-roles { margin: 0; }
+.tool-roles > div { display: grid; grid-template-columns: minmax(0, 1fr) 185px; gap: 20px; align-items: center; padding: 17px 0; border-bottom: 1px solid var(--line); }
+.tool-roles > div:first-child { padding-top: 0; }
+.tool-roles dt { line-height: 1.5; font-size: 17px; }
+.tool-roles dd { display: flex; align-items: center; gap: 10px; margin: 0; font-size: 16px; font-weight: 650; }
+.tool-roles .tool-logo { width: 34px; height: 34px; flex-basis: 34px; }
+.tools-note { margin-top: 20px; font-size: 14px; color: var(--muted); }
+.tools-page { padding-top: 56px; }
+.tools-heading { max-width: 800px; margin-bottom: 44px; }
+.tools-heading h1 { margin-block: 16px 24px; }
+.tools-heading > p { max-width: 60ch; font-size: 20px; color: var(--muted); }
+.tool-diagram { margin: 0; padding: 32px; background: var(--wash); border: 1px solid var(--line); border-radius: 24px; }
+.tool-diagram figcaption { margin-bottom: 28px; font-weight: 600; font-size: 17px; }
+.flow-sources { display: grid; grid-template-columns: minmax(0, 1fr) 140px minmax(0, 1fr); align-items: stretch; }
+.tool-node { min-width: 0; background: var(--paper); padding: 22px; border: 1px solid var(--line); border-radius: 14px; }
+.tool-node .tool-name { font-size: 21px; }
+.tool-context { display: block; margin-block: 18px 6px; font-size: 14px; font-weight: 650; color: var(--blue); }
+.tool-node > p { font-size: 15px; line-height: 1.55; color: var(--muted); }
+.export-route { align-self: center; text-align: center; padding: 14px; font-size: 12px; color: var(--muted); }
+.export-route span { display: block; }
+.export-arrow { font-size: 36px; line-height: 1.3; color: var(--blue); }
+.flow-route { display: flex; flex-direction: column; align-items: center; text-align: center; justify-content: center; gap: 4px; padding: 12px 8px 18px; font-size: 13px; line-height: 1.4; color: var(--muted); }
+.flow-route > span { font-size: 27px; color: var(--blue); line-height: 1; }
+.sd-route { grid-column: 1; }
+.photos-route { grid-column: 3; }
+.archive-collector { width: min(100%, 560px); margin-inline: auto; border-color: #9bb5e8; }
+.archive-foundation { display: flex; align-items: center; justify-content: center; gap: 24px; padding: 28px; background: var(--navy); color: var(--paper); border-radius: 14px; }
+.archive-foundation .tool-logo { width: 64px; height: 64px; flex-basis: 64px; color: white; }
+.archive-foundation h2 { font-size: 29px; margin-bottom: 6px; }
+.archive-foundation p { font-size: 16px; }
+.archive-foundation .archive-order { font-size: 14px; margin-top: 10px; color: #dce6ff; }
+.archive-order code { display: block; width: fit-content; font-size: 13px; margin-top: 6px; color: white; background: #314fa4; }
+.flow-outputs { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 18px; }
+.output-lane { display: flex; flex-direction: column; min-width: 0; }
+.output-lane .flow-route { min-height: 82px; }
+.output-lane .tool-node { flex-grow: 1; padding: 18px; }
+.output-lane .tool-name { font-size: 18px; }
+.workflow-notes { margin: 72px auto 0; max-width: 850px; }
+.workflow-notes dl { margin: 30px 0 0; }
+.workflow-notes dl > div { padding: 24px 0; border-top: 1px solid var(--line); }
+.workflow-notes dt { font-weight: 650; font-size: 20px; margin-bottom: 10px; }
+.workflow-notes dd { margin: 0; font-size: 16px; line-height: 1.65; color: var(--muted); }
+.workflow-invitation { display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 24px; margin-block: 64px 40px; padding: 28px 0; border-block: 1px solid var(--line); }
+.workflow-invitation p { font-weight: 650; font-size: 24px; }
+.tool-credits { font-size: 12px; color: var(--muted); margin-bottom: 56px; max-width: none; }
+.tool-credits a { color: inherit; }
+@media (max-width: 900px) {
+  .tools-overview { grid-template-columns: 1fr; gap: 32px; }
+  .flow-sources { grid-template-columns: minmax(0, 1fr) 105px minmax(0, 1fr); }
+  .tool-diagram { padding: 22px; }
+  .flow-outputs { grid-template-columns: 1fr; gap: 0; }
+  .output-lane .flow-route { min-height: auto; }
+  .output-lane .tool-node { padding: 22px; }
+}
+@media (max-width: 600px) {
+  .tools-page { padding-top: 28px; }
+  .tools-heading > p { font-size: 18px; }
+  .tool-diagram { padding: 18px; border-radius: 16px; }
+  .tool-diagram figcaption { font-size: 16px; }
+  .flow-sources { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 0 10px; }
+  .flow-sources > .tool-node, .export-route { grid-column: 1 / -1; }
+  .export-route { padding: 12px; }
+  .export-arrow { transform: rotate(90deg); }
+  .sd-route { grid-column: 1; }
+  .photos-route { grid-column: 2; }
+  .tool-node, .output-lane .tool-node { padding: 18px; }
+  .tool-node .tool-name { font-size: 19px; }
+  .archive-foundation { align-items: flex-start; flex-direction: column; gap: 12px; padding: 22px; }
+  .archive-foundation .tool-logo { width: 48px; height: 48px; flex-basis: 48px; }
+  .tool-roles > div { grid-template-columns: minmax(0, 1fr) 130px; gap: 12px; }
+  .tool-roles dt { font-size: 15px; }
+  .tool-roles dd { font-size: 14px; }
+  .tool-roles .tool-logo { width: 28px; height: 28px; flex-basis: 28px; }
+  .tool-roles .tool-name { gap: 8px; }
+  .tools-overview { padding-block: 44px; }
+}
