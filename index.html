@@ -103,41 +103,69 @@
 
     <section class="features-section wrap" id="funktionen" tabindex="-1" aria-labelledby="features-title">
       <div class="section-heading">
-        <h2 id="features-title">Was TrueArchive kann.</h2>
-        <p>Aktuelle Testversion: Alpha 0.13.0.<br><a href="release-notes.html#v0-13-0">Was sich verbessert hat</a></p>
+        <h2 id="features-title">Was TrueArchive für dich übernimmt.</h2>
+        <p class="feature-release"><a href="release-notes.html#v0-13-1">Alpha 0.13.1 · Neuerungen</a></p>
       </div>
-      <dl class="feature-list">
-        <div><dt>Google Fotos aus Takeout übernehmen</dt><dd>Einen entpackten Google-Export wählen und Bilder mit zuordenbarem Aufnahmedatum, GPS, Beschreibung und belegten Albumnamen im XMP archivieren. Manueller Import; keine Google-Anmeldung und kein automatischer Cloud-Abgleich. <a href="anleitung.html#google-photos">So funktioniert es.</a></dd></div>
-        <div><dt>Duplikate erkennen, Bearbeitungen behalten</dt><dd>Identische Dateien aus mehreren Quellen gemeinsam nutzen und die Herkünfte im XMP erhalten. Unterschiedliche Nitro-Rezepte bleiben bei verträglichen übrigen Metadaten eigenständige Varianten. <a href="anleitung.html#duplikate">So funktioniert es.</a></dd></div>
-        <div><dt>Hilfe an der richtigen Stelle</dt><dd>„?“-Buttons öffnen das passende Kapitel im Handbuch. Dort findest du auch die Release Notes zu deiner Version.</dd></div>
-        <div><dt>Alle Quellen mit einem Klick archivieren</dt><dd>Erst die lokalen Quellen, danach Apple Fotos mit dem gespeicherten Aufnahmezeitraum abgleichen. Jede Quelle erhält ein Ergebnis; Zeitpläne bleiben unverändert. Offene Vorschauen und Teilauswahlen werden ersetzt.</dd></div>
-        <div><dt>Aus Apple Fotos übernehmen</dt><dd>Die erreichbare Mediathek ohne Gesamtmengenlimit abgleichen. Auf Wunsch begrenzt ein gespeicherter Aufnahmezeitraum den manuellen und den geplanten Abgleich.</dd></div>
-        <div><dt>Karten, Platten und Ordner verbinden</dt><dd>SD-Karten, externe Festplatten und beliebige lokale Bildordner hinzufügen. Jede Quelle bekommt ihren eigenen Platz mit Einstellungen und Verbindungsstatus.</dd></div>
-        <div><dt>Quelllaufwerke sicher trennen</dt><dd>Externe Quellvolumes über das Auswurfsymbol trennen, sobald die Arbeit beendet ist. Die Verbindungen bleiben für später gespeichert; das Archivvolume ist geschützt.</dd></div>
-        <div><dt>Bilder und Metadaten zusammenhalten</dt><dd>Vorhandene XMP-Begleitdateien übernehmen oder fehlende im Archiv neu anlegen – auch für RAW-Dateien. Unterstützte Metadatenänderungen werden zusammengeführt; Konflikte bleiben sichtbar.</dd></div>
-        <div><dt>Ein Archiv aus normalen Dateien</dt><dd>Bilder und XMPs liegen nach Datum geordnet auf deiner Platte. Im Finder zugänglich und mit der kostenlosen Fotoverwaltung digiKam durchsuchbar.</dd></div>
-        <div><dt>Vorher sehen, was sich ändert</dt><dd>Bei Ordnerquellen die Vorschau prüfen und gezielt auswählen. Beim Wechsel zwischen Quellen und Ziel bleibt deine Auswahl erhalten. Deine Quellen bleiben unverändert.</dd></div>
-        <div><dt>Den Überblick behalten</dt><dd>Laufende Arbeit im festen Statusbereich und in der Menüleiste verfolgen. Dein Zielordner und der freie Speicher bleiben sichtbar; lokale Übernahmen lassen sich pausieren.</dd></div>
-        <div><dt>Regelmäßiger Abgleich</dt><dd>Zeitpläne je Quelle aktivieren, zum Beispiel täglich. Apple Fotos übernimmt denselben gespeicherten Datumsbereich in kleinen Etappen, solange TrueArchive läuft und der Mac wach ist.</dd></div>
-        <div><dt>Bilder lokal verschlagworten</dt><dd>Auf Wunsch ergänzt Apple Vision englische Schlagwörter direkt in den XMPs. Die Erkennung bleibt auf deinem Mac; vorhandene Einträge bleiben erhalten.</dd></div>
-        <div><dt>App automatisch aktuell halten</dt><dd>TrueArchive prüft täglich auf Updates und installiert sie im Leerlauf. Laufende und pausierte Archivvorgänge bleiben geschützt. Auf Wunsch aktualisierst du nur manuell.</dd></div>
-      </dl>
-      <p class="section-note">Zeitpläne und Verschlagwortung schaltest du bewusst ein. Welche Metadaten mitkommen und wo der Pilot Grenzen hat, steht im <a href="anleitung.html#details">Handbuch</a>.</p>
+      <div class="feature-group">
+        <div class="feature-intro">
+          <h3>Bilder zusammenführen</h3>
+          <p>Aus vielen Quellen wird eine Sammlung. Du entscheidest, was ins Archiv kommt.</p>
+        </div>
+        <dl class="feature-points">
+          <div><dt>Apple Fotos, Karten und Festplatten</dt><dd>Die Mediathek und ausgewählte lokale Ordner übernehmen. Bei Apple Fotos kannst du den Aufnahmezeitraum eingrenzen.</dd></div>
+          <div><dt>Google Fotos über Takeout</dt><dd>Einen entpackten Export samt unterstützten Metadaten manuell übernehmen. <a href="anleitung.html#google-photos">So bereitest du den Export vor.</a></dd></div>
+          <div><dt>Einmalig oder regelmäßig</dt><dd>Direkt archivieren oder bei lokalen Quellen vorher eine Vorschau prüfen. Für Apple Fotos und lokale Quellen kannst du einen Zeitplan aktivieren; der Mac muss dafür wach sein und TrueArchive laufen.</dd></div>
+        </dl>
+      </div>
+      <div class="feature-group">
+        <div class="feature-intro">
+          <h3>Originale und Metadaten bewahren</h3>
+          <p>Deine Quellen bleiben unverändert. Im Archiv bleiben Bilder und ihre Geschichte zusammen.</p>
+        </div>
+        <dl class="feature-points">
+          <div><dt>Originale, Bearbeitungen und Bildinfos</dt><dd>Verfügbare Angaben wie Datum, GPS und Alben kommen mit. XMP-Begleitdateien speichern Metadaten nach einem offenen Standard; fehlende XMPs werden im Archiv angelegt.</dd></div>
+          <div><dt>Duplikate zuordnen, Varianten erhalten</dt><dd>Identische Mediendateien erkennen und ihre Herkünfte festhalten. Unterschiedliche Nitro-Bearbeitungen bleiben bei verträglichen Metadaten als Varianten erhalten. Andere Konflikte bleiben zur Prüfung offen. <a href="anleitung.html#duplikate">Mehr zu Varianten und Konflikten.</a></dd></div>
+        </dl>
+      </div>
+      <div class="feature-group">
+        <div class="feature-intro">
+          <h3>Bilder wiederfinden</h3>
+          <p>Ein Archiv, das du auch ohne TrueArchive öffnen und mit anderen Programmen nutzen kannst.</p>
+        </div>
+        <dl class="feature-points">
+          <div><dt>Ordnung auf deiner Festplatte</dt><dd>Normale Dateien, sortiert nach Jahren und Tagen. Die kostenlose Open-Source-Fotoverwaltung digiKam durchsucht dein Archiv nach Datum, Orten und Schlagwörtern – nach Gesichtsindizierung und Namenszuordnung auch nach Personen.</dd></div>
+          <div><dt>Schlagwörter automatisch ergänzen</dt><dd>Auf Wunsch ergänzt Apple Vision englische Begriffe direkt in den XMPs. Die Erkennung läuft auf deinem Mac; vorhandene Schlagwörter bleiben erhalten.</dd></div>
+        </dl>
+      </div>
+      <p class="feature-handbook">Du möchtest genauer wissen, wie es funktioniert? <a href="anleitung.html">Abläufe und Grenzen im Handbuch ansehen</a></p>
 
       <details class="planned-modules" id="module">
-        <summary><span>Geplante Module</span><span class="summary-hint">7 Vorhaben · noch nicht verfügbar</span></summary>
+        <summary><span>Was wir als Nächstes vorhaben</span><span class="summary-hint">7 Ideen und geplante Module · noch nicht verfügbar</span></summary>
         <div class="module-content">
-          <p class="module-intro">Das möchten wir ergänzen. Umfang und Reihenfolge können sich durch eure Rückmeldungen ändern; feste Veröffentlichungstermine gibt es noch nicht.</p>
-          <dl class="module-list">
-            <div><dt>Adobe Lightroom Cloud</dt><dd>Bilder und verfügbare Metadaten regelmäßig aus Lightroom Cloud ins Archiv holen.</dd></div>
-            <div><dt>Alte Bildplatten sichten</dt><dd>Unbekannte Bestände überblicken und gezielt Ordner zur Übernahme auswählen. Konkrete lokale Ordner lassen sich heute schon importieren.</dd></div>
-            <div><dt>digiKam einrichten</dt><dd>Bei Installation und Einrichtung für das Archiv helfen. Suche und Gesichtserkennung bleiben bei digiKam.</dd></div>
-            <div><dt>Cloud-Backup bei Hetzner <span class="idea-label">Idee</span></dt><dd>Das Archiv mit Bildern, Videos und Metadaten regelmäßig verschlüsselt sichern. Neue und geänderte Dateien hochladen, frühere Sicherungsstände behalten und das Archiv bei einem Festplattenausfall wiederherstellen. Der Cloud-Speicher wird separat benötigt.</dd></div>
-            <div><dt>Speicher freigeben</dt><dd>Separates, optionales Modul: später große Videos gezielt aus Apple Fotos entfernen, nachdem ihre Archivierung geprüft wurde. Gehört nicht zur Kern-App.</dd></div>
-            <div><dt>Immich anbinden <span class="idea-label">Idee</span></dt><dd>Das Archiv später über einen eigenen Immich-Server ansehen, ohne die Archivstruktur zu verändern.</dd></div>
-            <div><dt>Fotobücher gestalten <span class="idea-label">Idee</span></dt><dd>Lokale Bildvorschläge aus deinem Archiv erhalten und per Wischen oder Tastatur auswählen. Buchgestaltung und Übergabe an einen Druckdienst sollen später dazukommen.</dd></div>
-          </dl>
-          <p class="module-cta">Fehlt etwas für deinen Alltag? <a href="feedback.html#featurewunsch">Featurewunsch abgeben</a></p>
+          <p class="module-intro">Diese Erweiterungen sind geplant. Was zuerst kommt, gestalten eure Rückmeldungen mit. Termine stehen noch nicht fest.</p>
+          <div class="module-group">
+            <h3>Weitere Bestände erschließen</h3>
+            <dl class="module-list">
+              <div><dt>Adobe Lightroom Cloud</dt><dd>Bilder und verfügbare Metadaten regelmäßig übernehmen.</dd></div>
+              <div><dt>Alte Bildplatten sichten</dt><dd>Unbekannte Sammlungen überblicken und passende Ordner auswählen. Einzelne Ordner lassen sich heute schon importieren.</dd></div>
+            </dl>
+          </div>
+          <div class="module-group">
+            <h3>Zusätzlich sichern und Platz schaffen</h3>
+            <dl class="module-list">
+              <div><dt>Cloud-Backup bei Hetzner</dt><dd>Das Archiv regelmäßig verschlüsselt sichern, Änderungen und frühere Sicherungsstände behalten und nach einem Plattenausfall wiederherstellen. Cloud-Speicher wird separat benötigt.</dd></div>
+              <div><dt>Speicher in Apple Fotos freigeben</dt><dd>Große Videos nach geprüfter Archivierung gezielt entfernen. Als separates, optionales Modul.</dd></div>
+            </dl>
+          </div>
+          <div class="module-group">
+            <h3>Mehr mit deinen Bildern machen</h3>
+            <dl class="module-list">
+              <div><dt>digiKam einrichten</dt><dd>Hilfe bei Installation und Einrichtung für dein Archiv.</dd></div>
+              <div><dt>Immich anbinden</dt><dd>Das Archiv über einen eigenen Immich-Server ansehen.</dd></div>
+              <div><dt>Fotobücher gestalten</dt><dd>Bildvorschläge per Wischen oder Tastatur auswählen und später als Buch drucken lassen.</dd></div>
+            </dl>
+          </div>
+          <p class="module-cta">Was würde dir helfen? <a href="feedback.html#featurewunsch">Deinen Wunsch einbringen</a></p>
         </div>
       </details>
     </section>

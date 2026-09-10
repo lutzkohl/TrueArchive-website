@@ -103,41 +103,69 @@
 
     <section class="features-section wrap" id="funktionen" tabindex="-1" aria-labelledby="features-title">
       <div class="section-heading">
-        <h2 id="features-title">What TrueArchive can do.</h2>
-        <p>Current test version: Alpha 0.13.0.<br><a href="release-notes.html#v0-13-0">See what has improved</a></p>
+        <h2 id="features-title">What TrueArchive takes care of.</h2>
+        <p class="feature-release"><a href="release-notes.html#v0-13-1">Alpha 0.13.1 · What’s new</a></p>
       </div>
-      <dl class="feature-list">
-        <div><dt>Import Google Photos from Takeout</dt><dd>Choose an extracted Google Takeout export and archive its pictures with matching capture dates, GPS, descriptions and proven album names in XMP. Import manually; no Google sign-in or automatic cloud sync. <a href="anleitung.html#google-photos">How it works.</a></dd></div>
-        <div><dt>Recognize duplicates, keep edits</dt><dd>Reuse identical files from multiple sources and keep their origins in the XMP. Different Nitro recipes remain separate variants when the other metadata is compatible. <a href="anleitung.html#duplikate">How it works.</a></dd></div>
-        <div><dt>Help where you need it</dt><dd>“?” buttons open the relevant handbook chapter. You will also find the release notes for your version there.</dd></div>
-        <div><dt>Archive all sources with one click</dt><dd>Sync local sources first, then Apple Photos using the saved capture date range. Each source gets a result; schedules remain unchanged. Open previews and partial selections are replaced.</dd></div>
-        <div><dt>Import from Apple Photos</dt><dd>Sync the accessible library without an overall item limit. An optional saved capture date range limits both manual and scheduled syncs.</dd></div>
-        <div><dt>Connect cards, drives and folders</dt><dd>Add SD cards, external drives and any local picture folders. Each source has its own page with settings and connection status.</dd></div>
-        <div><dt>Safely disconnect source drives</dt><dd>Use the eject icon to disconnect external source volumes once work has finished. Connections stay saved for later; the archive volume is protected.</dd></div>
-        <div><dt>Keep pictures and metadata together</dt><dd>Import existing XMP companion files or create missing ones in the archive, including for RAW files. Supported metadata changes are merged; conflicts remain visible.</dd></div>
-        <div><dt>An archive of ordinary files</dt><dd>Pictures and XMP files are organized by date on your drive. Accessible in Finder and searchable with the free photo management application digiKam.</dd></div>
-        <div><dt>See what will change first</dt><dd>Check the preview for folder sources and select specific files. Your selection stays intact when you switch between sources and the destination. Your sources remain unchanged.</dd></div>
-        <div><dt>Keep track of your work</dt><dd>Follow ongoing work in the fixed status area and menu bar. Your destination folder and free space stay visible; local imports can be paused.</dd></div>
-        <div><dt>Regular syncs</dt><dd>Enable schedules for each source, for example daily. Apple Photos uses the same saved date range in small batches while TrueArchive is running and the Mac is awake.</dd></div>
-        <div><dt>Tag pictures locally</dt><dd>Apple Vision can add English keywords directly to XMP files. Recognition happens on your Mac; existing entries stay intact.</dd></div>
-        <div><dt>Keep the app up to date automatically</dt><dd>TrueArchive checks for updates daily and installs them when idle. Running and paused archive operations stay protected. You can choose to update manually instead.</dd></div>
-      </dl>
-      <p class="section-note">You choose whether to enable schedules and keyword tagging. The metadata included and the pilot’s limitations are explained in the <a href="anleitung.html#details">Handbook</a>.</p>
+      <div class="feature-group">
+        <div class="feature-intro">
+          <h3>Bring your pictures together</h3>
+          <p>Many sources, one collection. You choose what goes into your archive.</p>
+        </div>
+        <dl class="feature-points">
+          <div><dt>Apple Photos, cards and drives</dt><dd>Import your library and selected local folders. In Apple Photos, you can narrow the capture date range.</dd></div>
+          <div><dt>Google Photos via Takeout</dt><dd>Manually import an extracted export with its supported metadata. <a href="anleitung.html#google-photos">How to prepare your export.</a></dd></div>
+          <div><dt>Once or on a schedule</dt><dd>Archive directly or check a preview first for local sources. Enable a schedule for Apple Photos and local sources; your Mac needs to be awake and TrueArchive running.</dd></div>
+        </dl>
+      </div>
+      <div class="feature-group">
+        <div class="feature-intro">
+          <h3>Keep originals and metadata</h3>
+          <p>Your sources stay unchanged. Pictures and their stories stay together in the archive.</p>
+        </div>
+        <dl class="feature-points">
+          <div><dt>Originals, edits and picture information</dt><dd>Available details such as dates, GPS and albums come along. XMP companion files store metadata using an open standard; missing XMP files are created in the archive.</dd></div>
+          <div><dt>Recognize duplicates, keep different edits</dt><dd>Identify identical media files and record where they came from. Different Nitro edits are kept as variants when their metadata is compatible. Other conflicts remain open for review. <a href="anleitung.html#duplikate">More about variants and conflicts.</a></dd></div>
+        </dl>
+      </div>
+      <div class="feature-group">
+        <div class="feature-intro">
+          <h3>Find your pictures again</h3>
+          <p>An archive you can open without TrueArchive and use with other applications.</p>
+        </div>
+        <dl class="feature-points">
+          <div><dt>Order on your drive</dt><dd>Ordinary files, sorted by year and day. The free, open-source photo manager digiKam lets you search by date, places and keywords – and by people once faces have been indexed and named.</dd></div>
+          <div><dt>Add keywords automatically</dt><dd>If you enable it, Apple Vision adds English keywords directly to XMP files. Recognition runs on your Mac; existing keywords stay intact.</dd></div>
+        </dl>
+      </div>
+      <p class="feature-handbook">Want to know exactly how it works? <a href="anleitung.html">Explore workflows and limitations in the handbook</a></p>
 
       <details class="planned-modules" id="module">
-        <summary><span>Planned modules</span><span class="summary-hint">7 plans · not yet available</span></summary>
+        <summary><span>What we have planned</span><span class="summary-hint">7 ideas and planned modules · not yet available</span></summary>
         <div class="module-content">
-          <p class="module-intro">These are the things we would like to add. Scope and order may change with your feedback; there are no fixed release dates yet.</p>
-          <dl class="module-list">
-            <div><dt>Adobe Lightroom Cloud</dt><dd>Regularly bring pictures and available metadata from Lightroom Cloud into the archive.</dd></div>
-            <div><dt>Explore old picture drives</dt><dd>Get an overview of unfamiliar collections and choose specific folders to import. You can already import individual local folders today.</dd></div>
-            <div><dt>Set up digiKam</dt><dd>Help install and configure digiKam for the archive. Search and face recognition remain digiKam’s responsibility.</dd></div>
-            <div><dt>Cloud backup with Hetzner <span class="idea-label">Idea</span></dt><dd>Regularly back up the archive’s pictures, videos and metadata with encryption. Upload new and changed files, keep earlier backup versions and restore the archive if a drive fails. Cloud storage is required separately.</dd></div>
-            <div><dt>Free up storage</dt><dd>A separate, optional module: later, selectively remove large videos from Apple Photos after their archiving has been verified. This is not part of the core app.</dd></div>
-            <div><dt>Connect Immich <span class="idea-label">Idea</span></dt><dd>Later, view the archive through your own Immich server without changing the archive structure.</dd></div>
-            <div><dt>Create photo books <span class="idea-label">Idea</span></dt><dd>Get local picture suggestions from your archive and select them by swiping or using the keyboard. Book design and handoff to a printing service are planned for later.</dd></div>
-          </dl>
-          <p class="module-cta">Is something missing for your everyday use? <a href="feedback.html#featurewunsch">Suggest a feature</a></p>
+          <p class="module-intro">These extensions are planned. Your feedback helps shape what comes first. There are no fixed release dates yet.</p>
+          <div class="module-group">
+            <h3>Bring in more collections</h3>
+            <dl class="module-list">
+              <div><dt>Adobe Lightroom Cloud</dt><dd>Regularly import pictures and available metadata.</dd></div>
+              <div><dt>Explore old picture drives</dt><dd>Get an overview of unfamiliar collections and choose folders to import. Individual folders can already be imported today.</dd></div>
+            </dl>
+          </div>
+          <div class="module-group">
+            <h3>Add a backup and free up space</h3>
+            <dl class="module-list">
+              <div><dt>Cloud backup with Hetzner</dt><dd>Regularly back up the archive with encryption, retain changes and earlier backup versions, and restore after a drive failure. Cloud storage is required separately.</dd></div>
+              <div><dt>Free up space in Apple Photos</dt><dd>Selectively remove large videos after their archiving has been verified. As a separate, optional module.</dd></div>
+            </dl>
+          </div>
+          <div class="module-group">
+            <h3>Do more with your pictures</h3>
+            <dl class="module-list">
+              <div><dt>Set up digiKam</dt><dd>Help with installation and setup for your archive.</dd></div>
+              <div><dt>Connect Immich</dt><dd>View the archive through your own Immich server.</dd></div>
+              <div><dt>Create photo books</dt><dd>Select suggested pictures by swiping or using the keyboard, then have them printed as a book.</dd></div>
+            </dl>
+          </div>
+          <p class="module-cta">What would help you? <a href="feedback.html#featurewunsch">Share your wish</a></p>
         </div>
       </details>
     </section>
