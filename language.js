@@ -39,7 +39,7 @@
       const choice = link.dataset.language;
       if (!valid(choice)) return;
       link.href = localizedURL(choice === 'system' ? system : choice, choice).href;
-      if (choice === preference) link.setAttribute('aria-current', 'true');
+      if (choice === language || (choice === 'system' && preference === 'system')) link.setAttribute('aria-current', 'true');
       else link.removeAttribute('aria-current');
     });
   }

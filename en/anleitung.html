@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="description" content="Install TrueArchive for Mac, archive all sources and safely disconnect source drives. Handbook covering duplicates, Nitro edits and release notes for Alpha 0.12.0.">
+  <meta name="description" content="Install TrueArchive for Mac, archive all sources and safely disconnect source drives. Handbook covering duplicates, Nitro edits and release notes for Alpha 0.12.1.">
   <meta name="robots" content="noindex, nofollow">
   <meta name="theme-color" content="#1E3C93">
   <title>Handbook – TrueArchive</title>
@@ -17,19 +17,18 @@
 <body>
   <a class="skip-link" href="#inhalt">Skip to content</a>
   <header class="site-header wrap">
-    <div class="brand"><a class="brand-home" href="index.html" aria-label="TrueArchive home"><img src="../assets/app-icon.png" width="40" height="40" alt=""><span>TrueArch</span></a><a class="brand-download" href="https://github.com/lutzkohl/TrueArchive-website/releases/download/v0.12.0-alpha/TrueArchive-0.12.0-alpha-macos-universal.zip" aria-label="Download TrueArchive 0.12.0">i</a><a class="brand-ending" href="index.html" aria-label="TrueArchive home">ve</a></div>
+    <div class="brand"><a class="brand-home" href="index.html" aria-label="TrueArchive home"><img src="../assets/app-icon.png" width="40" height="40" alt=""><span>TrueArchiv</span></a><a class="brand-download" href="https://github.com/lutzkohl/TrueArchive-website/releases/download/v0.12.1-alpha/TrueArchive-0.12.1-alpha-macos-universal.zip" aria-label="Download TrueArchive 0.12.1">e</a></div>
     <nav aria-label="Main navigation"><a class="secondary-nav" href="warum-truearchive.html">Why TrueArchive?</a><a class="secondary-nav" href="index.html#funktionen">Features</a><a class="secondary-nav" href="feedback.html">Feedback</a><a class="secondary-nav" href="anleitung.html" aria-current="page">Handbook</a><a class="button small primary" href="index.html#beta">Join the beta</a></nav>
-    <nav class="language-switch" aria-label="Choose language"><a href="../anleitung.html?lang=system" data-language="system">Automatic</a><a href="../anleitung.html?lang=de" data-language="de" lang="de">Deutsch</a><a href="anleitung.html?lang=en" data-language="en" lang="en">English</a></nav>
   </header>
 
   <main id="inhalt" class="wrap">
-    <div class="guide-heading"><h1>The TrueArchive handbook.</h1><p>Connect sources, choose an archive, start a sync.</p><p>The app’s “?” buttons open the relevant chapter directly. Further down, you will find the <a href="#release-notes">release notes and earlier versions</a>.</p><p class="guide-version">Handbook for Alpha 0.12.0 · Build 24 · 10 September 2026</p></div>
+    <div class="guide-heading"><h1>The TrueArchive handbook.</h1><p>Connect sources, choose an archive, start a sync.</p><p>The app’s “?” buttons open the relevant chapter directly. Further down, you will find the <a href="#release-notes">release notes and earlier versions</a>.</p><p class="guide-version">Handbook for Alpha 0.12.1 · Build 25 · 10 September 2026</p></div>
     <div class="guide-layout">
       <nav class="guide-nav" aria-label="In this handbook"><a href="#installation">Installation</a><a href="#updates">App updates</a><a href="#sprache">Choose language</a><a href="#einrichtung">Your first archive</a><a href="#arbeitsbereich">Sources and destination</a><a href="#alle-quellen">Archive all sources</a><a href="#duplikate">Duplicates and Nitro</a><a href="#vision">Automatic keywords</a><a href="#details">Questions and details</a><a href="#release-notes">Release Notes</a><a href="#hilfe">Troubleshooting</a></nav>
       <div class="guide-content">
         <section id="installation" aria-labelledby="installation-title">
           <h2 id="installation-title">Installation</h2>
-          <div class="guide-note"><p><strong>Alpha 0.12.0 is ready for the first round of testing.</strong> It includes the fix for the 0.10.0 menu bar freeze and a simpler interface. Start with a small selection that has a separate backup. <a href="index.html#beta">Sign up for testing</a>.</p></div>
+          <div class="guide-note"><p><strong>Alpha 0.12.1 is ready for the first round of testing.</strong> It includes the fix for the 0.10.0 menu bar freeze and a simpler interface. Start with a small selection that has a separate backup. <a href="index.html#beta">Sign up for testing</a>.</p></div>
           <p>You need a Mac with <strong>macOS 15 or later</strong>. A single package is intended for Intel and Apple Silicon. Check the release notes for your version’s testing status.</p>
           <p>Once you have received your beta invitation, install the linked app package as follows:</p>
           <ol>
@@ -54,7 +53,7 @@
 
         <section id="updates" aria-labelledby="updates-title">
           <h2 id="updates-title">App updates</h2>
-          <div class="guide-note"><p>Test version 0.12.0 is initially distributed as a manual package. It is not yet in the shared automatic update channel. Let any import finish, close the older app and replace it as described above. Your saved sources and archive are preserved.</p></div>
+          <div class="guide-note"><p>Test version 0.12.1 is initially distributed as a manual package. It is not yet in the shared automatic update channel. Let any import finish, close the older app and replace it as described above. Your saved sources and archive are preserved.</p></div>
           <p>From version 0.6.0, <strong>automatic app updates are enabled by default</strong>. TrueArchive checks roughly once a day while the app is running and the Mac is awake. A new, verified package is installed when idle; the app then restarts.</p>
           <p>Updates wait during checking, importing, pauses or keyword tagging. An unfinished setup or open import preview also prevents an automatic restart. This includes a retained preview on a source page that is not currently visible. No new archive jobs start during an update.</p>
           <p>Under <strong>TrueArchive → Settings → App updates</strong> you can turn off automatic updates. <strong>“Check for updates now”</strong> remains available for manual updates. You can also use the TrueArchive menu; “App updates …” in the menu bar window opens the setting.</p>
@@ -66,8 +65,8 @@
         <section id="sprache" aria-labelledby="language-title">
           <h2 id="language-title">Choose language</h2>
           <p>Under <strong>TrueArchive → Settings → General → Sprache / Language</strong> choose <strong>System, Deutsch or English</strong>. With “System”, TrueArchive uses the first supported language in your preferred system languages. If neither German nor English is listed, it uses English. Your explicit choice stays saved on this Mac.</p>
-          <p>Navigation and settings change immediately. Existing messages keep their language until the next action. System dialog controls and update dialogs use the language selected by macOS. Changing language does not restart ongoing archive work. Your source names, filenames, paths and archived metadata remain unchanged. Apple Vision continues to add English keywords.</p>
-          <p>The website has its own selection at the top for Deutsch, English and Automatic. Automatic follows your preferred browser languages, with English as the fallback. Your choice stays saved if the browser permits it. Language links also work without JavaScript; in that case, choose Deutsch or English yourself.</p>
+          <p>Navigation, settings and the last all-source sync summary change immediately. Existing individual error messages keep their language until the next action. System dialog controls and update dialogs use the language selected by macOS. Changing language does not restart ongoing archive work. Your source names, filenames, paths and archived metadata remain unchanged. Apple Vision continues to add English keywords.</p>
+          <p>The website initially follows your preferred browser languages, with English as the fallback. Use <strong>DE / ENG</strong> at the bottom of any page to switch. Your choice stays saved if the browser permits it. The language links also work without JavaScript. <a href="../anleitung.html?lang=system#sprache" data-language="system">Use the browser language automatically again</a>.</p>
         </section>
 
         <section id="einrichtung" aria-labelledby="setup-title">
@@ -126,7 +125,7 @@
             <p>Use <strong>“Change date range …”</strong> on the Photos page to limit the sync to inclusive calendar dates. “From” and “To” can be set together or individually. When the filter is active, items with no known capture date are excluded. Without a filter, undated items are included too.</p>
             <p>The capture date range stays saved with the Photos source and applies equally to direct and scheduled syncs. Changing it does not start or enable a schedule. A sync stops on an error or an incomplete batch; once the issue is resolved, you can start again. Already archived items are recognized.</p>
             <p>Archiving requests any iCloud resources it needs; local files do not have to be downloaded again. Originals, current versions and available additional resources are included. Live Photos may produce several files. Photos and videos stay in Apple Photos.</p>
-            <p>Enable recurring syncs separately through <strong>gear next to the source → Archive automatically</strong>. These also work in limited batches without an overall item limit. The accessible System Photo Library is not independent proof of the complete iCloud collection.</p>
+            <p>Enable recurring syncs separately through <strong>gear next to the source → Archiving schedule</strong>. These also work in limited batches without an overall item limit. The accessible System Photo Library is not independent proof of the complete iCloud collection.</p>
           </details>
 
           <details id="sd-karte">
@@ -148,7 +147,7 @@
 
           <details id="automatisierung">
             <summary>How do schedules work?</summary>
-            <p>Use the <strong>gear next to the source you want</strong> to enable <strong>“Archive automatically”</strong> . Then choose the interval: daily, hourly or every six hours. After errors have stopped a schedule, <strong>“Resume schedule”</strong> offers another attempt.</p>
+            <p>Use the <strong>gear next to the source you want</strong> to enable <strong>“Archiving schedule”</strong>. Then choose the interval: daily, hourly or every six hours. After errors have stopped a schedule, <strong>“Resume schedule”</strong> offers another attempt.</p>
             <p>Under <strong>TrueArchive → Settings → General</strong> the <strong>“Run schedules”</strong> control manages all configured schedules together. Until a schedule is configured, you only see a hint explaining how to enable one at a source. Turning this off prevents further scheduled runs; a sync already running still finishes. Use “Pause” separately to pause a running local operation, or cancel it. There is no second global schedule control on the archive page.</p>
             <p>TrueArchive must be running and the Mac awake; the main window may be closed. Missed runs are caught up once. Missing sources wait; after three failed attempts, the affected schedule stops. Open previews are preserved and prevent automatic imports and local keyword tagging, even when another source is displayed.</p>
             <p>Apple Photos checks the accessible library in stages, using the saved capture date range. After an app restart, a date range change or an intervening change, a new check round begins; archived resources are recognized. This is not a separate verification of all iCloud content.</p>
@@ -223,7 +222,7 @@
       </div>
     </div>
   </main>
-  <footer class="site-footer wrap"><p><strong>TrueArchive</strong><br>A personal community project.</p><nav aria-label="Further information"><a href="warum-truearchive.html">Why TrueArchive?</a><a href="release-notes.html">Release Notes</a><a href="index.html">Home</a><a href="feedback.html">Feedback &amp; ideas</a><a href="index.html#beta">Join the beta</a><a href="index.html#unterstuetzen">Support the project</a><a href="mailto:lutz@truearchive.app">Contact</a></nav></footer>
+  <footer class="site-footer wrap"><p><strong>TrueArchive</strong><br>A personal community project.</p><nav aria-label="Further information"><a href="warum-truearchive.html">Why TrueArchive?</a><a href="release-notes.html">Release Notes</a><a href="index.html">Home</a><a href="feedback.html">Feedback &amp; ideas</a><a href="index.html#beta">Join the beta</a><a href="index.html#unterstuetzen">Support the project</a><a href="mailto:lutz@truearchive.app">Contact</a><span role="group" class="language-switch" aria-label="Choose language"><a href="../anleitung.html?lang=de" data-language="de" lang="de" aria-label="Deutsch" title="Deutsch">DE</a><span aria-hidden="true">/</span><a href="anleitung.html?lang=en" data-language="en" lang="en" aria-label="English" title="English">ENG</a></span></nav></footer>
   <script>
     // Contextual app help must reveal a chapter even when its details are collapsed.
     function openHelpChapter() {
