@@ -18,7 +18,7 @@
   <a class="skip-link" href="#inhalt">Zum Inhalt</a>
   <header class="site-header wrap">
     <div class="brand"><a class="brand-home" href="index.html" aria-label="TrueArchive Startseite"><img src="assets/app-icon.png" width="40" height="40" alt=""><span>TrueArchiv</span></a><a class="brand-download" href="https://github.com/lutzkohl/TrueArchive-website/releases/download/v0.12.1-alpha/TrueArchive-0.12.1-alpha-macos-universal.zip" aria-label="TrueArchive 0.12.1 herunterladen">e</a></div>
-    <nav aria-label="Hauptnavigation"><a class="secondary-nav" href="warum-truearchive.html">Warum TrueArchive?</a>
+    <nav aria-label="Hauptnavigation"><a class="secondary-nav" href="#problem">Warum TrueArchive?</a>
       <a class="secondary-nav" href="#funktionen">Funktionen</a>
       <a class="secondary-nav" href="feedback.html">Feedback</a>
       <a class="secondary-nav" href="anleitung.html">Handbuch</a>
@@ -27,52 +27,44 @@
   </header>
 
   <main id="inhalt">
-    <section class="hero wrap" aria-labelledby="hero-title">
-      <div class="hero-copy">
-        <h1 id="hero-title">Deine Bilder.<br>Dein Archiv.</h1>
-        <p class="lead">Aus Apple Fotos, von SD-Karten und deinen Ordnern. Gemeinsam auf deiner Archivplatte.</p>
-        <p class="hero-detail">Originale, fertige Fassungen und verfügbare Metadaten bleiben beieinander. In normalen Ordnern, die dir gehören.</p>
-        <a class="story-entry" href="warum-truearchive.html">Warum ein gemeinsames Bildarchiv?</a>
-        <a class="button primary beta-button" href="#beta">Zur Beta anmelden</a>
-        <p class="beta-meta">Für Mac · macOS 15+ · Intel und Apple Silicon</p>
-        <p class="beta-invitation">Trag dich ein. Wir melden uns per E-Mail, wenn du TrueArchive testen kannst.</p>
-        <a class="hero-cause" href="#unterstuetzen">Mit TrueArchive Dentists for Africa unterstützen</a>
+    <section class="home-story wrap" id="problem" aria-labelledby="hero-title">
+      <figure class="home-story-image">
+        <img src="assets/bilder-ueberall.jpg" width="1536" height="1024" alt="Alte und neue Festplatten, Kamera, Drohne, Smartphone, USB-Stick sowie SD- und microSD-Karten auf einem Tisch." fetchpriority="high" decoding="async">
+        <figcaption>Kommt dir bekannt vor? · KI-generiertes Bild</figcaption>
+      </figure>
+      <div class="home-story-copy">
+        <h1 id="hero-title">Deine Bilder sind überall.</h1>
+        <p class="lead">Die Urlaubsfotos bei Apple. Die RAWs auf der Kamerakarte. Die Drohnenvideos auf einer winzigen microSD. Und irgendwo ist noch der USB-Stick von Mutti.</p>
+        <p>Auf der alten Festplatte liegen „Urlaub“, „Urlaub neu“ und „Bilder sortieren“. Auf der nächsten eine andere Auswahl. Und wenn du das eine Foto suchst, weißt du nicht mehr, wo du anfangen sollst.</p>
+        <a class="story-next" href="#loesung">Gib deinen Bildern einen gemeinsamen Platz <span aria-hidden="true">↓</span></a>
       </div>
+    </section>
 
-      <figure class="app-figure" aria-labelledby="app-caption">
-        <div class="app-example" role="img" aria-label="Schematisches Beispiel: Quellen links, darunter das Archivziel. Rechts eine Vorschau mit drei ausgewählten Dateien und der Aktion zum Archivieren.">
-          <div class="app-titlebar"><span class="window-dots" aria-hidden="true"><i></i><i></i><i></i></span><span>TrueArchive</span></div>
-          <div class="app-layout" aria-hidden="true">
-            <aside class="app-sidebar">
-              <span class="app-brand"><img src="assets/app-icon.png" width="22" height="22" alt="">TrueArchive</span>
-              <span class="app-section-label">Quellen</span>
-              <span class="app-source is-selected"><svg viewBox="0 0 20 20"><path d="M7 2h9v16H4V6Z"/><path d="M8 3v4m3-4v4m3-4v4"/></svg>Reisekarte</span>
-              <span class="app-source"><svg viewBox="0 0 20 20"><rect x="3" y="3" width="14" height="14" rx="2"/><path d="m4 14 4-5 5 5 2-2 2 2"/></svg>Meine Fotos</span>
-              <span class="app-source"><svg viewBox="0 0 20 20"><path d="M2 5h6l2 2h8v10H2Z"/></svg>Bildordner</span>
-              <span class="app-source app-add"><span>+</span>Quelle hinzufügen</span>
-              <span class="app-flow"><span class="flow-arrow">↓</span><span>Ins Archiv übernehmen</span></span>
-              <span class="app-section-label">Ziel</span>
-              <span class="app-source"><svg viewBox="0 0 20 20"><path d="M4 3h12l2 11H2Zm-2 11v3h16v-3m-5 1.5h2"/></svg>Bildarchiv</span>
-            </aside>
-            <div class="app-content">
-              <div class="app-page-heading"><strong>Reisekarte</strong><span>✓ Verbunden</span></div>
-              <div class="app-content-body">
-                <p class="app-settings">Einstellungen …</p>
-                <div class="app-preview-heading"><strong>Vorschau</strong><span>3 Dateien geprüft</span></div>
-                <div class="app-filters"><span class="is-selected">Alle</span><span>Neu</span><span>Geändert</span><span>Probleme</span></div>
-                <table class="app-files"><thead><tr><th></th><th>Dateiname</th><th>Status</th></tr></thead><tbody>
-                  <tr><td>✓</td><td>IMG_0042.ARW</td><td>Neu</td></tr>
-                  <tr><td>✓</td><td>IMG_0043.ARW</td><td>Neu</td></tr>
-                  <tr><td>✓</td><td>IMG_0044.ARW</td><td>Unverändert</td></tr>
-                </tbody></table>
-                <p class="app-file-count">1–3 von 3 Dateien</p>
-              </div>
-              <div class="app-actionbar"><span>3 ausgewählt</span><span class="app-main-action">3 ausgewählte archivieren</span></div>
-            </div>
+    <section class="home-solution" id="loesung" aria-labelledby="solution-title">
+      <div class="wrap">
+        <div class="solution-heading">
+          <div><span class="eyebrow">TrueArchive für Mac</span><h2 id="solution-title">Ein gemeinsamer Platz für deine Bilder.</h2></div>
+          <div class="solution-copy">
+            <p>Eine ausreichend große Festplatte. Ein Ordner als dein Archiv. TrueArchive bringt deine Bilder und Videos aus Apple Fotos, von SD-Karten und ausgewählten Ordnern dorthin – einmalig oder nach Zeitplan.</p>
+            <p>Deine Quellen bleiben unverändert. Das Archiv gehört dir: normale Dateien, die du auch ohne TrueArchive öffnen kannst.</p>
+            <a class="button primary beta-button" href="#beta">Zur Beta anmelden</a>
+            <p class="beta-meta">Für Mac · macOS 15+ · Intel und Apple Silicon</p>
           </div>
         </div>
-        <figcaption id="app-caption">Schematische App-Ansicht mit Beispieldaten.</figcaption>
-      </figure>
+        <figure class="app-figure app-screenshot" aria-labelledby="app-caption">
+          <a href="assets/truearchive-de.png" aria-label="App-Ansicht mit Beispieldaten vergrößern"><img src="assets/truearchive-de.png" width="1840" height="1300" alt="TrueArchive: links zwei verbundene Quellen und der Archivordner, rechts eine Vorschau mit zwei bereits archivierten Beispieldateien." loading="lazy" decoding="async"></a>
+          <figcaption id="app-caption">Die echte TrueArchive-Oberfläche mit Beispieldaten. <a href="assets/truearchive-de.png">Ansicht vergrößern</a></figcaption>
+        </figure>
+        <div class="archive-story">
+          <h2>Sortiert. Beschrieben.<br>Wiedergefunden.</h2>
+          <div class="story-prose">
+            <p>Alles liegt übersichtlich nach <strong>Jahren und Tagen</strong> im Archiv, zum Beispiel in <code>2026/2026-09-10</code>. Dateien ohne bekanntes Aufnahmedatum landen in <code>Unbekannt</code>.</p>
+            <p>Originale, fertige Bearbeitungen und verfügbare Metadaten bleiben zusammen: etwa Aufnahmedatum, GPS-Koordinaten, Schlagwörter und Albumzugehörigkeiten – abhängig von Quelle und Format. RAWs behalten ihre XMP-Begleitdateien.</p>
+            <p>Öffne den Archivordner in deiner vorhandenen <strong>digiKam</strong>-Installation und suche nach Datum, Schlagwörtern oder Orten. Hat digiKam die Gesichter indiziert und hast du ihnen Namen zugeordnet, findest du auch <strong>Personen</strong> wieder. Zum Beispiel Mutti – quer durch die Bilder von all deinen Platten.</p>
+            <a class="story-next" href="anleitung.html#digikam">Mehr zur Suche mit digiKam <span aria-hidden="true">→</span></a>
+          </div>
+        </div>
+      </div>
     </section>
 
     <section class="workflow" id="archiv" aria-labelledby="workflow-title">
@@ -83,7 +75,7 @@
           <li><span class="step-number" aria-hidden="true">2</span><h3>Archiv wählen</h3><p>Einen neuen leeren Ordner oder ein vorhandenes TrueArchive-Archiv verbinden.</p></li>
           <li><span class="step-number" aria-hidden="true">3</span><h3>Abgleich starten</h3><p>Sobald Quelle und Archiv geprüft sind, ist die Einrichtung vollständig. Eine Quelle oder alle Quellen gemeinsam archivieren.</p></li>
         </ol>
-        <p class="workflow-note">Eine begrenzte Probe ist nicht nötig. Den ersten Abgleich startest du selbst; danach kannst du je Quelle einen Zeitplan aktivieren. <a href="anleitung.html#einrichtung">Zur Anleitung</a></p>
+        <p class="workflow-note">Den ersten Abgleich startest du selbst; danach kannst du je Quelle einen Zeitplan aktivieren. Plane zusätzlich eine unabhängige zweite Sicherung ein, damit ein Ausfall der Archivplatte nicht deine Bilder kostet. <a href="anleitung.html#einrichtung">Zur Anleitung</a></p>
       </div>
     </section>
 
