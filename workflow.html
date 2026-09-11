@@ -17,24 +17,25 @@
 <body>
   <a class="skip-link" href="#inhalt">Zum Inhalt</a>
   <header class="site-header wrap">
-    <div class="brand"><a class="brand-home" href="index.html" aria-label="TrueArchive Startseite"><img src="assets/app-icon.png" width="40" height="40" alt=""><span>TrueArchiv</span></a><a class="brand-download" href="https://github.com/lutzkohl/TrueArchive-website/releases/download/v0.16.0-alpha/TrueArchive-0.16.0-alpha-macos-universal.zip" aria-label="TrueArchive 0.16.0 herunterladen">e</a></div>
+    <div class="brand"><a class="brand-home" href="index.html" aria-label="TrueArchive Startseite"><img src="assets/app-icon.png" width="40" height="40" alt=""><span>TrueArchive</span></a></div>
     <nav aria-label="Hauptnavigation">
       <a class="secondary-nav" href="workflow.html" aria-current="page">Foto-Workflow</a>
       <a class="secondary-nav" href="index.html#funktionen">Funktionen</a>
       <a class="secondary-nav" href="anleitung.html">Handbuch</a>
-      <a class="button small primary" href="index.html#beta">Zur Beta anmelden</a>
+      <a class="button small primary" href="index.html#alpha">Alpha herunterladen</a>
     </nav>
   </header>
 
     <main id="inhalt" class="tools-page wrap">
     <section class="tools-heading" aria-labelledby="tools-page-title">
       <span class="eyebrow">Ein möglicher Foto-Workflow</span>
-      <h1 id="tools-page-title">Von der SD-Karte<br>bis aufs Sofa.</h1>
+      <h1 id="tools-page-title">Von Kamera und Handy<br>bis aufs Sofa.</h1>
       <p>Bearbeiten, archivieren, wiederfinden und teilen: Jedes Tool hat seine Aufgabe. Der gemeinsame Mittelpunkt ist dein Archiv mit normalen Dateien.</p>
     </section>
 
     <figure class="tool-diagram" id="ablauf" aria-labelledby="diagram-title">
       <figcaption id="diagram-title">So finden Originale und fertige Bilder zusammen.</figcaption>
+      <div class="flow-inputs">
       <div class="flow-sources">
         <div class="tool-node "><a class="tool-name" href="https://www.gentlemencoders.com/nitro-for-ios/index.html"><img class="tool-logo" src="assets/tools/nitro.jpg" width="48" height="48" alt="" loading="lazy" decoding="async"><span>Nitro</span></a><span class="tool-context">Auf iPhone, iPad oder Mac</span><p>RAWs direkt auf der SD-Karte bearbeiten. Bearbeitungen bleiben als XMP beim Original.</p></div>
         <div class="export-route"><span>JPEG / HEIC</span><span aria-hidden="true" class="export-arrow">→</span><span>aus Nitro exportieren</span></div>
@@ -42,7 +43,12 @@
         <div class="flow-route sd-route"><span aria-hidden="true">↓</span>Von der SD-Karte: RAW + XMP</div>
         <div class="flow-route photos-route"><span aria-hidden="true">↓</span>Aus Apple Fotos: fertige Bilder</div>
       </div>
-      <div class="tool-node archive-collector"><a class="tool-name" href="index.html#loesung"><img class="tool-logo" src="assets/app-icon.png" width="48" height="48" alt="" loading="lazy" decoding="async"><span>TrueArchive</span></a><span class="tool-context">Sammeln · prüfen · archivieren</span><p>Die SD-Karte später am Mac anschließen. TrueArchive übernimmt RAWs mit XMP und holt die fertigen Bilder aus Apple Fotos.</p></div>
+      <div class="immich-input">
+        <div class="tool-node"><a class="tool-name" href="https://immich.app/"><img class="tool-logo" src="assets/tools/immich.svg" width="48" height="48" alt="" loading="lazy" decoding="async"><span>Immich</span></a><span class="tool-context">Uploads vom Handy</span><p>Wenn Immich die Uploads in einem für den Mac erreichbaren Ordner sammelt, kann TrueArchive sie von dort übernehmen.</p></div>
+        <div class="flow-route"><span aria-hidden="true">↓</span>Uploadordner · lokale Quelle</div>
+      </div>
+      </div>
+      <div class="tool-node archive-collector"><a class="tool-name" href="index.html#loesung"><img class="tool-logo" src="assets/app-icon.png" width="48" height="48" alt="" loading="lazy" decoding="async"><span>TrueArchive</span></a><span class="tool-context">Sammeln · prüfen · archivieren</span><p>RAWs mit XMP von der SD-Karte, fertige Bilder aus Apple Fotos und neue Dateien aus dem Immich-Uploadordner übernehmen. Bei Bedarf je Quelle einen Zeitplan aktivieren.</p></div>
       <div class="flow-route"><span aria-hidden="true">↓</span>Ins Archiv übernehmen</div>
       <div class="archive-foundation"><svg class="tool-logo drive-logo" width="48" height="48" viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M10 10h28l5 21v6a3 3 0 0 1-3 3H8a3 3 0 0 1-3-3v-6l5-21Z"/><path d="M5 31h38M12 35h12"/><circle cx="35" cy="35.5" r="1" fill="currentColor"/></svg><div><h2>Dein Archiv</h2><p>Originale · fertige Bilder · XMP</p><p class="archive-order">Normale Dateien, nach Jahr, Monat und Tag sortiert. <code>2026 / 2026-09 / 2026-09-10</code><br><a href="anleitung.html#monatsordner">So werden Dateien abgelegt</a>.</p></div></div>
       <div class="flow-outputs"><div class="output-lane"><div class="flow-route"><span aria-hidden="true">↕</span>Lesen &amp; Metadaten zurückschreiben</div><div class="tool-node "><a class="tool-name" href="https://www.digikam.org/"><img class="tool-logo" src="assets/tools/digikam.svg" width="48" height="48" alt="" loading="lazy" decoding="async"><span>digiKam</span></a><span class="tool-context">Verwalten &amp; wiederfinden</span><p>Namen, Bewertungen und Beschreibungen pflegen. Nach Personen suchen, sobald Gesichter erkannt und benannt sind.</p></div></div><div class="output-lane"><div class="flow-route"><span aria-hidden="true">↓</span>Archiv nur lesen · selbst einrichten</div><div class="tool-node "><a class="tool-name" href="https://immich.app/"><img class="tool-logo" src="assets/tools/immich.svg" width="48" height="48" alt="" loading="lazy" decoding="async"><span>Immich</span></a><span class="tool-context">Ansehen &amp; teilen</span><p>Im Browser und auf dem Handy durch die Bilder stöbern und sie mit der Familie teilen.</p></div></div><div class="output-lane"><div class="flow-route"><span aria-hidden="true">↓</span>Unabhängige Kopie anlegen</div><div class="tool-node"><div class="tool-name"><svg class="tool-logo drive-logo" width="48" height="48" viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M10 10h28l5 21v6a3 3 0 0 1-3 3H8a3 3 0 0 1-3-3v-6l5-21Z"/><path d="M5 31h38M12 35h12"/><circle cx="35" cy="35.5" r="1" fill="currentColor"/></svg><span>Zweite Sicherung</span></div><span class="tool-context">Wiederherstellen</span><p>Archiv samt Metadaten auf einem zweiten Datenträger oder bei einem Backup-Dienst sichern.</p></div></div></div>
@@ -53,12 +59,13 @@
       <dl>
         <div><dt>Die Metadaten bleiben bei den Bildern.</dt><dd>XMP ist ein offener Standard für Metadaten. Die Begleitdateien speichern etwa Schlagwörter, Bewertungen und Bearbeitungsdaten. TrueArchive ergänzt vorhandene XMPs oder legt sie neu an. Unterschiedliche Nitro-Bearbeitungen bleiben bei verträglichen übrigen Metadaten als Varianten erhalten; andere Konflikte werden gemeldet. Das Zusammenspiel von Nitro, TrueArchive und digiKam ist mit echten Bildern noch nicht vollständig geprüft. <a href="anleitung.html#duplikate">Mehr zu Varianten</a>.</dd></div>
         <div><dt>digiKam pflegt das Archiv.</dt><dd>digiKam ist eine kostenlose Open-Source-Fotoverwaltung. Binde den Archivordner als Sammlung ein und aktiviere das Schreiben der Metadaten in XMP-Begleitdateien. So bleiben unterstützte Angaben auch außerhalb des digiKam-Katalogs erhalten. Die automatische Einrichtung durch TrueArchive ist geplant. <a href="https://docs.digikam.org/en/setup_application/metadata_settings.html">XMP in digiKam einstellen</a>.</dd></div>
-        <div><dt>Immich ist das Fenster ins Archiv.</dt><dd>Immich ist eine Open-Source-Foto-App für deinen eigenen Server. Dieser muss laufen, wenn du Bilder ansehen möchtest. Binde das Archiv als externe Bibliothek mit reinem Lesezugriff ein; es wird dabei nicht erneut hochgeladen. Nicht alle XMP-Felder und Nitro-Bearbeitungsdaten werden in Immich dargestellt. Nutze die fertigen Bilder zum Ansehen. Eine automatische TrueArchive-Anbindung ist noch nicht verfügbar. <a href="https://docs.immich.app/features/libraries/">Externe Bibliotheken in Immich</a>.</dd></div>
+        <div id="immich-upload"><dt>Immich-Uploads können ins Archiv fließen.</dt><dd>Mache den Ordner mit den hochgeladenen Originalen auf deinem Mac erreichbar. Füge ihn in TrueArchive über <strong>+</strong> als lokale Quelle hinzu und aktiviere in ihren Einstellungen einen Zeitplan. Wähle den Originalordner, nicht Immichs Vorschaubilder, umgerechnete Videos oder Datenbank. TrueArchive kopiert die Medien und lässt die Quelle unverändert. Der Mac muss wach sein, TrueArchive laufen und Quelle sowie Archiv verbunden sein. Dieser Ordner-Workflow ist bereits möglich; Immich-Alben oder Datenbankeinträge werden dabei nicht abgeglichen. <a href="anleitung.html#einrichtung">Quelle einrichten</a>.</dd></div>
+        <div><dt>Immich ist das Fenster ins Archiv.</dt><dd>Immich ist eine Open-Source-Foto-App für deinen eigenen Server. Dieser muss laufen, wenn du Bilder ansehen möchtest. Binde das Archiv als externe Bibliothek mit reinem Lesezugriff ein; es wird dabei nicht erneut hochgeladen. Nicht alle XMP-Felder und Nitro-Bearbeitungsdaten werden in Immich dargestellt. Nutze die fertigen Bilder zum Ansehen. Die automatische Einrichtung und Steuerung von Immich durch TrueArchive sind geplant. <a href="https://docs.immich.app/features/libraries/">Externe Bibliotheken in Immich</a>.</dd></div>
         <div><dt>Die zweite Sicherung schützt vor Verlust.</dt><dd>Eine weitere Ansicht in digiKam oder Immich ist noch keine Sicherung. Sichere das Archiv unabhängig und prüfe, ob sich Dateien wiederherstellen lassen. Sichere bei Immich zusätzlich dessen Datenbank und eigene Dateien, etwa für Benutzer und Alben. Ein regelmäßiges Hetzner-Backup durch TrueArchive ist ein geplantes Modul. <a href="https://docs.immich.app/administration/backup-and-restore/">Immich sichern</a>.</dd></div>
       </dl>
       <p class="tools-note">Du kannst auch andere Werkzeuge nutzen. Alte Festplatten, weitere Ordner und manuelle Google-Fotos-Exporte können als zusätzliche Quellen zu TrueArchive kommen. Die Programme werden getrennt installiert; die gemeinsame Nutzung ist kein Komplettpaket.</p>
     </section>
-    <div class="workflow-invitation"><p>Deine Bilder. Dein Archiv. Dein Workflow.</p><a class="button primary" href="index.html#beta">Zur Beta anmelden</a></div>
+    <div class="workflow-invitation"><p>Deine Bilder. Dein Archiv. Dein Workflow.</p><a class="button primary" href="index.html#alpha">Alpha herunterladen</a></div>
     <p class="tool-credits">Produktlogos: <a href="https://apps.apple.com/app/id1591292532">Nitro / Gentlemen Coders</a>, <a href="https://www.apple.com/macos/photos/">Apple Fotos / Apple</a>, <a href="https://www.digikam.org/">digiKam</a>, <a href="https://github.com/immich-app/immich/tree/v3.1.0/design">Immich</a>. Zur Kennzeichnung der jeweiligen Werkzeuge; keine offizielle Partnerschaft.</p>
   </main>
 

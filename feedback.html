@@ -17,12 +17,12 @@
 <body>
   <a class="skip-link" href="#inhalt">Zum Inhalt</a>
   <header class="site-header wrap">
-    <div class="brand"><a class="brand-home" href="index.html" aria-label="TrueArchive Startseite"><img src="assets/app-icon.png" width="40" height="40" alt=""><span>TrueArchiv</span></a><a class="brand-download" href="https://github.com/lutzkohl/TrueArchive-website/releases/download/v0.16.0-alpha/TrueArchive-0.16.0-alpha-macos-universal.zip" aria-label="TrueArchive 0.16.0 herunterladen">e</a></div>
+    <div class="brand"><a class="brand-home" href="index.html" aria-label="TrueArchive Startseite"><img src="assets/app-icon.png" width="40" height="40" alt=""><span>TrueArchive</span></a></div>
     <nav aria-label="Hauptnavigation"><a class="secondary-nav" href="warum-truearchive.html">Warum TrueArchive?</a>
       <a class="secondary-nav" href="index.html#funktionen">Funktionen</a>
       <a class="secondary-nav" href="feedback.html" aria-current="page">Feedback</a>
       <a class="secondary-nav" href="anleitung.html">Handbuch</a>
-      <a class="button small primary" href="index.html#beta">Zur Beta anmelden</a>
+      <a class="button small primary" href="index.html#alpha">Alpha herunterladen</a>
     </nav>
   </header>
 
@@ -48,11 +48,19 @@
           </div>
           <div class="form-field">
             <label for="feedback-context">App-Version und Mac <span>(optional)</span></label>
-            <input id="feedback-context" name="test_environment" type="text" maxlength="180" placeholder="z. B. 0.13.1, iMac Intel, macOS 15">
+            <input id="feedback-context" name="test_environment" type="text" maxlength="180" placeholder="z. B. 0.18.0, iMac Intel, macOS 15">
+          </div>
+          <div class="form-field">
+            <label for="feedback-name">Name oder Kürzel <span>(optional)</span></label>
+            <input id="feedback-name" name="name" type="text" autocomplete="name" maxlength="100">
           </div>
           <div class="form-field">
             <label for="feedback-email">E-Mail für Rückfragen <span>(optional)</span></label>
             <input id="feedback-email" name="email" type="email" autocomplete="email" inputmode="email" autocapitalize="none" spellcheck="false" maxlength="254" placeholder="du@beispiel.de">
+          </div>
+          <div class="feedback-sharing">
+            <label class="consent-label" for="feedback-social"><input id="feedback-social" name="social_media_permission" type="checkbox" value="yes" aria-describedby="feedback-social-hint"><span>TrueArchive darf mein Feedback auf seinen Social-Media-Kanälen teilen, mit meinem Namen, falls ich einen angebe. <span class="field-hint">(optional)</span></span></label>
+            <p class="field-hint" id="feedback-social-hint">Freiwillig. Ohne Freigabe bleibt dein Feedback intern. Ohne Namen wird es anonym geteilt. Deine E-Mail wird nie veröffentlicht. Für einen Widerruf schreib an lutz@truearchive.app.</p>
           </div>
           <p class="form-data-note">Versand über Formspree. E-Mail nur für Rückfragen, keine Beta-Anmeldung. <a href="#rueckmeldung-datenschutz">Datenschutz</a></p>
           <button class="button secondary" type="submit">Testfeedback senden</button>
@@ -89,6 +97,7 @@
       <details class="beta-privacy">
         <summary>Was passiert mit meiner Rückmeldung?</summary>
         <p>Lutz Kohl verwendet deine Angaben, um TrueArchive zu verbessern und gegebenenfalls auf deine Rückmeldung zu antworten. Die Nachricht und die von dir ausgefüllten Felder werden bei Formspree gespeichert. Formspree verarbeitet auch technische Daten wie IP-Adresse und Browserangaben; eine Verarbeitung in den USA ist möglich. <a href="https://formspree.io/legal/privacy-policy/">Datenschutz bei Formspree</a>.</p>
+        <p>Die Veröffentlichung auf Social Media ist freiwillig und braucht das separate Häkchen. Mit Freigabe dürfen wir das Feedback und deinen angegebenen Namen oder dein Kürzel veröffentlichen; ohne Namen teilen wir es anonym. E-Mail-Adressen werden nicht veröffentlicht. Deine Freigabe für künftige Nutzungen kannst du bei uns widerrufen. Bereits von anderen geteilte Kopien können auf den Plattformen verbleiben.</p>
         <p>Für Fragen oder Löschung deiner Rückmeldung schreib an <a href="mailto:lutz@truearchive.app">lutz@truearchive.app</a>.</p>
       </details>
     </div>

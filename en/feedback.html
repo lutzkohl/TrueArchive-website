@@ -17,12 +17,12 @@
 <body>
   <a class="skip-link" href="#inhalt">Skip to content</a>
   <header class="site-header wrap">
-    <div class="brand"><a class="brand-home" href="index.html" aria-label="TrueArchive home"><img src="../assets/app-icon.png" width="40" height="40" alt=""><span>TrueArchiv</span></a><a class="brand-download" href="https://github.com/lutzkohl/TrueArchive-website/releases/download/v0.16.0-alpha/TrueArchive-0.16.0-alpha-macos-universal.zip" aria-label="Download TrueArchive 0.16.0">e</a></div>
+    <div class="brand"><a class="brand-home" href="index.html" aria-label="TrueArchive home"><img src="../assets/app-icon.png" width="40" height="40" alt=""><span>TrueArchive</span></a></div>
     <nav aria-label="Main navigation"><a class="secondary-nav" href="warum-truearchive.html">Why TrueArchive?</a>
       <a class="secondary-nav" href="index.html#funktionen">Features</a>
       <a class="secondary-nav" href="feedback.html" aria-current="page">Feedback</a>
       <a class="secondary-nav" href="anleitung.html">Handbook</a>
-      <a class="button small primary" href="index.html#beta">Join the beta</a>
+      <a class="button small primary" href="index.html#alpha">Download alpha</a>
     </nav>
   </header>
 
@@ -48,11 +48,19 @@
           </div>
           <div class="form-field">
             <label for="feedback-context">App version and Mac <span>(optional)</span></label>
-            <input id="feedback-context" name="test_environment" type="text" maxlength="180" placeholder="e.g. 0.13.1, Intel iMac, macOS 15">
+            <input id="feedback-context" name="test_environment" type="text" maxlength="180" placeholder="e.g. 0.18.0, Intel iMac, macOS 15">
+          </div>
+          <div class="form-field">
+            <label for="feedback-name">Name or nickname <span>(optional)</span></label>
+            <input id="feedback-name" name="name" type="text" autocomplete="name" maxlength="100">
           </div>
           <div class="form-field">
             <label for="feedback-email">Email for follow-up questions <span>(optional)</span></label>
             <input id="feedback-email" name="email" type="email" autocomplete="email" inputmode="email" autocapitalize="none" spellcheck="false" maxlength="254" placeholder="you@example.com">
+          </div>
+          <div class="feedback-sharing">
+            <label class="consent-label" for="feedback-social"><input id="feedback-social" name="social_media_permission" type="checkbox" value="yes" aria-describedby="feedback-social-hint"><span>TrueArchive may share my feedback on its social media channels, with my name if I provide one. <span class="field-hint">(optional)</span></span></label>
+            <p class="field-hint" id="feedback-social-hint">Optional. Without permission, your feedback stays internal. Without a name, it is shared anonymously. Your email is never published. To withdraw permission, contact lutz@truearchive.app.</p>
           </div>
           <p class="form-data-note">Sent through Formspree. Your email is only for follow-up questions; this is not a beta signup. <a href="#rueckmeldung-datenschutz">Privacy</a></p>
           <button class="button secondary" type="submit">Send test feedback</button>
@@ -90,6 +98,7 @@
         <summary>What happens to my feedback?</summary>
         <p>Lutz Kohl uses your information to improve TrueArchive and, where appropriate, respond to your feedback. Your message and the fields you fill in are stored at Formspree. Formspree also processes technical data such as your IP address and browser information; processing in the USA is possible. <a href="https://formspree.io/legal/privacy-policy/">Formspree privacy policy</a>.</p>
         <p>For questions or to delete your feedback, email <a href="mailto:lutz@truearchive.app">lutz@truearchive.app</a>.</p>
+        <p>Sharing on social media is voluntary and requires the separate checkbox. With permission, we may publish the feedback and the name or nickname you provide; without a name, we share it anonymously. Email addresses are not published. You can withdraw permission for future use by contacting us. Copies already shared by others may remain on those platforms.</p>
       </details>
     </div>
   </main>

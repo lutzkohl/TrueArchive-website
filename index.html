@@ -3,13 +3,14 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="description" content="TrueArchive für Mac bringt Bilder aus Apple Fotos, von SD-Karten und lokalen Ordnern in dein eigenes Archiv. Für die Beta anmelden und beim Testen mitmachen.">
+  <meta name="description" content="TrueArchive für Mac bringt Bilder aus Apple Fotos, von SD-Karten und lokalen Ordnern in dein eigenes Archiv. Die öffentliche Alpha herunterladen und beim Testen mitmachen.">
   <meta name="robots" content="noindex, nofollow">
   <meta name="theme-color" content="#1E3C93">
   <title>TrueArchive – Deine Bilder. Dein Archiv.</title>
   <link rel="icon" href="assets/app-icon.png" type="image/png">
   <link rel="stylesheet" href="styles.css">
   <script src="language.js" defer></script>
+  <script src="downloads.js" defer></script>
   <link rel="canonical" href="https://truearchive.app/index.html">
   <link rel="alternate" hreflang="de" href="https://truearchive.app/index.html">
   <link rel="alternate" hreflang="en" href="https://truearchive.app/en/index.html">
@@ -17,12 +18,12 @@
 <body>
   <a class="skip-link" href="#inhalt">Zum Inhalt</a>
   <header class="site-header wrap">
-    <div class="brand"><a class="brand-home" href="index.html" aria-label="TrueArchive Startseite"><img src="assets/app-icon.png" width="40" height="40" alt=""><span>TrueArchiv</span></a><a class="brand-download" href="https://github.com/lutzkohl/TrueArchive-website/releases/download/v0.16.0-alpha/TrueArchive-0.16.0-alpha-macos-universal.zip" aria-label="TrueArchive 0.16.0 herunterladen">e</a></div>
+    <div class="brand"><a class="brand-home" href="index.html" aria-label="TrueArchive Startseite"><img src="assets/app-icon.png" width="40" height="40" alt=""><span>TrueArchive</span></a></div>
     <nav aria-label="Hauptnavigation"><a class="secondary-nav" href="#problem">Warum TrueArchive?</a>
       <a class="secondary-nav" href="#funktionen">Funktionen</a>
       <a class="secondary-nav" href="feedback.html">Feedback</a>
       <a class="secondary-nav" href="anleitung.html">Handbuch</a>
-      <a class="button small primary" href="#beta">Zur Beta anmelden</a>
+      <a class="button small primary" href="#alpha">Alpha herunterladen</a>
     </nav>
   </header>
 
@@ -47,7 +48,7 @@
           <div class="solution-copy">
             <p>Eine ausreichend große Festplatte. Ein Ordner als dein Archiv. TrueArchive bringt deine Bilder und Videos aus Apple Fotos, von SD-Karten und ausgewählten Ordnern dorthin – einmalig oder nach Zeitplan.</p>
             <p>Deine Quellen bleiben unverändert. Das Archiv gehört dir: normale Dateien, die du auch ohne TrueArchive öffnen kannst.</p>
-            <a class="button primary beta-button" href="#beta">Zur Beta anmelden</a>
+            <a class="button primary beta-button" href="#alpha">Alpha ausprobieren</a>
             <p class="beta-meta">Für Mac · macOS 15+ · Intel und Apple Silicon</p>
           </div>
         </div>
@@ -102,10 +103,26 @@
       </div>
     </section>
 
+    <section class="alpha-section wrap" id="alpha" tabindex="-1" aria-labelledby="alpha-title">
+      <div class="alpha-warning" id="alpha-warning">
+        <span class="eyebrow">Frühe Testversion</span>
+        <h2 id="alpha-title">Alpha. Keine Garantie für deine Fotos.</h2>
+        <p>TrueArchive kann noch Fehler enthalten. <strong>Datenverlust ist möglich.</strong> Behalte eine unabhängige, geprüfte Sicherung und beginne mit Kopien einer kleinen Auswahl. Nutze die Alpha nicht mit der einzigen Kopie unersetzlicher Bilder.</p>
+      </div>
+      <div class="alpha-download">
+        <div><a class="button primary" data-alpha-download href="https://github.com/lutzkohl/TrueArchive-website/releases/download/v0.18.0-alpha/TrueArchive-0.18.0-alpha-macos-universal.zip" aria-describedby="alpha-warning alpha-requirements">Alpha 0.18.0 herunterladen</a>
+          <p id="alpha-requirements">Kostenlos · macOS 15+ · Intel und Apple Silicon<br>Nicht von Apple notarisiert. <a href="anleitung.html#installation">Anleitung zur Installation</a></p>
+          <p class="download-stats" data-download-stats hidden aria-live="polite"><strong data-download-count></strong> Downloads dieser Version · GitHub-Zählung, einschließlich mehrfacher Downloads.</p>
+        </div>
+        <div class="alpha-next"><p>Keine Anmeldung nötig. Probiere einen kleinen Import aus und erzähle uns, wie es lief.</p><a href="feedback.html#testfeedback">Feedback geben</a> · <a href="release-notes.html#v0-18-0">Was ist neu?</a></div>
+      </div>
+      <details class="download-privacy"><summary>Wie werden Downloads gezählt?</summary><p>GitHub zählt Downloads des App-Pakets, keine einzelnen Personen oder erfolgreichen Installationen. Diese Seite fragt den aktuellen Zählerstand bei GitHub ab; dabei erhält GitHub technische Verbindungsdaten wie deine IP-Adresse. Wir ergänzen keine Tracking-Cookies oder Besucherprofile. Ist der Zähler nicht erreichbar, funktioniert der Download trotzdem. <a href="https://docs.github.com/en/site-policy/privacy-policies/github-general-privacy-statement">Datenschutz bei GitHub</a>.</p></details>
+    </section>
+
     <section class="features-section wrap" id="funktionen" tabindex="-1" aria-labelledby="features-title">
       <div class="section-heading">
         <h2 id="features-title">Was TrueArchive für dich übernimmt.</h2>
-        <p class="feature-release"><a href="release-notes.html#v0-16-0">Alpha 0.16.0 · Neuerungen</a></p>
+        <p class="feature-release"><a href="release-notes.html#v0-18-0">Alpha 0.18.0 · Neuerungen</a></p>
       </div>
       <div class="feature-group">
         <div class="feature-intro">
@@ -180,15 +197,15 @@
       <div><dl class="tool-roles"><div><dt>Bild auf iPhone, iPad oder Mac bearbeiten</dt><dd><a class="tool-name" href="https://www.gentlemencoders.com/nitro-for-ios/index.html"><img class="tool-logo" src="assets/tools/nitro.jpg" width="48" height="48" alt="" loading="lazy" decoding="async"><span>Nitro</span></a></dd></div>
 <div><dt>Neue Bilder einsammeln und archivieren</dt><dd><a class="tool-name" href="index.html#loesung"><img class="tool-logo" src="assets/app-icon.png" width="48" height="48" alt="" loading="lazy" decoding="async"><span>TrueArchive</span></a></dd></div>
 <div><dt>Namen, Bewertungen und Beschreibungen pflegen</dt><dd><a class="tool-name" href="https://www.digikam.org/"><img class="tool-logo" src="assets/tools/digikam.svg" width="48" height="48" alt="" loading="lazy" decoding="async"><span>digiKam</span></a></dd></div>
-<div><dt>Bilder auf dem Sofa ansehen oder mit Familie teilen</dt><dd><a class="tool-name" href="https://immich.app/"><img class="tool-logo" src="assets/tools/immich.svg" width="48" height="48" alt="" loading="lazy" decoding="async"><span>Immich</span></a></dd></div>
-<div><dt>Verlorene Daten wiederherstellen</dt><dd><svg class="tool-logo drive-logo" width="48" height="48" viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M10 10h28l5 21v6a3 3 0 0 1-3 3H8a3 3 0 0 1-3-3v-6l5-21Z"/><path d="M5 31h38M12 35h12"/><circle cx="35" cy="35.5" r="1" fill="currentColor"/></svg><span>Zweite Sicherung</span></dd></div></dl><p class="tools-note">digiKam und Immich richtest du selbst ein. Eine TrueArchive-Anbindung an Immich und ein Hetzner-Backup sind geplant.</p></div>
+<div><dt>Vom Handy hochladen, Bilder ansehen und teilen</dt><dd><a class="tool-name" href="https://immich.app/"><img class="tool-logo" src="assets/tools/immich.svg" width="48" height="48" alt="" loading="lazy" decoding="async"><span>Immich</span></a></dd></div>
+<div><dt>Verlorene Daten wiederherstellen</dt><dd><svg class="tool-logo drive-logo" width="48" height="48" viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M10 10h28l5 21v6a3 3 0 0 1-3 3H8a3 3 0 0 1-3-3v-6l5-21Z"/><path d="M5 31h38M12 35h12"/><circle cx="35" cy="35.5" r="1" fill="currentColor"/></svg><span>Zweite Sicherung</span></dd></div></dl><p class="tools-note">Einen eingerichteten Immich-Uploadordner kannst du als lokale Quelle in TrueArchive aufnehmen und regelmäßig abgleichen. <a href="workflow.html#immich-upload">So geht’s</a>. digiKam und Immich richtest du selbst ein; eine automatische Immich-Einrichtung und ein Hetzner-Backup sind geplant.</p></div>
     </section>
 
     <section class="beta-section wrap" id="mitmachen" aria-labelledby="beta-title">
       <div class="beta-copy">
         <span class="eyebrow">Gemeinsam weiterentwickeln</span>
         <h2 id="beta-title">Teste TrueArchive<br> mit uns.</h2>
-        <p>Hilf uns, TrueArchive im Alltag zu testen. Lass uns deine E-Mail-Adresse da, damit wir dich zur Beta einladen können.</p>
+        <p>Die Alpha kannst du jetzt ohne Anmeldung ausprobieren. Wenn du zusätzlich zur späteren Beta-Runde eingeladen werden möchtest, lass uns hier deine E-Mail-Adresse da.</p>
       </div>
       <div class="beta-signup" id="beta" tabindex="-1">
         <h3 id="beta-form-title">Für die Beta anmelden</h3>
@@ -222,6 +239,7 @@
         <article class="support-option" aria-labelledby="personal-support-title">
           <h3 id="personal-support-title">Über TrueArchive beitragen</h3>
           <p>Ich bin Lutz Kohl und entwickle TrueArchive als persönliches Community-Projekt. Beiträge sammle ich persönlich und spende anschließend den vollen Unterstützungsbetrag an Dentists for Africa e.V.</p>
+          <p>Falls ich durch diese Spende Steuern spare, spende ich auch diesen Betrag zusätzlich an Dentists for Africa.</p>
           <p class="support-note">Für Beiträge an mich stelle ich keine Spendenbescheinigung aus.</p>
           <a class="button secondary support-button" href="https://gofund.me/ab1fa75bd" aria-describedby="support-hint">
             <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20.5 4.8a5.1 5.1 0 0 0-7.2 0L12 6.1l-1.3-1.3a5.1 5.1 0 0 0-7.2 7.2L12 20.5l8.5-8.5a5.1 5.1 0 0 0 0-7.2Z"/></svg>
