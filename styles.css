@@ -63,7 +63,10 @@ h3 { font-size: 22px; font-weight: 650; }
 .alpha-download .button { min-height: 58px; }
 .alpha-download p { margin-top: 14px; color: var(--muted); font-size: 14px; line-height: 1.65; }
 .alpha-next { padding-block: 2px; }
-.alpha-next p { margin: 0 0 12px; font-size: 17px; }
+.alpha-next h3 { font-size: 21px; margin-bottom: 14px; }
+.alpha-next ol { margin: 0 0 18px; padding-left: 22px; color: var(--muted); font-size: 15px; line-height: 1.6; }
+.alpha-next li + li { margin-top: 10px; }
+.alpha-next p { margin: 0 0 12px; font-size: 14px; }
 .download-privacy { margin-top: 22px; color: var(--muted); font-size: 13px; }
 .download-privacy summary { cursor: pointer; }
 .download-privacy p { margin-top: 10px; max-width: 90ch; }
