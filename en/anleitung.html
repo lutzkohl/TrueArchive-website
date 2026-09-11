@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="description" content="Install TrueArchive for Mac, archive all sources and safely disconnect source drives. Handbook for Alpha 0.17.0, covering monthly folders, duplicates, Nitro edits and Google Takeout.">
+  <meta name="description" content="Install TrueArchive for Mac, archive all sources and safely disconnect source drives. Handbook for Alpha 0.17.1, covering monthly folders, duplicates, Nitro edits and Google Takeout.">
   <meta name="robots" content="noindex, nofollow">
   <meta name="theme-color" content="#1E3C93">
   <title>Handbook – TrueArchive</title>
@@ -22,7 +22,7 @@
   </header>
 
   <main id="inhalt" class="wrap">
-    <div class="guide-heading"><h1>The TrueArchive handbook.</h1><p>Connect sources, choose an archive, start a sync.</p><p>The app’s “?” buttons open the relevant chapter directly. Further down, you will find the <a href="#release-notes">release notes and earlier versions</a>.</p><p class="guide-version">Handbook for Alpha 0.17.0 · Build 35 · local test candidate, not yet published.</p></div>
+    <div class="guide-heading"><h1>The TrueArchive handbook.</h1><p>Connect sources, choose an archive, start a sync.</p><p>The app’s “?” buttons open the relevant chapter directly. Further down, you will find the <a href="#release-notes">release notes and earlier versions</a>.</p><p class="guide-version">Handbook for Alpha 0.17.1 · Build 36 · local test candidate, not yet published.</p></div>
     <div class="guide-layout">
       <nav class="guide-nav" aria-label="In this handbook"><a href="#installation">Installation</a><a href="#updates">App updates</a><a href="#sprache">Choose language</a><a href="#einrichtung">Your first archive</a><a href="#arbeitsbereich">Sources and destination</a><a href="#alle-quellen">Archive all sources</a><a href="#google-photos">Google Photos (Takeout)</a><a href="#monatsordner">Monthly folders</a><a href="#duplikate">Duplicates and Nitro</a><a href="#vision">Automatic keywords</a><a href="#details">Questions and details</a><a href="#release-notes">Release Notes</a><a href="#hilfe">Troubleshooting</a></nav>
       <div class="guide-content">
@@ -74,7 +74,7 @@
           <h2 id="setup-title">Your first archive</h2>
           <ol>
             <li><strong>Connect sources.</strong> Use “+ Add source” to add Apple Photos, an SD card, local picture folders or a <a href="#google-photos">Google Takeout export</a>. The selected source opens directly.</li>
-            <li><strong>Connect an archive.</strong> On the archive page, choose a new empty archive folder, your existing TrueArchive archive or, in the 0.17.0 candidate, an <a href="#vorhandenes-archiv">existing picture folder</a>. The destination requires APFS or HFS+.</li>
+            <li><strong>Connect an archive.</strong> On the archive page, choose a new empty archive folder, your existing TrueArchive archive or, from candidate 0.17.1, directly use an <a href="#vorhandenes-archiv">existing picture folder</a>. The destination requires APFS or HFS+.</li>
             <li><strong>Start a sync when ready.</strong> Once at least one source is connected and the archive has been checked, TrueArchive automatically remembers the completed setup. Then start “Archive all sources” or a single source.</li>
           </ol>
           <p>Set up your sources and archive on the same pages you will use later. Short hints show what is still missing. There is no separate wizard, “Done” button or trial import. Automatic setup completion does not itself start an import. Sources, the archive and an optional Photos capture date range stay saved on this Mac.</p>
@@ -83,15 +83,17 @@
 
         <section id="vorhandenes-archiv" aria-labelledby="existing-archive-title">
           <h2 id="existing-archive-title">Use an existing picture folder as the archive</h2>
-          <div class="guide-note"><p><strong>In the 0.17.0 candidate:</strong> An ordinary picture folder that already contains files can become the archive destination. Scanning starts only after your explicit action.</p></div>
+          <div class="guide-note"><p><strong>From candidate 0.17.1:</strong> Choose your existing picture folder as the destination and use it directly. Registering the entire collection is not required.</p></div>
           <ol>
-            <li><strong>Select the destination.</strong> Choose the existing picture folder on the archive page. TrueArchive keeps it as the intended destination and offers the action to scan its contents.</li>
-            <li><strong>Scan the existing contents.</strong> Start the scan explicitly. You can see progress, counts and the file currently being checked. Use <strong>“Pause”</strong> to stop temporarily and <strong>“Resume”</strong> to continue. Imports and other archive work remain blocked until the scan finishes completely.</li>
-            <li><strong>Resolve real conflicts.</strong> Ambiguous or damaged XMP files and other cases that cannot be resolved safely appear as specific issues. The affected files remain unchanged, and the archive becomes ready only after you resolve them and run the scan again.</li>
+            <li><strong>Choose the archive folder.</strong> Open the destination on the left and select your existing folder on a supported APFS or HFS+ drive. That exact folder becomes the archive.</li>
+            <li><strong>Import new pictures.</strong> Start a sync for the selected source or all connected sources. New media and their XMP files are placed under <strong>year → month → day</strong>.</li>
           </ol>
-          <p>Existing media keep their names and locations; they are neither copied nor moved into date folders. Existing XMP is preserved and missing shared XMP is added. TrueArchive creates only small management files in the hidden <code>.bildarchiv</code> folder.</p>
-          <p>After the scan succeeds, TrueArchive places new imports under <strong>year → month → day</strong> as usual. The existing collection keeps its current folder structure.</p>
-          <p><strong>File packages stay closed.</strong> Photo libraries, applications and other Finder packages are preserved as a whole. TrueArchive registers media in ordinary folders and does not add XMP files inside packages. A package itself cannot be used as the archive destination.</p>
+          <p>Connecting preserves existing media and XMP files in place. It neither reads all pictures nor adds missing XMP files throughout the old collection. TrueArchive creates only its small control files in the hidden <code>.bildarchiv</code> folder; no additional database or persistent verification cache is needed.</p>
+          <p><strong>What does an import compare?</strong> TrueArchive checks the relevant destination folders and protects existing files from overwrites. Previously associated files there can be recognized. Pictures with different names, locations or changed capture dates may be copied again, including pictures previously archived with TrueArchive. Unclear metadata associations are not resolved by overwriting them.</p>
+          <p>For a comparison of the entire collection, deliberately start <a href="#duplikate">“Check duplicates”</a> later. This separate check can take longer and is not a prerequisite for importing. Connecting a folder does not prove that all previously stored files are complete or undamaged.</p>
+          <p><strong>If 0.17.0 already started registration:</strong> Previously added XMP files remain. A provable pending write is first completed safely, then the folder can be used directly. The remaining collection is not automatically registered. Ambiguous or damaged transaction evidence is preserved and must be resolved.</p>
+          <p><strong>Other interrupted imports:</strong> TrueArchive shows the pending operation. The required evidence is checked only when you start recovery. For older archive formats, this explicit check may cover the entire collection and take longer. Files are not changed without valid evidence.</p>
+          <p><strong>File packages stay closed during connection and ordinary imports.</strong> Photo libraries, applications and other Finder packages remain unchanged. A package itself cannot be the archive destination. Existing folders are not automatically reorganized.</p>
         </section>
 
         <section id="arbeitsbereich" aria-labelledby="workspace-title">
@@ -99,7 +101,7 @@
           <p><strong>From Alpha 0.13.1:</strong> The small folder icon to the right of the destination opens the archive folder in Finder. Its tooltip reads “Open archive in Finder”. Clicking the destination name still opens the archive page in TrueArchive. Folder icons beside local sources also open their configured folders in Finder, including SD cards, drives and unpacked Takeout exports. The icon is grey when the source is disconnected. Opening a folder keeps the current page and preview. Source and destination folder icons align in one column.</p>
           <p>Your sources appear on the left, with an arrow below pointing to your chosen archive folder. Use <strong>+</strong> to add more sources. Clicking a source name opens its page. Next to it are <strong>Archive now</strong> (an arrow into a drive), <strong>Settings</strong> (a gear) and, for external sources, an eject icon. The gear always opens that source’s settings, even when a different page is open.</p>
           <p>The small mark on the source icon shows the last checked connection: <strong>green dot</strong> connected, <strong>empty circle</strong> unreachable, <strong>dashed circle</strong> not yet checked, and <strong>orange exclamation mark</strong> Photos permission missing. Tooltips explain statuses and actions. For Apple Photos, green means full Photos access is allowed; whether a particular iCloud original is available is only known when it is requested.</p>
-          <p>The <strong>down arrow next to a source</strong> starts a full sync of that source only. It checks again and imports new or changed content into the shared archive. An open preview for this source is replaced; previews and reports for other sources remain. The first import into an empty archive folder creates the permanent archive identifier; previews created before that need to be checked again. Subfolder selection, the Photos date range and schedules remain unchanged. Start actions are locked while other work is running.</p>
+          <p>The <strong>down arrow next to a source</strong> starts a full sync of that source only. It checks again and imports new or changed content into the shared archive. An open preview for this source is replaced; previews and reports for other sources remain. Subfolder selection, the Photos date range and schedules remain unchanged. Start actions are locked while other work is running.</p>
           <p>The <strong>eject icon</strong> appears for external source volumes that can be disconnected. It disconnects all source folders on the same volume; the archive volume stays protected. <a href="#laufwerk-trennen">Safely disconnect a source drive.</a></p>
           <p>An issue notice in the main window names the affected source or archive destination and offers the appropriate action. <strong>“Go to affected source”</strong> opens its report. If that source page is already open, the cause appears under “Last sync”. When Photos access is missing, the page explains where to enable it. A successful report for a different source remains visible.</p>
           <p>All sources use the same archive destination. Source details show an archive notice only when the destination prevents an import; “Check Archive Destination” takes you to the details.</p>
@@ -241,6 +243,7 @@
 
           <details id="duplikate">
             <summary>What happens to duplicate pictures and multiple Nitro edits?</summary>
+            <p><strong>For directly used existing folders from 0.17.1:</strong> The recognition described below covers the relevant destination folders. Previously archived files elsewhere, or with a changed capture date, may be copied again. An import does not compare the entire collection.</p>
             <p><strong>Same file, multiple sources:</strong> TrueArchive checks the entire file contents. If the media bytes are identical and XMP information is compatible, the existing archive file is reused. The additional origin is added to its shared XMP. Names and source folders may differ. Similar-looking pictures, or a RAW and its finished JPEG, are not automatically considered duplicates.</p>
             <ul>
               <li><strong>Same RAW file, same Nitro edit:</strong> one media/XMP pair with multiple origins. Differences only in XML syntax or indentation do not create a new edit.</li>
@@ -252,7 +255,7 @@
             <p><strong>What the result counts mean:</strong> “Origin Added” means no additional media file was copied. A preserved edit variant counts as a new file. “Additional Copying Avoided” refers to media bytes not copied again during import; this does not mean additional disk space was freed.</p>
             <p><strong>Where did a picture come from?</strong> The origin list in the shared XMP contains the source identifier, role and relative file path. For local sources, available drive and selected folder names are included. For Apple Photos, logical items and roles remain associated; albums and keywords are added compatibly. The archive remains readable without a mandatory catalogue database.</p>
             <p><strong>Check existing copies:</strong> On the archive page, “Check duplicates” starts a read-only run. It checks supported picture, RAW and video formats, distinguishing identical copies, intentional edit variants and hard links. Separate editing data and other file types are outside this scan. Unmanaged or unreadable files also appear as notices. The check can be paused or cancelled; a partial result is not a complete check. Existing copies are not automatically deleted or merged.</p>
-            <div class="guide-note"><p><strong>Archive format from 0.10.0:</strong> The first time shared origin or variant data is written, format protection is raised to version 6. Existing folders are not reorganized. Older TrueArchive versions can no longer write to that archive afterwards; use at least 0.10.0 on every Mac for those archives. The new monthly layout requires at least 0.14.0. Media and XMP files remain ordinary files.</p></div>
+            <div class="guide-note"><p><strong>Archive format from 0.10.0:</strong> The first time shared origin or variant data is written, format protection is raised to version 6. Existing folders are not reorganized. Older TrueArchive versions can no longer write to that archive afterwards; use at least 0.10.0 on every Mac for those archives. The new monthly layout requires at least 0.14.0; directly used existing folders require at least 0.17.1. Media and XMP files remain ordinary files.</p></div>
             <p>None of these steps changes or deletes sources. Nitro recipes in XMP are preserved; additional Nitro files <code>.photo</code> and <code>.photo-edit</code> are still not imported. The status of actual round-trip testing with Nitro and digiKam is listed in the <a href="release-notes.html">version’s testing notes</a> .</p>
           </details>
 
