@@ -9,8 +9,10 @@
   <title>TrueArchive – Your pictures. Your archive.</title>
   <link rel="icon" href="../assets/app-icon.png" type="image/png">
   <link rel="stylesheet" href="../styles.css">
+  <link rel="stylesheet" href="../hero-carousel.css">
   <script src="../language.js" defer></script>
   <script src="../downloads.js" defer></script>
+  <script src="../hero-carousel.js" defer></script>
   <link rel="canonical" href="https://truearchive.app/en/index.html">
   <link rel="alternate" hreflang="de" href="https://truearchive.app/index.html">
   <link rel="alternate" hreflang="en" href="https://truearchive.app/en/index.html">
@@ -29,9 +31,17 @@
 
   <main id="inhalt">
     <section class="home-story wrap" id="problem" aria-labelledby="hero-title">
-      <figure class="home-story-image">
-        <img src="../assets/bilder-ueberall.jpg" width="1536" height="1024" alt="Old and new hard drives, a camera, drone, smartphone, USB stick, SD cards and microSD cards on a table." fetchpriority="high" decoding="async">
-        <figcaption>Look familiar? · AI-generated image</figcaption>
+      <figure class="home-story-image hero-carousel" data-hero-carousel data-hero-assets="../assets/personas/" role="group" aria-roledescription="carousel" aria-label="Pictures about a personal photo archive">
+        <div class="hero-carousel-frame">
+          <img data-hero-image src="../assets/bilder-ueberall.jpg" width="1536" height="1024" alt="Old and new hard drives, a camera, drone, smartphone, USB stick, SD cards and microSD cards on a table." fetchpriority="high" decoding="async">
+          <div class="hero-carousel-controls" data-hero-controls role="group" aria-label="Picture controls" hidden>
+            <button type="button" data-hero-previous aria-label="Previous picture">←</button>
+            <button type="button" data-hero-pause aria-label="Pause picture changes" aria-pressed="false">Ⅱ</button>
+            <button type="button" data-hero-next aria-label="Next picture">→</button>
+          </div>
+        </div>
+        <figcaption><span data-hero-caption>Look familiar?</span><span class="hero-caption-separator" aria-hidden="true"> · </span><span data-hero-disclosure>AI-generated image</span><span data-hero-caveat hidden></span></figcaption>
+        <span class="hero-carousel-announcement" data-hero-announcement aria-live="polite" aria-atomic="true"></span>
       </figure>
       <div class="home-story-copy">
         <h1 id="hero-title">Your pictures are everywhere.</h1>

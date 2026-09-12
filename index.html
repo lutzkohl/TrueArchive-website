@@ -9,8 +9,10 @@
   <title>TrueArchive – Deine Bilder. Dein Archiv.</title>
   <link rel="icon" href="assets/app-icon.png" type="image/png">
   <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="hero-carousel.css">
   <script src="language.js" defer></script>
   <script src="downloads.js" defer></script>
+  <script src="hero-carousel.js" defer></script>
   <link rel="canonical" href="https://truearchive.app/index.html">
   <link rel="alternate" hreflang="de" href="https://truearchive.app/index.html">
   <link rel="alternate" hreflang="en" href="https://truearchive.app/en/index.html">
@@ -29,9 +31,17 @@
 
   <main id="inhalt">
     <section class="home-story wrap" id="problem" aria-labelledby="hero-title">
-      <figure class="home-story-image">
-        <img src="assets/bilder-ueberall.jpg" width="1536" height="1024" alt="Alte und neue Festplatten, Kamera, Drohne, Smartphone, USB-Stick sowie SD- und microSD-Karten auf einem Tisch." fetchpriority="high" decoding="async">
-        <figcaption>Kommt dir bekannt vor? · KI-generiertes Bild</figcaption>
+      <figure class="home-story-image hero-carousel" data-hero-carousel data-hero-assets="assets/personas/" role="group" aria-roledescription="Karussell" aria-label="Bilder über ein eigenes Fotoarchiv">
+        <div class="hero-carousel-frame">
+          <img data-hero-image src="assets/bilder-ueberall.jpg" width="1536" height="1024" alt="Alte und neue Festplatten, Kamera, Drohne, Smartphone, USB-Stick sowie SD- und microSD-Karten auf einem Tisch." fetchpriority="high" decoding="async">
+          <div class="hero-carousel-controls" data-hero-controls role="group" aria-label="Bildwechsel" hidden>
+            <button type="button" data-hero-previous aria-label="Vorheriges Bild">←</button>
+            <button type="button" data-hero-pause aria-label="Bildwechsel pausieren" aria-pressed="false">Ⅱ</button>
+            <button type="button" data-hero-next aria-label="Nächstes Bild">→</button>
+          </div>
+        </div>
+        <figcaption><span data-hero-caption>Kommt dir bekannt vor?</span><span class="hero-caption-separator" aria-hidden="true"> · </span><span data-hero-disclosure>KI-generiertes Bild</span><span data-hero-caveat hidden></span></figcaption>
+        <span class="hero-carousel-announcement" data-hero-announcement aria-live="polite" aria-atomic="true"></span>
       </figure>
       <div class="home-story-copy">
         <h1 id="hero-title">Deine Bilder sind überall.</h1>
