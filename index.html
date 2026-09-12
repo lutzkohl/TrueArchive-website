@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="description" content="TrueArchive für Mac bringt Bilder aus Apple Fotos, von SD-Karten und lokalen Ordnern in dein eigenes Archiv. Die öffentliche Alpha herunterladen und beim Testen mitmachen.">
+  <meta name="description" content="TrueArchive für Mac archiviert Apple Fotos, Karten, Ordner, Takeout-Exporte und ausgewählte Immich-Uploads. Ziel und Quellen auf einer Fläche, mit direkten Aktionen. Öffentliche Alpha herunterladen.">
   <meta name="robots" content="noindex, nofollow">
   <meta name="theme-color" content="#1E3C93">
   <title>TrueArchive – Deine Bilder. Dein Archiv.</title>
@@ -47,14 +47,15 @@
           <div><span class="eyebrow">TrueArchive für Mac</span><h2 id="solution-title">Ein gemeinsamer Platz für deine Bilder.</h2></div>
           <div class="solution-copy">
             <p>Eine ausreichend große Festplatte. Ein Ordner als dein Archiv. TrueArchive bringt deine Bilder und Videos aus Apple Fotos, von SD-Karten und ausgewählten Ordnern dorthin – einmalig oder nach Zeitplan.</p>
+            <p>Das Ziel bleibt oben im Blick. Archiviere eine Quelle oder alle angeschlossenen mit einem Klick. Einstellungen, Vorschau und Ergebnis öffnen direkt an der jeweiligen Quelle. Auch die Menüleiste bietet Schnellaktionen.</p>
             <p>Deine Quellen bleiben unverändert. Das Archiv gehört dir: normale Dateien, die du auch ohne TrueArchive öffnen kannst.</p>
             <a class="button primary beta-button" href="#alpha">Alpha ausprobieren</a>
             <p class="beta-meta">Für Mac · macOS 15+ · Intel und Apple Silicon</p>
           </div>
         </div>
         <figure class="app-figure app-screenshot" aria-labelledby="app-caption">
-          <a href="assets/truearchive-de.png?v=0.17.2" aria-label="App-Ansicht mit Beispieldaten vergrößern"><img src="assets/truearchive-de.png?v=0.17.2" width="1840" height="1300" alt="TrueArchive: links zwei verbundene Quellen und der Archivordner, rechts eine Vorschau mit zwei bereits archivierten Beispieldateien." loading="lazy" decoding="async"></a>
-          <figcaption id="app-caption">Die echte TrueArchive-Oberfläche mit Beispieldaten. <a href="assets/truearchive-de.png?v=0.17.2">Ansicht vergrößern</a></figcaption>
+          <a href="assets/app-workspace-de.png?v=0.20.0" aria-label="App-Ansicht mit Beispieldaten vergrößern"><img src="assets/app-workspace-de.png?v=0.20.0" width="1100" height="780" alt="TrueArchive 0.20.0: blau hervorgehobenes Archivziel, Automatik darunter und eine gemeinsame Quellenliste mit Archivieren-, Einstellungs- und Auswerfen-Aktionen." loading="lazy" decoding="async"></a>
+          <figcaption id="app-caption">TrueArchive 0.20.0: Archivziel und Quellen auf einer Arbeitsfläche. Native Ansicht mit Beispieldaten. <a href="assets/app-workspace-de.png?v=0.20.0">Ansicht vergrößern</a></figcaption>
         </figure>
         <div class="archive-story">
           <div class="archive-story-visual">
@@ -95,11 +96,11 @@
       <div class="wrap">
         <div class="section-heading"><h2 id="workflow-title">In drei Schritten zum Archiv.</h2><p>Du verbindest Quellen und Archiv.<br>Deine Quellen bleiben unverändert.</p></div>
         <ol class="steps">
-          <li><span class="step-number" aria-hidden="true">1</span><h3>Quellen wählen</h3><p>Apple Fotos, Karten, Platten oder lokale Ordner hinzufügen.</p></li>
-          <li><span class="step-number" aria-hidden="true">2</span><h3>Archiv wählen</h3><p>Einen neuen leeren Ordner oder ein vorhandenes TrueArchive-Archiv verbinden.</p></li>
-          <li><span class="step-number" aria-hidden="true">3</span><h3>Abgleich starten</h3><p>Sobald Quelle und Archiv geprüft sind, ist die Einrichtung vollständig. Eine Quelle oder alle Quellen gemeinsam archivieren.</p></li>
+          <li><span class="step-number" aria-hidden="true">1</span><h3>Archiv wählen</h3><p>Einen neuen leeren Ordner, dein TrueArchive-Archiv oder einen vorhandenen Bildordner verbinden.</p></li>
+          <li><span class="step-number" aria-hidden="true">2</span><h3>Quelle hinzufügen</h3><p>Apple Fotos, Karten, Platten, Ordner, Takeout oder ein Immich-Konto verbinden und den Umfang einstellen.</p></li>
+          <li><span class="step-number" aria-hidden="true">3</span><h3>Direkt archivieren</h3><p>Eine lokale Quelle oder Apple Fotos starten, auf Wunsch nacheinander. Immich-Uploads separat auswählen, prüfen und archivieren.</p></li>
         </ol>
-        <p class="workflow-note">Den ersten Abgleich startest du selbst; danach kannst du je Quelle einen Zeitplan aktivieren. Plane zusätzlich eine unabhängige zweite Sicherung ein, damit ein Ausfall der Archivplatte nicht deine Bilder kostet. <a href="anleitung.html#einrichtung">Zur Anleitung</a></p>
+        <p class="workflow-note">Den ersten Abgleich startest du selbst. Für lokale Quellen und Apple Fotos kannst du einen Zeitplan aktivieren; Takeout und Immich bleiben manuell. Plane zusätzlich eine unabhängige zweite Sicherung ein, damit ein Ausfall der Archivplatte nicht deine Bilder kostet. <a href="anleitung.html#einrichtung">Zur Anleitung</a></p>
       </div>
     </section>
 
@@ -110,14 +111,14 @@
         <p>TrueArchive kann noch Fehler enthalten. <strong>Datenverlust ist möglich.</strong> Behalte eine unabhängige, geprüfte Sicherung und beginne mit Kopien einer kleinen Auswahl. Nutze die Alpha nicht mit der einzigen Kopie unersetzlicher Bilder.</p>
       </div>
       <div class="alpha-download">
-        <div><a class="button primary" data-alpha-download href="https://github.com/lutzkohl/TrueArchive-website/releases/download/v0.18.2-alpha/TrueArchive-0.18.2-alpha-macos-universal.zip" aria-describedby="alpha-warning alpha-requirements">Alpha 0.18.2 herunterladen</a>
-          <p id="alpha-requirements">Kostenlos · macOS 15+ · Intel und Apple Silicon<br>Nicht von Apple notarisiert. <a href="anleitung.html#installation">Anleitung zur Installation</a></p>
+        <div><a class="button primary" data-alpha-download href="https://github.com/lutzkohl/TrueArchive-website/releases/download/v0.20.0-alpha/TrueArchive-0.20.0-alpha-macos-universal.zip" aria-describedby="alpha-warning alpha-requirements">Alpha 0.20.0 herunterladen</a>
+          <p id="alpha-requirements">Build 45 · Veröffentlicht am <time datetime="2026-09-12">12. September 2026</time><br>Kostenlos · macOS 15+ · Intel und Apple Silicon<br>Nicht von Apple notarisiert. <a href="anleitung.html#installation">Anleitung zur Installation</a></p>
           <p class="download-stats" data-download-stats hidden aria-live="polite"><strong data-download-count></strong> Downloads dieser Version · GitHub-Zählung, einschließlich mehrfacher Downloads.</p>
         </div>
         <div class="alpha-next" id="alpha-install"><h3>So startest du die Alpha.</h3>
           <ol><li>ZIP entpacken, <strong>TrueArchive</strong> in „Programme“ ziehen und einmal öffnen.</li><li>Kann Apple die App nicht prüfen oder den Entwickler nicht bestätigen, schließe die Warnung. Öffne <strong>Systemeinstellungen → Datenschutz &amp; Sicherheit</strong> und scrolle zu „Sicherheit“.</li><li>Klicke bei TrueArchive auf <strong>„Dennoch öffnen“</strong> und bestätige mit <strong>„Öffnen“</strong>.</li></ol>
           <p><a href="anleitung.html#macos-startfreigabe">Ausführliche Starthilfe</a> · <a href="https://support.apple.com/de-de/102445">Apples Anleitung</a></p>
-          <p>Keine Anmeldung nötig. <a href="feedback.html#testfeedback">Feedback geben</a> · <a href="release-notes.html#v0-18-2">Was ist neu?</a></p></div>
+          <p>Keine Anmeldung nötig. <a href="feedback.html#testfeedback">Feedback geben</a> · <a href="release-notes.html#v0-20-0">Was ist neu?</a></p></div>
       </div>
       <details class="download-privacy"><summary>Wie werden Downloads gezählt?</summary><p>GitHub zählt Downloads des App-Pakets, keine einzelnen Personen oder erfolgreichen Installationen. Diese Seite fragt den aktuellen Zählerstand bei GitHub ab; dabei erhält GitHub technische Verbindungsdaten wie deine IP-Adresse. Wir ergänzen keine Tracking-Cookies oder Besucherprofile. Ist der Zähler nicht erreichbar, funktioniert der Download trotzdem. <a href="https://docs.github.com/en/site-policy/privacy-policies/github-general-privacy-statement">Datenschutz bei GitHub</a>.</p></details>
     </section>
@@ -125,7 +126,7 @@
     <section class="features-section wrap" id="funktionen" tabindex="-1" aria-labelledby="features-title">
       <div class="section-heading">
         <h2 id="features-title">Was TrueArchive für dich übernimmt.</h2>
-        <p class="feature-release"><a href="release-notes.html#v0-18-2">Alpha 0.18.2 · Neuerungen</a></p>
+        <p class="feature-release"><a href="release-notes.html#v0-20-0">Alpha 0.20.0 · Neuerungen</a></p>
       </div>
       <div class="feature-group">
         <div class="feature-intro">
@@ -135,7 +136,8 @@
         <dl class="feature-points">
           <div><dt>Apple Fotos, Karten und Festplatten</dt><dd>Die Mediathek und ausgewählte lokale Ordner übernehmen. Bei Apple Fotos kannst du den Aufnahmezeitraum eingrenzen.</dd></div>
           <div><dt>Google Fotos über Takeout</dt><dd>Einen entpackten Export samt unterstützten Metadaten manuell übernehmen. <a href="anleitung.html#google-photos">So bereitest du den Export vor.</a></dd></div>
-          <div><dt>Einmalig oder regelmäßig</dt><dd>Direkt archivieren oder bei lokalen Quellen vorher eine Vorschau prüfen. Für Apple Fotos und lokale Quellen kannst du einen Zeitplan aktivieren; der Mac muss dafür wach sein und TrueArchive laufen.</dd></div>
+          <div><dt>Eigene Uploads aus Immich</dt><dd>Ein Konto verbinden, Uploads auswählen, Originale und verfügbare XMPs prüfen und bewusst archivieren. Externe Bibliotheken bleiben ausgeschlossen. <a href="anleitung.html#immich">Immich Schritt für Schritt.</a></dd></div>
+          <div><dt>Direkt starten, Automatik im Blick</dt><dd>Eine Quelle oder alle angeschlossenen lokalen Quellen und Apple Fotos mit einem Klick archivieren. Einstellungen und Ergebnisse bleiben an der Quelle. Unterstützte Zeitpläne kannst du gemeinsam pausieren; der Mac muss wach sein und TrueArchive laufen. <a href="anleitung.html#menueleiste">Schnellaktionen in der Menüleiste.</a></dd></div>
         </dl>
       </div>
       <div class="feature-group">
@@ -182,7 +184,7 @@
             <h3>Mehr mit deinen Bildern machen</h3>
             <dl class="module-list">
               <div><dt>digiKam einrichten</dt><dd>Hilfe bei Installation und Einrichtung für dein Archiv.</dd></div>
-              <div><dt>Immich anbinden</dt><dd>Das Archiv über einen eigenen Immich-Server ansehen.</dd></div>
+              <div><dt>Immich einfacher einrichten</dt><dd>Bei Server und Laufwerkseinbindung helfen. Eigene Uploads importieren und eine selbst eingerichtete Archivbibliothek aktualisieren kannst du bereits heute.</dd></div>
               <div><dt>Fotobücher gestalten</dt><dd>Bildvorschläge per Wischen oder Tastatur auswählen und später als Buch drucken lassen.</dd></div>
             </dl>
           </div>
@@ -201,7 +203,7 @@
 <div><dt>Neue Bilder einsammeln und archivieren</dt><dd><a class="tool-name" href="index.html#loesung"><img class="tool-logo" src="assets/app-icon.png" width="48" height="48" alt="" loading="lazy" decoding="async"><span>TrueArchive</span></a></dd></div>
 <div><dt>Namen, Bewertungen und Beschreibungen pflegen</dt><dd><a class="tool-name" href="https://www.digikam.org/"><img class="tool-logo" src="assets/tools/digikam.svg" width="48" height="48" alt="" loading="lazy" decoding="async"><span>digiKam</span></a></dd></div>
 <div><dt>Vom Handy hochladen, Bilder ansehen und teilen</dt><dd><a class="tool-name" href="https://immich.app/"><img class="tool-logo" src="assets/tools/immich.svg" width="48" height="48" alt="" loading="lazy" decoding="async"><span>Immich</span></a></dd></div>
-<div><dt>Verlorene Daten wiederherstellen</dt><dd><svg class="tool-logo drive-logo" width="48" height="48" viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M10 10h28l5 21v6a3 3 0 0 1-3 3H8a3 3 0 0 1-3-3v-6l5-21Z"/><path d="M5 31h38M12 35h12"/><circle cx="35" cy="35.5" r="1" fill="currentColor"/></svg><span>Zweite Sicherung</span></dd></div></dl><p class="tools-note">Einen eingerichteten Immich-Uploadordner kannst du als lokale Quelle in TrueArchive aufnehmen und regelmäßig abgleichen. <a href="workflow.html#immich-upload">So geht’s</a>. digiKam und Immich richtest du selbst ein; eine automatische Immich-Einrichtung und ein Hetzner-Backup sind geplant.</p></div>
+<div><dt>Verlorene Daten wiederherstellen</dt><dd><svg class="tool-logo drive-logo" width="48" height="48" viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M10 10h28l5 21v6a3 3 0 0 1-3 3H8a3 3 0 0 1-3-3v-6l5-21Z"/><path d="M5 31h38M12 35h12"/><circle cx="35" cy="35.5" r="1" fill="currentColor"/></svg><span>Zweite Sicherung</span></dd></div></dl><p class="tools-note">Eigene Immich-Uploads kannst du <a href="anleitung.html#immich">im verbundenen Konto auswählen und archivieren</a>. Eine selbst eingerichtete externe Archivbibliothek lässt sich danach ausdrücklich aktualisieren. Ein erreichbarer <a href="workflow.html#immich-upload">Uploadordner als lokale Quelle</a> bleibt ein weiterer Weg. digiKam, Immich-Server und Laufwerkseinbindung richtest du selbst ein; Einrichtungshilfen und ein Hetzner-Backup sind geplant.</p></div>
     </section>
 
     <section class="beta-section wrap" id="mitmachen" aria-labelledby="beta-title">
