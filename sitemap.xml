@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xhtml="http://www.w3.org/1999/xhtml">
+  <url>
+    <loc>https://truearchive.app/anleitung.html</loc>
+    <xhtml:link rel="alternate" hreflang="de" href="https://truearchive.app/anleitung.html" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://truearchive.app/en/anleitung.html" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://truearchive.app/anleitung.html" />
+  </url>
+  <url>
+    <loc>https://truearchive.app/en/anleitung.html</loc>
+    <xhtml:link rel="alternate" hreflang="de" href="https://truearchive.app/anleitung.html" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://truearchive.app/en/anleitung.html" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://truearchive.app/anleitung.html" />
+  </url>
+  <url>
+    <loc>https://truearchive.app/en/feedback.html</loc>
+    <xhtml:link rel="alternate" hreflang="de" href="https://truearchive.app/feedback.html" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://truearchive.app/en/feedback.html" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://truearchive.app/feedback.html" />
+  </url>
+  <url>
+    <loc>https://truearchive.app/en/index.html</loc>
+    <xhtml:link rel="alternate" hreflang="de" href="https://truearchive.app/index.html" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://truearchive.app/en/index.html" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://truearchive.app/index.html" />
+  </url>
+  <url>
+    <loc>https://truearchive.app/en/release-notes.html</loc>
+    <xhtml:link rel="alternate" hreflang="de" href="https://truearchive.app/release-notes.html" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://truearchive.app/en/release-notes.html" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://truearchive.app/release-notes.html" />
+  </url>
+  <url>
+    <loc>https://truearchive.app/en/warum-truearchive.html</loc>
+    <xhtml:link rel="alternate" hreflang="de" href="https://truearchive.app/warum-truearchive.html" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://truearchive.app/en/warum-truearchive.html" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://truearchive.app/warum-truearchive.html" />
+  </url>
+  <url>
+    <loc>https://truearchive.app/en/workflow.html</loc>
+    <xhtml:link rel="alternate" hreflang="de" href="https://truearchive.app/workflow.html" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://truearchive.app/en/workflow.html" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://truearchive.app/workflow.html" />
+  </url>
+  <url>
+    <loc>https://truearchive.app/feedback.html</loc>
+    <xhtml:link rel="alternate" hreflang="de" href="https://truearchive.app/feedback.html" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://truearchive.app/en/feedback.html" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://truearchive.app/feedback.html" />
+  </url>
+  <url>
+    <loc>https://truearchive.app/index.html</loc>
+    <xhtml:link rel="alternate" hreflang="de" href="https://truearchive.app/index.html" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://truearchive.app/en/index.html" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://truearchive.app/index.html" />
+  </url>
+  <url>
+    <loc>https://truearchive.app/release-notes.html</loc>
+    <xhtml:link rel="alternate" hreflang="de" href="https://truearchive.app/release-notes.html" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://truearchive.app/en/release-notes.html" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://truearchive.app/release-notes.html" />
+  </url>
+  <url>
+    <loc>https://truearchive.app/warum-truearchive.html</loc>
+    <xhtml:link rel="alternate" hreflang="de" href="https://truearchive.app/warum-truearchive.html" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://truearchive.app/en/warum-truearchive.html" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://truearchive.app/warum-truearchive.html" />
+  </url>
+  <url>
+    <loc>https://truearchive.app/workflow.html</loc>
+    <xhtml:link rel="alternate" hreflang="de" href="https://truearchive.app/workflow.html" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://truearchive.app/en/workflow.html" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://truearchive.app/workflow.html" />
+  </url>
+</urlset>

@@ -21,8 +21,13 @@
   const browserLanguages = navigator.languages?.length ? navigator.languages : [navigator.language || 'en'];
   const system = browserLanguages.map(value => String(value).toLowerCase().split(/[-_]/)[0])
     .find(value => value === 'de' || value === 'en') || 'en';
-  // A direct English URL is an intentional entry point when no preference exists.
-  const language = preference === 'system' ? (!requested && !saved && isEnglish ? 'en' : system) : preference;
+  // Explicit language pages remain reachable for people and crawlers alike.
+  // Only the directory entry automatically chooses a first-visit language.
+  // An explicit URL or saved preference still overrides the page language.
+  const directPage = isEnglish || !current.pathname.endsWith('/');
+  const language = preference === 'system'
+    ? (!requested && !saved && directPage ? (isEnglish ? 'en' : 'de') : system)
+    : preference;
   function localizedURL(targetLanguage, selection) {
     const url = new URL(location.href);
     url.pathname = base + (targetLanguage === 'en' ? 'en/' : '') + page;

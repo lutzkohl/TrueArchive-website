@@ -1,0 +1,37 @@
+# TrueArchive
+
+> TrueArchive (also written “True Archive”) is a free macOS app for collecting photos and videos in an archive on your own drive. Official website: https://truearchive.app/. Created by Lutz Kohl as a personal community project.
+
+## Product facts
+
+- Requires macOS 15 or later; supports Intel Macs and Apple Silicon. The public download is an alpha and may contain bugs. Keep an independent backup before testing.
+- Sources: Apple Photos, SD cards, external drives, local folders, extracted Google Photos Takeout exports, and selected uploads from connected Immich accounts.
+- Google Photos import uses manually downloaded and extracted Takeout files. It is not direct, continuous Google cloud synchronisation.
+- The archive uses ordinary year/month/day folders, such as `2024/2024-01/2024-01-19`. Original media and XMP metadata sidecars remain accessible without TrueArchive.
+- XMP is an open metadata standard. Existing metadata is preserved and missing sidecars are created during archiving. Available metadata depends on the source and file format.
+- Local Apple Vision keyword analysis is optional. TrueArchive does not automatically delete source media. An archive drive does not replace an independent backup.
+- digiKam is a separate open-source application for managing and searching the archive. Searching by person requires face indexing and assigned names there. Immich is a separately configured server that can display an external archive library.
+- The public alpha is free. Voluntary project contributions are collected personally by Lutz Kohl and donated in full to Dentists for Africa e.V.; he covers payment fees and adds any tax savings. Direct donations and donation receipts are handled by the organisation, as explained on the website.
+
+## Deutsch
+
+- [Produkt, Alpha-Download und Fragen](https://truearchive.app/index.html): Funktionen, Voraussetzungen, Alpha-Hinweise und Antworten zum eigenen Fotoarchiv.
+- [Handbuch](https://truearchive.app/anleitung.html): Installation, Quellen, XMP, Duplikate, Zeitpläne und zweite Sicherung.
+- [Foto-Workflow](https://truearchive.app/workflow.html): Aufgaben von Nitro, TrueArchive, digiKam und Immich.
+- [Warum TrueArchive?](https://truearchive.app/warum-truearchive.html): Fotos von verstreuten Datenträgern in ein gemeinsames Archiv bringen.
+- [Release Notes](https://truearchive.app/release-notes.html): Veröffentlichte Versionen und ihre Grenzen; maßgeblich für den aktuellen Download.
+- [Feedback](https://truearchive.app/feedback.html): Testerfahrungen und Funktionswünsche.
+
+## English
+
+- [Product, alpha download and questions](https://truearchive.app/en/index.html)
+- [Handbook](https://truearchive.app/en/anleitung.html)
+- [Photo workflow](https://truearchive.app/en/workflow.html)
+- [Why TrueArchive?](https://truearchive.app/en/warum-truearchive.html)
+- [Release notes](https://truearchive.app/en/release-notes.html)
+- [Feedback](https://truearchive.app/en/feedback.html)
+
+## Contact
+
+- [Project contact](mailto:lutz@truearchive.app)
+- [Public website repository and releases](https://github.com/lutzkohl/TrueArchive-website)

@@ -183,6 +183,10 @@ h3 { font-size: 22px; font-weight: 650; }
 .guide-content .release-links { font-size: 13px; }
 .release-links a { color: var(--muted); }
 .support-section { padding-block: 44px 48px; border-top: 1px solid var(--line); scroll-margin-top: 24px; }
+.photo-faq details { border-bottom: 1px solid var(--line); padding-block: 16px; }
+.photo-faq summary { cursor: pointer; font-weight: 600; }
+.photo-faq details p { max-width: 76ch; margin-block: 14px 0; }
+.photo-faq code { overflow-wrap: anywhere; }
 .support-copy { max-width: 680px; }
 .support-copy h2 { font-size: clamp(24px, 2.4vw, 29px); }
 .support-copy p { margin-top: 12px; color: var(--muted); font-size: 15px; }
