@@ -10,6 +10,7 @@
   <link rel="icon" href="assets/app-icon.png" type="image/png">
   <link rel="stylesheet" href="styles.css">
   <script src="language.js" defer></script>
+  <script src="feedback.js" defer></script>
   <link rel="canonical" href="https://truearchive.app/feedback.html">
   <link rel="alternate" hreflang="de" href="https://truearchive.app/feedback.html">
   <link rel="alternate" hreflang="en" href="https://truearchive.app/en/feedback.html">
@@ -56,11 +57,12 @@
   <a class="skip-link" href="#inhalt">Zum Inhalt</a>
   <header class="site-header wrap">
     <div class="brand"><a class="brand-home" href="index.html" aria-label="TrueArchive Startseite"><img src="assets/app-icon.png" width="40" height="40" alt=""><span>TrueArchive</span></a></div>
-    <nav aria-label="Hauptnavigation"><a class="secondary-nav" href="warum-truearchive.html">Warum TrueArchive?</a>
-      <a class="secondary-nav" href="index.html#funktionen">Funktionen</a>
-      <a class="secondary-nav" href="feedback.html" aria-current="page">Feedback</a>
-      <a class="secondary-nav" href="anleitung.html">Handbuch</a>
-      <a class="button small primary" href="index.html#alpha">Alpha herunterladen</a>
+    <nav class="site-navigation" aria-label="Hauptnavigation"><a class="secondary-nav" href="warum-truearchive.html">Warum TrueArchive?</a><a class="secondary-nav" href="index.html#funktionen">Funktionen</a><a class="secondary-nav" href="feedback.html" aria-current="page">Feedback</a><a class="secondary-nav" href="anleitung.html">Handbuch</a>
+      <a class="secondary-nav" href="ressourcen.html">Ressourcen</a>
+      <details class="site-menu"><summary>Menü</summary><nav aria-label="Website-Menü"><a href="warum-truearchive.html">Warum TrueArchive?</a><a href="index.html#funktionen">Funktionen</a><a href="feedback.html" aria-current="page">Feedback</a><a href="anleitung.html">Handbuch</a><a href="ressourcen.html">Ressourcen</a></nav></details>
+      <a class="support-nav" href="index.html#unterstuetzen">Spenden</a>
+      <span role="group" class="language-switch" aria-label="Sprache wählen"><a href="feedback.html?lang=de" data-language="de" lang="de" aria-label="Deutsch" title="Deutsch">DE</a><span aria-hidden="true">/</span><a href="en/feedback.html?lang=en" data-language="en" lang="en" aria-label="English" title="English">ENG</a></span>
+      <div class="header-actions"><a class="button small primary" href="index.html#alpha">Alpha herunterladen</a><a class="button small secondary" href="index.html#beta">Für Beta anmelden</a></div>
     </nav>
   </header>
 
@@ -68,13 +70,13 @@
     <div class="guide-heading feedback-heading">
       <h1>TrueArchive mitgestalten.</h1>
       <p>Teile deine Erfahrungen aus der Testphase oder schlage eine Funktion vor. Beides hilft uns bei den nächsten Schritten.</p>
-      <nav class="feedback-nav" aria-label="Rückmeldung wählen"><a href="#testfeedback">Feedback zur Testphase</a><a href="#featurewunsch">Featurewunsch abgeben</a></nav>
+      <nav class="feedback-nav" aria-label="Rückmeldung wählen"><a data-feedback-choice href="#testfeedback">Feedback zur Testphase</a><a data-feedback-choice href="#featurewunsch">Featurewunsch abgeben</a></nav>
     </div>
 
-    <div class="feedback-forms">
+    <div class="feedback-forms" data-feedback-forms>
       <section class="response-panel" id="testfeedback" tabindex="-1" aria-labelledby="testfeedback-title">
         <h2 id="testfeedback-title">Feedback zur Testphase</h2>
-        <p class="form-intro" id="feedback-purpose">Was funktioniert gut, was ist unklar, wo gibt es ein Problem?</p>
+        <p class="form-intro" id="feedback-purpose">Konntest du deine ersten Bilder archivieren? Wo bist du hängen geblieben?</p>
         <form id="testfeedback-form" action="https://formspree.io/f/xeaqrbwz" method="post" aria-labelledby="testfeedback-title" aria-describedby="feedback-purpose feedback-data-hint">
           <input type="hidden" name="subject" value="TrueArchive – Feedback zur Testphase">
           <input type="hidden" name="_language" value="de">
@@ -86,7 +88,8 @@
           </div>
           <div class="form-field">
             <label for="feedback-context">App-Version und Mac <span>(optional)</span></label>
-            <input id="feedback-context" name="test_environment" type="text" maxlength="180" placeholder="z. B. 0.18.0, iMac Intel, macOS 15">
+            <input id="feedback-context" name="test_environment" type="text" maxlength="180" aria-describedby="feedback-version-hint">
+            <p class="field-hint" id="feedback-version-hint">Die Version findest du im Menü: <strong>TrueArchive → Über TrueArchive</strong>. Mac-Modell und macOS-Version kannst du ergänzen.</p>
           </div>
           <div class="form-field">
             <label for="feedback-name">Name oder Kürzel <span>(optional)</span></label>
@@ -141,6 +144,6 @@
     </div>
   </main>
 
-  <footer class="site-footer wrap"><p><strong>TrueArchive</strong><br>Ein persönliches Community-Projekt.</p><nav aria-label="Weitere Informationen"><a href="warum-truearchive.html">Warum TrueArchive?</a><a href="release-notes.html">Release Notes</a><a href="index.html#funktionen">Funktionen</a><a href="index.html">Startseite</a><a href="anleitung.html">Handbuch</a><a href="index.html#unterstuetzen">Projekt unterstützen</a><a href="mailto:lutz@truearchive.app">Kontakt</a><span role="group" class="language-switch" aria-label="Sprache wählen"><a href="feedback.html?lang=de" data-language="de" lang="de" aria-label="Deutsch" title="Deutsch">DE</a><span aria-hidden="true">/</span><a href="en/feedback.html?lang=en" data-language="en" lang="en" aria-label="English" title="English">ENG</a></span></nav></footer>
+  <footer class="site-footer wrap"><p><strong>TrueArchive</strong><br>Ein persönliches Community-Projekt.</p><nav aria-label="Weitere Informationen"><a href="warum-truearchive.html">Warum TrueArchive?</a><a href="release-notes.html">Release Notes</a><a href="index.html#funktionen">Funktionen</a><a href="index.html">Startseite</a><a href="anleitung.html">Handbuch</a><a href="index.html#unterstuetzen">Projekt unterstützen</a><a href="ressourcen.html">Ressourcen</a><a href="mailto:lutz@truearchive.app">Kontakt</a><span role="group" class="language-switch" aria-label="Sprache wählen"><a href="feedback.html?lang=de" data-language="de" lang="de" aria-label="Deutsch" title="Deutsch">DE</a><span aria-hidden="true">/</span><a href="en/feedback.html?lang=en" data-language="en" lang="en" aria-label="English" title="English">ENG</a></span></nav></footer>
 </body>
 </html>

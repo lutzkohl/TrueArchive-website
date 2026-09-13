@@ -3,10 +3,10 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="description" content="Edit RAW files, archive photos, manage metadata and share pictures: a workflow with Nitro, TrueArchive, digiKam, Immich and an independent backup.">
+  <meta name="description" content="Edit RAWs on the SD card with Nitro, archive with TrueArchive, find and share with Immich: one possible workflow.">
   <meta name="robots" content="index, follow, max-image-preview:large">
   <meta name="theme-color" content="#1E3C93">
-  <title>Photo workflow: TrueArchive, Nitro, digiKam and Immich</title>
+  <title>Photo workflow with Nitro, TrueArchive and Immich</title>
   <link rel="icon" href="../assets/app-icon.png" type="image/png">
   <link rel="stylesheet" href="../styles.css">
   <script src="../language.js" defer></script>
@@ -16,8 +16,8 @@
   <link rel="alternate" hreflang="x-default" href="https://truearchive.app/workflow.html">
   <meta property="og:type" content="website">
   <meta property="og:site_name" content="TrueArchive">
-  <meta property="og:title" content="Photo workflow: TrueArchive, Nitro, digiKam and Immich">
-  <meta property="og:description" content="Edit RAW files, archive photos, manage metadata and share pictures: a workflow with Nitro, TrueArchive, digiKam, Immich and an independent backup.">
+  <meta property="og:title" content="Photo workflow with Nitro, TrueArchive and Immich">
+  <meta property="og:description" content="Edit RAWs on the SD card with Nitro, archive with TrueArchive, find and share with Immich: one possible workflow.">
   <meta property="og:url" content="https://truearchive.app/en/workflow.html">
   <meta property="og:locale" content="en_GB">
   <meta property="og:locale:alternate" content="de_DE">
@@ -26,8 +26,8 @@
   <meta property="og:image:height" content="1560">
   <meta property="og:image:alt" content="TrueArchive on Mac: archive destination and import sources, shown with example data.">
   <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:title" content="Photo workflow: TrueArchive, Nitro, digiKam and Immich">
-  <meta name="twitter:description" content="Edit RAW files, archive photos, manage metadata and share pictures: a workflow with Nitro, TrueArchive, digiKam, Immich and an independent backup.">
+  <meta name="twitter:title" content="Photo workflow with Nitro, TrueArchive and Immich">
+  <meta name="twitter:description" content="Edit RAWs on the SD card with Nitro, archive with TrueArchive, find and share with Immich: one possible workflow.">
   <meta name="twitter:image" content="https://truearchive.app/assets/app-workspace-en.png">
   <meta name="twitter:image:alt" content="TrueArchive on Mac: archive destination and import sources, shown with example data.">
   <script type="application/ld+json">
@@ -38,8 +38,8 @@
       "@type": "WebPage",
       "@id": "https://truearchive.app/en/workflow.html#webpage",
       "url": "https://truearchive.app/en/workflow.html",
-      "name": "Photo workflow: TrueArchive, Nitro, digiKam and Immich",
-      "description": "Edit RAW files, archive photos, manage metadata and share pictures: a workflow with Nitro, TrueArchive, digiKam, Immich and an independent backup.",
+      "name": "Photo workflow with Nitro, TrueArchive and Immich",
+      "description": "Edit RAWs on the SD card with Nitro, archive with TrueArchive, find and share with Immich: one possible workflow.",
       "inLanguage": "en",
       "isPartOf": {
         "@id": "https://truearchive.app/#website"
@@ -56,11 +56,12 @@
   <a class="skip-link" href="#inhalt">Skip to content</a>
   <header class="site-header wrap">
     <div class="brand"><a class="brand-home" href="index.html" aria-label="TrueArchive home"><img src="../assets/app-icon.png" width="40" height="40" alt=""><span>TrueArchive</span></a></div>
-    <nav aria-label="Main navigation">
-      <a class="secondary-nav" href="workflow.html" aria-current="page">Photo workflow</a>
-      <a class="secondary-nav" href="index.html#funktionen">Features</a>
-      <a class="secondary-nav" href="anleitung.html">Handbook</a>
-      <a class="button small primary" href="index.html#alpha">Download alpha</a>
+    <nav class="site-navigation" aria-label="Main navigation"><a class="secondary-nav" href="workflow.html" aria-current="page">Photo workflow</a><a class="secondary-nav" href="index.html#funktionen">Features</a><a class="secondary-nav" href="anleitung.html">Handbook</a>
+      <a class="secondary-nav" href="ressourcen.html">Resources</a>
+      <details class="site-menu"><summary>Menu</summary><nav aria-label="Site menu"><a href="workflow.html" aria-current="page">Photo workflow</a><a href="index.html#funktionen">Features</a><a href="anleitung.html">Handbook</a><a href="ressourcen.html">Resources</a></nav></details>
+      <a class="support-nav" href="index.html#unterstuetzen">Donate</a>
+      <span role="group" class="language-switch" aria-label="Choose language"><a href="../workflow.html?lang=de" data-language="de" lang="de" aria-label="Deutsch" title="Deutsch">DE</a><span aria-hidden="true">/</span><a href="workflow.html?lang=en" data-language="en" lang="en" aria-label="English" title="English">ENG</a></span>
+      <div class="header-actions"><a class="button small primary" href="index.html#alpha">Download alpha</a><a class="button small secondary" href="index.html#beta">Join the beta</a></div>
     </nav>
   </header>
 
@@ -83,30 +84,31 @@
       </div>
       <div class="immich-input">
         <div class="tool-node"><a class="tool-name" href="https://immich.app/"><img class="tool-logo" src="../assets/tools/immich.svg" width="48" height="48" alt="" loading="lazy" decoding="async"><span>Immich</span></a><span class="tool-context">Uploads from your phone</span><p>With Immich configured to collect uploads in a folder accessible to your Mac, TrueArchive can import them from there.</p></div>
-        <div class="flow-route"><span aria-hidden="true">↓</span>Upload folder · local source</div>
+        <div class="flow-route"><span aria-hidden="true">↓</span>Immich account · select uploads</div>
       </div>
       </div>
-      <div class="tool-node archive-collector"><a class="tool-name" href="index.html#loesung"><img class="tool-logo" src="../assets/app-icon.png" width="48" height="48" alt="" loading="lazy" decoding="async"><span>TrueArchive</span></a><span class="tool-context">Collect · check · archive</span><p>Import RAWs with XMP from the SD card, finished pictures from Apple Photos and new files from the Immich upload folder. Enable a schedule for each source as needed.</p></div>
+      <div class="tool-node archive-collector"><a class="tool-name" href="index.html#loesung"><img class="tool-logo" src="../assets/app-icon.png" width="48" height="48" alt="" loading="lazy" decoding="async"><span>TrueArchive</span></a><span class="tool-context">Collect · check · archive</span><p>Bring RAWs with their XMP files, finished pictures from Apple Photos and selected Immich uploads into one archive. Local sources and Apple Photos can run on a schedule.</p></div>
       <div class="flow-route"><span aria-hidden="true">↓</span>Import into the archive</div>
       <div class="archive-foundation"><svg class="tool-logo drive-logo" width="48" height="48" viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M10 10h28l5 21v6a3 3 0 0 1-3 3H8a3 3 0 0 1-3-3v-6l5-21Z"/><path d="M5 31h38M12 35h12"/><circle cx="35" cy="35.5" r="1" fill="currentColor"/></svg><div><h2>Your archive</h2><p>Originals · finished pictures · XMP</p><p class="archive-order">Ordinary files, organised by year, month and day. <code>2026 / 2026-09 / 2026-09-10</code><br><a href="anleitung.html#monatsordner">How files are organized</a>.</p></div></div>
-      <div class="flow-outputs"><div class="output-lane"><div class="flow-route"><span aria-hidden="true">↕</span>Read &amp; write metadata back</div><div class="tool-node "><a class="tool-name" href="https://www.digikam.org/"><img class="tool-logo" src="../assets/tools/digikam.svg" width="48" height="48" alt="" loading="lazy" decoding="async"><span>digiKam</span></a><span class="tool-context">Manage &amp; find</span><p>Manage names, ratings and descriptions. Search by person once faces have been recognised and named.</p></div></div><div class="output-lane"><div class="flow-route"><span aria-hidden="true">↓</span>Read archive only · separate setup</div><div class="tool-node "><a class="tool-name" href="https://immich.app/"><img class="tool-logo" src="../assets/tools/immich.svg" width="48" height="48" alt="" loading="lazy" decoding="async"><span>Immich</span></a><span class="tool-context">Browse &amp; share</span><p>Browse pictures on your phone or in a browser and share them with family.</p></div></div><div class="output-lane"><div class="flow-route"><span aria-hidden="true">↓</span>Make an independent copy</div><div class="tool-node"><div class="tool-name"><svg class="tool-logo drive-logo" width="48" height="48" viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M10 10h28l5 21v6a3 3 0 0 1-3 3H8a3 3 0 0 1-3-3v-6l5-21Z"/><path d="M5 31h38M12 35h12"/><circle cx="35" cy="35.5" r="1" fill="currentColor"/></svg><span>Second backup</span></div><span class="tool-context">Restore</span><p>Back up the archive and its metadata to a second drive or a backup service.</p></div></div></div>
+      <div class="flow-outputs"><div class="output-lane"><div class="flow-route"><span aria-hidden="true">↓</span>Read archive only · separate setup</div><div class="tool-node "><a class="tool-name" href="https://immich.app/"><img class="tool-logo" src="../assets/tools/immich.svg" width="48" height="48" alt="" loading="lazy" decoding="async"><span>Immich</span></a><span class="tool-context">Find, browse &amp; share</span><p>Find pictures, organise albums and share memories with your family, on your phone or in a browser.</p></div></div><div class="output-lane"><div class="flow-route"><span aria-hidden="true">↓</span>Make an independent copy</div><div class="tool-node"><div class="tool-name"><svg class="tool-logo drive-logo" width="48" height="48" viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M10 10h28l5 21v6a3 3 0 0 1-3 3H8a3 3 0 0 1-3-3v-6l5-21Z"/><path d="M5 31h38M12 35h12"/><circle cx="35" cy="35.5" r="1" fill="currentColor"/></svg><span>Second backup</span></div><span class="tool-context">Restore</span><p>Back up the archive and its metadata to a second drive or a backup service.</p></div></div></div>
     </figure>
 
     <section class="workflow-notes" aria-labelledby="workflow-notes-title">
       <h2 id="workflow-notes-title">Making it work day to day.</h2>
       <dl>
-        <div><dt>Metadata stays with the pictures.</dt><dd>XMP is an open standard for metadata. Sidecar files store information such as keywords, ratings and editing data. TrueArchive adds to existing XMP files or creates them. Different Nitro edits are retained as variants when the remaining metadata is compatible; other conflicts are reported. Metadata exchange between Nitro, TrueArchive and digiKam has not yet been fully tested with real pictures. <a href="anleitung.html#duplikate">More about variants</a>.</dd></div>
-        <div><dt>digiKam manages the archive.</dt><dd>digiKam is a free, open-source photo manager. Add the archive folder as a collection and enable writing metadata to XMP sidecars. Supported information then remains available outside the digiKam catalogue. Automatic setup by TrueArchive is planned. <a href="https://docs.digikam.org/en/setup_application/metadata_settings.html">Configure XMP in digiKam</a>.</dd></div>
-        <div id="immich-upload"><dt>Immich uploads can feed the archive.</dt><dd>Make the folder containing the uploaded originals accessible to your Mac. In TrueArchive, use <strong>+</strong> to add it as a local source, then enable a schedule in its settings. Choose the originals folder, not Immich’s thumbnails, converted videos or database. TrueArchive copies the media and leaves the source unchanged. The Mac must be awake, TrueArchive running and both source and archive connected. This folder-based workflow is available now; it does not sync Immich albums or database entries. <a href="anleitung.html#einrichtung">Set up a source</a>.</dd></div>
-        <div><dt>Immich is a window into the archive.</dt><dd>Immich is an open-source photo app for your own server. The server needs to be running when you want to view pictures. Mount the archive as a read-only external library; there is no need to upload it again. Immich does not display every XMP field or Nitro editing recipe. Use the finished pictures for viewing. Automatic configuration and control of Immich through TrueArchive are planned. <a href="https://docs.immich.app/features/libraries/">External libraries in Immich</a>.</dd></div>
-        <div><dt>A second backup protects against loss.</dt><dd>Another view in digiKam or Immich is not a backup. Back up the archive independently and check that files can be restored. For Immich, also back up its database and own files, including user and album information. Scheduled Hetzner backups through TrueArchive are a planned module. <a href="https://docs.immich.app/administration/backup-and-restore/">Back up Immich</a>.</dd></div>
+        <div><dt>Metadata stays with the pictures.</dt><dd>XMP is an open standard for picture information. These sidecar files keep keywords, ratings and supported editing settings beside the original. TrueArchive preserves existing XMP information and creates sidecars where needed. Different Nitro edits can be kept as separate versions. <a href="anleitung.html#duplikate">How to keep edits and handle differing metadata</a>.</dd></div>
+        <div id="immich-upload"><dt>Immich uploads can feed the archive.</dt><dd>Add your Immich account as a source in TrueArchive, load its uploads and select the pictures you want to archive. This direct import currently starts manually; a schedule for it has not been implemented yet. Files from external archive libraries are excluded. <a href="anleitung.html#immich">Set up the direct Immich import</a>.</dd></div>
+        <div><dt>Use a schedule for an accessible upload folder.</dt><dd>If the original upload folder is already accessible to your Mac, you can add it as a local source and enable a schedule. Select the originals folder, not thumbnails, converted videos or the database. This copies files without importing Immich albums or database information. The Mac must be awake, TrueArchive running and both source and archive accessible. <a href="anleitung.html#einrichtung">Set up a local source</a>.</dd></div>
+        <div><dt>Immich is a window into the archive.</dt><dd>Immich is an open-source photo app for your own server. Add the archive as a read-only external library, then browse, search and share its pictures. Your server and archive drive must be available. Immich can rescan the library on a schedule. It does not display every XMP field or apply Nitro’s RAW editing settings; use exported JPEGs or HEICs to view finished edits. <a href="https://docs.immich.app/features/libraries/">Set up an external library</a>.</dd></div>
+        <div><dt>Also back up what you organise in Immich.</dt><dd>With the archive mounted read-only, changes you make in Immich do not write back into its files. Albums and other information managed by Immich therefore need their own backup. <a href="https://docs.immich.app/features/xmp-sidecars/">Immich and XMP files</a>.</dd></div>
+        <div><dt>A second backup protects against loss.</dt><dd>Another view in Immich is not a backup. Back up the archive independently and check that files can be restored. For Immich, also back up its database and own files, including user and album information. Scheduled Hetzner backups through TrueArchive are a planned module. <a href="https://docs.immich.app/administration/backup-and-restore/">Back up Immich</a>.</dd></div>
       </dl>
       <p class="tools-note">You can use other tools too. Old drives, additional folders and manual Google Photos exports can also be sources for TrueArchive. The programs are installed separately; this workflow is not an all-in-one package.</p>
     </section>
     <div class="workflow-invitation"><p>Your pictures. Your archive. Your workflow.</p><a class="button primary" href="index.html#alpha">Download alpha</a></div>
-    <p class="tool-credits">Product logos: <a href="https://apps.apple.com/app/id1591292532">Nitro / Gentlemen Coders</a>, <a href="https://www.apple.com/macos/photos/">Apple Photos / Apple</a>, <a href="https://www.digikam.org/">digiKam</a>, <a href="https://github.com/immich-app/immich/tree/v3.1.0/design">Immich</a>. Used to identify the respective tools; no official partnership.</p>
+    <p class="tool-credits">Product logos: <a href="https://apps.apple.com/app/id1591292532">Nitro / Gentlemen Coders</a>, <a href="https://www.apple.com/macos/photos/">Apple Photos / Apple</a>, <a href="https://github.com/immich-app/immich/tree/v3.1.0/design">Immich</a>. Used to identify the respective tools; no official partnership.</p>
   </main>
 
-  <footer class="site-footer wrap"><p><strong>TrueArchive</strong><br>A personal community project.</p><nav aria-label="Further information"><a href="index.html">Home</a><a href="workflow.html" aria-current="page">Photo workflow</a><a href="anleitung.html">Handbook</a><a href="release-notes.html">Release Notes</a><a href="feedback.html">Feedback &amp; ideas</a><a href="index.html#unterstuetzen">Support the project</a><a href="mailto:lutz@truearchive.app">Contact</a><span role="group" class="language-switch" aria-label="Choose language"><a href="../workflow.html?lang=de" data-language="de" lang="de" aria-label="Deutsch" title="Deutsch">DE</a><span aria-hidden="true">/</span><a href="workflow.html?lang=en" data-language="en" lang="en" aria-label="English" title="English">ENG</a></span></nav></footer>
+  <footer class="site-footer wrap"><p><strong>TrueArchive</strong><br>A personal community project.</p><nav aria-label="Further information"><a href="index.html">Home</a><a href="workflow.html" aria-current="page">Photo workflow</a><a href="anleitung.html">Handbook</a><a href="release-notes.html">Release Notes</a><a href="feedback.html">Feedback &amp; ideas</a><a href="index.html#unterstuetzen">Support the project</a><a href="ressourcen.html">Resources</a><a href="mailto:lutz@truearchive.app">Contact</a><span role="group" class="language-switch" aria-label="Choose language"><a href="../workflow.html?lang=de" data-language="de" lang="de" aria-label="Deutsch" title="Deutsch">DE</a><span aria-hidden="true">/</span><a href="workflow.html?lang=en" data-language="en" lang="en" aria-label="English" title="English">ENG</a></span></nav></footer>
 </body>
 </html>

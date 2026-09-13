@@ -10,6 +10,7 @@
   <link rel="icon" href="../assets/app-icon.png" type="image/png">
   <link rel="stylesheet" href="../styles.css">
   <script src="../language.js" defer></script>
+  <script src="../feedback.js" defer></script>
   <link rel="canonical" href="https://truearchive.app/en/feedback.html">
   <link rel="alternate" hreflang="de" href="https://truearchive.app/feedback.html">
   <link rel="alternate" hreflang="en" href="https://truearchive.app/en/feedback.html">
@@ -56,11 +57,12 @@
   <a class="skip-link" href="#inhalt">Skip to content</a>
   <header class="site-header wrap">
     <div class="brand"><a class="brand-home" href="index.html" aria-label="TrueArchive home"><img src="../assets/app-icon.png" width="40" height="40" alt=""><span>TrueArchive</span></a></div>
-    <nav aria-label="Main navigation"><a class="secondary-nav" href="warum-truearchive.html">Why TrueArchive?</a>
-      <a class="secondary-nav" href="index.html#funktionen">Features</a>
-      <a class="secondary-nav" href="feedback.html" aria-current="page">Feedback</a>
-      <a class="secondary-nav" href="anleitung.html">Handbook</a>
-      <a class="button small primary" href="index.html#alpha">Download alpha</a>
+    <nav class="site-navigation" aria-label="Main navigation"><a class="secondary-nav" href="warum-truearchive.html">Why TrueArchive?</a><a class="secondary-nav" href="index.html#funktionen">Features</a><a class="secondary-nav" href="feedback.html" aria-current="page">Feedback</a><a class="secondary-nav" href="anleitung.html">Handbook</a>
+      <a class="secondary-nav" href="ressourcen.html">Resources</a>
+      <details class="site-menu"><summary>Menu</summary><nav aria-label="Site menu"><a href="warum-truearchive.html">Why TrueArchive?</a><a href="index.html#funktionen">Features</a><a href="feedback.html" aria-current="page">Feedback</a><a href="anleitung.html">Handbook</a><a href="ressourcen.html">Resources</a></nav></details>
+      <a class="support-nav" href="index.html#unterstuetzen">Donate</a>
+      <span role="group" class="language-switch" aria-label="Choose language"><a href="../feedback.html?lang=de" data-language="de" lang="de" aria-label="Deutsch" title="Deutsch">DE</a><span aria-hidden="true">/</span><a href="feedback.html?lang=en" data-language="en" lang="en" aria-label="English" title="English">ENG</a></span>
+      <div class="header-actions"><a class="button small primary" href="index.html#alpha">Download alpha</a><a class="button small secondary" href="index.html#beta">Join the beta</a></div>
     </nav>
   </header>
 
@@ -68,13 +70,13 @@
     <div class="guide-heading feedback-heading">
       <h1>Help shape TrueArchive.</h1>
       <p>Share your experience from testing or suggest a feature. Both help us decide what comes next.</p>
-      <nav class="feedback-nav" aria-label="Choose feedback type"><a href="#testfeedback">Feedback on testing</a><a href="#featurewunsch">Suggest a feature</a></nav>
+      <nav class="feedback-nav" aria-label="Choose feedback type"><a data-feedback-choice href="#testfeedback">Feedback on testing</a><a data-feedback-choice href="#featurewunsch">Suggest a feature</a></nav>
     </div>
 
-    <div class="feedback-forms">
+    <div class="feedback-forms" data-feedback-forms>
       <section class="response-panel" id="testfeedback" tabindex="-1" aria-labelledby="testfeedback-title">
         <h2 id="testfeedback-title">Feedback on testing</h2>
-        <p class="form-intro" id="feedback-purpose">What works well, what is unclear, and where have you run into a problem?</p>
+        <p class="form-intro" id="feedback-purpose">Could you archive your first pictures? Where did you get stuck?</p>
         <form id="testfeedback-form" action="https://formspree.io/f/xeaqrbwz" method="post" aria-labelledby="testfeedback-title" aria-describedby="feedback-purpose feedback-data-hint">
           <input type="hidden" name="subject" value="TrueArchive – Feedback zur Testphase">
           <input type="hidden" name="_language" value="en">
@@ -86,7 +88,8 @@
           </div>
           <div class="form-field">
             <label for="feedback-context">App version and Mac <span>(optional)</span></label>
-            <input id="feedback-context" name="test_environment" type="text" maxlength="180" placeholder="e.g. 0.18.0, Intel iMac, macOS 15">
+            <input id="feedback-context" name="test_environment" type="text" maxlength="180" aria-describedby="feedback-version-hint">
+            <p class="field-hint" id="feedback-version-hint">Find the version in the menu: <strong>TrueArchive → About TrueArchive</strong>. You can also add your Mac model and macOS version.</p>
           </div>
           <div class="form-field">
             <label for="feedback-name">Name or nickname <span>(optional)</span></label>
@@ -141,6 +144,6 @@
     </div>
   </main>
 
-  <footer class="site-footer wrap"><p><strong>TrueArchive</strong><br>A personal community project.</p><nav aria-label="Further information"><a href="warum-truearchive.html">Why TrueArchive?</a><a href="release-notes.html">Release Notes</a><a href="index.html#funktionen">Features</a><a href="index.html">Home</a><a href="anleitung.html">Handbook</a><a href="index.html#unterstuetzen">Support the project</a><a href="mailto:lutz@truearchive.app">Contact</a><span role="group" class="language-switch" aria-label="Choose language"><a href="../feedback.html?lang=de" data-language="de" lang="de" aria-label="Deutsch" title="Deutsch">DE</a><span aria-hidden="true">/</span><a href="feedback.html?lang=en" data-language="en" lang="en" aria-label="English" title="English">ENG</a></span></nav></footer>
+  <footer class="site-footer wrap"><p><strong>TrueArchive</strong><br>A personal community project.</p><nav aria-label="Further information"><a href="warum-truearchive.html">Why TrueArchive?</a><a href="release-notes.html">Release Notes</a><a href="index.html#funktionen">Features</a><a href="index.html">Home</a><a href="anleitung.html">Handbook</a><a href="index.html#unterstuetzen">Support the project</a><a href="ressourcen.html">Resources</a><a href="mailto:lutz@truearchive.app">Contact</a><span role="group" class="language-switch" aria-label="Choose language"><a href="../feedback.html?lang=de" data-language="de" lang="de" aria-label="Deutsch" title="Deutsch">DE</a><span aria-hidden="true">/</span><a href="feedback.html?lang=en" data-language="en" lang="en" aria-label="English" title="English">ENG</a></span></nav></footer>
 </body>
 </html>

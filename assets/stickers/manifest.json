@@ -1,0 +1,186 @@
+{
+  "version": 1,
+  "design_count": 8,
+  "width": 512,
+  "height": 512,
+  "print_trim_mm": 60,
+  "print_bleed_mm": 3,
+  "designs": [
+    {
+      "id": "01-logo",
+      "title_de": "Nur das Logo",
+      "title_en": "Just the logo",
+      "files": {
+        "png": {
+          "path": "png/01-logo.png",
+          "bytes": 167675,
+          "sha256": "cc1e3967c0c7c4d68009aa4e9596e2c992dc95a1f1bbb881b20c57cb6715d5a8"
+        },
+        "webp": {
+          "path": "webp/01-logo.webp",
+          "bytes": 12400,
+          "sha256": "4290a82a7d492af6ca28458285848973d32902a778acbbce0e6d2af393648468"
+        },
+        "pdf": {
+          "path": "print/01-logo-60mm-3mm-beschnitt.pdf",
+          "bytes": 2679683,
+          "sha256": "f597e446879d1f91b6d4af96bfd344bbed0e5440e48467724a36f1d12c1c2c27"
+        }
+      }
+    },
+    {
+      "id": "02-ein-zuhause-hell",
+      "title_de": "Alle Bilder. Ein Zuhause.",
+      "title_en": "All your photos. One home. — white",
+      "files": {
+        "png": {
+          "path": "png/02-ein-zuhause-hell.png",
+          "bytes": 65187,
+          "sha256": "99ddf2d1ac9d2314350593f42468c07bba0db8757bbfa43d9b92dc9ef55c287a"
+        },
+        "webp": {
+          "path": "webp/02-ein-zuhause-hell.webp",
+          "bytes": 33054,
+          "sha256": "7789c6e2d2afcb679262ac223b27344e2211cb15f147b288c2a09b71a6362a3c"
+        },
+        "pdf": {
+          "path": "print/02-ein-zuhause-hell-60mm-3mm-beschnitt.pdf",
+          "bytes": 2741968,
+          "sha256": "56b0b22a521743d1a078401e2205879aeb6ed3764ce43e2f517d99b0b4414f01"
+        }
+      }
+    },
+    {
+      "id": "03-ein-zuhause-blau",
+      "title_de": "Alle Bilder. Ein Zuhause.",
+      "title_en": "All your photos. One home. — blue",
+      "files": {
+        "png": {
+          "path": "png/03-ein-zuhause-blau.png",
+          "bytes": 67597,
+          "sha256": "9c8c932e4e8a501c85149d3bbc8cfff9df72671b91c8db8bf0ca9274cc52d16b"
+        },
+        "webp": {
+          "path": "webp/03-ein-zuhause-blau.webp",
+          "bytes": 34860,
+          "sha256": "de079a3cb9fdbeaeef14aa48332515412b2cb6d1deef13093c197d7dcfb1b129"
+        },
+        "pdf": {
+          "path": "print/03-ein-zuhause-blau-60mm-3mm-beschnitt.pdf",
+          "bytes": 2741953,
+          "sha256": "1567de442ea3309c9efa860f240abb66e0c7d291cd2eb8340b8462a650908133"
+        }
+      }
+    },
+    {
+      "id": "04-dein-archiv",
+      "title_de": "Deine Bilder. Dein Archiv.",
+      "title_en": "Your photos. Your archive.",
+      "files": {
+        "png": {
+          "path": "png/04-dein-archiv.png",
+          "bytes": 65637,
+          "sha256": "e3fc783d89ff1d9993a882206843accc7f33f268f2efdde3210c9e8d91375365"
+        },
+        "webp": {
+          "path": "webp/04-dein-archiv.webp",
+          "bytes": 33440,
+          "sha256": "6f748f0ad3c87073075575f82d8b142ed0d10c45e2937818cc9ff2e84cbbf0f7"
+        },
+        "pdf": {
+          "path": "print/04-dein-archiv-60mm-3mm-beschnitt.pdf",
+          "bytes": 2741959,
+          "sha256": "1e41a3d50bb896adbc89e21e9669262be2eb842eb730c23f98295f3cf813b8e3"
+        }
+      }
+    },
+    {
+      "id": "05-erinnerungen",
+      "title_de": "Deine Erinnerungen. Bei dir.",
+      "title_en": "Your memories. With you.",
+      "files": {
+        "png": {
+          "path": "png/05-erinnerungen.png",
+          "bytes": 65623,
+          "sha256": "40795cd3bfacbf13b0dd3d43fe97d9cb8aa1224e509aaf68d6e8d2929c31a34f"
+        },
+        "webp": {
+          "path": "webp/05-erinnerungen.webp",
+          "bytes": 33540,
+          "sha256": "be02e8840ef390cdeb40861e18fdaa3bdf4a6f4544a22dc6a29b456b13f096de"
+        },
+        "pdf": {
+          "path": "print/05-erinnerungen-60mm-3mm-beschnitt.pdf",
+          "bytes": 2741976,
+          "sha256": "becf33fc427cc8ed4ecf8ba098831693aec007dec960e5ddb65cd3df0b182039"
+        }
+      }
+    },
+    {
+      "id": "06-ohne-abo",
+      "title_de": "Deine Bilder. Ohne Abo.",
+      "title_en": "Your photos. No subscription.",
+      "files": {
+        "png": {
+          "path": "png/06-ohne-abo.png",
+          "bytes": 65660,
+          "sha256": "6bf56573c12320e04f869a70d0ca8e9a5f673acd683e9f09f8bde78f65bcc16f"
+        },
+        "webp": {
+          "path": "webp/06-ohne-abo.webp",
+          "bytes": 33370,
+          "sha256": "f1db34b799dacb9a39dccd91c4d52d0393277128f1cf8c151a9ae6a15758d53b"
+        },
+        "pdf": {
+          "path": "print/06-ohne-abo-60mm-3mm-beschnitt.pdf",
+          "bytes": 2741962,
+          "sha256": "9fb510259e5290b40d99576e59bdb10c8ddfc19839fe63232f3e01306588fd98"
+        }
+      }
+    },
+    {
+      "id": "07-raus-aus-der-cloud",
+      "title_de": "Raus aus der Cloud. Rein ins Archiv.",
+      "title_en": "Out of the cloud. Into your archive.",
+      "files": {
+        "png": {
+          "path": "png/07-raus-aus-der-cloud.png",
+          "bytes": 68077,
+          "sha256": "c1973e21721625a6a1b9b049c66953dcdccce6a115ab6a5a85f1430ad7f5c045"
+        },
+        "webp": {
+          "path": "webp/07-raus-aus-der-cloud.webp",
+          "bytes": 35412,
+          "sha256": "0a74f00ea7ae7283a87bd252fea2ca860f3da4aa73dd5a6a2fc8085cdd2b4f0f"
+        },
+        "pdf": {
+          "path": "print/07-raus-aus-der-cloud-60mm-3mm-beschnitt.pdf",
+          "bytes": 2741985,
+          "sha256": "eee5d92081ad9bedb6af9341c8fbca1863af3c0a8eed2a69e302c5ce2202818c"
+        }
+      }
+    },
+    {
+      "id": "08-gesammelt-geordnet",
+      "title_de": "Gesammelt. Geordnet. Bei dir.",
+      "title_en": "Collected. Organised. With you.",
+      "files": {
+        "png": {
+          "path": "png/08-gesammelt-geordnet.png",
+          "bytes": 67161,
+          "sha256": "804d99009e97a3d342c11bbcd08267ede664de0e2f0f7168ff932fa6a61a70a1"
+        },
+        "webp": {
+          "path": "webp/08-gesammelt-geordnet.webp",
+          "bytes": 34688,
+          "sha256": "c1580e67351c7e6eca49a934196a05f79998b4356d3385ab98b6c31f84a7cd3f"
+        },
+        "pdf": {
+          "path": "print/08-gesammelt-geordnet-60mm-3mm-beschnitt.pdf",
+          "bytes": 2741975,
+          "sha256": "314f639fbdb7b384f959d5fa7a68c4c7b9e464966c08be034192417b351009f6"
+        }
+      }
+    }
+  ]
+}

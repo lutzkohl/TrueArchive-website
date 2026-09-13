@@ -105,11 +105,12 @@
   <a class="skip-link" href="#inhalt">Skip to content</a>
   <header class="site-header wrap">
     <div class="brand"><a class="brand-home" href="index.html" aria-label="TrueArchive home"><img src="../assets/app-icon.png" width="40" height="40" alt=""><span>TrueArchive</span></a></div>
-    <nav aria-label="Main navigation"><a class="secondary-nav" href="#problem">Why TrueArchive?</a>
-      <a class="secondary-nav" href="#funktionen">Features</a>
-      <a class="secondary-nav" href="feedback.html">Feedback</a>
-      <a class="secondary-nav" href="anleitung.html">Handbook</a>
-      <a class="button small primary" href="#alpha">Download alpha</a>
+    <nav class="site-navigation" aria-label="Main navigation"><a class="secondary-nav" href="#problem">Why TrueArchive?</a><a class="secondary-nav" href="#funktionen">Features</a><a class="secondary-nav" href="feedback.html">Feedback</a><a class="secondary-nav" href="anleitung.html">Handbook</a>
+      <a class="secondary-nav" href="ressourcen.html">Resources</a>
+      <details class="site-menu"><summary>Menu</summary><nav aria-label="Site menu"><a href="#problem">Why TrueArchive?</a><a href="#funktionen">Features</a><a href="feedback.html">Feedback</a><a href="anleitung.html">Handbook</a><a href="ressourcen.html">Resources</a></nav></details>
+      <a class="support-nav" href="#unterstuetzen">Donate</a>
+      <span role="group" class="language-switch" aria-label="Choose language"><a href="../index.html?lang=de" data-language="de" lang="de" aria-label="Deutsch" title="Deutsch">DE</a><span aria-hidden="true">/</span><a href="index.html?lang=en" data-language="en" lang="en" aria-label="English" title="English">ENG</a></span>
+      <div class="header-actions"><a class="button small primary" href="#alpha">Download alpha</a><a class="button small secondary" href="#beta">Join the beta</a></div>
     </nav>
   </header>
 
@@ -129,9 +130,10 @@
       </figure>
       <div class="home-story-copy">
         <h1 id="hero-title">Your pictures are everywhere.</h1>
-        <p class="lead">Your holiday photos in Apple Photos. The RAWs on your camera card. Drone videos on a tiny microSD. And somewhere, there’s that USB stick from Mum.</p>
-        <p>Your old drive has folders called “Holiday”, “Holiday new” and “Pictures to sort”. The next drive holds a different selection. When you need that one photo, you no longer know where to start.</p>
-        <a class="story-next" href="#loesung">Give your pictures a place together <span aria-hidden="true">↓</span></a>
+        <p class="lead">Holiday photos in Apple Photos, RAW files on the camera card, another selection on an old hard drive. Where was that one picture?</p>
+        <p class="product-summary">TrueArchive gathers your photos and videos into an organised archive on your hard drive.</p>
+        <p class="product-meta">For Mac · free · early alpha</p>
+        <a class="story-next" href="#loesung">See how it works <span aria-hidden="true">↓</span></a>
       </div>
     </section>
 
@@ -140,10 +142,9 @@
         <div class="solution-heading">
           <div><span class="eyebrow">TrueArchive for Mac</span><h2 id="solution-title">One place for all your pictures.</h2></div>
           <div class="solution-copy">
-            <p>A drive with enough space. One folder for your archive. TrueArchive brings your pictures and videos there from Apple Photos, SD cards and selected folders – as a one-off import or on a schedule.</p>
-            <p>The destination stays in view at the top. Archive one source or all connected sources with one click. Settings, previews and results open directly at each source. Quick actions are also available in the menu bar.</p>
-            <p>Your sources stay untouched. The archive belongs to you: ordinary files you can open even without TrueArchive.</p>
-            <a class="button primary beta-button" href="#alpha">Try the alpha</a>
+            <p>You choose which pictures to add. The result then shows which pictures are in the archive and which files could not be imported.</p>
+            <p>Your sources stay unchanged. Your archive contains ordinary files that you can open without TrueArchive.</p>
+            <div class="intro-actions"><a class="button primary" href="#alpha">Try the alpha</a><a class="button secondary" href="#beta">Join the beta</a></div>
             <p class="beta-meta">For Mac · macOS 15+ · Intel and Apple Silicon</p>
           </div>
         </div>
@@ -151,9 +152,9 @@
           <a href="../assets/app-workspace-en.png?v=0.20.0" aria-label="Enlarge the app view with sample data"><img src="../assets/app-workspace-en.png?v=0.20.0" width="1100" height="780" alt="TrueArchive 0.20.0: the archive destination highlighted in blue, automation below it and a shared source list with archive, settings and eject actions." loading="lazy" decoding="async"></a>
           <figcaption id="app-caption">TrueArchive 0.20.0: archive destination and sources in one workspace. Native view with sample data. <a href="../assets/app-workspace-en.png?v=0.20.0">Enlarge the view</a></figcaption>
         </figure>
-        <div class="archive-story">
+        <div class="archive-story" id="archiv" tabindex="-1">
           <div class="archive-story-visual">
-            <h2>Sorted. Described.<br>Found again.</h2>
+            <h2>Your pictures.<br>In ordinary folders.</h2>
             <figure class="archive-example" aria-labelledby="archive-example-caption">
               <div class="archive-window">
                 <div class="archive-window-heading">Year → month → day</div>
@@ -175,28 +176,18 @@
             </figure>
           </div>
           <div class="story-prose">
-            <p>New archives are organised by <strong>year, month and day</strong>, for example <code>2026/2026-09/2026-09-10</code>. Only months and days containing files are created. Without a known capture date, <code>Unbekannt</code> (unknown) stays directly in the archive. <a href="anleitung.html#monatsordner">How files are organized</a>.</p>
-            <p>Originals, finished edits and available metadata stay together: capture dates, GPS coordinates, keywords and album memberships, depending on the source and format.</p>
-            <p><strong>XMP files</strong> store this metadata using an <a href="https://developer.adobe.com/xmp/docs/xmp-specifications/">open standard</a> and sit alongside your pictures as companion files. TrueArchive imports and adds to existing XMP files, or creates them in the archive when none exist.</p>
-            <p><a href="https://www.digikam.org/"><strong>digiKam</strong></a> is a free, open-source photo management application for organising and searching your archived picture collection. Add your archive folder to it and search by date, keywords or location.</p>
-            <p>Once digiKam has indexed faces and you have assigned names, you can also find <strong>people</strong>. Like Mum, across pictures from all your drives.</p>
-            <a class="story-next" href="anleitung.html#digikam">More about searching with digiKam <span aria-hidden="true">→</span></a>
+            <p>New archives use <strong>year, month and day folders</strong>. Originals, finished edits and available picture information stay together, depending on the source and format.</p>
+            <p><strong>XMP sidecar files</strong> keep information such as dates, locations and keywords beside the pictures in an <a href="https://developer.adobe.com/xmp/docs/xmp-specifications/">open standard</a>. <a href="anleitung.html#monatsordner">More about the folder layout</a>.</p>
+            <dl class="archive-roles">
+              <div><dt>TrueArchive archives.</dt><dd>Your pictures stay on the drive you choose.</dd></div>
+              <div><dt>Immich helps you find and share pictures.</dt><dd>Browse your archive on your phone or in a browser with this open-source photo app on your own server. <a href="workflow.html#ablauf">See the workflow with Immich</a>.</dd></div>
+              <div><dt>A second backup adds protection.</dt><dd>Keep an independent, checked copy in case the archive drive fails.</dd></div>
+            </dl>
           </div>
         </div>
       </div>
     </section>
 
-    <section class="workflow" id="archiv" aria-labelledby="workflow-title">
-      <div class="wrap">
-        <div class="section-heading"><h2 id="workflow-title">Three steps to your archive.</h2><p>Connect your sources and archive.<br>Your sources remain unchanged.</p></div>
-        <ol class="steps">
-          <li><span class="step-number" aria-hidden="true">1</span><h3>Choose an archive</h3><p>Connect a new empty folder, your TrueArchive archive or an existing picture folder.</p></li>
-          <li><span class="step-number" aria-hidden="true">2</span><h3>Add a source</h3><p>Connect Apple Photos, cards, drives, folders, Takeout or an Immich account, then set the scope.</p></li>
-          <li><span class="step-number" aria-hidden="true">3</span><h3>Archive directly</h3><p>Start a local source or Apple Photos, or process them in sequence. Select, check and archive Immich uploads separately.</p></li>
-        </ol>
-        <p class="workflow-note">You start the first sync yourself. Enable a schedule for local sources and Apple Photos if you want; Takeout and Immich remain manual. Keep a separate second backup too, so a failed archive drive does not cost you your pictures. <a href="anleitung.html#einrichtung">Read the guide</a></p>
-      </div>
-    </section>
 
     <section class="alpha-section wrap" id="alpha" tabindex="-1" aria-labelledby="alpha-title">
       <div class="alpha-warning" id="alpha-warning">
@@ -214,6 +205,16 @@
           <p><a href="anleitung.html#macos-startfreigabe">Detailed startup help</a> · <a href="https://support.apple.com/en-us/102445">Apple’s instructions</a></p>
           <p>No signup required. <a href="feedback.html#testfeedback">Share feedback</a> · <a href="release-notes.html#v0-20-0">What’s new?</a></p></div>
       </div>
+      <div class="first-test" id="erster-test" tabindex="-1">
+        <h3>Your first test: five copied photos.</h3>
+        <ol>
+          <li>Copy five photos into a separate test folder. Keep the originals and your independent backup.</li>
+          <li>In TrueArchive, choose a <strong>new, empty folder</strong> as the archive and add the test folder as a local source.</li>
+          <li>Archive this source. Check the result, then <strong>open the five pictures in the destination folder</strong>.</li>
+          <li>Add a second source with a few copied pictures, such as an SD card or another folder. Archive it into the <strong>same archive</strong> and check that pictures from both sources are there. Repeat the import to check that unchanged pictures are recognised.</li>
+        </ol>
+        <p>Did that work? <a href="feedback.html#testfeedback">Tell us about your first test</a>. Need help? <a href="anleitung.html#einrichtung">Follow the setup guide</a>.</p>
+      </div>
       <details class="download-privacy"><summary>How are downloads counted?</summary><p>GitHub counts downloads of the app package, not unique people or successful installations. This page requests the current total from GitHub; GitHub receives technical connection data such as your IP address. We add no tracking cookies or visitor profiles. If the count is unavailable, the download still works. <a href="https://docs.github.com/en/site-policy/privacy-policies/github-general-privacy-statement">GitHub privacy statement</a>.</p></details>
     </section>
 
@@ -223,65 +224,37 @@
         <p class="feature-release"><a href="release-notes.html#v0-20-0">Alpha 0.20.0 · What’s new</a></p>
       </div>
       <div class="feature-group">
-        <div class="feature-intro">
-          <h3>Bring your pictures together</h3>
-          <p>Many sources, one collection. You choose what goes into your archive.</p>
-        </div>
+        <div class="feature-intro"><h3>Bring your pictures into one central archive</h3></div>
         <dl class="feature-points">
-          <div><dt>Apple Photos, cards and drives</dt><dd>Import your library and selected local folders. In Apple Photos, you can narrow the capture date range.</dd></div>
-          <div><dt>Google Photos via Takeout</dt><dd>Manually import an extracted export with its supported metadata. <a href="anleitung.html#google-photos">How to prepare your export.</a></dd></div>
-          <div><dt>Your Immich uploads</dt><dd>Connect an account, select uploads, check originals and available XMPs, then deliberately archive them. External library files are excluded. <a href="anleitung.html#immich">Immich step by step.</a></dd></div>
-          <div><dt>Direct starts, visible automation</dt><dd>Archive one source or all connected local sources and Apple Photos with one click. Settings and results stay with the source. Pause supported schedules together; your Mac needs to be awake and TrueArchive running. <a href="anleitung.html#menueleiste">Menu bar quick actions.</a></dd></div>
+          <div><dt>Choose your sources</dt><dd>Apple Photos, cards and local folders; manually prepared <a href="anleitung.html#google-photos">Google Takeout exports</a> and selected <a href="anleitung.html#immich">Immich uploads</a>.</dd></div>
+          <div><dt>Repeat when it suits you</dt><dd>Archive local sources and Apple Photos on a schedule while the Mac is awake and TrueArchive is running. You currently select Immich uploads yourself; scheduled direct imports are not available yet. Google Takeout exports need to be downloaded and unpacked first. <a href="workflow.html#immich-upload">More about importing from Immich</a>.</dd></div>
         </dl>
       </div>
       <div class="feature-group">
-        <div class="feature-intro">
-          <h3>Keep originals and metadata</h3>
-          <p>Your sources stay unchanged. Pictures and their stories stay together in the archive.</p>
-        </div>
+        <div class="feature-intro"><h3>Preserve originals and picture information</h3></div>
         <dl class="feature-points">
-          <div><dt>Originals, edits and picture information</dt><dd>Available details such as dates, GPS and albums come along. XMP companion files store metadata using an open standard; missing XMP files are created in the archive.</dd></div>
-          <div><dt>Recognize duplicates, keep different edits</dt><dd>Identify identical media files and record where they came from. Different Nitro edits are kept as variants when their metadata is compatible. Other conflicts remain open for review. <a href="anleitung.html#duplikate">More about variants and conflicts.</a></dd></div>
+          <div><dt>Keep your edits</dt><dd>A colour edit and a black-and-white edit of the same RAW? Both can be kept as separate versions, each with its editing settings. TrueArchive also records where identical pictures came from.</dd></div>
+          <div><dt>Decide when picture information differs</dt><dd>The preview shows which files need a decision. For local sources, choose “Keep both versions” or leave the file unselected for now. <a href="anleitung.html#duplikate">How to handle these cases</a>.</dd></div>
         </dl>
       </div>
       <div class="feature-group">
-        <div class="feature-intro">
-          <h3>Find your pictures again</h3>
-          <p>An archive you can open without TrueArchive and use with other applications.</p>
-        </div>
+        <div class="feature-intro"><h3>Keep an open archive</h3></div>
         <dl class="feature-points">
-          <div><dt>Order on your drive</dt><dd>Ordinary files in date folders; new archives use a fixed year/month/day order. The free, open-source photo manager digiKam lets you search by date, places and keywords – and by people once faces have been indexed and named.</dd></div>
-          <div><dt>Add keywords automatically</dt><dd>If you enable it, Apple Vision adds keywords in German, English or both to photos and, separately, videos. For videos, one frame every ten seconds is analysed and sample timestamps are stored in XMP. Recognition runs on your Mac; existing keywords stay intact.</dd></div>
+          <div><dt>Use your own tools</dt><dd>Ordinary media and XMP files work with other software. Optional <a href="anleitung.html#vision">Apple Vision keywords</a> are generated locally on your Mac, separately for photos and videos.</dd></div>
         </dl>
       </div>
       <p class="feature-handbook">Want to know exactly how it works? <a href="anleitung.html">Explore workflows and limitations in the handbook</a></p>
 
       <details class="planned-modules" id="module">
-        <summary><span>What we have planned</span><span class="summary-hint">7 ideas and planned modules · not yet available</span></summary>
+        <summary><span>Ideas for the next steps</span><span class="summary-hint">4 open ideas · not yet available</span></summary>
         <div class="module-content">
-          <p class="module-intro">These extensions are planned. Your feedback helps shape what comes first. There are no fixed release dates yet.</p>
-          <div class="module-group">
-            <h3>Bring in more collections</h3>
-            <dl class="module-list">
-              <div><dt>Adobe Lightroom Cloud</dt><dd>Regularly import pictures and available metadata.</dd></div>
-              <div><dt>Explore old picture drives</dt><dd>Get an overview of unfamiliar collections and choose folders to import. Individual folders can already be imported today.</dd></div>
-            </dl>
-          </div>
-          <div class="module-group">
-            <h3>Add a backup and free up space</h3>
-            <dl class="module-list">
-              <div><dt>Cloud backup with Hetzner</dt><dd>Regularly back up the archive with encryption, retain changes and earlier backup versions, and restore after a drive failure. Cloud storage is required separately.</dd></div>
+          <p class="module-intro">Four ideas for what comes next. Tell us which would help you most; release dates are not fixed yet.</p>
+          <dl class="module-list">
+              <div><dt>Import directly from Lightroom Cloud</dt><dd>Fetch pictures and available metadata directly from Adobe, without having to export them in Lightroom first.</dd></div>
+              <div><dt>Back up and restore your archive</dt><dd>Restore your archive from a chosen backup date. First on a second local drive, later with encrypted cloud storage at Hetzner. Cloud storage is paid for separately.</dd></div>
               <div><dt>Free up space in Apple Photos</dt><dd>Selectively remove large videos after their archiving has been verified. As a separate, optional module.</dd></div>
+              <div><dt>Create photo books</dt><dd>Select suitable pictures and later have them printed as a book.</dd></div>
             </dl>
-          </div>
-          <div class="module-group">
-            <h3>Do more with your pictures</h3>
-            <dl class="module-list">
-              <div><dt>Set up digiKam</dt><dd>Help with installation and setup for your archive.</dd></div>
-              <div><dt>Easier Immich setup</dt><dd>Help with the server and drive connection. You can already import your own uploads and update an archive library you have configured yourself.</dd></div>
-              <div><dt>Create photo books</dt><dd>Select suggested pictures by swiping or using the keyboard, then have them printed as a book.</dd></div>
-            </dl>
-          </div>
           <p class="module-cta">What would help you? <a href="feedback.html#featurewunsch">Share your wish</a></p>
         </div>
       </details>
@@ -295,9 +268,8 @@
       </div>
       <div><dl class="tool-roles"><div><dt>Edit pictures on iPhone, iPad or Mac</dt><dd><a class="tool-name" href="https://www.gentlemencoders.com/nitro-for-ios/index.html"><img class="tool-logo" src="../assets/tools/nitro.jpg" width="48" height="48" alt="" loading="lazy" decoding="async"><span>Nitro</span></a></dd></div>
 <div><dt>Collect and archive new pictures</dt><dd><a class="tool-name" href="index.html#loesung"><img class="tool-logo" src="../assets/app-icon.png" width="48" height="48" alt="" loading="lazy" decoding="async"><span>TrueArchive</span></a></dd></div>
-<div><dt>Manage names, ratings and descriptions</dt><dd><a class="tool-name" href="https://www.digikam.org/"><img class="tool-logo" src="../assets/tools/digikam.svg" width="48" height="48" alt="" loading="lazy" decoding="async"><span>digiKam</span></a></dd></div>
-<div><dt>Upload from your phone, browse and share</dt><dd><a class="tool-name" href="https://immich.app/"><img class="tool-logo" src="../assets/tools/immich.svg" width="48" height="48" alt="" loading="lazy" decoding="async"><span>Immich</span></a></dd></div>
-<div><dt>Restore lost data</dt><dd><svg class="tool-logo drive-logo" width="48" height="48" viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M10 10h28l5 21v6a3 3 0 0 1-3 3H8a3 3 0 0 1-3-3v-6l5-21Z"/><path d="M5 31h38M12 35h12"/><circle cx="35" cy="35.5" r="1" fill="currentColor"/></svg><span>A second backup</span></dd></div></dl><p class="tools-note">You can <a href="anleitung.html#immich">select and archive your own uploads from a connected Immich account</a>. Afterwards, explicitly update an external archive library you have configured yourself. An accessible <a href="workflow.html#immich-upload">upload folder as a local source</a> remains another option. Set up digiKam, the Immich server and its drive connection separately; setup assistance and a Hetzner backup module are planned.</p></div>
+<div><dt>Upload from your phone, find pictures and share</dt><dd><a class="tool-name" href="https://immich.app/"><img class="tool-logo" src="../assets/tools/immich.svg" width="48" height="48" alt="" loading="lazy" decoding="async"><span>Immich</span></a></dd></div>
+<div><dt>Restore lost data</dt><dd><svg class="tool-logo drive-logo" width="48" height="48" viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M10 10h28l5 21v6a3 3 0 0 1-3 3H8a3 3 0 0 1-3-3v-6l5-21Z"/><path d="M5 31h38M12 35h12"/><circle cx="35" cy="35.5" r="1" fill="currentColor"/></svg><span>A second backup</span></dd></div></dl><p class="tools-note">Use Nitro for editing if you want to. Set up your own Immich server for finding and sharing pictures, plus an independent backup. <a href="workflow.html">See the complete workflow and its requirements</a>.</p></div>
     </section>
 
     <section class="support-section wrap photo-faq" id="fragen" aria-labelledby="faq-title">
@@ -306,18 +278,19 @@
       <details><summary>Which photo sources can I import?</summary><p>Apple Photos, SD cards, external drives and local folders, plus extracted Google Takeout exports and selected Immich uploads. Google Photos is imported from downloaded Takeout files; automatic direct Google cloud sync is not included. <a href="anleitung.html">Set up your sources</a>.</p></details>
       <details><summary>How are pictures stored in the archive?</summary><p>In ordinary folders by year, month and day, for example <code>2024/2024-01/2024-01-19</code>. XMP sidecar files store metadata alongside the media using an open standard. Existing metadata is preserved, and missing XMP files are created during archiving. <a href="anleitung.html#monatsordner">Folder structure in the handbook</a>.</p></details>
       <details><summary>Do I need a cloud subscription?</summary><p>You do not need a cloud subscription for a local archive. Your archived files remain accessible without TrueArchive. If originals are still in iCloud or on an Immich server, TrueArchive needs access to that source to import them.</p></details>
-      <details><summary>How can I search my photo archive?</summary><p>Add your archive folder to digiKam, a free, open-source photo manager, to organise and search it. Searching by person requires face indexing and assigned names in digiKam. Immich can display the archive as an external library. You set up these tools separately. <a href="workflow.html">Explore the photo workflow</a>.</p></details>
+      <details><summary>How can I search my photo archive?</summary><p>Immich can display your archive as an external library. With face recognition enabled and people named, you can also search by person. You set up your Immich server separately. <a href="workflow.html">Explore the photo workflow</a>.</p></details>
       <details><summary>Does the archive drive replace a second backup?</summary><p>A single hard drive can fail. Keep an additional, independent backup. TrueArchive leaves sources unchanged during import, but the alpha does not guarantee protection from data loss. <a href="#alpha-warning">Read this before your first test</a>.</p></details>
     </section>
 
     <section class="beta-section wrap" id="mitmachen" aria-labelledby="beta-title">
       <div class="beta-copy">
-        <span class="eyebrow">Developing together</span>
-        <h2 id="beta-title">Test TrueArchive<br> with us.</h2>
-        <p>You can try the alpha now without signing up. If you would also like an invitation to the later beta round, leave your email address here.</p>
+        <h2 id="beta-title">How did your first test go?</h2>
+        <p>Your experience helps improve TrueArchive. You can send feedback or a feature idea without giving your name or email.</p>
+        <a class="story-next" href="feedback.html">Share feedback or a wish</a>
       </div>
       <div class="beta-signup" id="beta" tabindex="-1">
-        <h3 id="beta-form-title">Sign up for the beta</h3>
+        <h3 id="beta-form-title">Join the beta</h3>
+        <p class="beta-invitation">The alpha is available now without signup. Leave your email only if you would like an invitation to the next beta round.</p>
         <form id="beta-form" action="https://formspree.io/f/xeaqrbwz" method="post" aria-labelledby="beta-form-title" aria-describedby="beta-purpose beta-hint">
           <input type="hidden" name="subject" value="TrueArchive – Beta-Anmeldung">
           <input type="hidden" name="_language" value="en">
@@ -325,7 +298,7 @@
             <legend class="visually-hidden">Email address for your beta invitation</legend>
             <label for="beta-email">Your email address</label>
             <input id="beta-email" name="email" type="email" autocomplete="email" inputmode="email" autocapitalize="none" spellcheck="false" maxlength="254" placeholder="you@example.com" required>
-            <button class="button primary" type="submit">Join the beta</button>
+            <button class="button secondary" type="submit">Invite me to the next beta round</button>
           </fieldset>
           <p class="beta-purpose" id="beta-purpose">By signing up, you are asking to receive an email invitation to the TrueArchive beta.</p>
           <p class="beta-hint" id="beta-hint">After you submit, Formspree will guide you through confirmation.</p>
@@ -364,8 +337,9 @@
         </article>
       </div>
     </section>
+  <aside class="resource-invitation wrap"><p>Sticker for your chat or laptop.</p><a href="ressourcen.html">Choose your design</a></aside>
   </main>
 
-  <footer class="site-footer wrap"><p><strong>TrueArchive</strong><br>A personal community project.</p><nav aria-label="Further information"><a href="warum-truearchive.html">Why TrueArchive?</a><a href="workflow.html">Photo workflow</a><a href="release-notes.html">Release Notes</a><a href="#funktionen">Features</a><a href="feedback.html">Feedback &amp; ideas</a><a href="anleitung.html">Handbook</a><a href="#unterstuetzen">Support the project</a><a href="mailto:lutz@truearchive.app">Contact</a><a href="https://github.com/lutzkohl/TrueArchive-website">Website on GitHub</a><span role="group" class="language-switch" aria-label="Choose language"><a href="../index.html?lang=de" data-language="de" lang="de" aria-label="Deutsch" title="Deutsch">DE</a><span aria-hidden="true">/</span><a href="index.html?lang=en" data-language="en" lang="en" aria-label="English" title="English">ENG</a></span></nav></footer>
+  <footer class="site-footer wrap"><p><strong>TrueArchive</strong><br>A personal community project.</p><nav aria-label="Further information"><a href="warum-truearchive.html">Why TrueArchive?</a><a href="workflow.html">Photo workflow</a><a href="release-notes.html">Release Notes</a><a href="#funktionen">Features</a><a href="feedback.html">Feedback &amp; ideas</a><a href="anleitung.html">Handbook</a><a href="#unterstuetzen">Support the project</a><a href="ressourcen.html">Resources</a><a href="mailto:lutz@truearchive.app">Contact</a><a href="https://github.com/lutzkohl/TrueArchive-website">Website on GitHub</a><span role="group" class="language-switch" aria-label="Choose language"><a href="../index.html?lang=de" data-language="de" lang="de" aria-label="Deutsch" title="Deutsch">DE</a><span aria-hidden="true">/</span><a href="index.html?lang=en" data-language="en" lang="en" aria-label="English" title="English">ENG</a></span></nav></footer>
 </body>
 </html>

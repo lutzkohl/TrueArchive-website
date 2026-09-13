@@ -91,8 +91,8 @@
     {
       "id": "P2-B3",
       "caption": {
-        "de": "Ich hab jetzt immer Platz auf der Karte. Weil ich alles periodisch und sicher im Archiv ablege.",
-        "en": "I always have room on the card now. Because I regularly archive everything safely."
+        "de": "Meine Aufnahmen haben jetzt einen festen Platz im Archiv.",
+        "en": "My photos now have a permanent place in my archive."
       },
       "alt": {
         "de": "Fiktiver Karl ist mit seiner Kamera unterwegs.",
@@ -157,13 +157,11 @@
   ];
   const words = language === 'en' ? {
     previous:'Previous picture', next:'Next picture', pause:'Pause picture changes', play:'Resume picture changes',
-    disclosure:'AI-generated scenes · fictional statements',
-    card:'Memory cards are not cleared automatically.',
+    disclosure:'AI-generated example scenes',
     error:'This picture could not be loaded. You can continue with the arrows.'
   } : {
     previous:'Vorheriges Bild', next:'Nächstes Bild', pause:'Bildwechsel pausieren', play:'Bildwechsel fortsetzen',
-    disclosure:'KI-Beispielszenen · fiktive Aussagen',
-    card:'Speicherkarten werden nicht automatisch geleert.',
+    disclosure:'KI-Beispielszenen',
     error:'Dieses Bild konnte nicht geladen werden. Du kannst mit den Pfeilen weiterblättern.'
   };
   const media = window.matchMedia('(prefers-reduced-motion: reduce)');
@@ -188,7 +186,7 @@
     pause.setAttribute('aria-pressed', String(paused));
     if (!pending && mayRotate()) {
       const readingText = caption.textContent + ' ' + caveat.textContent;
-      const readingTime = Math.max(8000, 2500 + readingText.trim().split(/\s+/).length * 350);
+      const readingTime = Math.max(10000, 2500 + readingText.trim().split(/\s+/).length * 350);
       timer = window.setTimeout(() => { timer = null; show(cursor + 1, false); }, readingTime);
     }
   }
@@ -199,7 +197,7 @@
     image.setAttribute('alt', scene ? scene.alt[language] : original.alt);
     caption.textContent = scene ? scene.caption[language] : original.caption;
     disclosure.textContent = scene ? words.disclosure : original.disclosure;
-    caveat.textContent = failed ? words.error : (scene?.id === 'P2-B3' ? words.card : '');
+    caveat.textContent = failed ? words.error : '';
     caveat.hidden = !caveat.textContent;
     if (manual) announcement.textContent = caption.textContent + (caveat.textContent ? ' ' + caveat.textContent : '');
   }
