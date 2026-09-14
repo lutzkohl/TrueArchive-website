@@ -69,28 +69,42 @@
     <section class="tools-heading" aria-labelledby="tools-page-title">
       <span class="eyebrow">One possible photo workflow</span>
       <h1 id="tools-page-title">From camera and phone<br>to the sofa.</h1>
-      <p>Edit, archive, find and share: each tool has its job. Your archive of ordinary files is the shared foundation.</p>
+      <p>Apple Photos, SD cards, folders and exports go directly to TrueArchive. Immich can also supply phone uploads and display the finished archive.</p>
     </section>
 
     <figure class="tool-diagram" id="ablauf" aria-labelledby="diagram-title">
-      <figcaption id="diagram-title">How originals and finished pictures come together.</figcaption>
+      <figcaption id="diagram-title">Every source goes directly to TrueArchive, where your shared archive comes together.</figcaption>
       <div class="flow-inputs">
-      <div class="flow-sources">
-        <div class="tool-node "><a class="tool-name" href="https://www.gentlemencoders.com/nitro-for-ios/index.html"><img class="tool-logo" src="../assets/tools/nitro.jpg" width="48" height="48" alt="" loading="lazy" decoding="async"><span>Nitro</span></a><span class="tool-context">On iPhone, iPad or Mac</span><p>Edit RAW files directly on the SD card. Edits stay beside the original in XMP sidecars.</p></div>
-        <div class="export-route"><span>JPEG / HEIC</span><span aria-hidden="true" class="export-arrow">→</span><span>export from Nitro</span></div>
-        <div class="tool-node "><a class="tool-name" href="https://www.apple.com/macos/photos/"><img class="tool-logo" src="../assets/tools/apple-photos.png" width="48" height="48" alt="" loading="lazy" decoding="async"><span>Apple Photos</span></a><span class="tool-context">Finished pictures</span><p>Add the finished JPEGs or HEICs exported from Nitro to Apple Photos.</p></div>
-        <div class="flow-route sd-route"><span aria-hidden="true">↓</span>From the SD card: RAW + XMP</div>
-        <div class="flow-route photos-route"><span aria-hidden="true">↓</span>From Apple Photos: finished pictures</div>
+        <div class="tool-node source-lane" id="source-photos">
+          <a class="tool-name" href="https://www.apple.com/macos/photos/"><img class="tool-logo" src="../assets/tools/apple-photos.png" width="48" height="48" alt="" loading="lazy" decoding="async"><span>Apple Photos</span></a>
+          <span class="tool-context">Direct source · photos and videos</span><p>Archive your System Photo Library directly, including finished JPEGs or HEICs you have added from Nitro.</p>
+          <a class="source-route" href="#workflow-collector"><span aria-hidden="true">→</span>Directly to TrueArchive</a>
+        </div>
+        <div class="tool-node source-lane" id="source-sd">
+          <div class="tool-name">SD · Camera · Drone</div><span class="tool-context">Direct source · originals and XMP</span>
+          <p>Optionally use Nitro on iPhone, iPad or Mac: edit RAW files directly on the SD card. Edits stay beside the original in XMP sidecars.</p>
+          <a class="source-editor" href="https://www.gentlemencoders.com/nitro-for-ios/index.html"><img src="../assets/tools/nitro.jpg" width="24" height="24" alt="" loading="lazy" decoding="async">Nitro</a>
+          <p class="source-export">Also export finished pictures: Nitro → JPEG / HEIC → <a href="#source-photos">Apple Photos</a>.</p>
+          <a class="source-route" href="#workflow-collector"><span aria-hidden="true">→</span>Directly to TrueArchive</a>
+        </div>
+        <div class="tool-node source-lane" id="source-folders">
+          <div class="tool-name">Folders and drives</div><span class="tool-context">Direct source · existing files</span><p>Import pictures and videos from accessible local folders and connected drives.</p>
+          <a class="source-route" href="#workflow-collector"><span aria-hidden="true">→</span>Directly to TrueArchive</a>
+        </div>
+        <div class="tool-node source-lane" id="source-exports">
+          <div class="tool-name">Prepared exports</div><span class="tool-context">Direct source · local export folders</span><p>Archive extracted Google Takeout exports and supported pictures and videos from other local export folders.</p>
+          <a class="source-route" href="#workflow-collector"><span aria-hidden="true">→</span>Directly to TrueArchive</a>
+        </div>
+        <div class="tool-node source-lane immich-input" id="source-immich">
+          <a class="tool-name" href="https://immich.app/"><img class="tool-logo" src="../assets/tools/immich.svg" width="48" height="48" alt="" loading="lazy" decoding="async"><span>Immich</span></a>
+          <span class="tool-context">Additional source · phone and family uploads</span><p>Select your own uploads for each connected Immich account in TrueArchive. That selection goes directly from the server into your archive.</p>
+          <a class="source-route" href="#workflow-collector"><span aria-hidden="true">→</span>Selected uploads to TrueArchive</a>
+        </div>
       </div>
-      <div class="immich-input">
-        <div class="tool-node"><a class="tool-name" href="https://immich.app/"><img class="tool-logo" src="../assets/tools/immich.svg" width="48" height="48" alt="" loading="lazy" decoding="async"><span>Immich</span></a><span class="tool-context">Uploads from your phone</span><p>With Immich configured to collect uploads in a folder accessible to your Mac, TrueArchive can import them from there.</p></div>
-        <div class="flow-route"><span aria-hidden="true">↓</span>Immich account · select uploads</div>
-      </div>
-      </div>
-      <div class="tool-node archive-collector"><a class="tool-name" href="index.html#loesung"><img class="tool-logo" src="../assets/app-icon.png" width="48" height="48" alt="" loading="lazy" decoding="async"><span>TrueArchive</span></a><span class="tool-context">Collect · check · archive</span><p>Bring RAWs with their XMP files, finished pictures from Apple Photos and selected Immich uploads into one archive. Local sources and Apple Photos can run on a schedule.</p></div>
+      <div class="tool-node archive-collector" id="workflow-collector"><a class="tool-name" href="index.html#loesung"><img class="tool-logo" src="../assets/app-icon.png" width="48" height="48" alt="" loading="lazy" decoding="async"><span>TrueArchive</span></a><span class="tool-context">Collect · check · archive</span><p>Collect Apple Photos, SD cards, folders, drives and prepared exports directly. Selected Immich uploads are an additional source. Local sources and Apple Photos can run on a schedule.</p></div>
       <div class="flow-route"><span aria-hidden="true">↓</span>Import into the archive</div>
       <div class="archive-foundation"><svg class="tool-logo drive-logo" width="48" height="48" viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M10 10h28l5 21v6a3 3 0 0 1-3 3H8a3 3 0 0 1-3-3v-6l5-21Z"/><path d="M5 31h38M12 35h12"/><circle cx="35" cy="35.5" r="1" fill="currentColor"/></svg><div><h2>Your archive</h2><p>Originals · finished pictures · XMP</p><p class="archive-order">Ordinary files, organised by year, month and day. <code>2026 / 2026-09 / 2026-09-10</code><br><a href="anleitung.html#monatsordner">How files are organized</a>.</p></div></div>
-      <div class="flow-outputs"><div class="output-lane"><div class="flow-route"><span aria-hidden="true">↓</span>Read archive only · separate setup</div><div class="tool-node "><a class="tool-name" href="https://immich.app/"><img class="tool-logo" src="../assets/tools/immich.svg" width="48" height="48" alt="" loading="lazy" decoding="async"><span>Immich</span></a><span class="tool-context">Find, browse &amp; share</span><p>Find pictures, organise albums and share memories with your family, on your phone or in a browser.</p></div></div><div class="output-lane"><div class="flow-route"><span aria-hidden="true">↓</span>Make an independent copy</div><div class="tool-node"><div class="tool-name"><svg class="tool-logo drive-logo" width="48" height="48" viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M10 10h28l5 21v6a3 3 0 0 1-3 3H8a3 3 0 0 1-3-3v-6l5-21Z"/><path d="M5 31h38M12 35h12"/><circle cx="35" cy="35.5" r="1" fill="currentColor"/></svg><span>Second backup</span></div><span class="tool-context">Restore</span><p>Back up the archive and its metadata to a second drive or a backup service.</p></div></div></div>
+      <div class="flow-outputs"><div class="output-lane"><div class="flow-route">Archive → Immich · external library, read only</div><div class="tool-node "><a class="tool-name" href="https://immich.app/"><img class="tool-logo" src="../assets/tools/immich.svg" width="48" height="48" alt="" loading="lazy" decoding="async"><span>Immich</span></a><span class="tool-context">Archive view · browse and share</span><p>Connect the shared archive as an external library with read access. Find, view and share pictures with your family in a browser or on your phone.</p></div></div><div class="output-lane"><div class="flow-route">Archive → independent second backup</div><div class="tool-node"><div class="tool-name"><svg class="tool-logo drive-logo" width="48" height="48" viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M10 10h28l5 21v6a3 3 0 0 1-3 3H8a3 3 0 0 1-3-3v-6l5-21Z"/><path d="M5 31h38M12 35h12"/><circle cx="35" cy="35.5" r="1" fill="currentColor"/></svg><span>Second backup</span></div><span class="tool-context">Restore</span><p>Back up the archive and its metadata to a second drive or a backup service.</p></div></div></div>
     </figure>
 
     <section class="workflow-notes" aria-labelledby="workflow-notes-title">

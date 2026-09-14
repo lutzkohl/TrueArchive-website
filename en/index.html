@@ -78,6 +78,7 @@
       "url": "https://truearchive.app/",
       "applicationCategory": "MultimediaApplication",
       "operatingSystem": "macOS 15 or later",
+      "softwareVersion": "0.28.0",
       "inLanguage": [
         "de",
         "en"
@@ -85,7 +86,7 @@
       "description": "Archive photos and videos from Apple Photos, SD cards, folders, Google Takeout and Immich on your own drive. TrueArchive for Mac: free alpha.",
       "image": "https://truearchive.app/assets/app-icon.png",
       "screenshot": "https://truearchive.app/assets/app-workspace-en.png",
-      "downloadUrl": "https://github.com/lutzkohl/TrueArchive-website/releases/download/v0.20.0-alpha/TrueArchive-0.20.0-alpha-macos-universal.zip",
+      "downloadUrl": "https://github.com/lutzkohl/TrueArchive-website/releases/download/v0.28.0-alpha/TrueArchive-0.28.0-alpha-macos-universal.zip",
       "author": {
         "@id": "https://truearchive.app/#creator"
       },
@@ -149,8 +150,8 @@
           </div>
         </div>
         <figure class="app-figure app-screenshot" aria-labelledby="app-caption">
-          <a href="../assets/app-workspace-en.png?v=0.20.0" aria-label="Enlarge the app view with sample data"><img src="../assets/app-workspace-en.png?v=0.20.0" width="1100" height="780" alt="TrueArchive 0.20.0: the archive destination highlighted in blue, automation below it and a shared source list with archive, settings and eject actions." loading="lazy" decoding="async"></a>
-          <figcaption id="app-caption">TrueArchive 0.20.0: archive destination and sources in one workspace. Native view with sample data. <a href="../assets/app-workspace-en.png?v=0.20.0">Enlarge the view</a></figcaption>
+          <a href="../assets/app-workspace-en.png?v=7ba573c2d7" aria-label="Enlarge the app view with sample data"><img src="../assets/app-workspace-en.png?v=7ba573c2d7" width="1100" height="780" alt="TrueArchive: the archive destination highlighted in blue, automation below it and a shared source list with archive, settings and eject actions." loading="lazy" decoding="async"></a>
+          <figcaption id="app-caption">TrueArchive: archive destination and sources in one workspace. Native view with sample data. <a href="../assets/app-workspace-en.png?v=7ba573c2d7">Enlarge the view</a></figcaption>
         </figure>
         <div class="archive-story" id="archiv" tabindex="-1">
           <div class="archive-story-visual">
@@ -196,14 +197,14 @@
         <p>TrueArchive can still contain bugs. <strong>Data loss is possible.</strong> Keep an independent, verified backup and start with copies of a small selection. Do not use the alpha with your only copy of irreplaceable pictures.</p>
       </div>
       <div class="alpha-download">
-        <div><a class="button primary" data-alpha-download href="https://github.com/lutzkohl/TrueArchive-website/releases/download/v0.20.0-alpha/TrueArchive-0.20.0-alpha-macos-universal.zip" aria-describedby="alpha-warning alpha-requirements">Download Alpha 0.20.0</a>
-          <p id="alpha-requirements">Build 45 · Released on <time datetime="2026-09-12">12 September 2026</time><br>Free · macOS 15+ · Intel and Apple Silicon<br>Not notarized by Apple. <a href="anleitung.html#installation">Installation guide</a></p>
+        <div><a class="button primary" data-alpha-download href="https://github.com/lutzkohl/TrueArchive-website/releases/download/v0.28.0-alpha/TrueArchive-0.28.0-alpha-macos-universal.zip" aria-describedby="alpha-warning alpha-requirements">Download Alpha 0.28.0</a>
+          <p id="alpha-requirements">Build 53 · Released on <time datetime="2026-09-14">14 September 2026</time><br>Free · macOS 15+ · Intel and Apple Silicon<br>Not notarized by Apple. <a href="anleitung.html#installation">Installation guide</a></p>
           <p class="download-stats" data-download-stats hidden aria-live="polite"><strong data-download-count></strong> downloads of this version · GitHub counts, including repeat downloads.</p>
         </div>
         <div class="alpha-next" id="alpha-install"><h3>How to open the alpha.</h3>
           <ol><li>Unzip the download, drag <strong>TrueArchive</strong> into Applications and try opening it once.</li><li>If Apple cannot check the app or verify its developer, close the warning. Open <strong>System Settings → Privacy &amp; Security</strong> and scroll to Security.</li><li>Click <strong>Open Anyway</strong> next to TrueArchive, then confirm with <strong>Open</strong>.</li></ol>
           <p><a href="anleitung.html#macos-startfreigabe">Detailed startup help</a> · <a href="https://support.apple.com/en-us/102445">Apple’s instructions</a></p>
-          <p>No signup required. <a href="feedback.html#testfeedback">Share feedback</a> · <a href="release-notes.html#v0-20-0">What’s new?</a></p></div>
+          <p>No signup required. <a href="feedback.html#testfeedback">Share feedback</a> · <a href="release-notes.html#v0-28-0">What’s new?</a></p></div>
       </div>
       <div class="first-test" id="erster-test" tabindex="-1">
         <h3>Your first test: five copied photos.</h3>
@@ -221,7 +222,7 @@
     <section class="features-section wrap" id="funktionen" tabindex="-1" aria-labelledby="features-title">
       <div class="section-heading">
         <h2 id="features-title">What TrueArchive takes care of.</h2>
-        <p class="feature-release"><a href="release-notes.html#v0-20-0">Alpha 0.20.0 · What’s new</a></p>
+        <p class="feature-release"><a href="release-notes.html#v0-28-0">Alpha 0.28.0 · What’s new</a></p>
       </div>
       <div class="feature-group">
         <div class="feature-intro"><h3>Bring your pictures into one central archive</h3></div>
@@ -263,7 +264,7 @@
     <section class="tools-overview wrap" id="tool-workflow" aria-labelledby="tools-title">
       <div class="tools-intro"><span class="eyebrow">One possible workflow</span>
         <h2 id="tools-title">Which tool does what?</h2>
-        <p>From editing to finding pictures again: this is how the tools can work together. Choose the ones you need.</p>
+        <p>Apple Photos, SD cards, folders and exports go directly to TrueArchive. Immich can also supply phone uploads and display the finished archive.</p>
         <a class="text-link" href="workflow.html">See the workflow diagram <span aria-hidden="true">→</span></a>
       </div>
       <div><dl class="tool-roles"><div><dt>Edit pictures on iPhone, iPad or Mac</dt><dd><a class="tool-name" href="https://www.gentlemencoders.com/nitro-for-ios/index.html"><img class="tool-logo" src="../assets/tools/nitro.jpg" width="48" height="48" alt="" loading="lazy" decoding="async"><span>Nitro</span></a></dd></div>

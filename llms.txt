@@ -5,19 +5,20 @@
 ## Product facts
 
 - Requires macOS 15 or later; supports Intel Macs and Apple Silicon. The public download is an alpha and may contain bugs. Keep an independent backup before testing.
-- Sources: Apple Photos, SD cards, external drives, local folders, extracted Google Photos Takeout exports, and selected uploads from connected Immich accounts.
+- Sources: Apple Photos, SD cards, external drives, local folders, extracted Google Photos Takeout exports, local Lightroom exports, and selected uploads from connected Immich accounts.
 - Google Photos import uses manually downloaded and extracted Takeout files. It is not direct, continuous Google cloud synchronisation.
 - The archive uses ordinary year/month/day folders, such as `2024/2024-01/2024-01-19`. Original media and XMP metadata sidecars remain accessible without TrueArchive.
 - XMP is an open metadata standard. Existing metadata is preserved and missing sidecars are created during archiving. Available metadata depends on the source and file format.
 - Local Apple Vision keyword analysis is optional. TrueArchive does not automatically delete source media. An archive drive does not replace an independent backup.
-- digiKam is a separate open-source application for managing and searching the archive. Searching by person requires face indexing and assigned names there. Immich is a separately configured server that can display an external archive library.
+- Immich is an optional, separately configured server for viewing and sharing a read-only external archive library. Apple Photos, SD cards and folders import directly into TrueArchive. digiKam remains an optional alternative for managing the archive.
+- Alpha 0.28.0 adds encrypted local backups using restic on a separate physical drive, dated snapshots and restore. Backup passwords must be kept safely. Cloud backup is not yet implemented. Immich organization backup can preserve album keywords and named face metadata in XMP; it does not replace an Immich server/database backup.
 - The public alpha is free. Voluntary project contributions are collected personally by Lutz Kohl and donated in full to Dentists for Africa e.V.; he covers payment fees and adds any tax savings. Direct donations and donation receipts are handled by the organisation, as explained on the website.
 
 ## Deutsch
 
 - [Produkt, Alpha-Download und Fragen](https://truearchive.app/index.html): Funktionen, Voraussetzungen, Alpha-Hinweise und Antworten zum eigenen Fotoarchiv.
 - [Handbuch](https://truearchive.app/anleitung.html): Installation, Quellen, XMP, Duplikate, Zeitpläne und zweite Sicherung.
-- [Foto-Workflow](https://truearchive.app/workflow.html): Aufgaben von Nitro, TrueArchive, digiKam und Immich.
+- [Foto-Workflow](https://truearchive.app/workflow.html): Aufgaben von Nitro, TrueArchive, Immich und einer unabhängigen Sicherung.
 - [Warum TrueArchive?](https://truearchive.app/warum-truearchive.html): Fotos von verstreuten Datenträgern in ein gemeinsames Archiv bringen.
 - [Release Notes](https://truearchive.app/release-notes.html): Veröffentlichte Versionen und ihre Grenzen; maßgeblich für den aktuellen Download.
 - [Feedback](https://truearchive.app/feedback.html): Testerfahrungen und Funktionswünsche.
