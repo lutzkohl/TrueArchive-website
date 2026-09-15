@@ -1,0 +1,57 @@
+<!doctype html>
+<html lang="de">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="robots" content="noindex, nofollow, noarchive">
+  <meta name="referrer" content="no-referrer">
+  <meta name="description" content="Ein klickbarer UX-Entwurf für TrueArchive: Einstieg, Quellenaktionen, Bildauswahl und Reisearchiv. Zur gemeinsamen Durchsicht.">
+  <meta http-equiv="Content-Security-Policy" content="default-src 'none'; script-src 'self'; style-src 'self'; img-src 'self' data:; connect-src 'none'; font-src 'self'; base-uri 'none'; form-action 'none'">
+  <title>TrueArchive · UX-Entwurf September 2026</title>
+  <link rel="icon" href="../../assets/app-icon.png">
+  <link rel="stylesheet" href="proposal.css">
+  <script src="proposal.js" defer></script>
+</head>
+<body>
+  <a class="skip-link" href="#prototype">Zum klickbaren Entwurf</a>
+  <header class="review-header">
+    <a class="wordmark" href="https://truearchive.app/" aria-label="TrueArchive Website"><img src="../../assets/app-icon.png" width="34" height="34" alt="">TrueArchive</a>
+    <span class="edition">UX-Werkstatt <span aria-hidden="true">/</span> Entwurf 01 · 15. September 2026</span>
+  </header>
+  <main>
+    <section class="intro" aria-labelledby="intro-title">
+      <p class="eyebrow">Zur gemeinsamen Durchsicht</p>
+      <h1 id="intro-title">Ein klarer Weg<br>ins Archiv.</h1>
+      <div class="intro-side"><p>Quelle wählen. Ziel im Blick behalten. Direkt archivieren oder erst Bilder auswählen.</p><p class="quiet">Dieser klickbare Vorschlag greift alle acht UX-Findings auf und integriert das Reisearchiv. Alle Bilder, Namen und Ergebnisse sind Beispiele; die Demo greift auf keine Dateien oder Konten zu.</p><a href="#entscheidungen">Bewertung der acht Findings <span aria-hidden="true">↗</span></a></div>
+    </section>
+    <section class="review-controls" aria-label="Entwurf ausprobieren">
+      <div class="scenario-controls"><span class="control-caption">Situation ausprobieren</span><div class="segmented" role="group" aria-label="Beispielsituation">
+        <button type="button" data-scenario="ready" aria-pressed="true">Alltag</button><button type="button" data-scenario="setup" aria-pressed="false">Erster Start</button><button type="button" data-scenario="missing" aria-pressed="false">Ziel fehlt</button><button type="button" data-scenario="invalid" aria-pressed="false">Ordnerfehler</button><button type="button" data-scenario="travel" aria-pressed="false">Unterwegs</button><button type="button" data-scenario="home" aria-pressed="false">Wieder zu Hause</button>
+      </div></div>
+      <div class="variant-controls"><label class="variant-label"><input type="checkbox" id="quick-actions" checked> Direktaktionen in der Quellenliste <span class="recommendation">Empfehlung</span></label><label class="language-label" for="ui-language">App-Sprache <select id="ui-language"><option value="en">English</option><option value="de">Deutsch</option></select></label></div>
+    </section>
+    <div class="app-shell" id="prototype" tabindex="-1" lang="en" aria-label="TrueArchive, interaktiver Entwurf">
+      <div id="app"></div>
+    </div>
+    <p class="demo-caption"><span class="demo-dot" aria-hidden="true"></span> Interaktiver Entwurf · Änderungen gelten nur bis zum Neuladen. Ein Situationswechsel setzt das Beispiel zurück. Sprach- und Variantenwechsel behalten die aktuelle Auswahl.</p>
+    <section class="decisions" id="entscheidungen" aria-labelledby="decisions-title">
+      <div class="decisions-heading"><p class="eyebrow">Das steckt hinter dem Vorschlag</p><h2 id="decisions-title">Weniger Rätsel.<br>Klare nächste Schritte.</h2><p>Die meisten Hinweise lassen sich direkt übernehmen. Bei der Ordnerregel und den Schnellaktionen schlage ich eine Anpassung vor.</p></div>
+      <div class="findings">
+        <article><span class="finding-number">01</span><div><h3>Ordnerregeln erklären – die aktuelle Regel.</h3><p>Die Kritik an der Fehlermeldung ist berechtigt. „Muss leer sein“ ist inzwischen überholt: Auch ein bestehendes Archiv oder eine vorhandene Sammlung kann verbunden werden. Die Auswahl zeigt deshalb zulässige Fälle und benennt konkrete Hindernisse, etwa das Dateisystem oder denselben Ordner als Quelle und Ziel.</p><button class="text-button" data-demo="invalid">Ordnerfehler ausprobieren →</button></div></article>
+        <article><span class="finding-number">02</span><div><h3>Jede Sperre nennt den nächsten Schritt.</h3><p>Der Hinweis steht unmittelbar bei „Archive All Connected“ und bei den Quellenaktionen. „Choose an archive folder to continue.“ führt über den benachbarten beschrifteten Knopf zur Lösung. Verbindung, laufender Import und leere Bildauswahl bekommen eigene Hinweise.</p><button class="text-button" data-demo="missing">Fehlendes Ziel ansehen →</button></div></article>
+        <article><span class="finding-number">03</span><div><h3>Beschriftete Aktionen, eine klare Zugehörigkeit.</h3><p>Alle Quellenaktionen stehen mit Icon und Label im Detailbereich. Die Liste enthält keine rätselhafte Icon-Reihe. Meine Empfehlung ergänzt genau eine beschriftete Direktaktion pro erreichbarer Quelle, damit Ein-Klick-Archivieren erhalten bleibt. Der Schalter oben zeigt die ruhigere Alternative vollständig ohne Listenaktionen.</p><button class="text-button" data-demo="quiet">Ruhige Variante vergleichen →</button></div></article>
+        <article><span class="finding-number">04</span><div><h3>Der erste Start zeigt den Weg.</h3><p>„Add Sources → Choose Archive → Start Archiving“ zeigt Erledigtes und den nächsten Schritt. Die Orientierung bleibt kompakt, erzwingt keinen Assistenten und verschwindet im eingerichteten Alltag. Das aktive Archivziel bleibt immer optisch hervorgehoben.</p><button class="text-button" data-demo="setup">Von vorne starten →</button></div></article>
+        <article><span class="finding-number">05</span><div><h3>Entfernen unten links, eindeutig rot.</h3><p>„Remove Source“ bleibt am unteren Rand des Quellenbereichs. Direkt daneben wird klar: Die Verbindung wird entfernt, Bilder werden nicht gelöscht. Die Aktion ist in der Demo unmittelbar rückgängig zu machen; während eines Imports ist sie gesperrt.</p><button class="text-button" data-demo="remove">Aktion in der Quelle ansehen →</button></div></article>
+        <article><span class="finding-number">06</span><div><h3>Eine Auswahl für Ordner und Datenträger.</h3><p>„Select Folder…“ umfasst SD-Karte, Festplatte, SSD und lokale Ordner. Apple Photos, Google Takeout und Immich bleiben wegen ihrer unterschiedlichen Zugänge eigene Optionen. Ein erkanntes TrueArchive-Archiv wird als Archivquelle übernommen; die Metadaten brauchen diesen eigenen Übernahmeweg.</p><button class="text-button" data-demo="add">Quellenauswahl öffnen →</button></div></article>
+        <article><span class="finding-number">07</span><div><h3>Die Vorschau verspricht auch Auswahl.</h3><p>„Preview &amp; Select…“ öffnet direkt im Quellenbereich ein Raster mit Checkboxen, Auswahlzähler und „Archive Selected“. Die Vorschau ist optional. Wer alles übernehmen will, kann weiterhin direkt archivieren.</p><button class="text-button" data-demo="preview">Bilder auswählen →</button></div></article>
+        <article><span class="finding-number">08</span><div><h3>Eine Schreibweise, eine Bedeutung für „…“.</h3><p>Englische Actions und UI-Titel verwenden Title Case. Deutsch behält die normale Groß- und Kleinschreibung. Eine Ellipse bedeutet, dass noch eine Auswahl oder Eingabe folgt. Sofortaktionen wie „Archive Source“ und „Eject“ haben keine Ellipse.</p><p class="copy-examples">Add Source… · Choose Archive… · Preview &amp; Select… · App Settings… · Change Date Range…</p></div></article>
+      </div>
+    </section>
+    <section class="discussion" aria-labelledby="discussion-title"><div><p class="eyebrow">Für unsere nächste Runde</p><h2 id="discussion-title">Wie ruhig soll die Quellenliste sein?</h2></div><div><p>Mein Favorit: alle Details und Nebenaktionen in der ausgewählten Quelle, plus ein beschrifteter Archivieren-Knopf je Quelle. Damit bleiben der Kontext und der schnelle tägliche Ablauf erhalten.</p><p>Zum Testen: Eine Quelle direkt archivieren. Ohne Ziel weiterkommen. Drei Bilder auswählen. Dann die Reise-SSD ins Hauptarchiv übernehmen. Entscheidend ist, ob Aktion, Ziel und Ergebnis jederzeit klar bleiben.</p><button type="button" class="review-button" data-demo="ready">Zur empfohlenen Variante ↑</button></div></section>
+    <footer class="review-footer"><span>TrueArchive · UX-Vorschlag zur Diskussion</span><span>Separater Vorschaulink · keine Freigabe einer App-Version</span></footer>
+  </main>
+  <dialog id="modal" aria-labelledby="modal-title"><div id="modal-content"></div></dialog>
+  <div id="announcer" class="sr-only" role="status" aria-live="polite" aria-atomic="true"></div>
+  <noscript><p class="noscript">Bitte JavaScript aktivieren, um den interaktiven Entwurf auszuprobieren. Die Bewertung der acht Findings ist auch ohne JavaScript lesbar.</p></noscript>
+</body>
+</html>
