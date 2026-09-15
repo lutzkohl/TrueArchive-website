@@ -24,6 +24,7 @@
 - [Feedback](https://truearchive.app/feedback.html): Testerfahrungen und Funktionswünsche.
 
 - [Ressourcen und Sticker](https://truearchive.app/ressourcen.html): Bilder für digitale Sticker und Druckvorlagen.
+- [Hardware](https://truearchive.app/hardware.html): HDDs, Reise-SSDs, magnetische iPhone-Befestigung und USB-C-Hub mit Amazon.de-Produktlinks; keine aktuelle Bestseller-Rangliste.
 
 ## English
 
@@ -35,6 +36,7 @@
 - [Feedback](https://truearchive.app/en/feedback.html)
 
 - [Resources and stickers](https://truearchive.app/en/ressourcen.html)
+- [Hardware](https://truearchive.app/en/hardware.html): HDDs, travel SSDs, magnetic iPhone attachment and a USB-C hub with Amazon.de product links; not a current bestseller ranking.
 
 ## Contact
 

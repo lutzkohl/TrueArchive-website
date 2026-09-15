@@ -84,4 +84,16 @@
     <xhtml:link rel="alternate" hreflang="en" href="https://truearchive.app/en/ressourcen.html" />
     <xhtml:link rel="alternate" hreflang="x-default" href="https://truearchive.app/ressourcen.html" />
   </url>
+  <url>
+    <loc>https://truearchive.app/hardware.html</loc>
+    <xhtml:link rel="alternate" hreflang="de" href="https://truearchive.app/hardware.html" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://truearchive.app/en/hardware.html" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://truearchive.app/hardware.html" />
+  </url>
+  <url>
+    <loc>https://truearchive.app/en/hardware.html</loc>
+    <xhtml:link rel="alternate" hreflang="de" href="https://truearchive.app/hardware.html" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://truearchive.app/en/hardware.html" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://truearchive.app/hardware.html" />
+  </url>
 </urlset>
