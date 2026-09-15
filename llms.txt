@@ -42,3 +42,8 @@
 
 - [Project contact](mailto:lutz@truearchive.app)
 - [Public website repository and releases](https://github.com/lutzkohl/TrueArchive-website)
+
+## Legal notice
+
+- [Impressum (Deutsch)](https://truearchive.app/impressum.html)
+- [Legal Notice (English)](https://truearchive.app/en/impressum.html)

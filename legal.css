@@ -1,0 +1,16 @@
+/* Legal pages reuse the existing site header, footer and colours. */
+.legal-page { padding-block: 42px 76px; }
+.legal-heading { max-width: 760px; }
+.legal-heading h1 { font-size: clamp(40px, 5vw, 60px); }
+.legal-heading p { margin-top: 18px; color: var(--muted); }
+.legal-details { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 36px; max-width: 860px; margin-top: 38px; padding: 30px; background: var(--wash); border: 1px solid var(--line); border-radius: 12px; }
+.legal-details section { min-width: 0; }
+.legal-details h2, .legal-scope h2 { font-size: 24px; }
+.legal-details address { margin-top: 18px; font-style: normal; font-size: 18px; line-height: 1.7; }
+.legal-details p, .legal-scope p { margin-top: 16px; }
+.legal-details a { overflow-wrap: anywhere; }
+.legal-scope { max-width: 760px; margin-top: 38px; }
+@media (max-width: 700px) {
+  .legal-page { padding-block: 28px 48px; }
+  .legal-details { grid-template-columns: 1fr; gap: 30px; padding: 24px; }
+}
