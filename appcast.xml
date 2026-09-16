@@ -1,19 +1,19 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?><!-- sparkle-sign-warning:
 IMPORTANT: This file was signed by Sparkle. Any modifications to this file requires re-signing this file with generate_appcast or sign_update! The signed signature will be embedded at the end of this file.
---><rss xmlns:sparkle="http://www.andymatuschak.org/xml-namespaces/sparkle" version="2.0">
+--><rss xmlns:sparkle="http://www.andymatuschak.org/xml-namespaces/sparkle" xmlns:truearchive="urn:truearchive:updates:1" version="2.0">
   <channel>
     <title>TrueArchive Updates</title>
     <link>https://lutzkohl.github.io/TrueArchive-website/</link>
     <item>
-      <title>TrueArchive 0.34.1 Alpha</title>
-      <pubDate>Tue, 15 Sep 2026 12:26:43 GMT</pubDate>
-      <sparkle:version>63</sparkle:version>
-      <sparkle:shortVersionString>0.34.1</sparkle:shortVersionString>
+      <title>TrueArchive 0.38.0 Alpha</title>
+      <pubDate>Wed, 16 Sep 2026 15:07:43 GMT</pubDate>
+      <sparkle:version>68</sparkle:version>
+      <sparkle:shortVersionString>0.38.0</sparkle:shortVersionString>
       <sparkle:minimumSystemVersion>15.0</sparkle:minimumSystemVersion>
-      <enclosure url="https://github.com/lutzkohl/TrueArchive-website/releases/download/v0.34.1-alpha/TrueArchive-0.34.1-alpha-macos-universal.zip" length="45791781" type="application/octet-stream" sparkle:edSignature="MoZmj3sOpjDDsqGY89T6jio7L8aU2qsIML6gYH6sBN/LZi5LfXkxv+3LJ990xcMtGVrkxaM1kjGXkPZBMW5kBA=="></enclosure>
+      <enclosure url="https://github.com/lutzkohl/TrueArchive-website/releases/download/v0.38.0-alpha/TrueArchive-0.38.0-alpha-macos-universal.zip" length="47675500" type="application/octet-stream" sparkle:edSignature="i1J9OPjxPfzdv6emIKb0j/2Nv/1fxJaliYJNNhQMBinbaFLG2ZEDj08QZIoRoE8+nR5BxM0Mom3Iy8quHMegBA==" truearchive:bundleSHA256="babff41de5b8182ac20a35f5ea50c1c1d1d8ebb994a1e09bba13be2239199dc4"></enclosure>
     </item>
   </channel>
 </rss><!-- sparkle-signatures:
-edSignature: JcisStREFCW+wrWQ3hNf7R4R/30UJGqmhYvNkkD75ZYU3X2EVd/Brebns++6UBBTc2DUl2+5Z6w9IFuV97N9Cg==
-length: 1146
+edSignature: DdynyIEYTYAlWWErwFX32gTZ9bk2VdrHUbOCtOLWE6WLBPDBT7NjXx0iWqTqIP13X7Qt7Bbqqr6Gb4s9xopdBg==
+length: 1284
 -->
