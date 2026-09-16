@@ -8,7 +8,7 @@
   if (!link || !count || !stats) return;
   try {
     const url = new URL(link.href);
-    const match = url.pathname.match(/^\/lutzkohl\/TrueArchive-website\/releases\/download\/(v[\d.]+-alpha)\/(TrueArchive-[\d.]+-alpha-macos-universal\.zip)$/);
+    const match = url.pathname.match(/^\/lutzkohl\/TrueArchive-website\/releases\/download\/(v(\d+\.\d+\.\d+)(?:-build[1-9]\d*)?-alpha)\/(TrueArchive-\2-alpha-macos-universal\.zip)$/);
     if (url.origin !== 'https://github.com' || !match) return;
     const response = await fetch(`https://api.github.com/repos/lutzkohl/TrueArchive-website/releases/tags/${match[1]}`, {
       credentials: 'omit', referrerPolicy: 'no-referrer',
@@ -18,7 +18,7 @@
     if (!response.ok) return;
     const release = await response.json();
     if (release.draft !== false || release.tag_name !== match[1] || !Array.isArray(release.assets)) return;
-    const asset = release.assets.find(item => item.name === match[2] && item.state === 'uploaded' && item.browser_download_url === link.href);
+    const asset = release.assets.find(item => item.name === match[3] && item.state === 'uploaded' && item.browser_download_url === link.href);
     if (!asset || !Number.isSafeInteger(asset.download_count) || asset.download_count < 0) return;
     count.textContent = new Intl.NumberFormat(document.documentElement.lang === 'de' ? 'de-DE' : 'en-US').format(asset.download_count);
     stats.hidden = false;
