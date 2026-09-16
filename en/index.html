@@ -33,7 +33,7 @@
   <meta name="twitter:description" content="Archive photos and videos from Apple Photos, SD cards, folders, Google Takeout and Immich on your own drive. TrueArchive for Mac: free alpha.">
   <meta name="twitter:image" content="https://truearchive.app/assets/app-workspace-en.png">
   <meta name="twitter:image:alt" content="TrueArchive on Mac: archive destination and import sources, shown with example data.">
-  <script type="application/ld+json">
+  <script type="application/ld+json" data-release-schema>
 {
   "@context": "https://schema.org",
   "@graph": [
@@ -197,14 +197,14 @@
         <p>TrueArchive can still contain bugs. <strong>Data loss is possible.</strong> Keep an independent, verified backup and start with copies of a small selection. Do not use the alpha with your only copy of irreplaceable pictures.</p>
       </div>
       <div class="alpha-download">
-        <div><a class="button primary" data-alpha-download href="https://github.com/lutzkohl/TrueArchive-website/releases/download/v0.39.0-build69-alpha/TrueArchive-0.39.0-alpha-macos-universal.zip" aria-describedby="alpha-warning alpha-requirements">Download Alpha 0.39.0</a>
-          <p id="alpha-requirements">Build 69 · Released on <time datetime="2026-09-16">16 September 2026</time><br>Free · macOS 15+ · Intel and Apple Silicon<br>Not notarized by Apple. <a href="anleitung.html#installation">Installation guide</a></p>
+        <div><a class="button primary" data-alpha-download data-release-link="download" href="https://github.com/lutzkohl/TrueArchive-website/releases/download/v0.39.0-build69-alpha/TrueArchive-0.39.0-alpha-macos-universal.zip" aria-describedby="alpha-warning alpha-requirements">Download <!-- release:alpha -->Alpha 0.39.0<!-- /release:alpha --></a>
+          <p id="alpha-requirements"><!-- release:build -->Build 69<!-- /release:build --> · Released on <!-- release:time --><time datetime="2026-09-16">16 September 2026</time><!-- /release:time --><br>Free · macOS 15+ · Intel and Apple Silicon<br>Not notarized by Apple. <a href="anleitung.html#installation">Installation guide</a></p>
           <p class="download-stats" data-download-stats hidden aria-live="polite"><strong data-download-count></strong> downloads of this version · GitHub counts, including repeat downloads.</p>
         </div>
         <div class="alpha-next" id="alpha-install"><h3>How to open the alpha.</h3>
           <ol><li>Unzip the download, drag <strong>TrueArchive</strong> into Applications and try opening it once.</li><li>If Apple cannot check the app or verify its developer, close the warning. Open <strong>System Settings → Privacy &amp; Security</strong> and scroll to Security.</li><li>Click <strong>Open Anyway</strong> next to TrueArchive, then confirm with <strong>Open</strong>.</li></ol>
           <p><a href="anleitung.html#macos-startfreigabe">Detailed startup help</a> · <a href="https://support.apple.com/en-us/102445">Apple’s instructions</a></p>
-          <p>No signup required. <a href="feedback.html#testfeedback">Share feedback</a> · <a href="release-notes.html#v0-38-0">What’s new?</a></p></div>
+          <p>No signup required. <a href="feedback.html#testfeedback">Share feedback</a> · <a data-release-link="notes" href="release-notes.html#v0-39-0">What’s new?</a></p></div>
       </div>
       <div class="first-test" id="erster-test" tabindex="-1">
         <h3>Your first test: five copied photos.</h3>
@@ -222,7 +222,7 @@
     <section class="features-section wrap" id="funktionen" tabindex="-1" aria-labelledby="features-title">
       <div class="section-heading">
         <h2 id="features-title">What TrueArchive takes care of.</h2>
-        <p class="feature-release"><a href="release-notes.html#v0-38-0">Alpha 0.39.0 · What’s new</a></p>
+        <p class="feature-release"><a data-release-link="notes" href="release-notes.html#v0-39-0"><!-- release:alpha -->Alpha 0.39.0<!-- /release:alpha --> · What’s new</a></p>
       </div>
       <div class="feature-group">
         <div class="feature-intro"><h3>Bring your pictures into one central archive</h3></div>
@@ -246,13 +246,14 @@
       </div>
       <p class="feature-handbook">Want to know exactly how it works? <a href="anleitung.html">Explore workflows and limitations in the handbook</a></p>
 
+      <p class="feature-handbook"><strong>Back up and restore.</strong> TrueArchive encrypts your archive and XMP files on a second drive or a Hetzner Storage Box. Choose an earlier backup date and restore everything or selected files into a new empty folder. Optionally schedule a daily backup. A Storage Box is booked and paid for separately. <a href="anleitung.html#zweite-sicherung">Set up a second backup</a> · <a href="anleitung.html#hetzner">Set up Hetzner</a>.</p>
+
       <details class="planned-modules" id="module">
-        <summary><span>Ideas for the next steps</span><span class="summary-hint">4 open ideas · not yet available</span></summary>
+        <summary><span>Ideas for the next steps</span><span class="summary-hint">3 open ideas · not yet available</span></summary>
         <div class="module-content">
-          <p class="module-intro">Four ideas for what comes next. Tell us which would help you most; release dates are not fixed yet.</p>
+          <p class="module-intro">Three ideas for what comes next. Tell us which would help you most; release dates are not fixed yet.</p>
           <dl class="module-list">
               <div><dt>Import directly from Lightroom Cloud</dt><dd>Fetch pictures and available metadata directly from Adobe, without having to export them in Lightroom first.</dd></div>
-              <div><dt>Back up and restore your archive</dt><dd>Restore your archive from a chosen backup date. First on a second local drive, later with encrypted cloud storage at Hetzner. Cloud storage is paid for separately.</dd></div>
               <div><dt>Free up space in Apple Photos</dt><dd>Selectively remove large videos after their archiving has been verified. As a separate, optional module.</dd></div>
               <div><dt>Create photo books</dt><dd>Select suitable pictures and later have them printed as a book.</dd></div>
             </dl>

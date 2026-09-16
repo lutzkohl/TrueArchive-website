@@ -2,6 +2,10 @@
 
 > TrueArchive (also written “True Archive”) is a free macOS app for collecting photos and videos in an archive on your own drive. Official website: https://truearchive.app/. Created by Lutz Kohl as a personal community project.
 
+## Current public release
+
+<!-- release:summary -->Alpha 0.39.0 · Build 69 · 2026-09-16<!-- /release:summary -->
+
 ## Product facts
 
 - Requires macOS 15 or later; supports Intel Macs and Apple Silicon. The public download is an alpha and may contain bugs. Keep an independent backup before testing.
@@ -9,9 +13,11 @@
 - Google Photos import uses manually downloaded and extracted Takeout files. It is not direct, continuous Google cloud synchronisation.
 - The archive uses ordinary year/month/day folders, such as `2024/2024-01/2024-01-19`. Original media and XMP metadata sidecars remain accessible without TrueArchive.
 - XMP is an open metadata standard. Existing metadata is preserved and missing sidecars are created during archiving. Available metadata depends on the source and file format.
-- Local Apple Vision keyword analysis is optional. Import adapters only read source media. Alpha 0.39.0 includes separate, explicitly confirmed optional source space freeing; it is off by default, with verified archive data required and second-backup/favorite protection enabled by default. An archive drive does not replace an independent backup.
+- Local Apple Vision keyword analysis is optional. Import adapters only read source media. TrueArchive includes separate, explicitly confirmed optional source space freeing; it is off by default, with verified archive data required and second-backup/favorite protection enabled by default. An archive drive does not replace an independent backup.
+- TrueArchive includes a persistent local-source import queue and coordinated Mac/Photos Access updates. See the handbook for setup and release notes for known alpha limitations.
 - Immich is an optional, separately configured server for viewing and sharing a read-only external archive library. Apple Photos, SD cards and folders import directly into TrueArchive. digiKam remains an optional alternative for managing the archive.
-- Available since Alpha 0.28.0: encrypted local backups using restic on a separate physical drive, dated snapshots and restore. Backup passwords must be kept safely. Cloud backup is not yet implemented. Immich organization backup can preserve album keywords and named face metadata in XMP; it does not replace an Immich server/database backup.
+- Encrypted backups using restic are available on a separate physical drive or a separately purchased Hetzner Storage Box. Dated restore points retain earlier versions; restore the whole archive or selected files into a new empty folder. Daily scheduling is optional and initially off. Keep the backup password independently; your Mac, TrueArchive and the archive must be available for a scheduled backup.
+- The optional Immich organisation backup writes supported favourites, own albums, descriptions, tags and ratings into archive XMP files. Named people and face regions are an additional option; restoring people and faces into Immich is not yet available. The external archive library stays read-only in Immich. Its database, users, sharing and own uploaded files still require a separate Immich server backup.
 - The public alpha is free. Voluntary project contributions are collected personally by Lutz Kohl and donated in full to Dentists for Africa e.V.; he covers payment fees and adds any tax savings. Direct donations and donation receipts are handled by the organisation, as explained on the website.
 
 ## Deutsch
@@ -47,5 +53,3 @@
 
 - [Impressum (Deutsch)](https://truearchive.app/impressum.html)
 - [Legal Notice (English)](https://truearchive.app/en/impressum.html)
-
-- Alpha 0.39.0 includes a persistent local-source import queue, coordinated Mac/Photos Access updates, and encrypted Hetzner Storage Box backups with dated restore points. A separately purchased Storage Box and independently retained backup password are required; automatic backups are off by default. See the handbook for setup and release notes for known alpha limitations.

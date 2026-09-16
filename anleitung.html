@@ -66,14 +66,17 @@
   </header>
 
   <main id="inhalt" class="wrap">
-    <p class="wrap guide-note">Handbuch für Alpha 0.39.0. Einige Abbildungen zeigen eine frühere Oberfläche.</p>
-    <div class="guide-heading"><h1>Das TrueArchive-Handbuch.</h1><p>Archivziel und Quellen auf einer Fläche. Einzelne Quellen oder alle angeschlossenen direkt archivieren.</p><p>Die „?“-Buttons in der App öffnen direkt das passende Kapitel. Weiter unten findest du die <a href="#release-notes">Release Notes und frühere Versionen</a>.</p><p class="guide-version">Alpha 0.38.0 · Build 69 · 16. September 2026.</p></div>
+    <p class="wrap guide-note">Handbuch für <!-- release:alpha -->Alpha 0.39.0<!-- /release:alpha -->. Einige Abbildungen zeigen eine frühere Oberfläche.</p>
+    <div class="guide-heading"><h1>Das TrueArchive-Handbuch.</h1><p>Archivziel und Quellen auf einer Fläche. Einzelne Quellen oder alle angeschlossenen direkt archivieren.</p><p>Die „?“-Buttons in der App öffnen direkt das passende Kapitel. Weiter unten findest du die <a href="#release-notes">Release Notes und frühere Versionen</a>.</p><p class="guide-version"><!-- release:alpha -->Alpha 0.39.0<!-- /release:alpha --> · <!-- release:build -->Build 69<!-- /release:build --> · <!-- release:date -->16. September 2026<!-- /release:date -->.</p></div>
     <div class="guide-layout">
-      <nav class="guide-nav" aria-label="Im Handbuch"><a href="#installation">Installieren</a><a href="#updates">App-Updates</a><a href="#lokaler-index">Lokaler Index</a><a href="#sprache">Sprache wählen</a><a href="#einrichtung">Das erste Archiv</a><a href="#arbeitsbereich">Die Arbeitsfläche</a><a href="#alle-quellen">Alle angeschlossenen archivieren</a><a href="#archivierungswarteschlange">Archivierungswarteschlange</a><a href="#menueleiste">Menüleiste</a><a href="#apple-fotos">Apple Fotos</a><a href="#weitere-fotoskonten">Weitere Apple-Konten</a><a href="#immich">Immich</a><a href="#lightroom-export">Lightroom-Export</a><a href="#google-photos">Google Fotos (Takeout)</a><a href="#laufwerk-trennen">Laufwerke auswerfen</a><a href="#automatisierung">Zeitpläne</a><a href="#speicher-freigeben">Speicher freigeben</a><a href="#zweite-sicherung">Zweite Sicherung</a><a href="#hetzner">Hetzner einrichten</a><a href="#monatsordner">Monatsordner</a><a href="#duplikate">Duplikate und Nitro</a><a href="#aufnahmeorte">Fehlende Orte ergänzen</a><a href="#vision">Automatische Schlagwörter</a><a href="#details">Fragen und Details</a><a href="#release-notes">Release Notes</a><a href="#hilfe">Bei Problemen</a></nav>
+      <div class="guide-toc">
+        <button id="handbook-contents-toggle" class="guide-toc-toggle" type="button" aria-controls="handbook-contents" aria-expanded="true" hidden>Inhalt anzeigen</button>
+      <nav id="handbook-contents" class="guide-nav" aria-label="Im Handbuch"><a href="#installation">Installieren</a><a href="#updates">App-Updates</a><a href="#lokaler-index">Lokaler Index</a><a href="#sprache">Sprache wählen</a><a href="#einrichtung">Das erste Archiv</a><a href="#arbeitsbereich">Die Arbeitsfläche</a><a href="#alle-quellen">Alle angeschlossenen archivieren</a><a href="#archivierungswarteschlange">Archivierungswarteschlange</a><a href="#menueleiste">Menüleiste</a><a href="#apple-fotos">Apple Fotos</a><a href="#weitere-fotoskonten">Weitere Apple-Konten</a><a href="#immich">Immich</a><a href="#lightroom-export">Lightroom-Export</a><a href="#google-photos">Google Fotos (Takeout)</a><a href="#laufwerk-trennen">Laufwerke auswerfen</a><a href="#automatisierung">Zeitpläne</a><a href="#speicher-freigeben">Speicher freigeben</a><a href="#zweite-sicherung">Zweite Sicherung</a><a href="#hetzner">Hetzner einrichten</a><a href="#monatsordner">Monatsordner</a><a href="#duplikate">Duplikate und Nitro</a><a href="#aufnahmeorte">Fehlende Orte ergänzen</a><a href="#vision">Automatische Schlagwörter</a><a href="#details">Fragen und Details</a><a href="#release-notes">Release Notes</a><a href="#hilfe">Bei Problemen</a></nav>
+      </div>
       <div class="guide-content">
         <section id="installation" aria-labelledby="installation-title">
           <h2 id="installation-title">Installieren</h2>
-          <div class="guide-note"><p><strong>Alpha 0.38.0 / Build 68 ist verfügbar. Archiviere Karten schrittweise, verbinde weitere Apple-Fotos-Konten und stelle Zeitpläne oder die freiwillige Speicherfreigabe direkt bei der Quelle ein. Aktualisiere alle Macs, die in dasselbe Archiv schreiben, bevor du neue Metadatenfunktionen nutzt.</strong> <a href="index.html#alpha">Herunterladen</a>.</p></div>
+          <div class="guide-note"><p><strong><!-- release:alpha -->Alpha 0.39.0<!-- /release:alpha --> / <!-- release:build -->Build 69<!-- /release:build --> ist verfügbar. Archiviere Karten schrittweise, verbinde weitere Apple-Fotos-Konten und stelle Zeitpläne oder die freiwillige Speicherfreigabe direkt bei der Quelle ein. Aktualisiere alle Macs, die in dasselbe Archiv schreiben, bevor du neue Metadatenfunktionen nutzt.</strong> <a href="index.html#alpha">Herunterladen</a>.</p></div>
           <p>Du brauchst einen Mac mit <strong>macOS 15 oder neuer</strong>. Ein gemeinsames Paket enthält die App für Intel und Apple Silicon. Den Prüfstand deiner Version findest du in den Release Notes.</p>
           <p>Lade die aktuelle Alpha auf der <a href="index.html#alpha">Website</a> herunter und installiere sie so:</p>
           <ol>
@@ -100,7 +103,7 @@
 <p><strong>Gemeinsamer Teststand:</strong> Ab 0.39 kannst du unter App-Updates „Geprüfte Testversionen erhalten“ auf beiden Macs einschalten. Beide beziehen dasselbe zentral geprüfte Paket. Ohne diese Option erhältst du die freigegebenen Versionen. Version und Buildnummer stehen direkt daneben; das Ausschalten setzt die installierte Version nicht zurück. Ein offline befindlicher Mac aktualisiert sich erst bei seiner nächsten Verbindung und im sicheren Leerlauf.</p>
           <h2 id="updates-title">App-Updates</h2>
           <div class="guide-note"><p><strong>Gemeinsame Mac-Updates:</strong> TrueArchive bereitet das Update für alle angemeldeten Mac-Benutzer gemeinsam vor. Neue Archivaufträge warten; laufende oder pausierte Übertragungen müssen zuerst enden. Bereits aktive Fotos-Zugänge starten nach dem geprüften Austausch in ihrer bisherigen Sitzung wieder. Ausgeschaltete Zugänge bleiben aus, Kopplungen und Einstellungen erhalten.</p><p>Die App muss gemeinsam im Ordner <strong>Programme</strong> liegen. Ältere TrueArchive-Versionen und Fotos-Zugänge einmal regulär schließen. Bei einer wartenden Sitzung nennt die App die erforderliche Aktion unter „App-Updates“; anschließend „Installation erneut vorbereiten“ wählen. Ein unklar abgebrochenes Update verlangt einen regulären Mac-Neustart; danach prüft TrueArchive den Paketstand vor der Weiterarbeit. Fotoerlaubnisse bleiben deine Entscheidung.</p></div>
-          <div class="guide-note"><p>Alpha 0.38.0 ist auch über den Updatekanal verfügbar. Wähle im Menü <strong>TrueArchive → Nach Updates suchen …</strong>. Lass eine laufende Übernahme vorher enden; die App wartet mit der Installation, solange Archivarbeit offen ist. Alternativ kannst du das Paket von der Website installieren. Deine gespeicherten Quellen und das Archiv bleiben erhalten.</p></div>
+          <div class="guide-note"><p><!-- release:alpha -->Alpha 0.39.0<!-- /release:alpha --> ist auch über den Updatekanal verfügbar. Wähle im Menü <strong>TrueArchive → Nach Updates suchen …</strong>. Lass eine laufende Übernahme vorher enden; die App wartet mit der Installation, solange Archivarbeit offen ist. Alternativ kannst du das Paket von der Website installieren. Deine gespeicherten Quellen und das Archiv bleiben erhalten.</p></div>
           <p>Ab Version 0.6.0 sind <strong>automatische App-Updates voreingestellt</strong>. TrueArchive prüft ungefähr täglich, solange die App läuft und der Mac wach ist. Ein neues, geprüftes Paket wird im Leerlauf installiert; anschließend startet die App neu.</p>
           <p>Während einer Prüfung, Übernahme, Pause oder Verschlagwortung wartet das Update. Auch eine offene Einrichtung oder Importvorschau verhindert einen automatischen Neustart. Das gilt ebenso für eine erhaltene Vorschau in einem gerade zugeklappten Quellenbereich. Während des Updatevorgangs starten keine neuen Archivaufträge.</p>
           <p>Unter <strong>TrueArchive → Einstellungen → App-Updates</strong> kannst du die Automatik ausschalten. <strong>„Jetzt nach Updates suchen“</strong> bleibt für manuelle Updates verfügbar. Das geht auch über das TrueArchive-Menü; „App-Updates …“ im Menüleistenfenster öffnet die Einstellung.</p>
@@ -695,6 +698,29 @@
   </main>
   <footer class="site-footer wrap"><p><strong>TrueArchive</strong><br>Ein persönliches Community-Projekt.</p><nav aria-label="Weitere Informationen"><a href="warum-truearchive.html">Warum TrueArchive?</a><a href="release-notes.html">Release Notes</a><a href="index.html">Startseite</a><a href="feedback.html">Feedback &amp; Wünsche</a><a href="index.html#beta">Zur Beta anmelden</a><a href="index.html#unterstuetzen">Projekt unterstützen</a><a href="ressourcen.html">Ressourcen</a><a href="hardware.html">Hardware</a><a href="impressum.html">Impressum</a><a href="mailto:lutz@truearchive.app">Kontakt</a><a href="https://www.instagram.com/truearchive.app/" rel="me">Instagram</a><span role="group" class="language-switch" aria-label="Sprache wählen"><a href="anleitung.html?lang=de" data-language="de" lang="de" aria-label="Deutsch" title="Deutsch">DE</a><span aria-hidden="true">/</span><a href="en/anleitung.html?lang=en" data-language="en" lang="en" aria-label="English" title="English">ENG</a></span></nav></footer>
   <script>
+    // BEGIN handbook navigation
+    const contents = document.getElementById('handbook-contents');
+    const contentsToggle = document.getElementById('handbook-contents-toggle');
+    const smallScreen = window.matchMedia('(max-width: 850px)');
+    let contentsExpanded = false;
+    function updateContents() {
+      contentsToggle.hidden = !smallScreen.matches;
+      contents.hidden = smallScreen.matches && !contentsExpanded;
+      contentsToggle.setAttribute('aria-expanded', String(!contents.hidden));
+    }
+    contentsToggle.addEventListener('click', () => {
+      contentsExpanded = !contentsExpanded;
+      updateContents();
+    });
+    contents.addEventListener('click', event => {
+      if (smallScreen.matches && event.target.closest('a[href^="#"]')) {
+        contentsExpanded = false;
+        updateContents();
+      }
+    });
+    smallScreen.addEventListener('change', updateContents);
+    updateContents();
+    // END handbook navigation
     // Contextual app help must reveal a chapter even when its details are collapsed.
     function openHelpChapter() {
       let id;

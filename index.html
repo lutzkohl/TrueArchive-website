@@ -33,7 +33,7 @@
   <meta name="twitter:description" content="Fotos und Videos aus Apple Fotos, SD-Karten, Ordnern, Google Takeout und Immich auf deiner Festplatte archivieren. TrueArchive für Mac: kostenlose Alpha.">
   <meta name="twitter:image" content="https://truearchive.app/assets/app-workspace-de.png">
   <meta name="twitter:image:alt" content="TrueArchive auf dem Mac: Archivziel und Importquellen, dargestellt mit Beispieldaten.">
-  <script type="application/ld+json">
+  <script type="application/ld+json" data-release-schema>
 {
   "@context": "https://schema.org",
   "@graph": [
@@ -197,14 +197,14 @@
         <p>TrueArchive kann noch Fehler enthalten. <strong>Datenverlust ist möglich.</strong> Behalte eine unabhängige, geprüfte Sicherung und beginne mit Kopien einer kleinen Auswahl. Nutze die Alpha nicht mit der einzigen Kopie unersetzlicher Bilder.</p>
       </div>
       <div class="alpha-download">
-        <div><a class="button primary" data-alpha-download href="https://github.com/lutzkohl/TrueArchive-website/releases/download/v0.39.0-build69-alpha/TrueArchive-0.39.0-alpha-macos-universal.zip" aria-describedby="alpha-warning alpha-requirements">Alpha 0.39.0 herunterladen</a>
-          <p id="alpha-requirements">Build 69 · Veröffentlicht am <time datetime="2026-09-16">16. September 2026</time><br>Kostenlos · macOS 15+ · Intel und Apple Silicon<br>Nicht von Apple notarisiert. <a href="anleitung.html#installation">Anleitung zur Installation</a></p>
+        <div><a class="button primary" data-alpha-download data-release-link="download" href="https://github.com/lutzkohl/TrueArchive-website/releases/download/v0.39.0-build69-alpha/TrueArchive-0.39.0-alpha-macos-universal.zip" aria-describedby="alpha-warning alpha-requirements"><!-- release:alpha -->Alpha 0.39.0<!-- /release:alpha --> herunterladen</a>
+          <p id="alpha-requirements"><!-- release:build -->Build 69<!-- /release:build --> · Veröffentlicht am <!-- release:time --><time datetime="2026-09-16">16. September 2026</time><!-- /release:time --><br>Kostenlos · macOS 15+ · Intel und Apple Silicon<br>Nicht von Apple notarisiert. <a href="anleitung.html#installation">Anleitung zur Installation</a></p>
           <p class="download-stats" data-download-stats hidden aria-live="polite"><strong data-download-count></strong> Downloads dieser Version · GitHub-Zählung, einschließlich mehrfacher Downloads.</p>
         </div>
         <div class="alpha-next" id="alpha-install"><h3>So startest du die Alpha.</h3>
           <ol><li>ZIP entpacken, <strong>TrueArchive</strong> in „Programme“ ziehen und einmal öffnen.</li><li>Kann Apple die App nicht prüfen oder den Entwickler nicht bestätigen, schließe die Warnung. Öffne <strong>Systemeinstellungen → Datenschutz &amp; Sicherheit</strong> und scrolle zu „Sicherheit“.</li><li>Klicke bei TrueArchive auf <strong>„Dennoch öffnen“</strong> und bestätige mit <strong>„Öffnen“</strong>.</li></ol>
           <p><a href="anleitung.html#macos-startfreigabe">Ausführliche Starthilfe</a> · <a href="https://support.apple.com/de-de/102445">Apples Anleitung</a></p>
-          <p>Keine Anmeldung nötig. <a href="feedback.html#testfeedback">Feedback geben</a> · <a href="release-notes.html#v0-38-0">Was ist neu?</a></p></div>
+          <p>Keine Anmeldung nötig. <a href="feedback.html#testfeedback">Feedback geben</a> · <a data-release-link="notes" href="release-notes.html#v0-39-0">Was ist neu?</a></p></div>
       </div>
       <div class="first-test" id="erster-test" tabindex="-1">
         <h3>Dein erster Test: fünf kopierte Fotos.</h3>
@@ -222,7 +222,7 @@
     <section class="features-section wrap" id="funktionen" tabindex="-1" aria-labelledby="features-title">
       <div class="section-heading">
         <h2 id="features-title">Was TrueArchive für dich übernimmt.</h2>
-        <p class="feature-release"><a href="release-notes.html#v0-38-0">Alpha 0.39.0 · Neuerungen</a></p>
+        <p class="feature-release"><a data-release-link="notes" href="release-notes.html#v0-39-0"><!-- release:alpha -->Alpha 0.39.0<!-- /release:alpha --> · Neuerungen</a></p>
       </div>
       <div class="feature-group">
         <div class="feature-intro"><h3>Bilder in einem zentralen Archiv zusammenführen</h3></div>
@@ -246,13 +246,14 @@
       </div>
       <p class="feature-handbook">Du möchtest genauer wissen, wie es funktioniert? <a href="anleitung.html">Abläufe und Grenzen im Handbuch ansehen</a></p>
 
+      <p class="feature-handbook"><strong>Sichern und wiederherstellen.</strong> TrueArchive sichert dein Archiv samt XMP verschlüsselt auf einer zweiten Festplatte oder bei einer Hetzner Storage Box. Wähle einen früheren Sicherungsstand und stelle alles oder einzelne Dateien in einem neuen leeren Ordner wieder her. Auf Wunsch täglich nach Zeitplan. Die Storage Box wird separat gebucht und bezahlt. <a href="anleitung.html#zweite-sicherung">Zweite Sicherung einrichten</a> · <a href="anleitung.html#hetzner">Hetzner einrichten</a>.</p>
+
       <details class="planned-modules" id="module">
-        <summary><span>Ideen für die nächsten Schritte</span><span class="summary-hint">4 offene Ideen · noch nicht verfügbar</span></summary>
+        <summary><span>Ideen für die nächsten Schritte</span><span class="summary-hint">3 offene Ideen · noch nicht verfügbar</span></summary>
         <div class="module-content">
-          <p class="module-intro">Vier Ideen für die Weiterentwicklung. Sag uns, welche dir am meisten helfen würde; Termine stehen noch nicht fest.</p>
+          <p class="module-intro">Drei Ideen für die Weiterentwicklung. Sag uns, welche dir am meisten helfen würde; Termine stehen noch nicht fest.</p>
           <dl class="module-list">
               <div><dt>Direkt aus der Lightroom Cloud übernehmen</dt><dd>Bilder und verfügbare Metadaten direkt bei Adobe abrufen, ohne sie vorher in Lightroom exportieren zu müssen.</dd></div>
-              <div><dt>Archiv sichern und wiederherstellen</dt><dd>Dein Archiv aus einem gewählten Sicherungsstand wiederherstellen. Zuerst auf einer zweiten lokalen Festplatte, später auch verschlüsselt bei Hetzner. Cloud-Speicher wird separat bezahlt.</dd></div>
               <div><dt>Speicher in Apple Fotos freigeben</dt><dd>Große Videos nach geprüfter Archivierung gezielt entfernen. Als separates, optionales Modul.</dd></div>
               <div><dt>Fotobücher gestalten</dt><dd>Passende Bilder auswählen und später als Buch drucken lassen.</dd></div>
             </dl>
