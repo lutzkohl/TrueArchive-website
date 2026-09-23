@@ -108,4 +108,28 @@
     <xhtml:link rel="alternate" hreflang="en" href="https://truearchive.app/en/impressum.html" />
     <xhtml:link rel="alternate" hreflang="x-default" href="https://truearchive.app/impressum.html" />
   </url>
+  <url>
+    <loc>https://truearchive.app/datenschutz.html</loc>
+    <xhtml:link rel="alternate" hreflang="de" href="https://truearchive.app/datenschutz.html" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://truearchive.app/en/datenschutz.html" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://truearchive.app/datenschutz.html" />
+  </url>
+  <url>
+    <loc>https://truearchive.app/en/datenschutz.html</loc>
+    <xhtml:link rel="alternate" hreflang="de" href="https://truearchive.app/datenschutz.html" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://truearchive.app/en/datenschutz.html" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://truearchive.app/datenschutz.html" />
+  </url>
+  <url>
+    <loc>https://truearchive.app/support.html</loc>
+    <xhtml:link rel="alternate" hreflang="de" href="https://truearchive.app/support.html" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://truearchive.app/en/support.html" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://truearchive.app/support.html" />
+  </url>
+  <url>
+    <loc>https://truearchive.app/en/support.html</loc>
+    <xhtml:link rel="alternate" hreflang="de" href="https://truearchive.app/support.html" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://truearchive.app/en/support.html" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://truearchive.app/support.html" />
+  </url>
 </urlset>
