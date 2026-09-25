@@ -76,7 +76,20 @@
       <div class="guide-content release-notes">
         <section id="v0-40-0" class="guide-section">
           <h2>0.40.0 · More reliable backups and shared updates</h2>
-          <p><!-- release-note:v0-40-0 -->Build 74 · 18 September 2026 · Released.<!-- /release-note:v0-40-0 --></p>
+          <p><!-- release-note:v0-40-0 -->Build 96 · 25 September 2026 · Released.<!-- /release-note:v0-40-0 --></p>
+          <h3>New since the last public Build 74</h3>
+          <ul>
+            <li><strong>Easier first launch:</strong> The Mac package is signed with Developer ID and notarized by Apple. The manual “Open Anyway” exception should no longer be needed.</li>
+            <li><strong>Clearer workspace:</strong> Overview, Sources, Archive and Backup group the main tasks. Connection checks, interrupted imports and unavailable actions explain the next step.</li>
+            <li><strong>View archive photos on iPhone:</strong> Select an archive date range, prepare compact previews and see the measured or estimated storage before adding them to Apple Photos. Originals stay in the archive. Apple handles any subsequent iCloud sync.</li>
+            <li><strong>Review large Apple Photos videos:</strong> Browse by size, play videos and choose a separate space-reclamation action. Deletion requires a fresh check of the complete archived selection and explicit confirmation. With iCloud Photos enabled, deletion affects connected devices too; Apple normally keeps deleted videos in Recently Deleted first.</li>
+            <li><strong>Hetzner backup:</strong> Estimated remaining time, clear preparation and finalisation phases, and retained folder views. Travel transfer is part of the Hetzner connection: import a confirmed backup snapshot into the destination archive while retaining the source.</li>
+            <li><strong>Photos Access and updates:</strong> A distinct Photos Access icon, clearer explanations before Keychain access and visible status for participating Mac accounts. Active or paused work retains priority; required macOS approvals are not bypassed.</li>
+          </ul>
+          <p><strong>Before updating:</strong> Finish active imports safely and update the main app and Photos Access together. Before the first preview transfer, update every app that writes to the same archive. The format addition blocks older writers, and older app versions cannot open the new local settings. Previews replace neither originals nor an independent backup.</p>
+          <p><strong>Limitations:</strong> Still early alpha, with possible errors and data loss. Try new workflows with independently backed-up copies first. Personal multi-user, iCloud and travel workflows, and Intel runtime testing remain separate practical checks. Photos permission may need to be granted again after updating. Photos Access launch at login was unavailable on the test Mac; start it manually after each login there for now. This release is for Mac; iPhone and iPad are not generally available yet.</p>
+          <p><a href="anleitung.html#archivvorschauen">Archive previews</a> · <a href="anleitung.html#apple-videos-freigeben">Review and remove videos</a> · <a href="anleitung.html#reiseuebertragung">Travel transfer</a> · <a href="https://github.com/lutzkohl/TrueArchive-website/releases/tag/v0.40.0-build96-alpha">Build 96 and checksum</a></p>
+          <h3>Already included since Build 74 · 18 September 2026</h3>
           <ul>
             <li>Hetzner backups: fixed the observed memory growth during transfer. A complete backup and restore on another Mac were verified with the corrected 0.39.1 development build.</li>
             <li>Second backup now has separate Overview, Restore and Settings sections. Loaded folders, selections and scroll position survive switching sections. The first folder level is preloaded when opening a connection.</li>

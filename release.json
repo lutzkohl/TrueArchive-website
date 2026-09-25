@@ -1,12 +1,12 @@
 {
   "schema": 1,
   "version": "0.40.0",
-  "build": 74,
-  "date": "2026-09-18",
-  "tag": "v0.40.0-build74-alpha",
+  "build": 96,
+  "date": "2026-09-25",
+  "tag": "v0.40.0-build96-alpha",
   "package": {
     "name": "TrueArchive-0.40.0-alpha-macos-universal.zip",
-    "bytes": 48754902,
-    "sha256": "8a36bce805e28c9acd392feb0052dc6dd0179273d9e6494c76dea8fc3f394c6c"
+    "bytes": 52945196,
+    "sha256": "678859f09ff97d1a65d14cf58f355ce1af3dd4ea15ea8be106cc1ea89544f45c"
   }
 }

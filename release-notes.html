@@ -76,7 +76,20 @@
       <div class="guide-content release-notes">
         <section id="v0-40-0" class="guide-section">
           <h2>0.40.0 · Verlässlicher sichern und gemeinsam aktualisieren</h2>
-          <p><!-- release-note:v0-40-0 -->Build 74 · 18. September 2026 · Veröffentlicht.<!-- /release-note:v0-40-0 --></p>
+          <p><!-- release-note:v0-40-0 -->Build 96 · 25. September 2026 · Veröffentlicht.<!-- /release-note:v0-40-0 --></p>
+          <h3>Neu seit dem letzten öffentlichen Build 74</h3>
+          <ul>
+            <li><strong>Einfacher starten:</strong> Das Mac-Paket ist mit Developer ID signiert und von Apple notarisiert. Die manuelle Ausnahme „Dennoch öffnen“ sollte damit entfallen.</li>
+            <li><strong>Klarere Arbeitsfläche:</strong> Übersicht, Quellen, Archiv und Sicherung bündeln die Aufgaben. Verbindungsprüfungen, unterbrochene Übernahmen und gesperrte Aktionen erklären den nächsten Schritt.</li>
+            <li><strong>Archivbilder auf dem iPhone ansehen:</strong> Einen Zeitraum im Archiv auswählen, kleine Vorschauen vorbereiten und vor dem Hinzufügen den gemessenen oder geschätzten Platzbedarf sehen. Die Originale bleiben im Archiv. Apple übernimmt eine anschließende iCloud-Synchronisierung.</li>
+            <li><strong>Große Apple-Fotos-Videos prüfen:</strong> Videos nach Größe ansehen, abspielen und zur getrennten Speicherfreigabe auswählen. Gelöscht wird nur nach erneuter Prüfung der vollständigen archivierten Auswahl und ausdrücklicher Bestätigung. Bei aktivem iCloud-Fotos wirkt die Löschung auch auf verbundene Geräte; Apple bewahrt gelöschte Videos zunächst gewöhnlich unter „Zuletzt gelöscht“ auf.</li>
+            <li><strong>Hetzner-Sicherung:</strong> Geschätzte Restzeit während der Sicherung, klare Vorbereitungs- und Abschlussphasen und gespeicherte Ordneransichten. Die Reiseübertragung ist Teil der Hetzner-Verbindung und übernimmt einen bestätigten Sicherungsstand ins Zielarchiv, ohne die Quelle zu löschen.</li>
+            <li><strong>Fotos-Zugang und Updates:</strong> Eigenes erkennbares Fotos-Zugang-Symbol, verständlichere Hinweise vor Schlüsselbundzugriffen und sichtbarer Stand der beteiligten Mac-Konten. Laufende oder pausierte Arbeit behält Vorrang; erforderliche macOS-Freigaben werden nicht umgangen.</li>
+          </ul>
+          <p><strong>Vor dem Update:</strong> Laufende Übernahmen sicher beenden und Haupt-App sowie Fotos-Zugänge gemeinsam aktualisieren. Vor der ersten Vorschauübertragung müssen alle Apps, die in dasselbe Archiv schreiben, aktuell sein. Ältere Schreiber werden nach der Formaterweiterung gesperrt; die neue lokale Einrichtung lässt sich nicht mit alten App-Versionen öffnen. Vorschauen ersetzen weder Originale noch eine unabhängige Sicherung.</p>
+          <p><strong>Grenzen:</strong> Weiterhin frühe Alpha mit möglichen Fehlern und Datenverlust. Neue Abläufe zunächst mit unabhängig gesicherten Kopien testen. Persönliche Mehrbenutzer-, iCloud- und Reiseabläufe sowie die Intel-Laufzeit bleiben getrennte Praxisprüfungen. Fotos-Zugriff kann nach dem Update erneut freigegeben werden müssen. „Bei Anmeldung starten“ war beim Fotos-Zugang auf dem Test-Mac nicht verfügbar; starte den Zugang dort vorerst nach jeder Anmeldung manuell. Diese Veröffentlichung betrifft die Mac-App; iPhone und iPad sind noch nicht allgemein verfügbar.</p>
+          <p><a href="anleitung.html#archivvorschauen">Archivvorschauen</a> · <a href="anleitung.html#apple-videos-freigeben">Videos prüfen und freigeben</a> · <a href="anleitung.html#reiseuebertragung">Reiseübertragung</a> · <a href="https://github.com/lutzkohl/TrueArchive-website/releases/tag/v0.40.0-build96-alpha">Build 96 und Prüfsumme</a></p>
+          <h3>Bereits seit Build 74 · 18. September 2026</h3>
           <ul>
             <li>Hetzner-Sicherungen: Der beobachtete starke Speicheranstieg bei der Übertragung ist korrigiert. Eine vollständige Sicherung und Wiederherstellung auf einem anderen Mac wurden mit dem korrigierten 0.39.1-Zwischenstand geprüft.</li>
             <li>Die zweite Sicherung bietet Übersicht, Wiederherstellen und Einstellungen als eigene Bereiche. Bereits geladene Ordner, Auswahl und Scrollposition bleiben beim Wechsel erhalten. Beim Öffnen wird die erste Ordnerebene vorgeladen.</li>
