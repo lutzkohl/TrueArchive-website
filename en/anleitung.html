@@ -66,8 +66,8 @@
   </header>
 
   <main id="inhalt" class="wrap">
-    <p class="wrap guide-note">Handbook for <!-- release:alpha -->Alpha 0.40.0<!-- /release:alpha -->. Some illustrations show an earlier interface.</p>
-    <div class="guide-heading"><h1>The TrueArchive handbook.</h1><p>Your archive destination and sources in one workspace. Archive a single source or all connected sources directly.</p><p>The app’s “?” buttons open the relevant chapter directly. Further down, you will find the <a href="#release-notes">release notes and earlier versions</a>.</p><p class="guide-version"><!-- release:alpha -->Alpha 0.40.0<!-- /release:alpha --> · <!-- release:build -->Build 96<!-- /release:build --> · <!-- release:date -->25 September 2026<!-- /release:date -->.</p></div>
+    <p class="wrap guide-note">Handbook for <!-- release:alpha -->Alpha 0.40.1<!-- /release:alpha -->. Some illustrations show an earlier interface.</p>
+    <div class="guide-heading"><h1>The TrueArchive handbook.</h1><p>Your archive destination and sources in one workspace. Archive a single source or all connected sources directly.</p><p>The app’s “?” buttons open the relevant chapter directly. Further down, you will find the <a href="#release-notes">release notes and earlier versions</a>.</p><p class="guide-version"><!-- release:alpha -->Alpha 0.40.1<!-- /release:alpha --> · <!-- release:build -->Build 112<!-- /release:build --> · <!-- release:date -->17 October 2026<!-- /release:date -->.</p></div>
     <div class="guide-layout">
       <div class="guide-toc">
         <button id="handbook-contents-toggle" class="guide-toc-toggle" type="button" aria-controls="handbook-contents" aria-expanded="true" hidden>Show contents</button>
@@ -76,7 +76,7 @@
       <div class="guide-content">
         <section id="installation" aria-labelledby="installation-title">
           <h2 id="installation-title">Installation</h2>
-          <div class="guide-note"><p><strong><!-- release:alpha -->Alpha 0.40.0<!-- /release:alpha --> / <!-- release:build -->Build 96<!-- /release:build --> is available. Archive cards one item at a time, connect more Apple Photos accounts and configure schedules or optional space freeing directly at each source. Update every Mac that writes to the same archive before using the new metadata features.</strong> <a href="index.html#alpha">Download</a>.</p></div>
+          <div class="guide-note"><p><strong><!-- release:alpha -->Alpha 0.40.1<!-- /release:alpha --> / <!-- release:build -->Build 112<!-- /release:build --> is available. Archive cards one item at a time, connect more Apple Photos accounts and configure schedules or optional space freeing directly at each source. Update every Mac that writes to the same archive before using the new metadata features.</strong> <a href="index.html#alpha">Download</a>.</p></div>
           <p>You need a Mac with <strong>macOS 15 or later</strong>. A single package is intended for Intel and Apple Silicon. Check the release notes for your version’s testing status.</p>
           <p>Download the current alpha from the <a href="index.html#alpha">website</a> and install it as follows:</p>
           <ol>
@@ -99,7 +99,7 @@
           <h2 id="updates-title">App updates</h2>
           <div class="guide-note"><p><strong>Updates during archive work:</strong> App Updates lets you schedule a check for after archiving finishes and cancel that request. After an update, each user account shows whether the new app and Photos Access are ready. “Check access services again” repeats that check. Grant any missing Photos permission in the affected Mac user. “Ready” confirms the service, not a complete archive of all photos.</p></div>
           <div class="guide-note"><p><strong>Shared Mac updates:</strong> TrueArchive coordinates updates across signed-in Mac users. New archive jobs wait while existing or paused transfers finish. Previously active Photos Access apps restart in their original sessions after the verified replacement. Disabled access stays disabled; pairings and settings are preserved.</p><p>Use the shared app in <strong>Applications</strong>. Older TrueArchive and Photos Access versions must be closed normally once. “App updates” identifies the session that needs attention; choose “Prepare installation again” afterwards. An update that ended in an uncertain state requires a normal Mac restart. TrueArchive then verifies the installed package before resuming work. Photos permission remains your choice.</p></div>
-          <div class="guide-note"><p><!-- release:alpha -->Alpha 0.40.0<!-- /release:alpha --> is also available through the update channel. Choose <strong>TrueArchive → Check for updates …</strong> from the menu. Let any import finish first; installation waits while archive work is pending. Alternatively, install the package from the website. Your saved sources and archive are preserved.</p></div>
+          <div class="guide-note"><p><!-- release:alpha -->Alpha 0.40.1<!-- /release:alpha --> is also available through the update channel. Choose <strong>TrueArchive → Check for updates …</strong> from the menu. Let any import finish first; installation waits while archive work is pending. Alternatively, install the package from the website. Your saved sources and archive are preserved.</p></div>
           <p>From version 0.6.0, <strong>automatic app updates are enabled by default</strong>. TrueArchive checks roughly once a day while the app is running and the Mac is awake. A new, verified package is installed when idle; the app then restarts.</p>
           <p>Updates wait during checking, importing, pauses or keyword tagging. An unfinished setup or open import preview also prevents an automatic restart. This includes a retained preview in a source section that is currently collapsed. No new archive jobs start during an update.</p>
           <p>Under <strong>TrueArchive → Settings → App updates</strong> you can turn off automatic updates. <strong>“Check for updates now”</strong> remains available for manual updates. You can also use the TrueArchive menu; “App updates …” in the menu bar window opens the setting.</p>
@@ -443,13 +443,26 @@
           <p><a href="release-notes.html#v0-26-0">Face backup in 0.26.0</a> · <a href="release-notes.html#v0-25-0">Immich backup in 0.25.0</a> · <a href="release-notes.html#v0-19-0">Candidate 0.19.0 release notes</a> · <a href="#hilfe">Help with problems</a></p>
         </section>
 
+        <section id="archiv-uebernehmen" aria-labelledby="archive-import-title">
+          <h2 id="archive-import-title">Import another TrueArchive archive</h2>
+          <p>Under <strong>Archive → Maintenance → Import another TrueArchive archive</strong>, import an existing archive from a connected drive into the current destination archive. The source archive remains unchanged. The same entry is available under “Add source”.</p>
+          <ol>
+            <li><strong>Check the destination.</strong> Connect the archive that should receive the photos under Archive → Overview.</li>
+            <li><strong>Choose source archive …</strong> Select the top-level folder of the other TrueArchive archive. The preview compares both archives and shows new files, updates, files already present and open items. Nothing is imported yet.</li>
+            <li><strong>Review photo metadata.</strong> For each displayed conflict, choose the value from the source or destination archive. Unsupported or incomplete items remain explicitly open.</li>
+            <li><strong>Import reviewed files …</strong> Check the destination path and confirm with “Import now”. The result separately counts confirmed photos and open files.</li>
+          </ol>
+          <p>If the source or destination has changed since the preview, choose “Check again”. A partial or stopped import also needs a new check; previously imported files are recognised. “Close import” only clears this working state.</p>
+          <p>Pausing and stopping keep access reserved until the worker has actually finished. Archives sharing the same archive identity – such as a backup copy of the same archive – cannot be combined using this workflow. Unmanaged files in an adopted collection are outside the import scope and counted separately. The import does not confirm an entire drive and does not replace an independent backup.</p>
+        </section>
+
         <section id="alte-platten" aria-labelledby="drive-review-title">
           <h2 id="drive-review-title">Review old drives</h2>
           <figure class="app-figure app-screenshot" aria-labelledby="drive-review-screenshot-caption">
             <a href="../assets/app-drive-review-en.png?v=0.21.0"><img src="../assets/app-drive-review-en.png?v=0.21.0" width="1100" height="780" alt="Folder selection with direct archive actions and separate ZIP extraction." loading="lazy" decoding="async"></a>
             <figcaption id="drive-review-screenshot-caption">Native review using generated sample files. Selection and its archive action appear together.</figcaption>
           </figure>
-          <div class="guide-note"><p>This path does not merge a second TrueArchive structure. It reads an old photo collection, compares your folder selection with the existing archive, and imports only after you confirm. Source files remain unchanged.</p></div>
+          <div class="guide-note"><p>For a second TrueArchive archive, use <a href="#archiv-uebernehmen">Import another TrueArchive archive</a>. This drive-review workflow reads ordinary photo folders. It reads an old photo collection, compares your folder selection with the existing archive, and imports only after you confirm. Source files remain unchanged.</p></div>
           <ol>
             <li><strong>Choose a drive or photo folder.</strong> Open <strong>Archive → Maintenance → Import photos from another drive</strong> and choose <strong>Choose a drive or photo folder …</strong>. The same review path appears under “Add source” as “Review an old drive…” and directly in the row of a configured local source. Choosing a new folder starts the search; for a known source, choose “Find folders”.</li>
             <li><strong>Understand the scope.</strong> Completed folders show media count, size and path. “Show subfolders” splits a group into separately selectable areas. Incomplete or excluded areas do not count as fully examined.</li>

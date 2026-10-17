@@ -5,15 +5,15 @@ IMPORTANT: This file was signed by Sparkle. Any modifications to this file requi
     <title>TrueArchive Updates</title>
     <link>https://truearchive.app/</link>
     <item>
-      <title>TrueArchive 0.40.0 Alpha</title>
-      <pubDate>Fri, 25 Sep 2026 03:16:49 GMT</pubDate>
-      <sparkle:version>96</sparkle:version>
-      <sparkle:shortVersionString>0.40.0</sparkle:shortVersionString>
+      <title>TrueArchive 0.40.1 Alpha</title>
+      <pubDate>Sat, 17 Oct 2026 11:46:15 GMT</pubDate>
+      <sparkle:version>112</sparkle:version>
+      <sparkle:shortVersionString>0.40.1</sparkle:shortVersionString>
       <sparkle:minimumSystemVersion>15.0</sparkle:minimumSystemVersion>
-      <enclosure url="https://github.com/lutzkohl/TrueArchive-website/releases/download/v0.40.0-build96-alpha/TrueArchive-0.40.0-alpha-macos-universal.zip" length="52945196" type="application/octet-stream" sparkle:edSignature="RatIREKHFCetRFb4qX7rc9tyJfTHV9QNKOqMjVsoUlpgro5rCAEWde/hKFUVLRynP6OQYfrRwJlQUk9420wuDQ==" truearchive:bundleSHA256="fbe110b4f7a34b3b8ff80d6081f3b3e6e0c4fa23b46312c573c14462aff777ab"></enclosure>
+      <enclosure url="https://github.com/lutzkohl/TrueArchive-website/releases/download/v0.40.1-build112-alpha/TrueArchive-0.40.1-alpha-macos-universal.zip" length="53117335" type="application/octet-stream" sparkle:edSignature="jo46JkAu8AQCG1MdnbjNPvw5XQcAeFvA+UnRpxRvMJyTwkZv9I3XzR6BI43aF6F/g0ko25FaYQmEJ946gEAwBA==" truearchive:bundleSHA256="d8dd879eb41acfd1e7952a8f2588713d5ef96dba4a2478c0caf19a9b34b2df06"></enclosure>
     </item>
   </channel>
 </rss><!-- sparkle-signatures:
-edSignature: eBq2UKqu1ULM7xzZbiAFMMpdImkhwW2Xv5+QNNRBwejYbY6roPoe6zWSN0OeuVSkaguljwzLDBjb11EDiV+8DA==
-length: 1269
+edSignature: PBEcghGK4dnf0Wjlii2LX4OyZd70Bs2CfVGxE05gIkevxq4kRCMvsWlaAu7HWQ+nTZaJBY7oDAWdAU5PpnaLAg==
+length: 1271
 -->

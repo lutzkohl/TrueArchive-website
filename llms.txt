@@ -4,7 +4,7 @@
 
 ## Current public release
 
-<!-- release:summary -->Alpha 0.40.0 · Build 96 · 2026-09-25<!-- /release:summary -->
+<!-- release:summary -->Alpha 0.40.1 · Build 112 · 2026-10-17<!-- /release:summary -->
 
 ## Product facts
 
