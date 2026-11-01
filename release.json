@@ -1,12 +1,12 @@
 {
   "schema": 1,
-  "version": "0.41.4",
-  "build": 138,
+  "version": "0.41.5",
+  "build": 139,
   "date": "2026-11-01",
-  "tag": "v0.41.4-build138-alpha",
+  "tag": "v0.41.5-build139-alpha",
   "package": {
-    "name": "TrueArchive-0.41.4-alpha-macos-universal.zip",
-    "bytes": 54643981,
-    "sha256": "45835671deb4eebd60f00c8b3ad32fb1154c31f7876bacaf061254137bf72805"
+    "name": "TrueArchive-0.41.5-alpha-macos-universal.zip",
+    "bytes": 55183044,
+    "sha256": "3bcd5f0a51abd9a63aec242ab7c2cccbd81e7a7ef52df3281fea1207c6d46a82"
   }
 }
